@@ -281,4 +281,4 @@ TSWLatexianTemp*
 *.Rproj
 
 # Protect non-anonymized data
-./data/tweets.csv
+data/tweets.csv
