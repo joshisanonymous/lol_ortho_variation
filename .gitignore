@@ -279,3 +279,6 @@ TSWLatexianTemp*
 # R files
 .Rhistory
 *.Rproj
+
+# Protect non-anonymized data
+./data/tweets.csv
