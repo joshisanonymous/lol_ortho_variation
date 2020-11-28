@@ -4,7 +4,11 @@ library(tools)
 library(vegan)
 library(ggplot2)
 
-tweets <- read.csv("data/tweets.csv")
+tweets <- read.csv("data/tweetsAnon.csv")
+# Subset by orthographic variants of <lol> only
+lol <- subset(tweets, grepl("l+(o+|u+|e+|a+w+)l+",
+                            lol, perl = TRUE, ignore.case = TRUE))
+
 
 ## Functions
 # Get the Simpson's index of diversity for tokens of (lol)
@@ -27,9 +31,8 @@ getDivByCent <- function(df, speaker, variable, centrality){
 }
 
 ## Analysis
-
 ## ---- divByPR_graph ----
-divByPR <- getDivByCent("tweets", "utilisateur", "lol", "PageRank")
+divByPR <- getDivByCent("lol", "utilisateur", "lol", "PageRank")
 colnames(divByPR) <- c("User", colnames(divByPR)[2:3])
 ggplot(divByPR,
        aes(x = log(PageRank),
