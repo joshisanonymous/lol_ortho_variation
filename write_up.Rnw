@@ -7,7 +7,7 @@
     \addbibresource{References.bib}
 
   % Document information
-  \title{Centrality and Stability}
+  \title{Centrality and Variability of (lol)}
   \author{Joshua McNeill}
   \date{\today}
 
