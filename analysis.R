@@ -1,3 +1,13 @@
+#############################################################
+#                                                           #
+# This script analyzes Twitter data for variation of the    #
+# linguistic variable (lol). Script should be run from the  #
+# LaTeX write-up using knitr                                #
+#                                                           #
+# -Joshua McNeill (joshua dot mcneill at uga dot edu)       #
+#                                                           #
+#############################################################
+
 ## ---- load_data_packages_functions ----
 library(knitr)
 library(tools)
@@ -30,11 +40,22 @@ getDivByCent <- function(df, speaker, variable, centrality){
   return(divByCent)
 }
 
+# Draw a scatter plot comparing Simpon's index of diversity and a centrality measure
+graphDivByCent <- function(df, centrality) {
+  divByCent <- getDivByCent(df, "utilisateur", "lol", centrality)
+  colnames(divByCent) <- c("User", colnames(divByCent)[2:3])
+  ggplot(divByCent,
+         aes(x = log(eval(parse(text = toTitleCase(centrality)))),
+             y = Diversity)) +
+    theme_bw() +
+    labs(x = paste(toTitleCase(centrality), "(log)")) +
+    geom_point()
+}
+
 ## Analysis
 ## ---- divByPR_graph ----
-divByPR <- getDivByCent("lol", "utilisateur", "lol", "PageRank")
-colnames(divByPR) <- c("User", colnames(divByPR)[2:3])
-ggplot(divByPR,
-       aes(x = log(PageRank),
-           y = Diversity)) +
-  geom_point()
+graphDivByCent("lol", "PageRank")
+
+## ---- divByPR_above_med_degree ----
+lolHighDegree <- lol[lol$degre >= quantile(lol$degre)[3],]
+graphDivByCent("lolHighDegree", "PageRank")
