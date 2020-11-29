@@ -1,3 +1,13 @@
+#############################################################
+#                                                           #
+# This script automatically assigns pseudonyms for speakers #
+# everywhere their names show up in a data frame, including #
+# in utterances.                                            #
+#                                                           #
+# -Joshua McNeill (joshua dot mcneill at uga dot edu)       #
+#                                                           #
+#############################################################
+
 # Load packages
 library(babynames)
 
