@@ -51,7 +51,7 @@
 
     % Individuals positioned in a community
     A more recent concern for sociolinguists has been analyzing language variation with special attention to individual agency, which is at least implicit in \citeauthor{eckert_three_2012}'s (\citeyear{eckert_three_2012}) view of the ``third wave'' of sociolinguistics in which we currently find ourselves.
-    Twitter and social network analysis give us tools to approach this issue in a quantitative way.
+    Twitter and social network analysis give researchers tools to approach this issue in a quantitative way.
     Because interactions on Twitter are explicit through use of the @ symbol to identify addressees, it is possible to easily construct robust social networks.
     With such networks constructed, modern community detection algorithms and centrality measures are also simple to implement.
     This allows for identifying exactly where a person is within a community when contrasting their language use with others, and thus opportunities to better understand agency in language variation arise.
@@ -66,8 +66,11 @@
     \end{itemize}
   \section{Method}
     % Data collection
-    Data for this study will come from the same corpus constructed for \textcite{mcneill_lol_2018}.
-    This corpus included tweets originating from Twitter servers in the Maritime Provinces of Canada between January 11th and February 7th, 2017 and included 307,878 directed tweets containing upwards of 4,000 tokens of (lol).\footnote{In this case, (lol) was a lexical variable and so included variants such as \lexi{rofl} and even \lexi{mdr} from French \lexi{mort de rire}, so the exact number of orthographic variants of \lexi{lol} alone is not given.}
+    Data for this study comes from the same corpus constructed for \textcite{mcneill_lol_2018}.
+    This corpus includes tweets originating from Twitter servers in the Maritime Provinces of Canada between January 11th and February 7th, 2017 and includes 307,878 directed tweets.
+    These tweets were used 
+     containing upwards of 4,000 tokens of (lol).
+    In this case, (lol) was a lexical variable and so included variants such as \lexi{rofl} and even \lexi{mdr} from French \lexi{mort de rire}, so the exact number of orthographic variants of \lexi{lol} alone is not given.
     % Data coding
     Tokens are already coded for community, using \citeauthor{newman_finding_2004}'s (\citeyear{newman_finding_2004}) algorithm for detecting communities, and various centrality measures, notably PageRank \parencite{brin_anatomy_1998}, as well as orthographic variant.
     % Descriptive statistics
