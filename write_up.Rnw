@@ -2,12 +2,13 @@
   % Packages and settings
   \usepackage{fontspec}
     \setmainfont{Charis SIL}
-  \usepackage[margin=1.0in]{geometry}
+  % \usepackage[margin=1.0in]{geometry}
   \usepackage[style=apa, backend=biber]{biblatex}
     \addbibresource{References.bib}
+  \usepackage{hyperref}
 
   % Document information
-  \title{Centrality and Variability of (lol)}
+  \title{Marginality and orthographic variation in (lol)}
   \author{Joshua McNeill}
   \date{\today}
 
@@ -19,56 +20,145 @@
 \begin{document}
   \maketitle
   \section{Introduction}
-    % Twitter
-    Twitter is a micro-blogging online platform that provides sociolinguists with numerous advantages for studying variation.
-    Users of Twitter post short messages up to 280 characters in length that can optionally be directed at a specific user or users using the @ symbol followed by target's username.
-    Whether directed or not, the default setting is for all tweets to be publicly accessible even to people who do not have Twitter accounts.
-    This fact is regularly understood by users, and so creating corpora from tweets does not pose as many ethical dilemmas as does creating corpora from other similar online platforms where communication is expected to be generally private, such as Facebook.
+  \label{sec:intro}
+    In earlier studies of langauge variation, speakers who were peripheral to their communities in some way were often disregarded.
+    Indeed, \textcite{labov_social_2006} explicitly disregarded two African-American speakers in his study of the Lower East Side in New York as they had moved to the area from Virginia when they were 10 years old (p.~118).
+    This practice was directly critiqued in \citeauthor{horvath_delimiting_1987}'s (\citeyear{horvath_delimiting_1987}) study of Sydney, Australia where they suggested that excluding new arrivals and marginal members of a community might also lead to throwing out important data for better understanding language change (p.~201).
+    Their proposed solution was what they called the linguistic grouping approach to studying language variation, wherein a researcher would first use a clustering algorithm to group speakers according to sharing similar linguistic features and then search for the social categories that those in the resulting groups might have in common, whereas variationist studies typically proceed in the opposite way.
 
-    % Orthographic variation
-    The generally casual nature of Twitter in comparison with other forms of written communication also provides a space where it is appropriate for users to eschew orthographic conventions that would be tightly controlled in other contexts, either through subtle social controls as in writing letters, for instance, or through much more explicit controls as in being graded on an essay in an English class.
-    Indeed, several studies have shown that flouting orthographic conventions is quite common on Twitter.
-    \textcite{tatman_im_2016} and \textcite{eisenstein_identifying_2014} both used orthographic forms on Twitter to examine to what extent users stylize their writing to approximate what they might see as the indiosyncratic features of their spoken pronunciations.
-    Similarly, \textcite{ilbury_sassy_2020} recently examined how persona are created on Twitter through the use of orthographic variation.
-    While Ilbury treats orthographic variation as its own system independent of speech, to date, there appears to have been no attempts to take a quantitative variationist approach to analyzing written forms on Twitter.
+    More recently, sociolinguists have become much more interested in agentivity and hence marginal community members.
+    When certain speakers are excluded from analysis for being recent arrivals, it now has more to do with the type of variation being analyzed, particularly when that variation is phonological.
+    For instance, despite her clear interest in agentivity and analysis of four marginal community members in her study of Belten High, \textcite{eckert_linguistic_2000} herself excludes those who moved to the community after 8 years of age (p.~82).
+    However, Eckert was interested in phonological variation, and by that time, there was good evidence to suggest that most speakers do not adjust their phonologies after that age\footnote{Discussed in more detail below}.
 
+    The objective of this study, then, is to look again at peripheral community members and how they behave, whether they be brand new members of a given community or long-term members who are nonetheless still peripheral.
+    Specifically, I aim to look use social network analysis to detect communities on the social media platform Twitter and analyze orthographic variation in these Twitter users' use of \orth{lol} as a function of their centralities in said communities.
+
+    \subsection{Second Dialect Acquisition}
+    \label{sec:dialect_acquisition}
+      Examining the linguistic behavior of new arrivals to a community has been an area of study in sociolinguistics at least since \citeauthor{payne_factors_1980}'s (\citeyear{payne_factors_1980}) study of speakers in King of Prussia, a town near Philadelphia, Pennsylvania.
+      Payne looked specifically at variation in vowels in her study, using age of arrival in King of Prussia as a extra-linguistic variable.
+      In general, she found that 60\% to 70\% of the children who moved to the area before the age of 4 learned the local vowel system in its totality, whereas this percentage dropped to 40\% to 67\% for those who moved between the ages of 5 and 9 and 0\% to 67\% for those who moved between the ages of 10 and 14 \parencite[p.~155]{payne_factors_1980}.
+      Payne's results have since been used as evidence that, at least for phonological variables, linguistic systems are relatively stable after age 8 so that moving into a new community where a different system is dominant will not lead to the adoption of this new different system.
+      Whether this stability is a result of the literal impossibility of fully learning a new sound system or whether sound systems too strongly represent a speaker's identity by adolescence for them to give them up was not addressed in this early study, however.
+
+      Over time, research into phenomena such as what Payne examined has come to be known as second dialect acquisition.
+      More recently, second dialect acquisition features particularly prominently in the work of Nycz, but a number of others have also touched on this topic \parencite[see][for a review]{nycz_second_2015}.
+      However, acquisition is not necessarily the topic that is being addressed in the current study.
+      Acquisition implies that a speaker is learning to use a new linguistic form to which they do not already have access in their mental grammar or perhaps to which they have never even been exposed.
+      The focus on dialects in this area of research, understood to be geographically defined varieties, additionally brings geography to the forefront as a conditioning factor, somewhat sidelining other social factors such as class, race, or gender.
+      It appears then that the very name second dialect acquisition suggests particular research interests which are not central to my aims with this study, though they are still important.
+
+      The aim here is to explore what peripheral members to a community do more generally.
+      Peripherality certainly can be the result of geographic relocation but need not be.
+      In practice, speech communities \parencite[e.g.,][]{labov_social_2006} are geographically defined, but communities can also be defined in other ways.
+      For instance, and taken up in more detail below, communities of practice as used in \textcite{eckert_linguistic_2000} and \textcite{bucholtz_why_1999} situate communities primarily around shared activities.
+      Partaking in extra-curricular school activities, in Eckert's study for instance, or playing the numbers game \parencite[p.~216]{poplack_sometimes_2000} might draw people together to form a community where perhaps geographical proximity alone would not.
+
+      Likewise, in studies of phonological variation, acquisition may be a key concept even when there is already a familiarity with the sound system a speaker aims to adopt, as the rules of the system may be opaque, and the physiological motions used to achieve certain sounds may require practice.
+      Morphosyntactic variables also suggest the need to learn nuanced rules in order to truly adopt a different system.
+      Many speakers, for instance, are familiar with habitual \lexi{be} but not use it.
+      If such a speaker wished to begin using it, they would have to learn that it expresses the habitual aspect as opposed to being simply invariance of inflections for the copula, something that is not immediately obvious through observation alone.
+      Indeed, \textcite{eberhardt_first_2015} claimed that habitual \lexi{be} is ``one of the most frequently used but least understood features of AAE [African-American English] by outsiders,'' hence the fact that they found it ``striking'' that non-African-American singer Iggy Azalea uses this feature very accurately (p.~311).
+
+      There are linguistic levels in which acquisition is arguably much simpler and so acquisition, while not absent, is not the central concern.
+      For instance, observation alone can teach a speaker all they need to know about the meaning of perhaps most lexical items, at least for those that are not function words.
+      I know of no argument for the stability of mental lexicons after age 8 such as is often argued for phonological systems, and the ease of acquisition is a possible explanation.
+      Similarly, new spellings for known words, the focus of this study, can arguably be acquired easily through observation alone granted that one is literate to begin with.
+      One could imagine speakers who are intimately familiar with spellings that they have never once in their lives used but could use at any time if they so chose, such as \orth{u} for \orth{you}.
+      This relative unimportance of acquisition in the sort of variation I am analyzing here is part of what leads me to distinguish this study from previous related work in second dialect acquisition.
+
+    \subsection{Twitter}
+    \label{sec:twitter}
+      Twitter is a micro-blogging social media platform that provides sociolinguists with numerous interesting opportunities for studying language variation.
+      Users of Twitter post short messages, tweets, up to 280 characters in length that can optionally be directed at a specific user or users using the @ symbol followed by target's username.
+      Whether directed or not, the default setting is for all tweets to be publicly accessible even to people who do not have Twitter accounts.
+      This fact is regularly understood by users, and so creating corpora from tweets does not pose as many ethical dilemmas\footnote{
+        This should not be read as there being no ethical dilemmas involved in creating such corpora.
+        The standards used for this study will be discussed in section \ref{sec:methods} \nameref{Methods}.
+      }
+      as does creating corpora from other similar online platforms where communication is expected to be generally private, such as Facebook.
+
+      Because of the text-based nature of Twitter and the ease of capturing large swaths of conversation without conducting a single interview, sociolinguistic studies based on this platform have tended to involve very large corpora and to be highly quantitative.
+      For instance, in their study of gender identity and lexical variation, \textcite{bamman_gender_2014} constructed a corpus over a six month period that included 14,464 Twitter users and 9,212,118 tweets (p.~140).
+      Comparing this to \citeauthor{labov_social_2006}'s (\citeyear{labov_social_2006}) suggestion in 2006 that a sample of 60 to 100 speakers is relatively large and is enough to analyze stratification in a single city (p.~401), having thousands of speakers and millions of utterances is a large leap in size.
+
+      It is also notable that \textcite{bamman_gender_2014} were interested in lexical variation, whereas perhaps most variationists focus in on phonetics and phonology.
+      There is a clear practical reason for analyzing sound systems, of course: this allows a researcher to maximize the tokens they collect and minimize the amount of recordings that must be done to obtain those tokens.
+      Focusing on lexical items is much more difficult outside of perhaps function words but not when corpora with millions of utterances are collected.
+      \textcite{eisenstein_identifying_2014}, for example, also looked at lexical variation of regional lexical items on Twitter, such as \lexi{jawn} which originated in Philadelphia, Pennsylvania.
+      Similarly, \textcite{pavalanathan_audience-modulated_2015} were able to test \citeauthor{bell_language_1984}'s (\citeyear{bell_language_1984}) theory of audience design in how users of Twitter style shifted their lexical items according to the intended audience, either more generic vocabulary for broad audiences or more regional vocabulary for narrower, more local audiences ().
+      This latter study also provides an example of another distinction between variationist studies of Twitter and traditional interview-based studies: the number of linguistic variables analyzed.
+      \textcite{pavalanathan_audience-modulated_2015} looked at over 200 variables whereas a traditional variationist study may include only one to perhaps nine linguistic variables.
+      This scale of analysis is also present in the aforementioned Twitter-based studies.
+      % Kim et al.?
+
+    \subsection{Orthographic Variation}
+    \label{sec:ortho_variation}
+      The generally casual nature of Twitter in comparison with other forms of written communication also provides a space where it is appropriate for users to eschew orthographic conventions that would be tightly controlled in other contexts, either through subtle social controls as in writing letters, for instance, or through much more explicit controls as in being graded on an essay in an English class.
+      Indeed, several studies have shown that flouting orthographic conventions is quite common on Twitter.
+      \textcite{tatman_im_2016} and \textcite{eisenstein_systematic_2015} both used orthographic forms on Twitter to examine to what extent users shape their writing to approximate what they might see as the indiosyncratic features of their spoken pronunciations.
+      Similarly, \textcite{ilbury_sassy_2020} recently examined how persona are created on Twitter through the use of orthographic variation.
+      While Ilbury treats orthographic variation as its own system independent of speech, to date, there appears to have been no attempts to take a quantitative variationist approach to analyzing written forms on Twitter.
+
+    \subsection{Social Network Analysis}
+    \label{sec:sna}
     % Social network analysis
     Another advantage of using Twitter for variationist research is that it provides ample opportunity to employ robust social network analysis techniques without many of the difficulties that normally come with sketching out ties between people.
     In social network analysis, researchers map out which people in their studies are connected to which people, ultimately generating a sort of web of connections that provides an opportunity to perform quantitative analyses that are not as easily performed when identifying communities and relationships in less concrete terms.
 
-      % Place in sociolinguistics
-    Social network analysis -- not to be confused with \lexi{social network} as used to describe platforms like Twitter -- has been used in variationist research since \textcite{milroy_linguistic_1985} used it to study Belfast.
-    However, because of the difficulty in reliably establishing ties between people, methods for employing such analyses have remained mostly lackluster and have not kept up with methodological developments that have occurred in sociology, though there are notable exceptions more recently such as \textcite{dodsworth_social_2017}.
+    % Place in sociolinguistics
+    Social network analysis -- not to be confused with terms like \lexi{social network} or \lexi{social media} as used to describe platforms like Twitter -- has been used in variationist research since \textcite{milroy_language_1987} used it to study Belfast.
+    Her motivation for employing social network analysis was the inadequacy of the then current variationist methods for explaining why two people who can be placed into all the same broad social categories still end up speaking differently, as did Hannah and Paula, two co-workers that she describes in her study \parencite[pp.~131-134]{milroy_language_1987}.
+    Indeed, social network was able to explain such anomalies by analyzing how integrated speakers were into different social networks in Belfast, suggesting that one's interactions may be more important than social characteristics that can be ascribed to them.
 
-      % Centrality
-      % Community detection
-    Two key aspects of social network analysis are community detection and measuring centrality.
-    Community detection is the process of using algorithms to delineate communities within a social network.
-    In this case, a community is conceptualized as no more than a cluster of individuals who interact more with each other than with others in the network.
-    The reasons for those more frequent interactions are then left to social theory to explain.
-    Centrality is a measure of how integrated an individual is within such a community.
-    Numerous approaches to measuring centrality exist, and indeed \textcite{milroy_linguistic_1985} development her own index for this, which has perhaps been the most consistent feature of social network analysis as used in sociolinguistics.
+    However, because of the difficulty in reliably establishing ties between people, methods for employing such analyses have remained mostly fairly simple and have not kept up with methodological developments that have occurred in sociology, though there are notable exceptions more recently such as \textcite{dodsworth_social_2017}.
+    \textcite{milroy_language_1987} herself did not actually sketch out a network but instead assumed that different neighborhoods in Belfast each constituted separate networks.
+    She then created an index from that ranged from zero to five to quantify speakers' integration into those networks where such factors as working with people from the same neighborhood or having kin in the neighborhood would increase one's score \parencite[pp.~139-142]{milroy_language_1987}.
+    Similar indices have been used since in studies such as \citeauthor{li_two-step_2000}'s (\citeyear{li_two-step_2000}) study of Chinese immigrants in Tyneside, England and \citeauthor{sharma_style_2011}'s (\citeyear{sharma_style_2011}) study of Indians in London.
 
-    % Individuals positioned in a community
-    A more recent concern for sociolinguists has been analyzing language variation with special attention to individual agency, which is at least implicit in \citeauthor{eckert_three_2012}'s (\citeyear{eckert_three_2012}) view of the ``third wave'' of sociolinguistics in which we currently find ourselves.
-    Twitter and social network analysis give researchers tools to approach this issue in a quantitative way.
-    Because interactions on Twitter are explicit through use of the @ symbol to identify addressees, it is possible to easily construct robust social networks.
-    With such networks constructed, modern community detection algorithms and centrality measures are also simple to implement.
-    This allows for identifying exactly where a person is within a community when contrasting their language use with others, and thus opportunities to better understand agency in language variation arise.
+    \paragraph{Community Detection}
+    \label{par:community_detect}
+      One important area of development in modern social network analysis techniques that has been missing from sociolinguistics is community detection.
+      Community detection is the process of using algorithms to delineate communities within a social network.
+      In this case, a community is conceptualized as a cluster of individuals who mostly all interact with each other.
+      For instance, if a network consists of Joe, Kelly, Bob, and Ted, and Joe, Kelly, and Bob all know each other but the only one that knows Ted is Bob, then Joe, Kelly, and Bob likely form community of which Bob is not a part.
+      Each of these connections is called a tie, but what may constitute a tie or how to quantify the strength of a tie is decided by the researcher.
 
-    Indeed, just such an approach was used in \textcite{mcneill_lol_2018}.
-    In that study, the goal was to analyze lexical variation and language contact as opposed to orthographic variation, however.
-    In terms of community detection, it showed that \citeauthor{newman_finding_2004}'s (\citeyear{newman_finding_2004}) approach yielded meaningful results for analyzing language, but a lack of any users who produced a large number of tokens made it impossible to conclude anything about how a user's centrality in a community and their linguistic choices.
-    As such, this study aims to look at a broader swath of data by ignoring the issue of language contact and focusing on orthographic variation in the spelling of the adjunct \lexi{lol} \gloss{laugh out loud}.
-    Specifically, I ask the following question:
-    \begin{itemize}
-      \item Do individuals use fewer orthographic variants of (lol) as their centrality in a given community goes up?
-    \end{itemize}
-  \section{Method}
+      At the core of any tie, though, is the idea that two people who are tied together interact with each other on some level so that ultimately any community in a social network is based on mutual interactions.
+      This conceptualization of what a community is, a group of people who interact with each other, accords with conceptions of communities such as communities of practice.
+      To share an activity together is inextricably about interacting with one another.
+      For this reason, \textcite{schenkel_theorizing_2002} argued that social network analysis can be used to quantify the characteristics of communities of practice as the latter are more often identified through qualitative means.
+
+      A community conceptualized as a group of people who interact with each other does not necessarily accord with other conceptualizations of communities.
+      For instance, speech communities are geographically chosen and then linguistically validated.
+      There is no need to establish that the members of such communities interact with each other because interaction is not to be found in the traditional definition.
+      Labov's participants in the Lower East Side simply need to live in the same geographic area and share speech patterns and speech evaluations to be part of the same speech community.
+      Whether they all actually interact with each other is immaterial.
+      This is not to say that there communities of practice or communities as defined in social network analysis are better or more valid than speech communities, but each conceptualization lends itself better to answer different sorts of questions.
+
+    \paragraph{Centrality Measures}
+      A more recent concern for sociolinguists has been analyzing language variation with special attention to individual agency, which is at least implicit in \citeauthor{eckert_three_2012}'s (\citeyear{eckert_three_2012}) view of the ``third wave'' of sociolinguistics in which we currently find ourselves.
+      Twitter and social network analysis give researchers tools to approach this issue in a quantitative way.
+      Because interactions on Twitter are explicit through use of the @ symbol to identify addressees, it is possible to easily construct robust social networks.
+      With such networks constructed, modern community detection algorithms and centrality measures are also simple to implement.
+      This allows for identifying exactly where a person is within a community when contrasting their language use with others, and thus opportunities to better understand agency in language variation arise.
+
+      Indeed, just such an approach was used in \textcite{mcneill_lol_2018}.
+      In that study, the goal was to analyze lexical variation and language contact as opposed to orthographic variation, however.
+      In terms of community detection, it showed that \citeauthor{newman_finding_2004}'s (\citeyear{newman_finding_2004}) approach yielded meaningful results for analyzing language, but a lack of any users who produced a large number of tokens made it impossible to conclude anything about how a user's centrality in a community and their linguistic choices.
+      As such, this study aims to look at a broader swath of data by ignoring the issue of language contact and focusing on orthographic variation in the spelling of the adjunct \lexi{lol} \gloss{laugh out loud}.
+      Specifically, I ask the following question:
+      \begin{itemize}
+        \item Do individuals use fewer orthographic variants of (lol) as their centrality in a given community goes up?
+      \end{itemize}
+      
+  \section{Methods}
+  \label{sec:methods}
     % Data collection
     Data for this study comes from the same corpus constructed for \textcite{mcneill_lol_2018}.
     This corpus includes tweets originating from Twitter servers in the Maritime Provinces of Canada between January 11th and February 7th, 2017 and includes 307,878 directed tweets.
-    These tweets were used 
+    These tweets were used
      containing upwards of 4,000 tokens of (lol).
     In this case, (lol) was a lexical variable and so included variants such as \lexi{rofl} and even \lexi{mdr} from French \lexi{mort de rire}, so the exact number of orthographic variants of \lexi{lol} alone is not given.
     % Data coding
@@ -78,4 +168,10 @@
     % Significance tests
     As both centrality measures and the Simpson diversity index yield continuous values, the statistical significance of centrality can be tested by testing the significance of the resulting correlation.
     In the case of a non-linear relationship, the data will either be transformed or a similar significance test for monotonic relationships will be used.
+  \section{Results}
+  \label{sec:results}
+  \section{Discussion}
+  \label{sec:discussion}
+    % Assume this is akin to *adult* second dialect acquisition
+    \printbibliography
 \end{document}
