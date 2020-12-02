@@ -59,3 +59,6 @@ graphDivByCent("lol", "PageRank")
 ## ---- divByPR_above_med_degree ----
 lolHighDegree <- lol[lol$degre >= quantile(lol$degre)[3],]
 graphDivByCent("lolHighDegree", "PageRank")
+
+## ---- get_modes ----
+data.frame(table(lol$lol))[which.max(data.frame(table(lol$lol))[,2]),1]

@@ -6,6 +6,7 @@
   \usepackage[style=apa, backend=biber]{biblatex}
     \addbibresource{References.bib}
   \usepackage{hyperref}
+  \usepackage[group-minimum-digits=4, group-separator={,}]{siunitx}
 
   % Document information
   \title{Marginality and orthographic variation in (lol)}
@@ -18,6 +19,17 @@
   \newcommand{\gloss}[1]{`#1'}
 
 \begin{document}
+  <<settings_load_scripts, echo = FALSE>>=
+  read_chunk("analysis.R")
+  opts_chunk$set(echo = FALSE,
+                 warning = FALSE,
+                 message = FALSE,
+                 results = "asis",
+                 fig.height = 3,
+                 fig.width = 3.5)
+  @
+  <<load_data_packages_functions>>=
+  @
   \maketitle
   \section{Introduction}
   \label{sec:intro}
@@ -138,38 +150,99 @@
       This is not to say that there communities of practice or communities as defined in social network analysis are better or more valid than speech communities, but each conceptualization lends itself better to answer different sorts of questions.
 
     \paragraph{Centrality Measures}
-      A more recent concern for sociolinguists has been analyzing language variation with special attention to individual agency, which is at least implicit in \citeauthor{eckert_three_2012}'s (\citeyear{eckert_three_2012}) view of the ``third wave'' of sociolinguistics in which we currently find ourselves.
-      Twitter and social network analysis give researchers tools to approach this issue in a quantitative way.
-      Because interactions on Twitter are explicit through use of the @ symbol to identify addressees, it is possible to easily construct robust social networks.
-      With such networks constructed, modern community detection algorithms and centrality measures are also simple to implement.
-      This allows for identifying exactly where a person is within a community when contrasting their language use with others, and thus opportunities to better understand agency in language variation arise.
+      A more recent concern for sociolinguists has been analyzing language variation with special attention to individual agency, which is at least implicit in \citeauthor{eckert_three_2012}'s (\citeyear{eckert_three_2012}) view of the ``third wave'' of sociolinguistics.
+      Social network analysis give researchers tools to approach this issue in a quantitative way through the use of centrality measures.
+      In this case, centrality refers to how integrated a person is into a given community.
 
-      Indeed, just such an approach was used in \textcite{mcneill_lol_2018}.
-      In that study, the goal was to analyze lexical variation and language contact as opposed to orthographic variation, however.
-      In terms of community detection, it showed that \citeauthor{newman_finding_2004}'s (\citeyear{newman_finding_2004}) approach yielded meaningful results for analyzing language, but a lack of any users who produced a large number of tokens made it impossible to conclude anything about how a user's centrality in a community and their linguistic choices.
-      As such, this study aims to look at a broader swath of data by ignoring the issue of language contact and focusing on orthographic variation in the spelling of the adjunct \lexi{lol} \gloss{laugh out loud}.
+      There are many different centrality measures, and in fact Milroy's index and the similar indices used by subsequent researchers are all effectively centrality measures.
+      What all centrality measures have in common is quantifying the number of people in a community with whom a given person interacts and quantifying the frequency or importance of those interactions.
+      A very basic way to measure this is with what is by measuring a person's degree in the community, which is just the sum of their ties in the community.
+      For instance, going back to the hypothetical network made up of Joe, Kelly, Bob, and Ted, Ted would have a degree of one since his only tie links him to Bob, whereas Joe and Kelly would have degrees of two because they interact with each other and Bob, and finally Bob would have a degree of three because he interacts with all the other people in the network.
+      If we were just interested in a person's degree within the community, however, Ted would have a degree of zero since he is not part of the community, and the others would each have a degree of two.
+
+      The above describes a simple case not only because of the small size of the network but also because ties can be directional and there can be multiple ties between the same two people.
+      Because interactions on Twitter are made explicit through use of the @ symbol to identify addressees, and because this adds directionality and the potential for counting multiple ties (i.e., interactions) between two users, it is possible to easily construct robust social networks from data collected from the platform, implement performant community detection algorithms, and use more nuanced centrality measures.
+
+      Just such a community detection algorithm and centrality measures were used in \textcite{mcneill_lol_2018}, the study that pre-empted the present work.
+      Although this previous study was focused on analyzing lexical variation and language contact as opposed to orthographic variation, the object of analysis included \lexi{lol} as a lexical item, and the communities detected and the centrality measures used are still perfectly valid for further analyses.
+      The findings in \textcite{mcneill_lol_2018} suggest \citeauthor{newman_finding_2004}'s (\citeyear{newman_finding_2004}) approach to communities yields meaningful results for analyzing language in that the community one belongs to is a predictor of the lexical variant one will use for (lol), even in what would be considered bilingual conversation.
+      However, a lack of any users who produced a large number of lexical tokens made it impossible to conclude anything about the relationship between a user's centrality in a community and their linguistic behavior.
+      As such, this study aims to look at a broader swath of data by ignoring the issue of language contact and focusing on orthographic variation in the spelling of \lexi{lol} \gloss{laugh out loud}.
       Specifically, I ask the following question:
       \begin{itemize}
-        \item Do individuals use fewer orthographic variants of (lol) as their centrality in a given community goes up?
+        \item Do individuals use more or fewer orthographic variants of (lol) as their centrality in a given community goes up?
       \end{itemize}
-      
+
   \section{Methods}
   \label{sec:methods}
-    % Data collection
-    Data for this study comes from the same corpus constructed for \textcite{mcneill_lol_2018}.
-    This corpus includes tweets originating from Twitter servers in the Maritime Provinces of Canada between January 11th and February 7th, 2017 and includes 307,878 directed tweets.
-    These tweets were used
-     containing upwards of 4,000 tokens of (lol).
-    In this case, (lol) was a lexical variable and so included variants such as \lexi{rofl} and even \lexi{mdr} from French \lexi{mort de rire}, so the exact number of orthographic variants of \lexi{lol} alone is not given.
-    % Data coding
-    Tokens are already coded for community, using \citeauthor{newman_finding_2004}'s (\citeyear{newman_finding_2004}) algorithm for detecting communities, and various centrality measures, notably PageRank \parencite{brin_anatomy_1998}, as well as orthographic variant.
-    % Descriptive statistics
-    The Simpson diversity index will be used as a measure of how stable the variability of one's spelling of (lol) is where greater stability is understood as roughly meaning that fewer variants were used and one clear mode was used.
-    % Significance tests
-    As both centrality measures and the Simpson diversity index yield continuous values, the statistical significance of centrality can be tested by testing the significance of the resulting correlation.
-    In the case of a non-linear relationship, the data will either be transformed or a similar significance test for monotonic relationships will be used.
+    \subsection{Data Collection}
+    \label{sec:data_collect}
+      Data for this study comes from the same corpus constructed for \textcite{mcneill_lol_2018}.
+      This corpus includes tweets originating from Twitter servers in the Maritime Provinces of Canada between January 11th and February 7th, 2017 and includes 307,878 directed tweets.
+      All tweets were used when applying \citeauthor{newman_finding_2004}'s (\citeyear{newman_finding_2004}) community detection algorithm, even those that would not ultimately be analyzed.
+      This initially yielded 8,945 communities, but as the goal at the time involved looking at those who might be considered French speakers specifically, only communities which contained tweets with French in them were analyzed, resulting in \Sexpr{length(levels(factor(tweets$communaute)))} communities, each with a three- or four-digit ID.
+
+      These \Sexpr{length(levels(factor(tweets$communaute)))} communities contained \num{\Sexpr{nrow(tweets)}} tokens of (lol).
+      In this case, these were tokens of (lol) as a lexical variable and so included variants such as \lexi{rofl} \gloss{roll on the floor laughing} and even \lexi{mdr} from French \lexi{mort de rire}, the rough equivalent of \lexi{lol}.
+      In other words, lexical items that are not of interest in the current study were included and spelling variants of \orth{lol} such as \orth{LOL} or \orth{lolol} were collapsed into tokens of one lexical item: \lexi{lol}.
+      Fortunately, the original spellings were stored in the corpus, and by far the most common lexical item was \lexi{lol}, so filtering out unwanted lexical items resulting in a corpus with \num{\Sexpr{nrow(lol)}} tokens of the orthographic variable (lol), which includes \Sexpr{length(levels(factor(lol$lol)))} spelling variants.
+
+    \subsection{Data Coding}
+    \label{sec:data_coding}
+      As mentioned above, all 307,878 directed tweets were used for detecting communities.
+      The implementation of \citeauthor{newman_finding_2004}'s (\citeyear{newman_finding_2004}) algorithm provided in the software package Gephi \parencite{bastian_gephi:_2009} was used for this task.
+      Newman and Girvan's algorithm aims to maximize modularity in a network, which is the quality of a given division of the network.
+      Essentially, the algorithm attempts to divide the network into different potential arrangements of communities and calculates the modularity for each.
+      It ultimately chooses the arrangement that returns the highest modularity value.
+      Every token was thus coded for the community of the user who sent the tweet given the results of the community detection algorithm.
+
+      Each token was also coded for various centrality measures, all of which were calculated in Gephi.
+      Many basic measures were included, such as the degree of each user, and also some slightly more complex measures, such as the in-degree and out-degree, which are the degrees for just incoming and just outgoing tweets respectively.
+      The centrality measure focused on here, though, is PageRank \parencite{brin_anatomy_1998}.
+
+      PageRank was originally developed for ordering search engine results and ultimately led to the creation of Google.
+      Page $A$'s PageRank $PR$, or in this case person $A$'s $PR$, is calculated as follows:
+      \begin{equation}
+        \label{eq:pagerank}
+        PR \left( A \right) = \left( 1 - d \right) + d \left( \frac{PR \left( T1 \right)}{C \left( T1 \right)} + ... + \frac{PR \left( Tn \right)}{C \left( Tn \right)} \right)
+      \end{equation}
+      Here, $d$ is a damping factor between zero and one, $Tn$ is a page that links to page $A$, and $C(Tn)$ is the total pages linked to by page $Tn$.
+      This effectively makes PageRank a function of the number of pages that link to the page of interest as well as the PageRanks of those pages.
+      As a result, a user who directs many tweets to other members of their community but who receives very few tweets from other members will not have a particularly high PageRank.
+      The intuition is that it is not difficult to talk a lot, but it is difficult to get people to care enough about what a person thinks to bother talking to that person.
+
+      Finally, several other factors were coded for each token that are not of direct importance in the present study.
+      For instance, geographic location was coded based on that which was entered in the profile of each user.
+      This information is optional and manually entered by users, meaning it is not always reliable.
+      It was also found to be less important statistically and subsumed by community in \textcite{mcneill_lol_2018} in that those who were from the same area were likely to be part of the same Twitter community.
+      Additionally, the language of the text surrounding each token was coded, as well as the device tweeted from (e.g., mobile or web), and the number of follow and followers of the user.
+
+    \subsection{Statistical Analyses}
+    \label{sec:statistics}
+      % Descriptive stats
+      As the data analyzed in this study is all categorical, the descriptive statistics used are fairly basic with a notable exception.
+      The measure of central tendency for (lol) is the mode.
+      This can be calculated for individuals as well as for communities as wholes for comparison.
+      What is key, however, is having a way to quantify the dispersion of variants of (lol) for either an individual or a community as my research question is specifically interested in how stable one's variation in spelling becomes or does not become relative to their centrality in a community.
+      The Simpson diversity index \parencite{simpson_measurement_1949} is thus used as a measure of this stability, which is rarely found in variationist studies (see \citeauthor{greenberg_measurement_1956} \citeyear{greenberg_measurement_1956} and \citeauthor{sharma_style_2011} \citeyear{sharma_style_2011} for noteworthy examples).
+
+      The Simpson diversity index $D$ is common in ecological studies, and it is calculated as follows:
+      \begin{equation}
+        \label{eq:simpson}
+        D = 1 - \sum_{i=1}^R{p_{i}^2}
+      \end{equation}
+      Here, $p$ is the relative frequency of a variant $i$ of the variable in question.
+      Essentially, the few variants included and the greater the frequency of the mode relative to the other variants, the lower $D$ will be.
+      One can imagine a uniform distribution as having a very high $D$ and a strongly unimodal distribution having a very low $D$.
+
+      % Significance tests
+      As both centrality measures and the Simpson diversity index yield continuous values, they can be plotted against each other to search for a correlation or monotonic relationship.
+      This is done for both the entirety of individuals included as well as for those whose degrees were at or above the median degree for the community.
+      The latter is done to account for the possibility of many users with very low diversities of (lol) only having low diversities because they only produced very few tokens of (lol), perhaps as few as one token.
+      Where appropriate, a test for statistical significance of a correlation is used.
   \section{Results}
   \label{sec:results}
+    
   \section{Discussion}
   \label{sec:discussion}
     % Assume this is akin to *adult* second dialect acquisition
