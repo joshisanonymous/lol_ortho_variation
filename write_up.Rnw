@@ -254,7 +254,7 @@
       \caption{Summary statistics for each community}
       \label{tab:summary_communities}
       \begin{tabular}{l l r r}
-        Community                        & Mode                             & Diversity                                  & Members who use (lol) \rule{0pt}{14pt} \\
+        Community                        & Mode                             & Diversity                                  & Members who used (lol) \rule{0pt}{14pt} \\
         \hline
         \Sexpr{communitiesSummary[1, 1]} & \Sexpr{communitiesSummary[1, 2]} & \Sexpr{round(communitiesSummary[1, 3], 2)} & \Sexpr{communitiesSummary[1, 5]} \\
         \Sexpr{communitiesSummary[2, 1]} & \Sexpr{communitiesSummary[2, 2]} & \Sexpr{round(communitiesSummary[2, 3], 2)} & \Sexpr{communitiesSummary[2, 5]} \\
