@@ -75,23 +75,54 @@ communitiesSummary <- merge(communitiesModesDivs, communitiesSize, by = 1)
 rm(list = c("communitiesModes", "communitiesDivs", "communitiesSize", "communitiesModesDivs"))
 colnames(communitiesSummary) <- c("Community", "Mode", "Diversity", "Users", "Size")
 
-# Create a data frame summarizing community 2265
-lolCommunity2265 <- lol[lol$communaute == 2265,]
-lol2265Modes <- aggregate(lolCommunity2265$lol, list(lolCommunity2265$utilisateur), getMode)
-lol2265DivByCent <- getDivByCent("lolCommunity2265", "utilisateur", "lol", "PageRank")
-lol2265Summary <- merge(lol2265Modes, lol2265DivByCent, by = 1)
-lol2265Summary$Tokens <- table(lolCommunity2265$utilisateur)
-colnames(lol2265Summary) <- c("User", "Mode", "PageRank", "Diversity", "Tokens")
-rm(list = c("lolCommunity2265", "lol2265Modes", "lol2265DivByCent"))
-
 # Create a data frame summarizing each user
 usersCommunities <- aggregate(lol$communaute, list(lol$utilisateur), function(x) head(x, n = 1))
 usersModes <- aggregate(lol$lol, list(lol$utilisateur), getMode)
 usersDivByCent <- getDivByCent("lol", "utilisateur", "lol", "PageRank")
 usersCommsModes <- merge(usersCommunities, usersModes, by = 1)
 usersSummary <- merge(usersCommsModes, usersDivByCent, by = 1)
+usersSummary$Tokens <- table(lol$utilisateur)
 rm(list = c("usersCommunities", "usersModes", "usersDivByCent", "usersCommsModes"))
-colnames(usersSummary) <- c("User", "Community", "Mode", "PageRank", "Diversity")
+colnames(usersSummary) <- c("User", "Community", "Mode", "PageRank", "Diversity", "Tokens")
+
+# Create a data frame summarizing community 2265
+usersSummary2265 <- usersSummary[usersSummary$Community == 2265,]
+
+# Create a data frame summarizing active users, producing at least 10 tokens
+usersSummaryActive <- usersSummary[usersSummary$Tokens >= 10,]
+
+# Subset data frame including only communities that users with the 5 highest and
+# 5 lowest PageRanks belong to
+lolDistComms <- lol[lol$communaute == 2265 |
+                    lol$communaute == 1291 |
+                    lol$communaute == 1032,]
+# Grab only variants of (lol) over 1
+variants <- table(lolDistComms$lol)
+variantsGT <- names(variants[variants > 5])
+variantsLT <- names(variants[variants <= 5])
+lolDistComms <- lolDistComms[lolDistComms$lol == "lol" |
+                             lolDistComms$lol == "Lol" |
+                             lolDistComms$lol == "LOL",]
+
+# Subset data frame including only users with the 5 highest PageRanks
+lolDistUsersHigh <- lol[lol$utilisateur == "Rithanya" |
+                        lol$utilisateur == "Amair" |
+                        lol$utilisateur == "Rheya" |
+                        lol$utilisateur == "Saadiya" |
+                        lol$utilisateur == "Seprina",]
+lolDistUsersHigh <- lolDistUsersHigh[lolDistUsersHigh$lol == "lol" |
+                                     lolDistUsersHigh$lol == "Lol" |
+                                     lolDistUsersHigh$lol == "LOL",]
+
+# Subset data frame including only users with the 5 lowest PageRanks
+lolDistUsersLow <- lol[lol$utilisateur == "Kentoria" |
+                       lol$utilisateur == "Leyann" |
+                       lol$utilisateur == "Weatherly" |
+                       lol$utilisateur == "Yamira" |
+                       lol$utilisateur == "Yogi",]
+lolDistUsersLow <- lolDistUsersLow[lolDistUsersLow$lol == "lol" |
+                                   lolDistUsersLow$lol == "Lol" |
+                                   lolDistUsersLow$lol == "LOL",]
 
 ## Analysis
 ## ---- divByPR_graph ----
@@ -99,3 +130,28 @@ graphDivByCent("lol", "PageRank")
 
 ## ---- divByPR_graph_active ----
 graphDivByCent("lolActive", "PageRank")
+
+
+## ---- lol_dist_comms ----
+ggplot(lolDistComms,
+       aes(x = lol)) +
+  facet_wrap(.~lolDistComms$communaute, ncol = 3) +
+  labs(x = "(lol)", y = "Relative Frequency") +
+  theme_bw() +
+  geom_bar(aes(y = ..count.. / sapply(PANEL, FUN=function(x) sum(count[PANEL == x]))))
+
+## ---- lol_dist_users_high ----
+ggplot(lolDistUsersHigh,
+       aes(x = lol)) +
+  facet_wrap(.~lolDistUsersHigh$utilisateur, ncol = 5) +
+  labs(x = "(lol)", y = "Relative Frequency") +
+  theme_bw() +
+  geom_bar(aes(y = ..count.. / sapply(PANEL, FUN=function(x) sum(count[PANEL == x]))))
+
+## ---- lol_dist_users_low ----
+ggplot(lolDistUsersLow,
+       aes(x = lol)) +
+  facet_wrap(.~lolDistUsersLow$utilisateur, ncol = 5) +
+  labs(x = "(lol)", y = "Relative Frequency") +
+  theme_bw() +
+  geom_bar(aes(y = ..count.. / sapply(PANEL, FUN=function(x) sum(count[PANEL == x]))))

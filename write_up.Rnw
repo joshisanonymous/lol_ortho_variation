@@ -243,32 +243,32 @@
   \section{Results}
   \label{sec:results}
     The summary of the characteristics for each community, shown in Table \ref{tab:summary_communities}, do not reveal much.
-    The mode for every community is \orth{lol} except community \Sexpr{communitiesSummary[12, 1]} with all uppercase \orth{\Sexpr{communitiesSummary[12, 2]}} as the mode.
+    The mode for every community is \orth{lol} except community \Sexpr{communitiesSummary[12, "Community"]} with all uppercase \orth{\Sexpr{communitiesSummary[12, "Mode"]}} as the mode.
     What this does suggest is that even if a user is new to one of these communities, there is a good chance that they came from a community where the orthographic norm for (lol) was also \orth{lol}, just as in most of these communities.
 
-    As for diversity, the only communities to be particularly consistent communities \Sexpr{communitiesSummary[5, 1]} and \Sexpr{communitiesSummary[11, 1]} which each use the \orth{lol} spelling at all times.
-    However, (lol) was rarely used in these two communities as only \Sexpr{communitiesSummary[5, 5]} and \Sexpr{communitiesSummary[11, 5]} members produced (lol) at all in each, respectively.
+    As for diversity, the only communities to be particularly consistent are communities \Sexpr{communitiesSummary[5, "Community"]} and \Sexpr{communitiesSummary[11, "Community"]} which each use the \orth{lol} spelling at all times.
+    However, (lol) was rarely used in these two communities as only \Sexpr{communitiesSummary[5, "Size"]} and \Sexpr{communitiesSummary[11, "Size"]} members produced (lol) at all in each, respectively.
     Overall, there was a median of \Sexpr{round(median(communitiesSummary$Diversity), 2)} for the diversity of variants of (lol) used by the communities.
     \begin{table}[tbhp]
       \centering
       \caption{Summary statistics for each community}
       \label{tab:summary_communities}
       \begin{tabular}{l l r r}
-        Community                        & Mode                             & Diversity                                  & Members who used (lol) \rule{0pt}{14pt} \\
+        Community                                  & Mode                                  & Diversity                                            & Members who used (lol) \rule{0pt}{14pt} \\
         \hline
-        \Sexpr{communitiesSummary[1, 1]} & \Sexpr{communitiesSummary[1, 2]} & \Sexpr{round(communitiesSummary[1, 3], 2)} & \Sexpr{communitiesSummary[1, 5]} \\
-        \Sexpr{communitiesSummary[2, 1]} & \Sexpr{communitiesSummary[2, 2]} & \Sexpr{round(communitiesSummary[2, 3], 2)} & \Sexpr{communitiesSummary[2, 5]} \\
-        \Sexpr{communitiesSummary[3, 1]} & \Sexpr{communitiesSummary[3, 2]} & \Sexpr{round(communitiesSummary[3, 3], 2)} & \Sexpr{communitiesSummary[3, 5]} \\
-        \Sexpr{communitiesSummary[4, 1]} & \Sexpr{communitiesSummary[4, 2]} & \Sexpr{round(communitiesSummary[4, 3], 2)} & \Sexpr{communitiesSummary[4, 5]} \\
-        \Sexpr{communitiesSummary[5, 1]} & \Sexpr{communitiesSummary[5, 2]} & \Sexpr{round(communitiesSummary[5, 3], 2)} & \Sexpr{communitiesSummary[5, 5]} \\
-        \Sexpr{communitiesSummary[6, 1]} & \Sexpr{communitiesSummary[6, 2]} & \Sexpr{round(communitiesSummary[6, 3], 2)} & \Sexpr{communitiesSummary[6, 5]} \\
-        \Sexpr{communitiesSummary[7, 1]} & \Sexpr{communitiesSummary[7, 2]} & \Sexpr{round(communitiesSummary[7, 3], 2)} & \Sexpr{communitiesSummary[7, 5]} \\
-        \Sexpr{communitiesSummary[8, 1]} & \Sexpr{communitiesSummary[8, 2]} & \Sexpr{round(communitiesSummary[8, 3], 2)} & \Sexpr{communitiesSummary[8, 5]} \\
-        \Sexpr{communitiesSummary[9, 1]} & \Sexpr{communitiesSummary[9, 2]} & \Sexpr{round(communitiesSummary[9, 3], 2)} & \Sexpr{communitiesSummary[9, 5]} \\
-        \Sexpr{communitiesSummary[10, 1]} & \Sexpr{communitiesSummary[10, 2]} & \Sexpr{round(communitiesSummary[10, 3], 2)} & \Sexpr{communitiesSummary[10, 5]} \\
-        \Sexpr{communitiesSummary[11, 1]} & \Sexpr{communitiesSummary[11, 2]} & \Sexpr{round(communitiesSummary[11, 3], 2)} & \Sexpr{communitiesSummary[11, 5]} \\
-        \Sexpr{communitiesSummary[12, 1]} & \Sexpr{communitiesSummary[12, 2]} & \Sexpr{round(communitiesSummary[12, 3], 2)} & \Sexpr{communitiesSummary[12, 5]} \\
-        \Sexpr{communitiesSummary[13, 1]} & \Sexpr{communitiesSummary[13, 2]} & \Sexpr{round(communitiesSummary[13, 3], 2)} & \Sexpr{communitiesSummary[13, 5]} \\
+        \Sexpr{communitiesSummary[1, "Community"]} & \Sexpr{communitiesSummary[1, "Mode"]} & \Sexpr{round(communitiesSummary[1, "Diversity"], 2)} & \Sexpr{communitiesSummary[1, "Size"]} \\
+        \Sexpr{communitiesSummary[2, "Community"]} & \Sexpr{communitiesSummary[2, "Mode"]} & \Sexpr{round(communitiesSummary[2, "Diversity"], 2)} & \Sexpr{communitiesSummary[2, "Size"]} \\
+        \Sexpr{communitiesSummary[3, "Community"]} & \Sexpr{communitiesSummary[3, "Mode"]} & \Sexpr{round(communitiesSummary[3, "Diversity"], 2)} & \Sexpr{communitiesSummary[3, "Size"]} \\
+        \Sexpr{communitiesSummary[4, "Community"]} & \Sexpr{communitiesSummary[4, "Mode"]} & \Sexpr{round(communitiesSummary[4, "Diversity"], 2)} & \Sexpr{communitiesSummary[4, "Size"]} \\
+        \Sexpr{communitiesSummary[5, "Community"]} & \Sexpr{communitiesSummary[5, "Mode"]} & \Sexpr{round(communitiesSummary[5, "Diversity"], 2)} & \Sexpr{communitiesSummary[5, "Size"]} \\
+        \Sexpr{communitiesSummary[6, "Community"]} & \Sexpr{communitiesSummary[6, "Mode"]} & \Sexpr{round(communitiesSummary[6, "Diversity"], 2)} & \Sexpr{communitiesSummary[6, "Size"]} \\
+        \Sexpr{communitiesSummary[7, "Community"]} & \Sexpr{communitiesSummary[7, "Mode"]} & \Sexpr{round(communitiesSummary[7, "Diversity"], 2)} & \Sexpr{communitiesSummary[7, "Size"]} \\
+        \Sexpr{communitiesSummary[8, "Community"]} & \Sexpr{communitiesSummary[8, "Mode"]} & \Sexpr{round(communitiesSummary[8, "Diversity"], 2)} & \Sexpr{communitiesSummary[8, "Size"]} \\
+        \Sexpr{communitiesSummary[9, "Community"]} & \Sexpr{communitiesSummary[9, "Mode"]} & \Sexpr{round(communitiesSummary[9, "Diversity"], 2)} & \Sexpr{communitiesSummary[9, "Size"]} \\
+        \Sexpr{communitiesSummary[10, "Community"]} & \Sexpr{communitiesSummary[10, "Mode"]} & \Sexpr{round(communitiesSummary[10, "Diversity"], 2)} & \Sexpr{communitiesSummary[10, "Size"]} \\
+        \Sexpr{communitiesSummary[11, "Community"]} & \Sexpr{communitiesSummary[11, "Mode"]} & \Sexpr{round(communitiesSummary[11, "Diversity"], 2)} & \Sexpr{communitiesSummary[11, "Size"]} \\
+        \Sexpr{communitiesSummary[12, "Community"]} & \Sexpr{communitiesSummary[12, "Mode"]} & \Sexpr{round(communitiesSummary[12, "Diversity"], 2)} & \Sexpr{communitiesSummary[12, "Size"]} \\
+        \Sexpr{communitiesSummary[13, "Community"]} & \Sexpr{communitiesSummary[13, "Mode"]} & \Sexpr{round(communitiesSummary[13, "Diversity"], 2)} & \Sexpr{communitiesSummary[13, "Size"]} \\
       \end{tabular}
     \end{table}
 
@@ -295,28 +295,51 @@
 
     The lack of any clear relationship overall suggests that at least for the spelling of (lol), users are not reacting to the norms of their communities, or possibly there is simply nothing to which they could react given that the mode of each was \orth{lol} except for community 2265, which had \orth{LOL} as its mode instead.
     Table \ref{tab:summary_2265} provides summary statistics for each user in this community.
-    What is immediately apparent is that the mode for this community stems mostly from \Sexpr{lol2265Summary[7, 1]}'s linguistic behavior in that they produced far more tokens of (lol) than anyone else and were also quite consistent in their spelling with a diversity of \Sexpr{round(lol2265Summary[7, 4], 2)}.
-    However, it is difficult to qualify \Sexpr{lol2265Summary[7, 1]}'s place in this community from this data.
-    Their PageRank is \Sexpr{round(lol2265Summary[7, 3], 4)}, higher than all but one other user, but the range of PageRanks is fairly narrow.
-    It is possible that none of the members of this community who produced (lol) were central nor peripheral to the community but were simply typical members.
+    What is immediately apparent is that the mode for this community stems mostly from \Sexpr{usersSummary2265[7, "User"]}'s linguistic behavior in that they produced far more tokens of (lol) than anyone else and were also quite consistent in their spelling with a diversity of \Sexpr{round(usersSummary2265[7, "Diversity"], 2)}.
+    \Sexpr{usersSummary2265[7, "User"]}'s place in this community is fairly central, as well, with a PageRank of \Sexpr{round(usersSummary2265[7, "PageRank"], 4)}, which despite the narrow range of PageRanks, is one of the highest among any user analyzed in this corpus for any community.
     \begin{table}[tbhp]
       \centering
       \caption{Summary statistics for community 2265}
       \label{tab:summary_2265}
       \begin{tabular}{l r l r r}
-        User                         & PageRank                               & Mode                         & Diversity                              & Tokens \rule{0pt}{14pt} \\
+        User                                & PageRank                                          & Mode                                & Diversity                                          & Tokens \rule{0pt}{14pt} \\
         \hline
-        \Sexpr{lol2265Summary[1, 1]} & \Sexpr{round(lol2265Summary[1, 3], 4)} & \Sexpr{lol2265Summary[1, 2]} & \Sexpr{round(lol2265Summary[1, 4], 2)} & \Sexpr{lol2265Summary[1, 5]} \\
-        \Sexpr{lol2265Summary[2, 1]} & \Sexpr{round(lol2265Summary[2, 3], 4)} & \Sexpr{lol2265Summary[2, 2]} & \Sexpr{round(lol2265Summary[2, 4], 2)} & \Sexpr{lol2265Summary[2, 5]} \\
-        \Sexpr{lol2265Summary[3, 1]} & \Sexpr{round(lol2265Summary[3, 3], 4)} & \Sexpr{lol2265Summary[3, 2]} & \Sexpr{round(lol2265Summary[3, 4], 2)} & \Sexpr{lol2265Summary[3, 5]} \\
-        \Sexpr{lol2265Summary[4, 1]} & \Sexpr{round(lol2265Summary[4, 3], 4)} & \Sexpr{lol2265Summary[4, 2]} & \Sexpr{round(lol2265Summary[4, 4], 2)} & \Sexpr{lol2265Summary[4, 5]} \\
-        \Sexpr{lol2265Summary[5, 1]} & \Sexpr{round(lol2265Summary[5, 3], 4)} & \Sexpr{lol2265Summary[5, 2]} & \Sexpr{round(lol2265Summary[5, 4], 2)} & \Sexpr{lol2265Summary[5, 5]} \\
-        \Sexpr{lol2265Summary[6, 1]} & \Sexpr{round(lol2265Summary[6, 3], 4)} & \Sexpr{lol2265Summary[6, 2]} & \Sexpr{round(lol2265Summary[6, 4], 2)} & \Sexpr{lol2265Summary[6, 5]} \\
-        \Sexpr{lol2265Summary[7, 1]} & \Sexpr{round(lol2265Summary[7, 3], 4)} & \Sexpr{lol2265Summary[7, 2]} & \Sexpr{round(lol2265Summary[7, 4], 2)} & \Sexpr{lol2265Summary[7, 5]} \\
-        \Sexpr{lol2265Summary[8, 1]} & \Sexpr{round(lol2265Summary[8, 3], 4)} & \Sexpr{lol2265Summary[8, 2]} & \Sexpr{round(lol2265Summary[8, 4], 2)} & \Sexpr{lol2265Summary[8, 5]} \\
+        \Sexpr{usersSummary2265[1, "User"]} & \Sexpr{round(usersSummary2265[1, "PageRank"], 4)} & \Sexpr{usersSummary2265[1, "Mode"]} & \Sexpr{round(usersSummary2265[1, "Diversity"], 2)} & \Sexpr{usersSummary2265[1, "Tokens"]} \\
+        \Sexpr{usersSummary2265[2, "User"]} & \Sexpr{round(usersSummary2265[2, "PageRank"], 4)} & \Sexpr{usersSummary2265[2, "Mode"]} & \Sexpr{round(usersSummary2265[2, "Diversity"], 2)} & \Sexpr{usersSummary2265[2, "Tokens"]} \\
+        \Sexpr{usersSummary2265[3, "User"]} & \Sexpr{round(usersSummary2265[3, "PageRank"], 4)} & \Sexpr{usersSummary2265[3, "Mode"]} & \Sexpr{round(usersSummary2265[3, "Diversity"], 2)} & \Sexpr{usersSummary2265[3, "Tokens"]} \\
+        \Sexpr{usersSummary2265[4, "User"]} & \Sexpr{round(usersSummary2265[4, "PageRank"], 4)} & \Sexpr{usersSummary2265[4, "Mode"]} & \Sexpr{round(usersSummary2265[4, "Diversity"], 2)} & \Sexpr{usersSummary2265[4, "Tokens"]} \\
+        \Sexpr{usersSummary2265[5, "User"]} & \Sexpr{round(usersSummary2265[5, "PageRank"], 4)} & \Sexpr{usersSummary2265[5, "Mode"]} & \Sexpr{round(usersSummary2265[5, "Diversity"], 2)} & \Sexpr{usersSummary2265[5, "Tokens"]} \\
+        \Sexpr{usersSummary2265[6, "User"]} & \Sexpr{round(usersSummary2265[6, "PageRank"], 4)} & \Sexpr{usersSummary2265[6, "Mode"]} & \Sexpr{round(usersSummary2265[6, "Diversity"], 2)} & \Sexpr{usersSummary2265[6, "Tokens"]} \\
+        \Sexpr{usersSummary2265[7, "User"]} & \Sexpr{round(usersSummary2265[7, "PageRank"], 4)} & \Sexpr{usersSummary2265[7, "Mode"]} & \Sexpr{round(usersSummary2265[7, "Diversity"], 2)} & \Sexpr{usersSummary2265[7, "Tokens"]} \\
+        \Sexpr{usersSummary2265[8, "User"]} & \Sexpr{round(usersSummary2265[8, "PageRank"], 4)} & \Sexpr{usersSummary2265[8, "Mode"]} & \Sexpr{round(usersSummary2265[8, "Diversity"], 2)} & \Sexpr{usersSummary2265[8, "Tokens"]} \\
       \end{tabular}
     \end{table}
-    % What do the top 5 and bottom 5 users by pagerank look like compared to their communities
+
+    Digging deeper into the results for individual users such as \Sexpr{usersSummary2265[7, "User"]} who have relatively high PageRanks as well as those who have particularly low PageRanks may prove enlightening.
+    Table \ref{tab:summary_highlow_pr} gives the summary statistics for the users with the highest and lowest PageRanks among those who produced a reasonable number of tokens of (lol).
+    \begin{table}[tbhp]
+      \centering
+      \caption{Summary statistics for users with the highest and lowest PageRanks among those with at least 10 tokens of (lol)}
+      \label{tab:summary_highlow_pr}
+      % Highest and lowest PageRanks were determined using head() and tail() on usersSummaryActive
+      \begin{tabular}{l l r l r r}
+        User                              & Community                              & PageRank                                        & Mode                              & Diversity         & Tokens \rule{0pt}{14pt} \\
+        \hline
+        \multicolumn{6}{c}{Highest PageRanks} \rule{0pt}{14pt} \\
+        \Sexpr{usersSummary[900, "User"]} & \Sexpr{usersSummary[900, "Community"]} & \Sexpr{round(usersSummary[900, "PageRank"], 5)} & \Sexpr{usersSummary[900, "Mode"]} & \Sexpr{round(usersSummary[900, "Diversity"], 2)} & \rule{0pt}{14pt} \Sexpr{usersSummary[900, "Tokens"]} \\
+        \Sexpr{usersSummary[50, "User"]} & \Sexpr{usersSummary[50, "Community"]} & \Sexpr{round(usersSummary[50, "PageRank"], 5)} & \Sexpr{usersSummary[50, "Mode"]} & \Sexpr{round(usersSummary[50, "Diversity"], 2)} & \Sexpr{usersSummary[50, "Tokens"]} \\
+        \Sexpr{usersSummary[893, "User"]} & \Sexpr{usersSummary[893, "Community"]} & \Sexpr{round(usersSummary[893, "PageRank"], 5)} & \Sexpr{usersSummary[893, "Mode"]} & \Sexpr{round(usersSummary[893, "Diversity"], 2)} & \Sexpr{usersSummary[893, "Tokens"]} \\
+        \Sexpr{usersSummary[915, "User"]} & \Sexpr{usersSummary[915, "Community"]} & \Sexpr{round(usersSummary[915, "PageRank"], 5)} & \Sexpr{usersSummary[915, "Mode"]} & \Sexpr{round(usersSummary[915, "Diversity"], 2)} & \Sexpr{usersSummary[915, "Tokens"]} \\
+        \Sexpr{usersSummary[933, "User"]} & \Sexpr{usersSummary[933, "Community"]} & \Sexpr{round(usersSummary[933, "PageRank"], 5)} & \Sexpr{usersSummary[933, "Mode"]} & \Sexpr{round(usersSummary[933, "Diversity"], 2)} & \Sexpr{usersSummary[933, "Tokens"]} \\
+        \hline
+        \multicolumn{6}{c}{Lowest PageRanks} \rule{0pt}{14pt} \\
+        \Sexpr{usersSummary[583, "User"]} & \Sexpr{usersSummary[583, "Community"]} & \Sexpr{round(usersSummary[583, "PageRank"], 5)} & \Sexpr{usersSummary[583, "Mode"]} & \Sexpr{round(usersSummary[583, "Diversity"], 2)} & \rule{0pt}{14pt} \Sexpr{usersSummary[583, "Tokens"]} \\
+        \Sexpr{usersSummary[671, "User"]} & \Sexpr{usersSummary[671, "Community"]} & \Sexpr{round(usersSummary[671, "PageRank"], 5)} & \Sexpr{usersSummary[671, "Mode"]} & \Sexpr{round(usersSummary[671, "Diversity"], 2)} & \Sexpr{usersSummary[671, "Tokens"]} \\
+        \Sexpr{usersSummary[1093, "User"]} & \Sexpr{usersSummary[1093, "Community"]} & \Sexpr{round(usersSummary[1093, "PageRank"], 5)} & \Sexpr{usersSummary[1093, "Mode"]} & \Sexpr{round(usersSummary[1093, "Diversity"], 2)} & \Sexpr{usersSummary[1093, "Tokens"]} \\
+        \Sexpr{usersSummary[1106, "User"]} & \Sexpr{usersSummary[1106, "Community"]} & \Sexpr{round(usersSummary[1106, "PageRank"], 5)} & \Sexpr{usersSummary[1106, "Mode"]} & \Sexpr{round(usersSummary[1106, "Diversity"], 2)} & \Sexpr{usersSummary[1106, "Tokens"]} \\
+        \Sexpr{usersSummary[1116, "User"]} & \Sexpr{usersSummary[1116, "Community"]} & \Sexpr{round(usersSummary[1116, "PageRank"], 5)} & \Sexpr{usersSummary[1116, "Mode"]} & \Sexpr{round(usersSummary[1116, "Diversity"], 2)} & \Sexpr{usersSummary[1116, "Tokens"]} \\
+      \end{tabular}
+    \end{table}
   \section{Discussion}
   \label{sec:discussion}
     % Assume this is akin to *adult* second dialect acquisition
