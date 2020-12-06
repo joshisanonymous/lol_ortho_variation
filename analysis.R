@@ -14,6 +14,9 @@ library(tools)
 library(vegan)
 library(ggplot2)
 
+# Remove scientific notation
+options(scipen = 999)
+
 ## Functions
 # Get the Simpson's index of diversity for tokens of (lol)
 getDiversity <- function(variants){
@@ -44,6 +47,16 @@ graphDivByCent <- function(df, centrality) {
     theme_bw() +
     labs(x = paste(toTitleCase(centrality), "(log)")) +
     geom_point()
+}
+
+# Draw a bar graph for the distribution of (lol) for a set of users
+graphlolDistUsers <- function(df) {
+  ggplot(df,
+         aes(x = lol)) +
+    facet_wrap(. ~ df$communaute + df$utilisateur, ncol = 5) +
+    labs(x = "(lol)", y = "Relative Frequency") +
+    theme_bw() +
+    geom_bar(aes(y = ..count.. / sapply(PANEL, FUN=function(x) sum(count[PANEL == x]))))
 }
 
 # Get the mode of a vector
@@ -84,6 +97,8 @@ usersSummary <- merge(usersCommsModes, usersDivByCent, by = 1)
 usersSummary$Tokens <- table(lol$utilisateur)
 rm(list = c("usersCommunities", "usersModes", "usersDivByCent", "usersCommsModes"))
 colnames(usersSummary) <- c("User", "Community", "Mode", "PageRank", "Diversity", "Tokens")
+usersSummary <- merge(usersSummary, communitiesSummary[, c("Community", "Diversity")], by = "Community")
+colnames(usersSummary) <- c("Community", "User", "Mode", "PageRank", "Diversity", "Tokens", "Diversity_Comm")
 
 # Create a data frame summarizing community 2265
 usersSummary2265 <- usersSummary[usersSummary$Community == 2265,]
@@ -115,10 +130,10 @@ lolDistUsersHigh <- lolDistUsersHigh[lolDistUsersHigh$lol == "lol" |
                                      lolDistUsersHigh$lol == "LOL",]
 
 # Subset data frame including only users with the 5 lowest PageRanks
-lolDistUsersLow <- lol[lol$utilisateur == "Kentoria" |
-                       lol$utilisateur == "Leyann" |
-                       lol$utilisateur == "Weatherly" |
-                       lol$utilisateur == "Yamira" |
+lolDistUsersLow <- lol[lol$utilisateur == "Leyann" |
+                       lol$utilisateur == "Dellanira" |
+                       lol$utilisateur == "Jocques" |
+                       lol$utilisateur == "Kentoria" |
                        lol$utilisateur == "Yogi",]
 lolDistUsersLow <- lolDistUsersLow[lolDistUsersLow$lol == "lol" |
                                    lolDistUsersLow$lol == "Lol" |
@@ -133,25 +148,27 @@ graphDivByCent("lolActive", "PageRank")
 
 
 ## ---- lol_dist_comms ----
+lolDistComms$communaute_ordered <- factor(lolDistComms$communaute, levels = c("1291", "2265", "1032"))
 ggplot(lolDistComms,
        aes(x = lol)) +
-  facet_wrap(.~lolDistComms$communaute, ncol = 3) +
+  facet_wrap(.~lolDistComms$communaute_ordered, ncol = 3) +
   labs(x = "(lol)", y = "Relative Frequency") +
   theme_bw() +
   geom_bar(aes(y = ..count.. / sapply(PANEL, FUN=function(x) sum(count[PANEL == x]))))
 
 ## ---- lol_dist_users_high ----
-ggplot(lolDistUsersHigh,
-       aes(x = lol)) +
-  facet_wrap(.~lolDistUsersHigh$utilisateur, ncol = 5) +
-  labs(x = "(lol)", y = "Relative Frequency") +
-  theme_bw() +
-  geom_bar(aes(y = ..count.. / sapply(PANEL, FUN=function(x) sum(count[PANEL == x]))))
+graphlolDistUsers(lolDistUsersHigh)
 
 ## ---- lol_dist_users_low ----
-ggplot(lolDistUsersLow,
-       aes(x = lol)) +
-  facet_wrap(.~lolDistUsersLow$utilisateur, ncol = 5) +
-  labs(x = "(lol)", y = "Relative Frequency") +
+graphlolDistUsers(lolDistUsersLow)
+
+## ---- div_individual_community ----
+ggplot(usersSummaryActive,
+       aes(x = Diversity,
+           y = Diversity_Comm)) +
+  scale_x_continuous(limits = c(0, 0.7)) +
+  scale_y_continuous(limits = c(0, 0.7)) +
+  labs(x = "Individual Diversity", y = "Community Diversity") +
   theme_bw() +
-  geom_bar(aes(y = ..count.. / sapply(PANEL, FUN=function(x) sum(count[PANEL == x]))))
+  geom_point() +
+  geom_abline(slope = 1, intercept = 0)

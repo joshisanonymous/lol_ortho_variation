@@ -272,19 +272,19 @@
       \end{tabular}
     \end{table}
 
-    Taking a look at how the diversity for any given user relates to their PageRank within their community, Figure \ref{fig:div_by_pr_all} shows the results when all users are included.
-    The log of the PageRank was taken to more easily see the spread along the x-axis, though the result is not even monotonic let alone linear.
-    This graph suggests that there is no relationship at all between diversity in (lol) and PageRank, but one might ask if there are a large number of users who produced very few tokens and so only have low diversity due to this fact.
+    Taking a look at how the diversity for any given user relates to their PageRank within their community, there appears to be no pattern at all.
+    The result is not even monotonic let alone linear.
+    One might ask, though, if there are a large number of users who produced very few tokens and so only have low diversity due to this fact.
     The mean number of tokens of (lol) produced by users is \Sexpr{round(mean(table(lol$utilisateur)), 2)}, and the median is \Sexpr{median(table(lol$utilisateur))}, suggesting that indeed most users produced very few tokens.
     Filtering out users who produced fewer than 10 tokens yields \num{\Sexpr{nrow(lolActive)}} from \Sexpr{length(usersActive)} users.
-    The resulting plot can be seen in Figure \ref{fig:div_by_pr_active}, though again, it appears that there is no relationship between diversity and PageRank.
-    \begin{figure}[tbhp]
-      \centering
-      \caption{Diversity according to PageRank for all users}
-      \label{fig:div_by_pr_all}
-      <<divByPR_graph>>=
-      @
-    \end{figure}
+    The resulting plot can be seen in Figure \ref{fig:div_by_pr_active}, though just as when all users were included, it appears that there is no relationship between the diversity of (lol) and PageRank.
+    % \begin{figure}[tbhp]
+    %   \centering
+    %   \caption{Diversity according to PageRank for all users}
+    %   \label{fig:div_by_pr_all}
+    %   <<divByPR_graph>>=
+    %   @
+    % \end{figure}
     \begin{figure}[tbhp]
       \centering
       \caption{Diversity according to PageRank for users who produced at least 10 tokens of (lol)}
@@ -295,8 +295,8 @@
 
     The lack of any clear relationship overall suggests that at least for the spelling of (lol), users are not reacting to the norms of their communities, or possibly there is simply nothing to which they could react given that the mode of each was \orth{lol} except for community 2265, which had \orth{LOL} as its mode instead.
     Table \ref{tab:summary_2265} provides summary statistics for each user in this community.
-    What is immediately apparent is that the mode for this community stems mostly from \Sexpr{usersSummary2265[7, "User"]}'s linguistic behavior in that they produced far more tokens of (lol) than anyone else and were also quite consistent in their spelling with a diversity of \Sexpr{round(usersSummary2265[7, "Diversity"], 2)}.
-    \Sexpr{usersSummary2265[7, "User"]}'s place in this community is fairly central, as well, with a PageRank of \Sexpr{round(usersSummary2265[7, "PageRank"], 4)}, which despite the narrow range of PageRanks, is one of the highest among any user analyzed in this corpus for any community.
+    What is immediately apparent is that the mode for this community stems mostly from Rithanya's linguistic behavior in that they produced far more tokens of (lol) than anyone else and were also quite consistent in their spelling with a diversity of \Sexpr{round(usersSummary2265[2, "Diversity"], 2)}.
+    Rithanya's place in this community is fairly central, as well, with a PageRank of \Sexpr{round(usersSummary2265[2, "PageRank"], 4)}, which despite the narrow range of PageRanks, is one of the highest among any user analyzed in this corpus for any community.
     \begin{table}[tbhp]
       \centering
       \caption{Summary statistics for community 2265}
@@ -315,31 +315,72 @@
       \end{tabular}
     \end{table}
 
-    Digging deeper into the results for individual users such as \Sexpr{usersSummary2265[7, "User"]} who have relatively high PageRanks as well as those who have particularly low PageRanks may prove enlightening.
+    Digging deeper into the results for individual users such as Rithanya who have relatively high PageRanks as well as those who have particularly low PageRanks provides some interesting nuances.
     Table \ref{tab:summary_highlow_pr} gives the summary statistics for the users with the highest and lowest PageRanks among those who produced a reasonable number of tokens of (lol).
+    In each of these cases, each user, regardless of their position in the community, has less diversity in their realizations of (lol) than their community does as a whole.
+    This is not surprising as a community as will necessarily always have realized more variants of the linguistic variable than any individual member of that community, but overall, Figure \ref{fig:div_by_div_active} demonstrates that some individuals do in fact show much more diversity than their community as a whole.
+    If that were not the case, all points would be above the line going through the center of the graph.
+    This must come down to the lack of a clear mode in among their realizations as they will never have produced more variants than the community.
+    More on point, this fact seems to have nothing to do with their position in the community as none of the users in Table \ref{tab:summary_highlow_pr} outdue the diversity of their community.
     \begin{table}[tbhp]
       \centering
       \caption{Summary statistics for users with the highest and lowest PageRanks among those with at least 10 tokens of (lol)}
       \label{tab:summary_highlow_pr}
       % Highest and lowest PageRanks were determined using head() and tail() on usersSummaryActive
-      \begin{tabular}{l l r l r r}
-        User                              & Community                              & PageRank                                        & Mode                              & Diversity         & Tokens \rule{0pt}{14pt} \\
+      \begin{tabular}{l r l r r | l r}
+        User & PageRank & Mode & $D$ & Tokens & Community & \rule{0pt}{14pt} $D$ \\
         \hline
-        \multicolumn{6}{c}{Highest PageRanks} \rule{0pt}{14pt} \\
-        \Sexpr{usersSummary[900, "User"]} & \Sexpr{usersSummary[900, "Community"]} & \Sexpr{round(usersSummary[900, "PageRank"], 5)} & \Sexpr{usersSummary[900, "Mode"]} & \Sexpr{round(usersSummary[900, "Diversity"], 2)} & \rule{0pt}{14pt} \Sexpr{usersSummary[900, "Tokens"]} \\
-        \Sexpr{usersSummary[50, "User"]} & \Sexpr{usersSummary[50, "Community"]} & \Sexpr{round(usersSummary[50, "PageRank"], 5)} & \Sexpr{usersSummary[50, "Mode"]} & \Sexpr{round(usersSummary[50, "Diversity"], 2)} & \Sexpr{usersSummary[50, "Tokens"]} \\
-        \Sexpr{usersSummary[893, "User"]} & \Sexpr{usersSummary[893, "Community"]} & \Sexpr{round(usersSummary[893, "PageRank"], 5)} & \Sexpr{usersSummary[893, "Mode"]} & \Sexpr{round(usersSummary[893, "Diversity"], 2)} & \Sexpr{usersSummary[893, "Tokens"]} \\
-        \Sexpr{usersSummary[915, "User"]} & \Sexpr{usersSummary[915, "Community"]} & \Sexpr{round(usersSummary[915, "PageRank"], 5)} & \Sexpr{usersSummary[915, "Mode"]} & \Sexpr{round(usersSummary[915, "Diversity"], 2)} & \Sexpr{usersSummary[915, "Tokens"]} \\
-        \Sexpr{usersSummary[933, "User"]} & \Sexpr{usersSummary[933, "Community"]} & \Sexpr{round(usersSummary[933, "PageRank"], 5)} & \Sexpr{usersSummary[933, "Mode"]} & \Sexpr{round(usersSummary[933, "Diversity"], 2)} & \Sexpr{usersSummary[933, "Tokens"]} \\
+        \multicolumn{7}{c}{Highest PageRanks} \rule{0pt}{14pt} \\
         \hline
-        \multicolumn{6}{c}{Lowest PageRanks} \rule{0pt}{14pt} \\
-        \Sexpr{usersSummary[583, "User"]} & \Sexpr{usersSummary[583, "Community"]} & \Sexpr{round(usersSummary[583, "PageRank"], 5)} & \Sexpr{usersSummary[583, "Mode"]} & \Sexpr{round(usersSummary[583, "Diversity"], 2)} & \rule{0pt}{14pt} \Sexpr{usersSummary[583, "Tokens"]} \\
-        \Sexpr{usersSummary[671, "User"]} & \Sexpr{usersSummary[671, "Community"]} & \Sexpr{round(usersSummary[671, "PageRank"], 5)} & \Sexpr{usersSummary[671, "Mode"]} & \Sexpr{round(usersSummary[671, "Diversity"], 2)} & \Sexpr{usersSummary[671, "Tokens"]} \\
-        \Sexpr{usersSummary[1093, "User"]} & \Sexpr{usersSummary[1093, "Community"]} & \Sexpr{round(usersSummary[1093, "PageRank"], 5)} & \Sexpr{usersSummary[1093, "Mode"]} & \Sexpr{round(usersSummary[1093, "Diversity"], 2)} & \Sexpr{usersSummary[1093, "Tokens"]} \\
-        \Sexpr{usersSummary[1106, "User"]} & \Sexpr{usersSummary[1106, "Community"]} & \Sexpr{round(usersSummary[1106, "PageRank"], 5)} & \Sexpr{usersSummary[1106, "Mode"]} & \Sexpr{round(usersSummary[1106, "Diversity"], 2)} & \Sexpr{usersSummary[1106, "Tokens"]} \\
-        \Sexpr{usersSummary[1116, "User"]} & \Sexpr{usersSummary[1116, "Community"]} & \Sexpr{round(usersSummary[1116, "PageRank"], 5)} & \Sexpr{usersSummary[1116, "Mode"]} & \Sexpr{round(usersSummary[1116, "Diversity"], 2)} & \Sexpr{usersSummary[1116, "Tokens"]} \\
+        \Sexpr{usersSummary[1123, "User"]} & \Sexpr{round(usersSummary[1123, "PageRank"], 5)} & \Sexpr{usersSummary[1123, "Mode"]} & \Sexpr{round(usersSummary[1123, "Diversity"], 2)} & \rule{0pt}{14pt} \Sexpr{usersSummary[1123, "Tokens"]} & \Sexpr{usersSummary[1123, "Community"]} & \Sexpr{round(usersSummary[1123, "Diversity_Comm"], 2)} \\
+        \Sexpr{usersSummary[971, "User"]} & \Sexpr{round(usersSummary[971, "PageRank"], 5)} & \Sexpr{usersSummary[971, "Mode"]} & \Sexpr{round(usersSummary[971, "Diversity"], 2)} & \Sexpr{usersSummary[971, "Tokens"]} & \Sexpr{usersSummary[971, "Community"]} & \Sexpr{round(usersSummary[971, "Diversity_Comm"], 2)} \\
+        \Sexpr{usersSummary[967, "User"]} & \Sexpr{round(usersSummary[967, "PageRank"], 5)} & \Sexpr{usersSummary[967, "Mode"]} & \Sexpr{round(usersSummary[967, "Diversity"], 2)} & \Sexpr{usersSummary[967, "Tokens"]} & \Sexpr{usersSummary[967, "Community"]} & \Sexpr{round(usersSummary[967, "Diversity_Comm"], 2)} \\
+        \Sexpr{usersSummary[968, "User"]} & \Sexpr{round(usersSummary[968, "PageRank"], 5)} & \Sexpr{usersSummary[968, "Mode"]} & \Sexpr{round(usersSummary[968, "Diversity"], 2)} & \Sexpr{usersSummary[968, "Tokens"]} & \Sexpr{usersSummary[968, "Community"]} & \Sexpr{round(usersSummary[968, "Diversity_Comm"], 2)} \\
+        \Sexpr{usersSummary[981, "User"]} & \Sexpr{round(usersSummary[981, "PageRank"], 5)} & \Sexpr{usersSummary[981, "Mode"]} & \Sexpr{round(usersSummary[981, "Diversity"], 2)} & \Sexpr{usersSummary[981, "Tokens"]} & \Sexpr{usersSummary[981, "Community"]} & \Sexpr{round(usersSummary[981, "Diversity_Comm"], 2)} \\
+        \hline
+        \multicolumn{7}{c}{Lowest PageRanks} \rule{0pt}{14pt} \\
+        \hline
+        \Sexpr{usersSummary[663, "User"]} & \Sexpr{round(usersSummary[663, "PageRank"], 5)} & \Sexpr{usersSummary[663, "Mode"]} & \Sexpr{round(usersSummary[663, "Diversity"], 2)} & \Sexpr{usersSummary[663, "Tokens"]} & \Sexpr{usersSummary[663, "Community"]} \rule{0pt}{14pt} & \Sexpr{round(usersSummary[663, "Diversity_Comm"], 2)} \\
+        \Sexpr{usersSummary[725, "User"]} & \Sexpr{round(usersSummary[725, "PageRank"], 5)} & \Sexpr{usersSummary[725, "Mode"]} & \Sexpr{round(usersSummary[725, "Diversity"], 2)} & \Sexpr{usersSummary[725, "Tokens"]} & \Sexpr{usersSummary[725, "Community"]} & \Sexpr{round(usersSummary[725, "Diversity_Comm"], 2)} \\
+        \Sexpr{usersSummary[774, "User"]} & \Sexpr{round(usersSummary[774, "PageRank"], 5)} & \Sexpr{usersSummary[774, "Mode"]} & \Sexpr{round(usersSummary[774, "Diversity"], 2)} & \Sexpr{usersSummary[774, "Tokens"]} & \Sexpr{usersSummary[774, "Community"]} & \Sexpr{round(usersSummary[774, "Diversity_Comm"], 2)} \\
+        \Sexpr{usersSummary[778, "User"]} & \Sexpr{round(usersSummary[778, "PageRank"], 5)} & \Sexpr{usersSummary[778, "Mode"]} & \Sexpr{round(usersSummary[778, "Diversity"], 2)} & \Sexpr{usersSummary[778, "Tokens"]} & \Sexpr{usersSummary[778, "Community"]} & \Sexpr{round(usersSummary[778, "Diversity_Comm"], 2)} \\
+        \Sexpr{usersSummary[786, "User"]} & \Sexpr{round(usersSummary[786, "PageRank"], 5)} & \Sexpr{usersSummary[786, "Mode"]} & \Sexpr{round(usersSummary[786, "Diversity"], 2)} & \Sexpr{usersSummary[786, "Tokens"]} & \Sexpr{usersSummary[786, "Community"]} & \Sexpr{round(usersSummary[786, "Diversity_Comm"], 2)} \\
       \end{tabular}
     \end{table}
+    \begin{figure}[tbhp]
+      \centering
+      \caption{Diversity of each user's realization of (lol) by the diversity of their community as a whole among those with at least 10 tokens}
+      \label{fig:div_by_div_active}
+      <<div_individual_community, fig.height = 3.5, fig.width = 3.5>>=
+      @
+    \end{figure}
+
+    In the case of the user with the highest PageRank, Rithanya, they basically make up their whole community in terms of (lol) usage, but for the others who do not have \orth{lol} as their mode, a comparison of the distribution of (lol) between them and their communities can be seen in Figures \ref{fig:lol_dist_comms}, \ref{fig:lol_dist_users_high}, and \ref{fig:lol_dist_users_low}.
+    Other than community 2265 where Rithanya made up the bulk of the total tokens, the distribution for communities 1291 and 1032 are quite similar: \orth{lol} is the clear mode, \orth{LOL} is still pretty frequent, and \orth{Lol} has an appreciable frequency.
+    There were, of course, many other variants produced, but following Zipf's law, no other variant had more than five tokens in the entire corpus and most others had only one, so they were excluded from these charts to make the charts more readable.
+    \begin{figure}[tbhp]
+      \centering
+      \caption{The distribution of (lol) for the communities of those with the highest PageRanks and lowest}
+      \label{fig:lol_dist_comms}
+      <<lol_dist_comms>>=
+      @
+    \end{figure}
+    \begin{figure}[tbhp]
+      \centering
+      \caption{The distribution of (lol) for users with the highest PageRanks}
+      \label{fig:lol_dist_users_high}
+      <<lol_dist_users_high>>=
+      @
+    \end{figure}
+    \begin{figure}[tbhp]
+      \centering
+      \caption{The distribution of (lol) for users with the lowest PageRanks}
+      \label{fig:lol_dist_users_low}
+      <<lol_dist_users_low>>=
+      @
+    \end{figure}
+
+    
   \section{Discussion}
   \label{sec:discussion}
     % Assume this is akin to *adult* second dialect acquisition
