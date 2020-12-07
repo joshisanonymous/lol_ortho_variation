@@ -166,8 +166,8 @@ graphlolDistUsers(lolDistUsersLow)
 ggplot(usersSummaryActive,
        aes(x = Diversity,
            y = Diversity_Comm)) +
-  scale_x_continuous(limits = c(0, 0.7)) +
-  scale_y_continuous(limits = c(0, 0.7)) +
+  scale_x_continuous(limits = c(0, 0.75)) +
+  scale_y_continuous(limits = c(0, 0.75)) +
   labs(x = "Individual Diversity", y = "Community Diversity") +
   theme_bw() +
   geom_point() +

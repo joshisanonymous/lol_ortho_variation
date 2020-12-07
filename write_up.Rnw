@@ -351,13 +351,13 @@
       \centering
       \caption{Diversity of each user's realization of (lol) by the diversity of their community as a whole among those with at least 10 tokens}
       \label{fig:div_by_div_active}
-      <<div_individual_community, fig.height = 3.5, fig.width = 3.5>>=
+      <<div_individual_community, fig.height = 3, fig.width = 3>>=
       @
     \end{figure}
 
     In the case of the user with the highest PageRank, Rithanya, they basically make up their whole community in terms of (lol) usage, but for the others who do not have \orth{lol} as their mode, a comparison of the distribution of (lol) between them and their communities can be seen in Figures \ref{fig:lol_dist_comms}, \ref{fig:lol_dist_users_high}, and \ref{fig:lol_dist_users_low}.
-    Other than community 2265 where Rithanya made up the bulk of the total tokens, the distribution for communities 1291 and 1032 are quite similar: \orth{lol} is the clear mode, \orth{LOL} is still pretty frequent, and \orth{Lol} has an appreciable frequency.
-    There were, of course, many other variants produced, but following Zipf's law, no other variant had more than five tokens in the entire corpus and most others had only one, so they were excluded from these charts to make the charts more readable.
+    Other than community 2265 where Rithanya made up the bulk of the total tokens, the distribution for communities 1291 and 1032 are quite similar: \orth{lol} is the clear mode, \orth{LOL} is still pretty frequent, and \orth{Lol} has an appreciable frequency but is also the least frequent.
+    There were, of course, many other variants produced, but following Zipf's law, no other variant had more than five tokens out of all tokens by users who produced more than 10 tokens of (lol), and most others had only one, so they were excluded from these charts to make the charts more readable.
     \begin{figure}[tbhp]
       \centering
       \caption{The distribution of (lol) for the communities of those with the highest PageRanks and lowest}
@@ -380,9 +380,28 @@
       @
     \end{figure}
 
-    
+    In community 1291, Amair, Rheya, and Seprina look much like the community as a whole in their modes for (lol), but Saadiya does not follow the same pattern.
+    Saadiya produced only \orth{LOL} despite being central to this community.
+    Likewise, Leyann and Yogi among the most marginal members in community 1032\footnote{
+      The five marginal members listed in Figure \ref{fig:lol_dist_users_low} are not in fact the most marginal in the network as there were \Sexpr{nrow(usersSummaryActive[usersSummaryActive < 0.0000385,])} users with the same PageRank.
+      They instead form a sample of the most marginal members.
+    } also clearly favored \orth{LOL} unlike the community as a whole.
+    Finally, Jocques was the only shown here who had \orth{Lol} for a mode.
+    However, Jocque only used this variant at the very beginning of a tweet or after punctuation, meaning that it was always the first word of what might be orthographically considered the beginning of a sentence.
+    In the case of typing on a mobile device, it is possible that many of the cases of \orth{Lol} come from typical auto-correct systems that might capitalize the first word of every new sentence, though this is not the case for Jocques as they tweeted from the web.
+    Clearly, it is just as possible for central members to have modes that differ from their community as it is for marginal members.
+    % Look into <Lol> more. Is this more often from mobile devices? Is it usually at the beginning of a sentence?
+
+    Outside of the modes for these users, the general shapes of the distributions for the central as well as for the marginal members were never just like that of the community except in the case of Rithanya.
+    For instance, Dellanira and Kentoria, who had the same mode as the community in having \orth{lol}, did not use \orth{LOL} at all let alone as their second most frequent variant.
+    Likewise, among central members, Amair produced no tokens of \orth{LOL} but did produce some \orth{Lol}, and Seprina use \orth{lol} almost to the complete exclusion of \orth{LOL} and \orth{Lol}, which both had higher relative frequencies for community 1291.
+    Where Figure \ref{fig:div_by_div_active} showed that not all individual users have less diversity for (lol) than their community.
+    Some do show less diversity, of course, but regardless, this comparison of distributions for central and marginal members suggests the shapes of those distributions do may not often line up with the community regardless of social position.
+
   \section{Discussion}
   \label{sec:discussion}
+    % Limitations
+      % 
     % Assume this is akin to *adult* second dialect acquisition
     \printbibliography
 \end{document}
