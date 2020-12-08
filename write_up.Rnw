@@ -1,8 +1,10 @@
+%%%%%%%%%%%%%%%%%%%%%%%%
+% Compile with XeLaTeX %
+%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass{article}
   % Packages and settings
   \usepackage{fontspec}
     \setmainfont{Charis SIL}
-  % \usepackage[margin=1.0in]{geometry}
   \usepackage[style=apa, backend=biber]{biblatex}
     \addbibresource{References.bib}
   \usepackage{hyperref}
@@ -31,6 +33,15 @@
   <<load_packages_functions_data>>=
   @
   \maketitle
+  \begin{abstract}
+    In this study, a corpus derived from Twitter is used to analyze orthographic variation in the linguistic variable (lol).
+    Modern social network analysis techniques are employed to detect communities in the corpus and calculate centralities, particularly PageRank, for members of those communities.
+    The objective is to advance understanding of individual agency and how it relates to one's position in a social structure.
+    As such, I ask whether the diversity of realizations of (lol) can be understood as a function of one's centrality in one's community.
+    The results suggest that this is not the case, though as an early exploratory study, there is still much to be done to draw any firm conclusion.
+    It is suggested that more linguistic variables be analyzed in a similar quantitative manner.
+  \end{abstract}
+
   \section{Introduction}
   \label{sec:intro}
     In earlier studies of langauge variation, speakers who were peripheral to their communities in some way were often disregarded.
@@ -44,7 +55,7 @@
     However, Eckert was interested in phonological variation, and by that time, there was good evidence to suggest that most speakers do not adjust their phonologies after that age\footnote{Discussed in more detail below}.
 
     The objective of this study, then, is to look again at peripheral community members and how they behave, whether they be brand new members of a given community or long-term members who are nonetheless still peripheral.
-    Specifically, I aim to look use social network analysis to detect communities on the social media platform Twitter and analyze orthographic variation in these Twitter users' use of \orth{lol} as a function of their centralities in said communities.
+    Specifically, I aim to use social network analysis to detect communities on the social media platform Twitter and analyze orthographic variation in these Twitter users' use of \orth{lol} as a function of their centralities in said communities.
 
     \subsection{Second Dialect Acquisition}
     \label{sec:dialect_acquisition}
@@ -55,7 +66,9 @@
       Whether this stability is a result of the literal impossibility of fully learning a new sound system or whether sound systems too strongly represent a speaker's identity by adolescence for them to give them up was not addressed in this early study, however.
 
       Over time, research into phenomena such as what Payne examined has come to be known as second dialect acquisition.
-      More recently, second dialect acquisition features particularly prominently in the work of Nycz, but a number of others have also touched on this topic \parencite[see][for a review]{nycz_second_2015}.
+      More recently, second dialect acquisition features particularly prominently in the work of Nycz, but a number of others have also touched on this topic\footnote{
+         See \textcite{nycz_second_2015} for a review.
+      }.
       However, acquisition is not necessarily the topic that is being addressed in the current study.
       Acquisition implies that a speaker is learning to use a new linguistic form to which they do not already have access in their mental grammar or perhaps to which they have never even been exposed.
       The focus on dialects in this area of research, understood to be geographically defined varieties, additionally brings geography to the forefront as a conditioning factor, somewhat sidelining other social factors such as class, race, or gender.
@@ -64,12 +77,12 @@
       The aim here is to explore what peripheral members to a community do more generally.
       Peripherality certainly can be the result of geographic relocation but need not be.
       In practice, speech communities \parencite[e.g.,][]{labov_social_2006} are geographically defined, but communities can also be defined in other ways.
-      For instance, and taken up in more detail below, communities of practice as used in \textcite{eckert_linguistic_2000} and \textcite{bucholtz_why_1999} situate communities primarily around shared activities.
+      For instance, and taken up in more detail below, communities of practice as used in \textcite{eckert_linguistic_2000} and \textcite{bucholtz_why_1999} to situate communities primarily around shared activities.
       Partaking in extra-curricular school activities, in Eckert's study for instance, or playing the numbers game \parencite[p.~216]{poplack_sometimes_2000} might draw people together to form a community where perhaps geographical proximity alone would not.
 
       Likewise, in studies of phonological variation, acquisition may be a key concept even when there is already a familiarity with the sound system a speaker aims to adopt, as the rules of the system may be opaque, and the physiological motions used to achieve certain sounds may require practice.
       Morphosyntactic variables also suggest the need to learn nuanced rules in order to truly adopt a different system.
-      Many speakers, for instance, are familiar with habitual \lexi{be} but not use it.
+      Many speakers, for instance, are familiar with habitual \lexi{be} but do not use it.
       If such a speaker wished to begin using it, they would have to learn that it expresses the habitual aspect as opposed to being simply invariance of inflections for the copula, something that is not immediately obvious through observation alone.
       Indeed, \textcite{eberhardt_first_2015} claimed that habitual \lexi{be} is ``one of the most frequently used but least understood features of AAE [African-American English] by outsiders,'' hence the fact that they found it ``striking'' that non-African-American singer Iggy Azalea uses this feature very accurately (p.~311).
 
@@ -83,11 +96,13 @@
     \subsection{Twitter}
     \label{sec:twitter}
       Twitter is a micro-blogging social media platform that provides sociolinguists with numerous interesting opportunities for studying language variation.
-      Users of Twitter post short messages, tweets, up to 280 characters in length that can optionally be directed at a specific user or users using the @ symbol followed by target's username.
+      Users of Twitter post short messages, tweets, up to 280 characters in length\footnote{
+        At the time of data collection for this study, the character limit was 140 characters.
+      } that can optionally be directed at a specific user or users using the @ symbol followed by target's username.
       Whether directed or not, the default setting is for all tweets to be publicly accessible even to people who do not have Twitter accounts.
       This fact is regularly understood by users, and so creating corpora from tweets does not pose as many ethical dilemmas\footnote{
         This should not be read as there being no ethical dilemmas involved in creating such corpora.
-        The standards used for this study will be discussed in section \ref{sec:methods} \nameref{Methods}.
+        The standards used for this study will be discussed in section \ref{sec:methods} \nameref{sec:methods}.
       }
       as does creating corpora from other similar online platforms where communication is expected to be generally private, such as Facebook.
 
@@ -96,10 +111,10 @@
       Comparing this to \citeauthor{labov_social_2006}'s (\citeyear{labov_social_2006}) suggestion in 2006 that a sample of 60 to 100 speakers is relatively large and is enough to analyze stratification in a single city (p.~401), having thousands of speakers and millions of utterances is a large leap in size.
 
       It is also notable that \textcite{bamman_gender_2014} were interested in lexical variation, whereas perhaps most variationists focus in on phonetics and phonology.
-      There is a clear practical reason for analyzing sound systems, of course: this allows a researcher to maximize the tokens they collect and minimize the amount of recordings that must be done to obtain those tokens.
+      There is a clear practical reason for analyzing sound systems, of course: this allows a researcher to maximize the tokens they collect and minimize the amount of recordings that must be done to obtain those tokens. % Add Lavander's discussion of referential meaning vs functional equivalence
       Focusing on lexical items is much more difficult outside of perhaps function words but not when corpora with millions of utterances are collected.
       \textcite{eisenstein_identifying_2014}, for example, also looked at lexical variation of regional lexical items on Twitter, such as \lexi{jawn} which originated in Philadelphia, Pennsylvania.
-      Similarly, \textcite{pavalanathan_audience-modulated_2015} were able to test \citeauthor{bell_language_1984}'s (\citeyear{bell_language_1984}) theory of audience design in how users of Twitter style shifted their lexical items according to the intended audience, either more generic vocabulary for broad audiences or more regional vocabulary for narrower, more local audiences ().
+      Similarly, \textcite{pavalanathan_audience-modulated_2015} were able to test \citeauthor{bell_language_1984}'s (\citeyear{bell_language_1984}) theory of audience design in how users of Twitter style shifted their lexical items according to the intended audience, using either more generic vocabulary for broad audiences or more regional vocabulary for narrower, more local audiences.
       This latter study also provides an example of another distinction between variationist studies of Twitter and traditional interview-based studies: the number of linguistic variables analyzed.
       \textcite{pavalanathan_audience-modulated_2015} looked at over 200 variables whereas a traditional variationist study may include only one to perhaps nine linguistic variables.
       This scale of analysis is also present in the aforementioned Twitter-based studies.
@@ -170,7 +185,7 @@
       As such, this study aims to look at a broader swath of data by ignoring the issue of language contact and focusing on orthographic variation in the spelling of \lexi{lol} \gloss{laugh out loud}.
       Specifically, I ask the following question:
       \begin{itemize}
-        \item Do individuals use more or fewer orthographic variants of (lol) as their centrality in a given community goes up?
+        \item Do individuals show more or less diversity of orthographic variants of (lol) as their centrality in a given community goes up?
       \end{itemize}
 
   \section{Methods}
@@ -400,8 +415,65 @@
 
   \section{Discussion}
   \label{sec:discussion}
-    % Limitations
-      % 
-    % Assume this is akin to *adult* second dialect acquisition
+    Recall that the research question for this study asked if the diversity of the realization of (lol) increased or decreased relative to a user's centrality in their community.
+    There is no clear relationship betwen this linguistic variable and diversity, and there are a couple reasons why that might be outside of simply concluding that social position is not an important factor in language variation.
+    Indeed, such a conclusion would at least implicitly be at odds with long-held assumptions in the variationist literature that social position is important as in, for example, Labov's analysis of central community members in Philadelphia in Celeste S. and Carol Meyers \parencite[as cited in][]{eckert_phonetics_2017}, and \citeauthor{eckert_linguistic_2000} (\citeyear{eckert_linguistic_2000}) proposed concept of sociolinguistic icons, community members who make extreme use of advanced variants and are also central to their communities (pp.~216-219).
+
+    One reason for the lack of a relationship could be that there is no variation in mode from community to community and so there is no new norm for marginal members to learn.
+    They of course do not automatically follow the norms of the community for (lol), nor do central members for that matter, but they are perhaps behaving linguistically in the same way as they would in the communities in which they are central.
+    To disentangle this potential explanation would require a different community detection algorithm that allows for placing individuals in multiple communities as opposed to \citeauthor{newman_finding_2004}'s (\citeyear{newman_finding_2004}) which places every individual into exactly one community.
+    While the algorithm used here has been well validated, it is also unreasonable to think that any individual belongs to only one community \lexi{a priori}.
+
+    Another reason for the lack of a relationship could be that (lol) happens to be used primarily to express one's personal identity.
+    It is important to remember that (lol) is one linguistic variable out of very many possible variables, all of which may be utilized towards different ends.
+    A marginal member may, for example, attempt to employ lexical items that feel more appropriate to a community to which they are trying to become more central while maintaining their own distinctiveness through their use of (lol).
+    It is important to remember that the goal of participating in a community is not always to conform entirely but is perhaps more often to find the threshold of conformity required to be marked as a member without going any further.
+    \subsection{Limitations}
+    \label{sec:limitations}
+      Both of the potential explanations above function admit some limitations to the present study.
+      Because of the community detection algorithm used, how any given individual behaves from community to community cannot be analyzed.
+      Without closer ethnographic work or interviews, the level of conformity aimed for by marginal members cannot be identified.
+      Two other limitations are worth noting, as well: the age range being represented by this Twitter corpus and the type of linguistic variable that was analyzed.
+
+      People of many ages use Twitter but not to the same extent.
+      For one, it must be assumed that there is no one in the corpus below perhaps 6 to 8 years old as using Twitter require the ability to read and write.
+      This sets research into orthographic variation apart from research into speech where any age group can potentially be included given that ethical concerns are resolved.
+      Even in the case of abundant precaution to protect those included in a corpus, it is simply not possible to study the orthographic variation of those who are not yet literate.
+      Writing in this sense is another language that they have not yet learned.
+
+      Likewise, it is unlikely that there is adequate representation of those over 35 years old in this or any Twitter corpus.
+      \textcite{sloan_who_2015} have shown evidence that the bulk of Twitter users are under 35 years old.
+      This should be kept in mind when comparing the results of studies based on Twitter as while they may be comparable to results from studies like \citeauthor{payne_factors_1980}'s (\citeyear{payne_factors_1980}) as she did not use older speakers, there is little to no comparability possible when looking at studies focused on older speakers, which is no small point as there is still more to learn about age grading \parencite[see][for a review]{wagner_age_2012}.
+
+      Finally, as has already been mentioned, (lol) is yet one of many possible linguistic variables at play in these communities.
+      In particular, (lol) was most often an adjunct in the corpus used here, which may make it more susceptible to purely pragmatic uses as opposed to, for example, signaling social affiliation since adjuncts are likely to be speaker-oriented adverbs \parencite{ernst_speaker-oriented_2009}.
+      This is not to say that a variable cannot do both types of work at once, but disentangling the two is made more difficult by the part-of-speech.
+
+    \subsection{Future Research}
+    \label{sec:future_research}
+      As this study is quite exploratory, there are still plenty of avenues to go down and topics to address and clarify.
+      Expanding on the idea of what other linguistic variables would be appropriate to look at in the same way as was done with (lol) here, pronouns are likely a good candidate.
+      At least in English, pronouns are often obligatory, making them frequent enough for robust quantitative analysis.
+      This is particularly true when exceptionally large corpora can be constructed with relative ease as is possible when mining data from Twitter.
+      One pronoun that appears even in the current corpus in various spellings is the second person pronoun, which takes at least two spellings: \orth{you} and \orth{u}.
+      It is hard to imagine such a pronoun as performing pragmatic work or as having slightly different references for each spelling, so what is left is its social meaning.
+
+      The overall objective of this study was to shed more light on how social position relates to language variation.
+      While individual agency has become much more prominent in sociolinguistic research, precise measurements of social position are rarely used.
+      For instance, \textcite{eckert_linguistic_2000} suggests that Judy is a sociolinguistic icon (p.~217) but seems to have come to that conclusion through qualitative or linguistic means.
+      She does in fact provide a sociograms for the students at Belten High (pp.~173-174), but she does not employ any centrality measures.
+      Having done just that here has allowed for posing a question that is both testable and falsifiable.
+      Qualitative work is of course highly useful, but we are perhaps at a point where that qualitative works needs to be operationalized quantitatively more, as has been done here, to move towards more robust theories of agency.
+
+      With the advent of particularly casual medium of written communication on the internet, the dearth of studies of orthographic variation is surprising.
+      Just as phonological variation provides for very frequent linguistic variables that make for effective quantitative analyses, so does orthographic variation for the written language.
+      Lexical variation variation is of course also easily analyzed through a variationist framework, but such studies are generally limited to looking into the diffusion of given lexical items \parencite[e.g.,]{grieve_mapping_2018} as opposed to the way the realization of lexical linguistic variables might change from group to group and context to context.
+      Such lexical diffusion studies are indeed exciting, but further work on orthographic variation may help fill in some gaps.
+
+      Finally, written language needs to be analyzed more in and of itself.
+      To state that written language is separate from spoken language is not at all controversial, yet it is rarely touched on in variationist studies as a distinct entity.
+      While \textcite{tatman_im_2016} and \citeauthor{eisenstein_systematic_2015}'s (\citeyear{eisenstein_systematic_2015}) work on orthographic variation is elucidating and important, both approach writing through the lens of its relationship to speech.
+      In the case of (lol) here, I have attempted to treat writing as its own distinct language, and in fact it would have been difficult to do otherwise as this lexical item originated in writing and is only marginally used in speech.
+      As exploratory studies such as this lead develop into something larger, it will be important to also develop a conceptual framework that does not confuse written and spoken language.
     \printbibliography
 \end{document}
