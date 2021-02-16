@@ -283,3 +283,4 @@ TSWLatexianTemp*
 # Protect non-anonymized data
 data/tweets.csv
 data/userKey.csv
+data/usersAll.csv
