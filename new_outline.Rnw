@@ -3,8 +3,17 @@
     % Orthographic variation in CMC has been examined before, often (but not always) in relation to spoken phonology
     % Here we look at an orthographic variable that cannot be linked to phonology, (lol), in order to identify its function(s)
   % CMC
+    % Definition and special considerations
+      % As Paolillo (1999) recognized early on, the nature of online contact isn't necessarily the same as face-to-face contact (1), so early researchers were interested in how CMC affected relationships and the linguistic influences speakers have on each other.
+        % For example, Yates (1996) analyzed a computer conferencing system specifically to situate CMC relative to spoken and written language.
+          % Yates (1996) used what might be better described as linguistic statistics than linguistic variables, such as type/token ratio and lexical density (33-37), although he also looked at the frequency of different personal pronouns (40-41).
+          % An important distinction Yates (1996) argued to exist between CMC and face-to-face conversation is that there is no real field in the sense of Halliday in CMC other than the text itself (45-46).
+        % As late as 2008, Tagliamonte & Denis (2008) were still trying to situate CMC, concluding themselves that instant messaging forms a "hybrid register" (5), in line with previous conclusions of other forms of CMC.
+      % There are also different forms of CMC
+        % Tagliamonte & Denis (2008) consider instant messaging to be one-to-one synchronous CMC (3)
     % Twitter
       % Characteristics of Twitter
+        % Yates (1996) focused on "open" discussions (i.e., not private) in his early study of a computer conferencing system in CMC for ethical concerns (31), and as Twitter is also primarily public discourse, it has the same advantage.
         % Java et al. (2007) found that only a quarter of Twitter users hold conversations (as cited in Danescu-Niculescu-Mizil et al. 2011:1).
           % There is, however, also evidence that this varies from language to language (see Hong et al. 2011).
         % Although many languages are used on Twitter, Hong et al. (2011) found that 51% was in English (519), and there is little reason to believe that has changed.
@@ -28,8 +37,18 @@
             % Schnoebelen (2012) previously found that emoticons can express positive or negative feelings, flirting, or teasing, but that the presence of a nose made no difference for these uses (122).
             % What Schnoebelen (2012) did find to be associated with noseful emoticons was more standard orthographic practices, like a lack of repeating letters to show prosody and a ubiquity of apostrophes in contractions (122-123), suggesting that the nose expresses a sort of stance.
             % Schnoebelen (2012) also found a social connection with younger users preferring noseless emoticons and older users noseful (123-124).
+      % Other strictly non-phonological variations have been long recognized
+        % Paolillo (1999) examined <you> as <u>, <are> as <r>, and final <s> as <z> on IRC (2).
+        % <u> and <r> were also recognized early as Cherny (1995) reported these being considered by MUD players as spellings that originated on IRC (as cited in Paolillo 1999:2).
+      % Tagliamonte & Denis (2008) also looked at <u> but added to this <I> as <i>, finding a preference for <you> and <i>, respectively, in their IM study (14).
+      % Tagliamonte & Denis (2008) looked at the five most frequent "IM forms" (i.e., those that they considered unique to CMC): haha, lol, hehe, omg, and hmm (12).
+        % While it is, however, arguable if haha, hehe, and hmm are truly unique to CMC, there is far less question for lol and omg.
   % lol
     % Lexical variation
+      % lol has been examined before, but principally as a lexical variable.
+      % Tagliamonte & Denis (2008) collapsed spelling variants of lol, treating it as a lexical variable.
+        % They interpreted it in their data not as an expression of laughter but "as a signal of interlocutor involvement," whereas haha and hehe indicate forms of laughter (11).
+        % Tagliamonte & Denis (2008) found age to be significant in that lol and hehe were more frequent in younger users and haha more frequent among older users (13).
     % Orthographic variation
   % Research question: What social and pragmatic functions does the orthographic variation of (lol) have?
     % Expectation: Not socially variable but pragmatically important
@@ -51,6 +70,9 @@
       % Geographic location
       % Community detection
       % Centrality measures
+        % Has been used in CMC, e.g. Paollilo's (1999) study of IRC
+          % Paolillo (1999) started from previous findings that central members of a community would use more non-standard variants (2-3), but his own results showed the opposite pattern (8).
+            % The point is just that centrality can be meaningful even in CMC.
     % Pragmatic variables
       % Sentiment of turn
         % Code using a sentiment classifier
