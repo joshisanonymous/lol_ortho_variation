@@ -1,0 +1,87 @@
+% Introduction
+  % My objective
+    % Orthographic variation in CMC has been examined before, often (but not always) in relation to spoken phonology
+    % Here we look at an orthographic variable that cannot be linked to phonology, (lol), in order to identify its function(s)
+  % CMC
+    % Twitter
+      % Characteristics of Twitter
+        % Java et al. (2007) found that only a quarter of Twitter users hold conversations (as cited in Danescu-Niculescu-Mizil et al. 2011:1).
+          % There is, however, also evidence that this varies from language to language (see Hong et al. 2011).
+        % Although many languages are used on Twitter, Hong et al. (2011) found that 51% was in English (519), and there is little reason to believe that has changed.
+        % Similar to face-to-face conversation in some ways, but as Danescu-Niculescu-Mizil et al. (2011) note, it isn't always synchronous and there's a limit to how much can be said in one turn (1).
+      % Variation between groups on Twitter
+        % Very broadly, Hong et al. (2011) provided evidence that variation in how speakers of different languages use Twitter exists, in this case in terms of Twitter conventions that were employed such as retweets and hashtags (519-520)
+        % Eisenstein (2013) was able to look at demographics using geotagged tweets, but these represented the environments of users, not the demographics of the users themselves (15)
+          % Eisenstein's (2013) results suggested that those from high density, African-American areas represented t/d deletion more in their writing (15-17)
+      % Stylistic variation (conceptualized as individual variation) on Twitter
+        % Danescu-Niculescu-Mizil et al. (2011) did not find social status, measured by things like follower count, to be meaningful (8)
+          % Their treatment of "style" was unusual, as things like the presence vs absence of features such as articles or second person pronouns were considered markers of style.
+        % Danescu-Niculescu-Mizil et al. (2011) found that users will accommodate their style to their interlocutors on Twitter, either symmetrically or asymmetrically (6-8).
+          % As the literature on accommodation theory suggests that accommodation is triggered not just by a need for "communicational efficiency", but also to gain social approval and maintain one's identity (Danescu-Niculescu-Mizil et al. 2011:3), this suggests that social factors are unsurprisingly at work on social media.
+  % Orthographic variation
+    % Phonological connection
+      % Eisenstein (2013) noted that both Whiteman (1982) and Thompson et al. (2004) found no phonology-orthography connection, but both were before there were models of non-standard orthography, like those found on social media, to follow (17)
+    % Strictly non-phonological
+      % Emoticons, invented by Scott Fahlman in 1982, can't possibly be phonological.
+        % Schnoebelen (2012) looked at these in American English, finding that 9.7% of the tweets in his corpus contained them (117).
+          % Schnoebelen (2012) focused primairly on the most frequent noseless smiley :) compared to the far less frequent noseful version :-) (117).
+            % Schnoebelen (2012) previously found that emoticons can express positive or negative feelings, flirting, or teasing, but that the presence of a nose made no difference for these uses (122).
+            % What Schnoebelen (2012) did find to be associated with noseful emoticons was more standard orthographic practices, like a lack of repeating letters to show prosody and a ubiquity of apostrophes in contractions (122-123), suggesting that the nose expresses a sort of stance.
+            % Schnoebelen (2012) also found a social connection with younger users preferring noseless emoticons and older users noseful (123-124).
+  % lol
+    % Lexical variation
+    % Orthographic variation
+  % Research question: What social and pragmatic functions does the orthographic variation of (lol) have?
+    % Expectation: Not socially variable but pragmatically important
+      % e.g., Capitalization or reduplication could reasonably be used to represent different degrees of laughter
+        % Schnoebelen (2012) acknowledged this possibility when formulating his idea of affective lengthening (117-118).
+
+% Methods
+  % Data collection
+    % Source: Twitter
+      % General considerations
+        % It can be difficult to find long or repeated conversation between pairs of individuals.
+          % Danescu-Niculescu-Mizil et al. (2011) got around this by identifying pairs that were likely to converse a lot and mining their entire Twitter histories to reconstruct many conversations between those pairs (3).
+      % Original purpose of corpus
+      % Date and duration
+      % Search string
+    % Anonymization
+  % Data coding
+    % Social variables
+      % Geographic location
+      % Community detection
+      % Centrality measures
+    % Pragmatic variables
+      % Sentiment of turn
+        % Code using a sentiment classifier
+    % Linguistic variables
+      % Spelling variants
+        % While others such as <Lol> or <lolol> exist, <lol> and <LOL> are by far the most frequent
+        % <Lol> is particularly notable as auto-correct and spell correct systems can capitalize it
+          % Check if it's particularly common at the beginning of sentences
+          % Contextualize its impact by giving its low frequency
+      % Turn initial, medial, or final
+
+  % Statistics
+    % Modes by geographic location and community
+      % Geographic communities range from city to province to country
+      % Province and country yield more robust Ns where cities sometimes have very few members in data
+      % Province is used over country for the sake of higher precision
+    % Spreads by geographic location and community using D
+    % Fisher's exact test for significance
+      % Null: There is no difference from location to location or community to community in the distribution of spelling variants
+
+% Results
+  % Demographics of each geographic location and community, include mode, spread, and N
+  % Statistical significance
+    % Social variables (don't expect any, but rehash these to contextualize the need for a discourse analysis)
+      % Statistical significance for province
+      % Statistical significance for community
+      % Was there a pattern for any centrality measure by individuals?
+    % Pragmatic variables
+    % Linguistic variables
+
+% Discussion
+  % Is there evidence that orthographic (lol) serves a social function in terms of group identity?
+  % Is there evidence that orthographic (lol) serves a pragmatic function?
+  % Is there evidence that the position of (lol) in a turn impacts its spelling?
