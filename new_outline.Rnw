@@ -8,16 +8,13 @@
         % For example, Yates (1996) analyzed a computer conferencing system specifically to situate CMC relative to spoken and written language.
           % Yates (1996) used what might be better described as linguistic statistics than linguistic variables, such as type/token ratio and lexical density (33-37), although he also looked at the frequency of different personal pronouns (40-41).
           % An important distinction Yates (1996) argued to exist between CMC and face-to-face conversation is that there is no real field in the sense of Halliday in CMC other than the text itself (45-46).
-        % As late as 2008, Tagliamonte & Denis (2008) were still trying to situate CMC, concluding themselves that instant messaging forms a "hybrid register" (5), in line with previous conclusions of other forms of CMC.
+        % As late as 2008, researchers such as Androutsopoulos (2008 "Style":287) and Tagliamonte & Denis (2008) were still trying to situate CMC
+          % Tagliamonte & Denis themselves concluded that instant messaging forms a "hybrid register" (5), in line with previous conclusions of other forms of CMC.
+      % Crystal (2001) defined CMC varieties by medium of communication (e.g., email language or forum language) under the view that the constraints each medium place on speakers are the most important (as cited in Androutsopoulos 2008 "Style":280).
       % There are also different forms of CMC
         % Tagliamonte & Denis (2008) consider instant messaging to be one-to-one synchronous CMC (3)
     % Twitter
-      % Characteristics of Twitter
-        % Yates (1996) focused on "open" discussions (i.e., not private) in his early study of a computer conferencing system in CMC for ethical concerns (31), and as Twitter is also primarily public discourse, it has the same advantage.
-        % Java et al. (2007) found that only a quarter of Twitter users hold conversations (as cited in Danescu-Niculescu-Mizil et al. 2011:1).
-          % There is, however, also evidence that this varies from language to language (see Hong et al. 2011).
-        % Although many languages are used on Twitter, Hong et al. (2011) found that 51% was in English (519), and there is little reason to believe that has changed.
-        % Similar to face-to-face conversation in some ways, but as Danescu-Niculescu-Mizil et al. (2011) note, it isn't always synchronous and there's a limit to how much can be said in one turn (1).
+      % Similar to face-to-face conversation in some ways, but as Danescu-Niculescu-Mizil et al. (2011) note, it isn't always synchronous and there's a limit to how much can be said in one turn (1).
       % Variation between groups on Twitter
         % Very broadly, Hong et al. (2011) provided evidence that variation in how speakers of different languages use Twitter exists, in this case in terms of Twitter conventions that were employed such as retweets and hashtags (519-520)
         % Eisenstein (2013) was able to look at demographics using geotagged tweets, but these represented the environments of users, not the demographics of the users themselves (15)
@@ -27,6 +24,10 @@
           % Their treatment of "style" was unusual, as things like the presence vs absence of features such as articles or second person pronouns were considered markers of style.
         % Danescu-Niculescu-Mizil et al. (2011) found that users will accommodate their style to their interlocutors on Twitter, either symmetrically or asymmetrically (6-8).
           % As the literature on accommodation theory suggests that accommodation is triggered not just by a need for "communicational efficiency", but also to gain social approval and maintain one's identity (Danescu-Niculescu-Mizil et al. 2011:3), this suggests that social factors are unsurprisingly at work on social media.
+    % Communities in CMC
+      % Castells (2000) defined these similar to communities of practice where they are "organized around a shared interest or purpose," but he didn't think these were the same as face-to-face communities because of the differences in how interaction occurs (as cited in Androutsopoulos 2008 "Style":283).
+        % Androutsopoulos (2008 "Style") recognized that the internet allows virtual communities to be connected in a quite literal way through hyperlinks, calling such conglomerates computer-mediated discourse fields (283-284).
+          % This is perhaps more relevant when working with web sites and forums as CMC as Androutsopoulos (2008 "Style") did, though even in places like Twitter, users can link to each other's posts.
   % Orthographic variation
     % Phonological connection
       % Eisenstein (2013) noted that both Whiteman (1982) and Thompson et al. (2004) found no phonology-orthography connection, but both were before there were models of non-standard orthography, like those found on social media, to follow (17)
@@ -58,6 +59,11 @@
 % Methods
   % Data collection
     % Source: Twitter
+      % Characteristics of Twitter
+        % Yates (1996) focused on "open" discussions (i.e., not private) in his early study of a computer conferencing system in CMC for ethical concerns (31), and as Twitter is also primarily public discourse, it has the same advantage.
+        % Java et al. (2007) found that only a quarter of Twitter users hold conversations (as cited in Danescu-Niculescu-Mizil et al. 2011:1).
+          % There is, however, also evidence that this varies from language to language (see Hong et al. 2011).
+        % Although many languages are used on Twitter, Hong et al. (2011) found that 51% was in English (519), and there is little reason to believe that has changed.
       % General considerations
         % It can be difficult to find long or repeated conversation between pairs of individuals.
           % Danescu-Niculescu-Mizil et al. (2011) got around this by identifying pairs that were likely to converse a lot and mining their entire Twitter histories to reconstruct many conversations between those pairs (3).
@@ -71,8 +77,10 @@
       % Community detection
       % Centrality measures
         % Has been used in CMC, e.g. Paollilo's (1999) study of IRC
+          % The point is just that centrality can be meaningful even in CMC.
           % Paolillo (1999) started from previous findings that central members of a community would use more non-standard variants (2-3), but his own results showed the opposite pattern (8).
-            % The point is just that centrality can be meaningful even in CMC.
+          % Other examples
+            % 
     % Pragmatic variables
       % Sentiment of turn
         % Code using a sentiment classifier
