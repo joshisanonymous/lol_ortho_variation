@@ -28,6 +28,7 @@
       % Castells (2000) defined these similar to communities of practice where they are "organized around a shared interest or purpose," but he didn't think these were the same as face-to-face communities because of the differences in how interaction occurs (as cited in Androutsopoulos 2008 "Style":283).
         % Androutsopoulos (2008 "Style") recognized that the internet allows virtual communities to be connected in a quite literal way through hyperlinks, calling such conglomerates computer-mediated discourse fields (283-284).
           % This is perhaps more relevant when working with web sites and forums as CMC as Androutsopoulos (2008 "Style") did, though even in places like Twitter, users can link to each other's posts.
+      % Androutsopoulos (2008 "Style") describes participants in the German hip-hop sites as partaking in a "liminal" virtual community where they could experiment with different identities linguistically from their day-to-day (290).
   % Orthographic variation
     % Phonological connection
       % Eisenstein (2013) noted that both Whiteman (1982) and Thompson et al. (2004) found no phonology-orthography connection, but both were before there were models of non-standard orthography, like those found on social media, to follow (17)
@@ -44,6 +45,8 @@
       % Tagliamonte & Denis (2008) also looked at <u> but added to this <I> as <i>, finding a preference for <you> and <i>, respectively, in their IM study (14).
       % Tagliamonte & Denis (2008) looked at the five most frequent "IM forms" (i.e., those that they considered unique to CMC): haha, lol, hehe, omg, and hmm (12).
         % While it is, however, arguable if haha, hehe, and hmm are truly unique to CMC, there is far less question for lol and omg.
+      % This phenomenon is not limited to English, of course, as members of German hip-hop web sites and forums were found to use <z> for plural, <ph> for <f>, and <k> for <c> (Androutsopoulos 2008 "Style":291).
+        % Androutsopoulos (2008 "Style") also noted a lack of capitalization where standard German orthography involves capitalizing every noun (301-304).
   % lol
     % Lexical variation
       % lol has been examined before, but principally as a lexical variable.
@@ -80,7 +83,7 @@
           % The point is just that centrality can be meaningful even in CMC.
           % Paolillo (1999) started from previous findings that central members of a community would use more non-standard variants (2-3), but his own results showed the opposite pattern (8).
           % Other examples
-            % 
+            % Androutsopoulos (2008 "Style") did the same for German hip-hop web sites using page views and general awareness of the scene (288-289).
     % Pragmatic variables
       % Sentiment of turn
         % Code using a sentiment classifier
