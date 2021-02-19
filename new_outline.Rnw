@@ -5,14 +5,24 @@
   % CMC
     % Definition and special considerations
       % As Paolillo (1999) recognized early on, the nature of online contact isn't necessarily the same as face-to-face contact (1), so early researchers were interested in how CMC affected relationships and the linguistic influences speakers have on each other.
+        % This is a sentiment N. Baron (2004) echoed, suggesting that the medium may change "the character of language produced in that medium" (398).
+          % An example in N. Baron's (2004) study of instant messaging is the phenomenon of multiple overlapping conversation topics between two people, possible due to both being able to speak at the same time without interrupting the other (400).
+          % Another example N. Baron (2004) brings up is the prevalence of multiturn sequences in IM, which she argues helps the speaker hold the floor (417).
+        % Indeed, Androutsopoulos (2008 "Potentials") described there being two "waves" of CMC research: the first focused on the impact of different CMC mediums on language, and the second focused more on pragmatic and sociolinguistic considerations (1-2).
         % For example, Yates (1996) analyzed a computer conferencing system specifically to situate CMC relative to spoken and written language.
           % Yates (1996) used what might be better described as linguistic statistics than linguistic variables, such as type/token ratio and lexical density (33-37), although he also looked at the frequency of different personal pronouns (40-41).
           % An important distinction Yates (1996) argued to exist between CMC and face-to-face conversation is that there is no real field in the sense of Halliday in CMC other than the text itself (45-46).
         % As late as 2008, researchers such as Androutsopoulos (2008 "Style":287) and Tagliamonte & Denis (2008) were still trying to situate CMC
           % Tagliamonte & Denis themselves concluded that instant messaging forms a "hybrid register" (5), in line with previous conclusions of other forms of CMC.
+            % N. Baron (2004) herself had previously suggested that studies of social determinants in speech, in her case gender, can inform and be informed by results from CMC because of this sort of hybrid nature (401).
       % Crystal (2001) defined CMC varieties by medium of communication (e.g., email language or forum language) under the view that the constraints each medium place on speakers are the most important (as cited in Androutsopoulos 2008 "Style":280).
+        % And this is indeed important, as Androutsopoulos (2008 "Style") found more "hip-hop slang" used on German hip-hop forums than on homepages than on magazines/portals (293).
+      % N. Baron (2004) introduced two parameters for classifying CMC mediums: synchronous vs asynchronous and one-to-one vs one-to-many messages (398).
+        % Important here is what is considered synchronous vs asynchronous, as she considered text messages to be asynchronous because one doesn't necessarily expect texts to be read and responded to immediately as would be the case, in her opinion, for chat, MUDs, and instant messaging (398).
+          % It's good to acknowledge that this also changes, as even email may be considered synchronous today due to smartphone access whereas it wouldn't have been in the past.
       % There are also different forms of CMC
-        % Tagliamonte & Denis (2008) consider instant messaging to be one-to-one synchronous CMC (3)
+        % N. Baron (2004) considered instant messaging to be one-to-one synchronous CMC (399).
+          % Tagliamonte & Denis (2008) agreed, considering instant messaging to be one-to-one synchronous CMC (3)
     % Twitter
       % Similar to face-to-face conversation in some ways, but as Danescu-Niculescu-Mizil et al. (2011) note, it isn't always synchronous and there's a limit to how much can be said in one turn (1).
       % Variation between groups on Twitter
@@ -25,20 +35,42 @@
         % Danescu-Niculescu-Mizil et al. (2011) found that users will accommodate their style to their interlocutors on Twitter, either symmetrically or asymmetrically (6-8).
           % As the literature on accommodation theory suggests that accommodation is triggered not just by a need for "communicational efficiency", but also to gain social approval and maintain one's identity (Danescu-Niculescu-Mizil et al. 2011:3), this suggests that social factors are unsurprisingly at work on social media.
     % Communities in CMC
+      % Mendoza-Denton (2001) defines social identity as "the active negotiation of an individual's relationship with larger social constructs" that is "signaled through language and other semiotic means" (as cited in Androutsopoulos 2008 "Style":282).
+        % This means that communities must have norms for a linguistic feature that differ from each other otherwise nothing will be signaled by using the shared feature.
       % Castells (2000) defined these similar to communities of practice where they are "organized around a shared interest or purpose," but he didn't think these were the same as face-to-face communities because of the differences in how interaction occurs (as cited in Androutsopoulos 2008 "Style":283).
         % Androutsopoulos (2008 "Style") recognized that the internet allows virtual communities to be connected in a quite literal way through hyperlinks, calling such conglomerates computer-mediated discourse fields (283-284).
           % This is perhaps more relevant when working with web sites and forums as CMC as Androutsopoulos (2008 "Style") did, though even in places like Twitter, users can link to each other's posts.
       % Androutsopoulos (2008 "Style") describes participants in the German hip-hop sites as partaking in a "liminal" virtual community where they could experiment with different identities linguistically from their day-to-day (290).
+        % Indeed, Androutsopoulos's (2008 "Potentials") described one informant, Wolfgang, as indicating that he would never speak in person the way people write on German hip-hop websites, nor has he heard anyone else do so (15).
+      % Androutsopoulos (2008 "Style") found two dichotomies from work on speech reproduced in German hip-hop music critics on websites: standard vs non-standard language and overt vs covert prestige (309).
+      % Social factors also find import in CMC, as N. Baron (2004) found gender differences between such things as turn lengths and use of contractions in instant messaging.
+        % Such factors must always be approached carefully, though, as N. Baron (2004) herself notes, CMC offers a level of anonymity where speakers can portray themselves as different ages and genders, among other social characteristics (406).
   % Orthographic variation
+    % Androutsopoulos (2000) argued that "spelling choices which signal certain attitudes or evoke certain frames of interpretation by establishing a contrast to the text's spelling regularities or to the default spelling of a linguistic item," though the exact function is not always the same (517).
+      % Androutsopoulos (2000) provides an example in which <Fähnziehn> is used in a German punk fanzine where <fanzine> is expected so as to mock German natives who are ignorant of the fanzine scene (526).
+      % In fact, Androutsopoulos (2008 "Potentials") provides a discussion with one of his informants from his work on German hip-hop websites, Alex, as explicitly speaking of some orthographic variations, like medial <z> for <s>, as signaling an extreme dedication to hip-hop (12-13).
+    % It's important to identify a typology of orthographic variation, something Androutsopoulos (2000) has done.
+      % Androutsopoulos (2000) defined non-standard spellings as diverging from standard, codified norms, having their origin in speech or not (514).
+      % Ultimately, Androutsopoulos (2000) proposed a typology with five phonologically related non-standard spellings (i.e., phonetic, colloquial, regiolectal, prosodic, and interlingual) and one non-phonologically related (i.e., homophone) (521).
+        % Androutsopoulos (2000) divided homophone spellings into two subtypes: lexical substitutions and grapheme substitutions (521-522).
     % Phonological connection
-      % Eisenstein (2013) noted that both Whiteman (1982) and Thompson et al. (2004) found no phonology-orthography connection, but both were before there were models of non-standard orthography, like those found on social media, to follow (17)
+      % Eisenstein (2013) noted that both Whiteman (1982) and Thompson et al. (2004) found no phonology-orthography connection, but both were before there were models of non-standard orthography, like those found on social media, to follow (17).
+        % In fact, Androutsopoulos (2000) found colloquial spellings to be the most frequent non-standard phonologically related spellings in German punk fanzines (523).
+          % This means that previous research did not fully agree and that non-standard forms could be found even outside of CMC.
+          % This involved forms like elisions in articles and verbs as well as contractions of clitic pronouns (Androutsopoulos 2000:523-524).
+      % Androutsopoulos (2008 "Style") found forums on the German hip-hop website webbeatz.de to contain more colloquial spellings (i.e., linked to colloquial speech) than other areas of the site (297).
+      % It's also important to be careful about what to consider phonologically related.
+        % Androutsopoulos (2008 "Potentials") points out a discussion with a regular visitor to German hip-hop websites, Anita, who used <a> for word final <er> as doing so to imitate liner notes for Wu Tang albums, seemingly unaware that there's a phonological relationship there (12-13).
     % Strictly non-phonological
+      % Sebba (1998) suggested that non-standard spellings are used in British Creole both because it distances the language from its superstrate and because there's no orthographic norm, providing examples such as <Jameka> and <kool> (as cited in Androutsopoulos 2000:515).
       % Emoticons, invented by Scott Fahlman in 1982, can't possibly be phonological.
         % Schnoebelen (2012) looked at these in American English, finding that 9.7% of the tweets in his corpus contained them (117).
           % Schnoebelen (2012) focused primairly on the most frequent noseless smiley :) compared to the far less frequent noseful version :-) (117).
             % Schnoebelen (2012) previously found that emoticons can express positive or negative feelings, flirting, or teasing, but that the presence of a nose made no difference for these uses (122).
             % What Schnoebelen (2012) did find to be associated with noseful emoticons was more standard orthographic practices, like a lack of repeating letters to show prosody and a ubiquity of apostrophes in contractions (122-123), suggesting that the nose expresses a sort of stance.
             % Schnoebelen (2012) also found a social connection with younger users preferring noseless emoticons and older users noseful (123-124).
+        % N. Baron (2004) also looked at emoticons in her study of gender in instant messaging, with the addition of abbreviations and acronyms that she considered to be limited to CMC (411).
+          % N. Baron (2004) found that emoticons were almost exclusively limited to females in her data (415-416).
       % Other strictly non-phonological variations have been long recognized
         % Paolillo (1999) examined <you> as <u>, <are> as <r>, and final <s> as <z> on IRC (2).
         % <u> and <r> were also recognized early as Cherny (1995) reported these being considered by MUD players as spellings that originated on IRC (as cited in Paolillo 1999:2).
@@ -50,6 +82,9 @@
   % lol
     % Lexical variation
       % lol has been examined before, but principally as a lexical variable.
+      % N. Baron (2004) looked at lol as a lexical variable in her study of gender in instant messaging as this was the most frequent CMC specific acronym in her data (412).
+        % N. Baron (2004) also noted, anecdotally, that lol was used in speech at that time (411), though the implication is that it originated in CMC.
+        % N. Baron (2004) argued that lol often functioned as a "phatic filler", similar to responding with "OK, cool, or yeah" to show engagement (412).
       % Tagliamonte & Denis (2008) collapsed spelling variants of lol, treating it as a lexical variable.
         % They interpreted it in their data not as an expression of laughter but "as a signal of interlocutor involvement," whereas haha and hehe indicate forms of laughter (11).
         % Tagliamonte & Denis (2008) found age to be significant in that lol and hehe were more frequent in younger users and haha more frequent among older users (13).
