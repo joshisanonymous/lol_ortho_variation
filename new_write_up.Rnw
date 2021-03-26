@@ -37,7 +37,19 @@
     As such, the aim of the present study is to give an in depth examination of the potential social and pragmatic functions of an orthographic variable that cannot reasonably be linked to either spoken language or educational and literary writing: (lol).
     Specifically, we will look at (lol) as used on the social media platform Twitter.
 
-    
+    % Insert examples from data with explanation of the variable
+
+    The rest of this introduction will be structured as follows. Section \ref{subsec:cmc} will cover the general nature of CMC and any special considerations that are applicable to the present study. Section \ref{subsec:orthographic_variation} will review work that has been done on orthographic variation. Finally, a thorough review of work that has been done on (lol), whether as a lexical or orthographic variable, will be presented in section \ref{subsec:previous_lol}.
+
+    \subsection{Computer-mediated communication}
+      \label{subsec:cmc}
+      
+
+    \subsection{Orthographic variation}
+      \label{subsec:orthographic_variation}
+
+    \subsection{Previous work on (lol)}
+      \label{subsec:previous_lol}
 
   \section{Methods}
     \label{sec:methods}
