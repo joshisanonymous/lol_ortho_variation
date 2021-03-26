@@ -1,0 +1,52 @@
+%%%%%%%%%%%%%%%%%%%%%%%%
+% Compile with XeLaTeX %
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{article}
+  % Packages and settings
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage[style=apa, backend=biber]{biblatex}
+    \addbibresource{References.bib}
+  \usepackage{hyperref}
+  \usepackage[group-minimum-digits=4, group-separator={,}]{siunitx}
+
+  % Document information
+  \title{Orthographic variation of (lol)}
+  \author{Joshua McNeill}
+  \date{\today}
+
+  % New commands
+  \newcommand{\orth}[1]{$\langle$#1$\rangle$}
+  \newcommand{\lexi}[1]{\textit{#1}}
+  \newcommand{\gloss}[1]{`#1'}
+
+\begin{document}
+  \maketitle
+  \begin{abstract}
+
+  \end{abstract}
+
+  \section{Introduction}
+    \label{sec:introduction}
+    Studies of orthographic variation are not unheard of in sociolinguistics.
+    This has been especially true since the widespread adoption of the internet as computer-mediated communication (CMC) presents both a wealth of relatively easily accessible data and social contexts that are less subject to overt social controls than what would historically be the case for written forms as they had previously been largely relegated to educational and literary contexts.
+    However, CMC studies and studies of orthographic variation in general have been focused mostly, though not always, either on situating CMC along a continuum between spoken language and historical written language or on the connection between phonology and spelling.
+
+    With some notable exceptions, an area of orthographic variation that has not been explored as much is how it functions on its own terms, independent of phonology.
+    As such, the aim of the present study is to give an in depth examination of the potential social and pragmatic functions of an orthographic variable that cannot reasonably be linked to either spoken language or educational and literary writing: (lol).
+    Specifically, we will look at (lol) as used on the social media platform Twitter.
+
+    
+
+  \section{Methods}
+    \label{sec:methods}
+
+  \section{Results}
+    \label{sec:results}
+
+  \section{Discussion}
+    \label{sec:discussion}
+
+  \printbibliography
+\end{document}
