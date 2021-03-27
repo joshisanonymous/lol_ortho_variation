@@ -75,7 +75,7 @@
       The reason is that it is typical to be connected to an IRC chatroom without monitoring it closely, making it less synchronous than might be expected.
       Indeed, \textcite{baron_see_2004} herself acknowledged that IM users in her data were sometimes multitasking while connected and so did not always respond immediately (p.~419).
       Even in clearer cases of asynchronicity, such e-mail, there is still some imperfection in the classification as many people now own cell phones that receive e-mail notifications instantly wherever they are, allowing for relatively quick responses, though quick responses are not necessarily expected.
-      This parameter is still useful, of course, since a medium can be thought of as more or less synchronous in terms of expectations, but there are caveats to keep in mind still.
+      This parameter is still useful, of course, since a medium can be thought of as more or less synchronous in terms of expectations -- in our case, Twitter is relatively asynchronous but can be used from a cell phone that provides immediate notifications still -- but there are caveats to keep in mind.
 
       It is also important to consider the audience for messages, which is part of \citeauthor{baron_see_2004}'s (\citeyear{baron_see_2004}) typological framework, as well.
 
