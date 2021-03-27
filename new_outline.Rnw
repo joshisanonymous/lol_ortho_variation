@@ -1,29 +1,34 @@
 % Introduction
-  % My objective
-    % Orthographic variation in CMC has been examined before, often (but not always) in relation to spoken phonology
+  %! My objective
+    %! Orthographic variation in CMC has been examined before, often (but not always) in relation to spoken phonology
     % Here we look at an orthographic variable that cannot be linked to phonology, (lol), in order to identify its function(s)
   % CMC
-    % Definition and special considerations
-      % As Paolillo (1999) recognized early on, the nature of online contact isn't necessarily the same as face-to-face contact (1), so early researchers were interested in how CMC affected relationships and the linguistic influences speakers have on each other.
-        % This is a sentiment N. Baron (2004) echoed, suggesting that the medium may change "the character of language produced in that medium" (398).
-          % An example in N. Baron's (2004) study of instant messaging is the phenomenon of multiple overlapping conversation topics between two people, possible due to both being able to speak at the same time without interrupting the other (400).
-          % Another example N. Baron (2004) brings up is the prevalence of multiturn sequences in IM, which she argues helps the speaker hold the floor (417).
-        % Indeed, Androutsopoulos (2008 "Potentials") described there being two "waves" of CMC research: the first focused on the impact of different CMC mediums on language, and the second focused more on pragmatic and sociolinguistic considerations (1-2).
-        % For example, Yates (1996) analyzed a computer conferencing system specifically to situate CMC relative to spoken and written language.
+    % What is it
+      % Mediums
+        %! For example, Yates (1996) analyzed a computer conferencing system specifically to situate CMC relative to spoken and written language.
+        %! N. Baron (2004) considered instant messaging to be one-to-one synchronous CMC (399).
+          %! Tagliamonte & Denis (2008) agreed, considering instant messaging to be one-to-one synchronous CMC (3).
+        %! I. Stewart et al. (2017) examined Instagram despite this being a platform that's centered on images.
+    % Waves
+      %! Indeed, Androutsopoulos (2008 "Potentials") described there being two "waves" of CMC research: the first focused on the impact of different CMC mediums on language, and the second focused more on pragmatic and sociolinguistic considerations (1-2).
+      % First wave
+        % Typology
+          %! N. Baron (2004) introduced two parameters for classifying CMC mediums: synchronous vs asynchronous and one-to-one vs one-to-many messages (398).
+            % Important here is what is considered synchronous vs asynchronous, as she considered text messages to be asynchronous because one doesn't necessarily expect texts to be read and responded to immediately as would be the case, in her opinion, for chat, MUDs, and instant messaging (398).
+              % It's good to acknowledge that this also changes, as even email may be considered synchronous today due to smartphone access whereas it wouldn't have been in the past.
+        % Relationship to speech and writing
+          % As Paolillo (1999) recognized early on, the nature of online contact isn't necessarily the same as face-to-face contact (1), so early researchers were interested in how CMC affected relationships and the linguistic influences speakers have on each other.
+            % This is a sentiment N. Baron (2004) echoed, suggesting that the medium may change "the character of language produced in that medium" (398).
+              % An example in N. Baron's (2004) study of instant messaging is the phenomenon of multiple overlapping conversation topics between two people, possible due to both being able to speak at the same time without interrupting the other (400).
+              % Another example N. Baron (2004) brings up is the prevalence of multiturn sequences in IM, which she argues helps the speaker hold the floor (417).
+            % Crystal (2001) defined CMC varieties by medium of communication (e.g., email language or forum language) under the view that the constraints each medium place on speakers are the most important (as cited in Androutsopoulos 2008 "Style":280).
+              % And this is indeed important, as Androutsopoulos (2008 "Style") found more "hip-hop slang" used on German hip-hop forums than on homepages than on magazines/portals (293).
           % Yates (1996) used what might be better described as linguistic statistics than linguistic variables, such as type/token ratio and lexical density (33-37), although he also looked at the frequency of different personal pronouns (40-41).
-          % An important distinction Yates (1996) argued to exist between CMC and face-to-face conversation is that there is no real field in the sense of Halliday in CMC other than the text itself (45-46).
-        % As late as 2008, researchers such as Androutsopoulos (2008 "Style":287) and Tagliamonte & Denis (2008) were still trying to situate CMC
-          % Tagliamonte & Denis themselves concluded that instant messaging forms a "hybrid register" (5), in line with previous conclusions of other forms of CMC.
-            % N. Baron (2004) herself had previously suggested that studies of social determinants in speech, in her case gender, can inform and be informed by results from CMC because of this sort of hybrid nature (401).
-      % Crystal (2001) defined CMC varieties by medium of communication (e.g., email language or forum language) under the view that the constraints each medium place on speakers are the most important (as cited in Androutsopoulos 2008 "Style":280).
-        % And this is indeed important, as Androutsopoulos (2008 "Style") found more "hip-hop slang" used on German hip-hop forums than on homepages than on magazines/portals (293).
-      % N. Baron (2004) introduced two parameters for classifying CMC mediums: synchronous vs asynchronous and one-to-one vs one-to-many messages (398).
-        % Important here is what is considered synchronous vs asynchronous, as she considered text messages to be asynchronous because one doesn't necessarily expect texts to be read and responded to immediately as would be the case, in her opinion, for chat, MUDs, and instant messaging (398).
-          % It's good to acknowledge that this also changes, as even email may be considered synchronous today due to smartphone access whereas it wouldn't have been in the past.
-      % There are also different forms of CMC
-        % N. Baron (2004) considered instant messaging to be one-to-one synchronous CMC (399).
-          % Tagliamonte & Denis (2008) agreed, considering instant messaging to be one-to-one synchronous CMC (3).
-        % I. Stewart et al. (2017) examined Instagram despite this being a platform that's centered on images.
+            % An important distinction Yates (1996) argued to exist between CMC and face-to-face conversation is that there is no real field in the sense of Halliday in CMC other than the text itself (45-46).
+          % As late as 2008, researchers such as Androutsopoulos (2008 "Style":287) and Tagliamonte & Denis (2008) were still trying to situate CMC
+            % Tagliamonte & Denis themselves concluded that instant messaging forms a "hybrid register" (5), in line with previous conclusions of other forms of CMC.
+              % N. Baron (2004) herself had previously suggested that studies of social determinants in speech, in her case gender, can inform and be informed by results from CMC because of this sort of hybrid nature (401).
+
   % Orthographic variation
     % Androutsopoulos (2000) argued that "spelling choices which signal certain attitudes or evoke certain frames of interpretation by establishing a contrast to the text's spelling regularities or to the default spelling of a linguistic item," though the exact function is not always the same (517).
       % Androutsopoulos (2000) provides an example in which <Fähnziehn> is used in a German punk fanzine where <fanzine> is expected so as to mock German natives who are ignorant of the fanzine scene (526).
@@ -215,6 +220,7 @@
     % Linguistic variables
 
 % Discussion
+  % Did this work like a phonological variable?
   % Is there evidence that orthographic (lol) serves a social function in terms of group identity?
   % Is there evidence that orthographic (lol) serves a pragmatic function?
   % Is there evidence that the position of (lol) in a turn impacts its spelling?

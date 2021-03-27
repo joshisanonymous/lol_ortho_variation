@@ -9,6 +9,7 @@
   \usepackage[style=apa, backend=biber]{biblatex}
     \addbibresource{References.bib}
   \usepackage{hyperref}
+    \hypersetup{colorlinks=true, allcolors=blue}
   \usepackage[group-minimum-digits=4, group-separator={,}]{siunitx}
 
   % Document information
@@ -39,11 +40,44 @@
 
     % Insert examples from data with explanation of the variable
 
-    The rest of this introduction will be structured as follows. Section \ref{subsec:cmc} will cover the general nature of CMC and any special considerations that are applicable to the present study. Section \ref{subsec:orthographic_variation} will review work that has been done on orthographic variation. Finally, a thorough review of work that has been done on (lol), whether as a lexical or orthographic variable, will be presented in section \ref{subsec:previous_lol}.
+    The rest of this introduction will be structured as follows.
+    Section \ref{subsec:cmc} will cover the general nature of CMC and any special considerations that are applicable to the present study.
+    Section \ref{subsec:orthographic_variation} will review work that has been done on orthographic variation.
+    Finally, a thorough review of work that has been done on (lol), whether as a lexical or orthographic variable, will be presented in section \ref{subsec:previous_lol}.
 
     \subsection{Computer-mediated communication}
       \label{subsec:cmc}
-      
+      With the advent of the internet, many new mediums of communication have entered daily life, collectively referred to as CMC.
+      Likewise, by the end of the 1990s, research focused on these new mediums began in ernest.
+      For instance, \textcite{cherny_mud_1996} examined multi-user dungeons (MUDS), which are online, text-based, multiplayer games, whereas \textcite{herring_oral_1996} analyzed language in computer conferencing systems, which are perhaps progenitors of discussion forums, and \textcite{paolillo_language_2001} looked at chatrooms on internet relay chat (IRC).
+      These were all early mediums, and so studies have progressed to other mediums as they have been developed, which include instant messaging (IM) \parencite[][e.g.,]{baron_see_2004, tagliamonte_linguistic_2008}, the social media photo-sharing platform Instagram \parencite[][e.g.,]{stewart_anorexia_2017}, and both commonly and importantly for the present study, the social media micro-blogging platform Twitter \parencite[][e.g.,]{bamman_gender_2014, eisenstein_phonological_2013, hong_language_2011, ilbury_sassy_2020, jones_toward_2015, kim_sociolinguistic_2014}.
+      \textcite{schneier_digital_2021} also looked at text messaging on cell phones, though his data included use of any platform on a cell phone.
+
+      \textcite{androutsopoulos_potentials_2008} described the goals of these researchers of CMC as fitting into two separate ``waves'',\footnote{
+        This is not to be confused with \citeauthor{eckert_three_2012}'s (\citeyear{eckert_three_2012}) description of three ``waves'' of sociolinguistics, though there comparison is apt.
+      }
+      the first focused on the impact of the constraints placed on users of different CMC mediums on the language they produce, and the second focused more on analyses of what happens in CMC pragmaticly and sociolinguisticly (pp.~1-2), though one might also add that there has been a consistent interest in characterizing the relationship between CMC and both speech and older written mediums throughout both of these waves.
+      As such, the rest of this section will cover concepts and findings that came out of the first wave that will be relevant to interpreting the results from our analysis of (lol), whereas the succeeding sections will review work that fits more squarely in the second wave.
+
+      In order to compare results from a study centered on Twitter, as we are doing here, with results from previous work, it is important to have a framework for classifying different mediums.
+      Perhaps the most prevalent framework in CMC is \citeauthor{baron_see_2004}'s (\citeyear{baron_see_2004}), which includes two dichotomous parameters: synchronicity versus asynchronicity, and one-to-one versus one-to-many interactions (p.~398).
+      The first parameter, synchronicity versus asynchronicity, refers to whether there is a reasonable expectation between the interlocutors the messages will be received and responses made as soon immediately, as if in a face-to-face conversation.
+      The second parameter, one-to-one versus one-to-many interactions, refers to whether locutors are sending messages that are meant to be received either by one person or by many people.
+
+      \citeauthor{baron_see_2004}'s (\citeyear{baron_see_2004}) typological framework for CMC is useful for understanding how comparable data produced through different mediums is as there may either be different limitations placed on the forms of messages.
+      For instance, \textcite{baron_see_2004} suggested that chatrooms, MUDs, and IM are all synchronous CMC mediums, whereas text messaging is asynchronous as one may not expect immediate replies to text messages (p.~398).
+      The implication is that data collected from chatrooms and IM are more comparable than data collected from chatrooms and text messages.
+
+      However, the boundaries between what should be considered synchronous and asynchronous are somewhat fuzzy.
+      While chatrooms would presumably yield situations where interlocutors immediately reply to each other, this is not necessarily the case.
+      IRC still exists today, though the way it is used may have changed over the last 20 years.
+      For instance, at the time of this writing, the chatroom #nlp on the freenode network, which offers discussion and help with natural language processing, has a topic that states that it may take two to three hours to get a response to a question.
+      The reason is that it is typical to be connected to an IRC chatroom without monitoring it closely, making it less synchronous than might be expected.
+      Indeed, \textcite{baron_see_2004} herself acknowledged that IM users in her data were sometimes multitasking while connected and so did not always respond immediately (p.~419).
+      Even in clearer cases of asynchronicity, such e-mail, there is still some imperfection in the classification as many people now own cell phones that receive e-mail notifications instantly wherever they are, allowing for relatively quick responses, though quick responses are not necessarily expected.
+      This parameter is still useful, of course, since a medium can be thought of as more or less synchronous in terms of expectations, but there are caveats to keep in mind still.
+
+      It is also important to consider the audience for messages, which is part of \citeauthor{baron_see_2004}'s (\citeyear{baron_see_2004}) typological framework, as well.
 
     \subsection{Orthographic variation}
       \label{subsec:orthographic_variation}

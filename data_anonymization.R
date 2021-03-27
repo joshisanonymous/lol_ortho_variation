@@ -9,14 +9,14 @@
 #############################################################
 
 # Load packages
-library(babynames)
+library(randomNames)
 
 # Read in raw data
 tweets <- read.csv("data/tweets.csv")
 usersAll <- read.csv("data/usersAll.csv")
 
 ## Functions
-# Take a data frame and a anonymization key data frame and attempt to pseudonymize
+# Take a data frame and an anonymization key data frame and attempt to pseudonymize
 pseudonymize <- function(df, key) {
   for(name in key$realNames) {
     if(is.element(key[key$realNames == name, 2], key$realNames)) {
@@ -46,8 +46,9 @@ tweets <- tweets[, 2:ncol(tweets)]
 usersAll <- usersAll[, c(1, 3:ncol(usersAll))]
 
 # Create key
-fakeNames <- sample(unique(babynames$name), length(unique(tweets$utilisateur)))
-userKey <- data.frame("realNames" = unique(tweets$utilisateur),
+# fakeNames <- sample(unique(babynames$name), length(unique(tweets$utilisateur)))
+fakeNames <- randomNames(length(unique(usersAll$Id)), name.order = "first.last", name.sep = "_")
+userKey <- data.frame("realNames" = unique(usersAll$Id),
                       "fakeNames" = fakeNames)
 
 # Apply pseudonym function
@@ -59,5 +60,5 @@ write.csv(userKey, "data/userKey.csv")
 write.csv(tweetsAnon, "data/tweetsAnon.csv")
 write.csv(usersAllAnon, "data/usersAllAnon.csv")
 
-# Clean
+# Clean up
 rm(list = ls())
