@@ -13,31 +13,33 @@
       %! Indeed, Androutsopoulos (2008 "Potentials") described there being two "waves" of CMC research: the first focused on the impact of different CMC mediums on language, and the second focused more on pragmatic and sociolinguistic considerations (1-2).
       % First wave
         % Typology
+          %! As Paolillo (1999) recognized early on, the nature of online contact isn't necessarily the same as face-to-face contact (1), so early researchers were interested in how CMC affected relationships and the linguistic influences speakers have on each other.
+          %! An important distinction Yates (1996) argued to exist between CMC and face-to-face conversation is that there is no real field in the sense of Halliday in CMC other than the text itself (45-46).
+          %! This is a sentiment N. Baron (2004) echoed, suggesting that the medium may change "the character of language produced in that medium" (398).
           %! N. Baron (2004) introduced two parameters for classifying CMC mediums: synchronous vs asynchronous and one-to-one vs one-to-many messages (398).
-            % Important here is what is considered synchronous vs asynchronous, as she considered text messages to be asynchronous because one doesn't necessarily expect texts to be read and responded to immediately as would be the case, in her opinion, for chat, MUDs, and instant messaging (398).
-              % It's good to acknowledge that this also changes, as even email may be considered synchronous today due to smartphone access whereas it wouldn't have been in the past.
-        % Relationship to speech and writing
-          % As Paolillo (1999) recognized early on, the nature of online contact isn't necessarily the same as face-to-face contact (1), so early researchers were interested in how CMC affected relationships and the linguistic influences speakers have on each other.
-            % This is a sentiment N. Baron (2004) echoed, suggesting that the medium may change "the character of language produced in that medium" (398).
-              % An example in N. Baron's (2004) study of instant messaging is the phenomenon of multiple overlapping conversation topics between two people, possible due to both being able to speak at the same time without interrupting the other (400).
-              % Another example N. Baron (2004) brings up is the prevalence of multiturn sequences in IM, which she argues helps the speaker hold the floor (417).
+            %! Important here is what is considered synchronous vs asynchronous, as she considered text messages to be asynchronous because one doesn't necessarily expect texts to be read and responded to immediately as would be the case, in her opinion, for chat, MUDs, and instant messaging (398).
+              %! It's good to acknowledge that this also changes, as even email may be considered synchronous today due to smartphone access whereas it wouldn't have been in the past.
+            %! Impacts of synchronicity
+              %! An example in N. Baron's (2004) study of instant messaging is the phenomenon of multiple overlapping conversation topics between two people, possible due to both being able to speak at the same time without interrupting the other (400).
+              %! Another example N. Baron (2004) brings up is the prevalence of multiturn sequences in IM, which she argues helps the speaker hold the floor (417).
+            %! Impacts of audience
+              %! And this is indeed important, as Androutsopoulos (2008 "Style") found more "hip-hop slang" used on German hip-hop forums than on homepages than on magazines/portals (293).
             % Crystal (2001) defined CMC varieties by medium of communication (e.g., email language or forum language) under the view that the constraints each medium place on speakers are the most important (as cited in Androutsopoulos 2008 "Style":280).
-              % And this is indeed important, as Androutsopoulos (2008 "Style") found more "hip-hop slang" used on German hip-hop forums than on homepages than on magazines/portals (293).
-          % Yates (1996) used what might be better described as linguistic statistics than linguistic variables, such as type/token ratio and lexical density (33-37), although he also looked at the frequency of different personal pronouns (40-41).
-            % An important distinction Yates (1996) argued to exist between CMC and face-to-face conversation is that there is no real field in the sense of Halliday in CMC other than the text itself (45-46).
+            % Yates (1996) used what might be better described as linguistic statistics than linguistic variables, such as type/token ratio and lexical density (33-37), although he also looked at the frequency of different personal pronouns (40-41).
+        % Relationship to speech and writing
           % As late as 2008, researchers such as Androutsopoulos (2008 "Style":287) and Tagliamonte & Denis (2008) were still trying to situate CMC
-            % Tagliamonte & Denis themselves concluded that instant messaging forms a "hybrid register" (5), in line with previous conclusions of other forms of CMC.
-              % N. Baron (2004) herself had previously suggested that studies of social determinants in speech, in her case gender, can inform and be informed by results from CMC because of this sort of hybrid nature (401).
+            % N. Baron (2004) herself had previously suggested that studies of social determinants in speech, in her case gender, can inform and be informed by results from CMC because of this sort of hybrid nature (401).
 
   % Orthographic variation
-    % Androutsopoulos (2000) argued that "spelling choices which signal certain attitudes or evoke certain frames of interpretation by establishing a contrast to the text's spelling regularities or to the default spelling of a linguistic item," though the exact function is not always the same (517).
-      % Androutsopoulos (2000) provides an example in which <Fähnziehn> is used in a German punk fanzine where <fanzine> is expected so as to mock German natives who are ignorant of the fanzine scene (526).
-      % In fact, Androutsopoulos (2008 "Potentials") provides a discussion with one of his informants from his work on German hip-hop websites, Alex, as explicitly speaking of some orthographic variations, like medial <z> for <s>, as signaling an extreme dedication to hip-hop (12-13).
-      % Likewise, Hinrichs & White-Sustaíta (2011) found Jamaican Creole speakers living abroad used forms like <mi> where the item would specifically signal a distinction between Creole and English (i.e., as a subject pronoun) but <me> otherwise (as cited in Eisenstein 2015:165).
-    % There's good reason to believe that orthographic variation is not a case of poor spelling.
-      % Varnhagen et al. (2010) found no consistency between scores on spelling tests and usage of non-standard spellings in instant messaging.
-      % What Varnhagen et al. (2010) did find, though, was that non-standard spellings were acquired as norms where examples like <shulda> never occurred due to <shoulda> being the norm (731).
-    % It's important to identify a typology of orthographic variation, something Androutsopoulos (2000) has done.
+    %! Tagliamonte & Denis themselves concluded that instant messaging forms a "hybrid register" (5), in line with previous conclusions of other forms of CMC.
+    %! Androutsopoulos (2000) argued that "spelling choices which signal certain attitudes or evoke certain frames of interpretation by establishing a contrast to the text's spelling regularities or to the default spelling of a linguistic item," though the exact function is not always the same (517).
+      %! Androutsopoulos (2000) provides an example in which <Fähnziehn> is used in a German punk fanzine where <fanzine> is expected so as to mock German natives who are ignorant of the fanzine scene (526).
+      %! In fact, Androutsopoulos (2008 "Potentials") provides a discussion with one of his informants from his work on German hip-hop websites, Alex, as explicitly speaking of some orthographic variations, like medial <z> for <s>, as signaling an extreme dedication to hip-hop (12-13).
+      %! Likewise, Hinrichs & White-Sustaíta (2011) found Jamaican Creole speakers living abroad used forms like <mi> where the item would specifically signal a distinction between Creole and English (i.e., as a subject pronoun) but <me> otherwise (as cited in Eisenstein 2015:165).
+    %! There's good reason to believe that orthographic variation is not a case of poor spelling.
+      %! Varnhagen et al. (2010) found no consistency between scores on spelling tests and usage of non-standard spellings in instant messaging.
+      %! What Varnhagen et al. (2010) did find, though, was that non-standard spellings were acquired as norms where examples like <shulda> never occurred due to <shoulda> being the norm (731).
+    % [probably leave out] It's important to identify a typology of orthographic variation, something Androutsopoulos (2000) has done.
       % Androutsopoulos (2000) defined non-standard spellings as diverging from standard, codified norms, having their origin in speech or not (514).
       % Ultimately, Androutsopoulos (2000) proposed a typology with five phonologically related non-standard spellings (i.e., phonetic, colloquial, regiolectal, prosodic, and interlingual) and one non-phonologically related (i.e., homophone) (521).
         % Androutsopoulos (2000) divided homophone spellings into two subtypes: lexical substitutions and grapheme substitutions (521-522).
