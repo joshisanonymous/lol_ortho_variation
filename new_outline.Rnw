@@ -31,14 +31,6 @@
             % N. Baron (2004) herself had previously suggested that studies of social determinants in speech, in her case gender, can inform and be informed by results from CMC because of this sort of hybrid nature (401).
 
   % Orthographic variation
-    %! Tagliamonte & Denis themselves concluded that instant messaging forms a "hybrid register" (5), in line with previous conclusions of other forms of CMC.
-    %! Androutsopoulos (2000) argued that "spelling choices which signal certain attitudes or evoke certain frames of interpretation by establishing a contrast to the text's spelling regularities or to the default spelling of a linguistic item," though the exact function is not always the same (517).
-      %! Androutsopoulos (2000) provides an example in which <Fähnziehn> is used in a German punk fanzine where <fanzine> is expected so as to mock German natives who are ignorant of the fanzine scene (526).
-      %! In fact, Androutsopoulos (2008 "Potentials") provides a discussion with one of his informants from his work on German hip-hop websites, Alex, as explicitly speaking of some orthographic variations, like medial <z> for <s>, as signaling an extreme dedication to hip-hop (12-13).
-      %! Likewise, Hinrichs & White-Sustaíta (2011) found Jamaican Creole speakers living abroad used forms like <mi> where the item would specifically signal a distinction between Creole and English (i.e., as a subject pronoun) but <me> otherwise (as cited in Eisenstein 2015:165).
-    %! There's good reason to believe that orthographic variation is not a case of poor spelling.
-      %! Varnhagen et al. (2010) found no consistency between scores on spelling tests and usage of non-standard spellings in instant messaging.
-      %! What Varnhagen et al. (2010) did find, though, was that non-standard spellings were acquired as norms where examples like <shulda> never occurred due to <shoulda> being the norm (731).
     % [probably leave out] It's important to identify a typology of orthographic variation, something Androutsopoulos (2000) has done.
       % Androutsopoulos (2000) defined non-standard spellings as diverging from standard, codified norms, having their origin in speech or not (514).
       % Ultimately, Androutsopoulos (2000) proposed a typology with five phonologically related non-standard spellings (i.e., phonetic, colloquial, regiolectal, prosodic, and interlingual) and one non-phonologically related (i.e., homophone) (521).
@@ -51,44 +43,62 @@
       % Finally, Varnhagen et al. (2010) split up their typology broadly into shortcuts (much like simplifications) and pragmatic devices (723).
       % Important here is that lol would fall under simplification as an acronym in Liénard's system, lexical substitution in Androutsopoulos's, and emotion acronym in Varnhagen et al.'s.
         % In any case, what's shared is that it would be difficult to place lol in any phonologically motivated in any of these systems.
-    % Phonological connection
-      % Eisenstein (2015) found four factors, one linguistic and three social, that favored the absence of <g> in (ing) on Twitter: being a verb, being an @-message, sent from a county with high Black population, sent from a county with high population density (176).
+
+    %! Tagliamonte & Denis themselves concluded that instant messaging forms a "hybrid register" (5), in line with previous conclusions of other forms of CMC.
+    %! There's good reason to believe that orthographic variation is not a case of poor spelling.
+      %! Varnhagen et al. (2010) found no consistency between scores on spelling tests and usage of non-standard spellings in instant messaging.
+      %! What Varnhagen et al. (2010) did find, though, was that non-standard spellings were acquired as norms where examples like <shulda> never occurred due to <shoulda> being the norm (731).
+    % Functions
+      % Grammatically constrained or indicative of grammatical function
+        %! Likewise, Hinrichs & White-Sustaíta (2011) found Jamaican Creole speakers living abroad used forms like <mi> where the item would specifically signal a distinction between Creole and English (i.e., as a subject pronoun) but <me> otherwise (as cited in Eisenstein 2015:165).
+          % Tatman (2016) additionally presents the example of <work> vs <werk> as appearing to be phonologically related respelling but actually being two different lexical items (163-164).
+        % Eisenstein (2015) found four factors, one linguistic and three social, that favored the absence of <g> in (ing) on Twitter: being a verb, being an @-message, sent from a county with high Black population, sent from a county with high population density (176). [being a verb is for grammar]
+        % Eisenstein (2015) found that only voiced variants of "th-stopping" were used on Twitter (170-171).
+      % Audience
+        % Eisenstein (2015) found four factors, one linguistic and three social, that favored the absence of <g> in (ing) on Twitter: being a verb, being an @-message, sent from a county with high Black population, sent from a county with high population density (176). [@-message results is for audience]
+        % Androutsopoulos (2008 "Style") found forums on the German hip-hop website webbeatz.de to contain more colloquial spellings (i.e., linked to colloquial speech) than other areas of the site (297).
+      % Community
+        % Eisenstein (2015) found four factors, one linguistic and three social, that favored the absence of <g> in (ing) on Twitter: being a verb, being an @-message, sent from a county with high Black population, sent from a county with high population density (176). [county characteristics are for community]
+        % One example Jones (2015) finds, which also implicates a geographic difference in norms, is nothing being represented as <nuttin> in the north and <nun> in the south (424).
+        % Sebba (1998) suggested that non-standard spellings are used in British Creole both because it distances the language from its superstrate and because there's no orthographic norm, providing examples such as <Jameka> and <kool> (as cited in Androutsopoulos 2000:515).
+        % Schnoebelen (2012) also found a social connection with younger users preferring noseless emoticons and older users noseful (123-124).
+          % What Schnoebelen (2012) did find to be associated with noseful emoticons was more standard orthographic practices, like a lack of repeating letters to show prosody and a ubiquity of apostrophes in contractions (122-123), suggesting that the nose expresses a sort of stance.
+        % N. Baron (2004) also looked at emoticons in her study of gender in instant messaging, with the addition of abbreviations and acronyms that she considered to be limited to CMC (411).
+          % N. Baron (2004) found that emoticons were almost exclusively limited to females in her data (415-416).
+          % This result was found again in Varnhagen et al.'s (2010) examination of instant messaging, though not quite to the degree of exclusivity (728-729).
+        % <u> and <r> were also recognized early as Cherny (1995) reported these being considered by MUD players as spellings that originated on IRC (as cited in Paolillo 1999:2).
+        %! In fact, Androutsopoulos (2008 "Potentials") provides a discussion with one of his informants from his work on German hip-hop websites, Alex, as explicitly speaking of some orthographic variations, like medial <z> for <s>, as signaling an extreme dedication to hip-hop (12-13).
+      % Pragmatic
+        %! Androutsopoulos (2000) argued that "spelling choices which signal certain attitudes or evoke certain frames of interpretation by establishing a contrast to the text's spelling regularities or to the default spelling of a linguistic item," though the exact function is not always the same (517).
+          %! Androutsopoulos (2000) provides an example in which <Fähnziehn> is used in a German punk fanzine where <fanzine> is expected so as to mock German natives who are ignorant of the fanzine scene (526).
+
+    %[leave out] Phonological connection
       % Eisenstein (2013) noted that both Whiteman (1982) and Thompson et al. (2004) found no phonology-orthography connection, but both were before there were models of non-standard orthography, like those found on social media, to follow (17).
         % In fact, Androutsopoulos (2000) found colloquial spellings to be the most frequent non-standard phonologically related spellings in German punk fanzines (523).
           % This means that previous research did not fully agree and that non-standard forms could be found even outside of CMC.
           % This involved forms like elisions in articles and verbs as well as contractions of clitic pronouns (Androutsopoulos 2000:523-524).
-      % Androutsopoulos (2008 "Style") found forums on the German hip-hop website webbeatz.de to contain more colloquial spellings (i.e., linked to colloquial speech) than other areas of the site (297).
       % It's also important to be careful about what to consider phonologically related.
         % Androutsopoulos (2008 "Potentials") points out a discussion with a regular visitor to German hip-hop websites, Anita, who used <a> for word final <er> as doing so to imitate liner notes for Wu Tang albums, seemingly unaware that there's a phonological relationship there (12-13).
         % Tatman (2016) argues that two criteria must be met to even have the possibility for phonetically motived orthographic variation: the feature be salient and there's concerted purpose behind the respelling in light of pressures from standardized spellings (161).
-        % Tatman (2016) additionally presents the example of <work> vs <werk> as appearing to be phonologically related respelling but actually being two different lexical items (163-164).
       % Where there is a phonological connection, Schneier (2021) argues that this is the "residue" of spoken language more so than a complete transfer, in argreement with Eisenstein (4).
         % Perhaps along the same lines, Eisenstein (2015) points out that phonologically related respellings can't just take any form because they're constrained not only by the spoken modality but also the written modality (162).
           % In this case, Eisenstein (2015) is arguing that (ing) can only be respelled in so many ways (162).
-        % Eisenstein (2015) found that only voiced variants of "th-stopping" were used on Twitter (170-171).
         % Tatman's (2016) comparison of a fan's performance of a radio announcer's voice in recordings vs tweets shows that these two contexts may be similar but are not always identical (165-167).
       % Representations of phonologically related orthographic variation can be difficult to identify and interpret, as Jones (2015) notes (410).
         % Jones (2015) notes a case where an apostrophe might be used to represent a glottal stop, but instead either voiceless stops or simply nothing are used to represent it (416).
-          % One example Jones (2015) finds, which also implicates a geographic difference in norms, is nothing being represented as <nuttin> in the north and <nun> in the south (424).
-    % Strictly non-phonological orthographic variation
-      % Sebba (1998) suggested that non-standard spellings are used in British Creole both because it distances the language from its superstrate and because there's no orthographic norm, providing examples such as <Jameka> and <kool> (as cited in Androutsopoulos 2000:515).
+    %[leave out] Strictly non-phonological orthographic variation
       % Emoticons, invented by Scott Fahlman in 1982, can't possibly be phonological.
         % Schnoebelen (2012) looked at these in American English, finding that 9.7% of the tweets in his corpus contained them (117).
           % Schnoebelen (2012) focused primairly on the most frequent noseless smiley :) compared to the far less frequent noseful version :-) (117).
             % Schnoebelen (2012) previously found that emoticons can express positive or negative feelings, flirting, or teasing, but that the presence of a nose made no difference for these uses (122).
-            % What Schnoebelen (2012) did find to be associated with noseful emoticons was more standard orthographic practices, like a lack of repeating letters to show prosody and a ubiquity of apostrophes in contractions (122-123), suggesting that the nose expresses a sort of stance.
-            % Schnoebelen (2012) also found a social connection with younger users preferring noseless emoticons and older users noseful (123-124).
-        % N. Baron (2004) also looked at emoticons in her study of gender in instant messaging, with the addition of abbreviations and acronyms that she considered to be limited to CMC (411).
-          % N. Baron (2004) found that emoticons were almost exclusively limited to females in her data (415-416).
-          % This result was found again in Varnhagen et al.'s (2010) examination of instant messaging, though not quite to the degree of exclusivity (728-729).
       % Other strictly non-phonological variations have been long recognized
         % Paolillo (1999) examined <you> as <u>, <are> as <r>, and final <s> as <z> on IRC (2).
-        % <u> and <r> were also recognized early as Cherny (1995) reported these being considered by MUD players as spellings that originated on IRC (as cited in Paolillo 1999:2).
       % Tagliamonte & Denis (2008) also looked at <u> but added to this <I> as <i>, finding a preference for <you> and <i>, respectively, in their IM study (14).
       % Tagliamonte & Denis (2008) looked at the five most frequent "IM forms" (i.e., those that they considered unique to CMC): haha, lol, hehe, omg, and hmm (12).
         % While it is, however, arguable if haha, hehe, and hmm are truly unique to CMC, there is far less question for lol and omg.
       % This phenomenon is not limited to English, of course, as members of German hip-hop web sites and forums were found to use <z> for plural, <ph> for <f>, and <k> for <c> (Androutsopoulos 2008 "Style":291).
         % Androutsopoulos (2008 "Style") also noted a lack of capitalization where standard German orthography involves capitalizing every noun (301-304).
+
   % lol
     % Originated in English language chat rooms in the 1980s according to McCulloch 2019, as cited in Schneier 2021:4).
       % It is no longer limited to English, though.
