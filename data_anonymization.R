@@ -19,6 +19,14 @@ usersAll <- read.csv("data/usersAll.csv")
 # Take a data frame and an anonymization key data frame and attempt to pseudonymize
 pseudonymize <- function(df, key) {
   for(name in key$realNames) {
+    # Show progress
+    if (exists("iteration")) {
+      iteration <- iteration + 1
+    } else {
+      iteration <- 1 
+    }
+    print(paste("Current iteration:", iteration))
+    # Perform task
     if(is.element(key[key$realNames == name, 2], key$realNames)) {
       if(exists("makeNewPseudo")) {
         makeNewPseudo <- c(makeNewPseudo, name)
