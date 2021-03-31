@@ -25,7 +25,7 @@
 \begin{document}
   \maketitle
   \begin{abstract}
-
+    [TBD]
   \end{abstract}
 
   \section{Introduction}
@@ -38,7 +38,7 @@
     As such, the aim of the present study is to give an in depth examination of the potential social and pragmatic associations of variants of an orthographic variable that cannot reasonably be linked to either spoken language or educational and literary writing: (lol).
     Specifically, we will look at (lol) as used on the social media platform Twitter, whether certain spelling variants are associated with certain Twitter communities or certain positions within communities and whether certain spelling variants are associated with particular sentiments.
 
-    % Insert examples from data with explanation of the variable
+    [Insert examples from data with explanation of the variable]
 
     The rest of this introduction will be structured as follows.
     Section \ref{subsec:cmc} will cover the general nature of CMC and any special considerations that are applicable to the present study.
@@ -115,34 +115,111 @@
 
       \subsubsection{Connection to grammar}
         \label{subsubsec:connect_grammar}
-        % Grammar
         It is not unusual for variant spellings to be constrained by grammar.
         A very standard and overt example of this comes from French verbs.
         For most verbs, the singular first, second, and third person present forms of verbs are phonetically identical, yet the written forms vary anyway to agree with the subject.
         \lexi{Parler} \gloss{to speak} is pronounced [paʀl] for all three singular subjects in perhaps most varieties of Hexagonal French,\footnote{
           French spoken in France.
         } but is written \orth{parle} for first and third person and \orth{parles} for second person.
+        It is thus useful to consider other potential grammatical constraints on orthographic variation.
 
-        A somewhat more structural function of orthographic variation is exemplified in Hinrichs and White-Sustaíta's (2011) work on Jamaican Creole, which has English as its superstrate.
-        They found that speakers of the language living outside of Jamaica would vary between spellings such as \orth{mi} and \orth{me}, both pronounced [mi], based on the syntactic function within the sentence, using the former for as a subject pronun and the latter in all other cases.
+        One such case can be found in Hinrichs and White-Sustaíta's (2011) work on Jamaican Creole, which has English as its superstrate.
+        They found that speakers of the language living outside of Jamaica would vary between spellings such as \orth{mi} and \orth{me}, both pronounced [mi], based on the syntactic function within the sentence, using the former as the subject pronun and the latter in all other cases.
         Hinrichs and White-Sustaíta (2011) argued that \orth{mi} was limited to the subject pronoun function because this was a stereotypical feature of Jamaican Creole as English would have \lexi{I} in these cases.
-        However, they note that it could also be said that this variation indicates a complex relationship to English and perhaps non-Creole-speakers \parencite[Hinrichs and White-Sustaíta 2011, as cited in][p.~165]{eisenstein_systematic_2015}, making its function not only structural but also social.
+        However, they note that it could also be said that this variation indicates a complex relationship to English and perhaps non-Creole-speakers \parencite[Hinrichs and White-Sustaíta 2011, as cited in][p.~165]{eisenstein_systematic_2015}, making it not only grammatical constrained but possibly socially motivated.
 
-        % Community
-        The previous example presents locutors perhaps taking a particular stance but may also be interpreted as signaling group membership or a lack thereof.
-        A clearer example of the latter comes from \citeauthor{androutsopoulos_potentials_2008}'s (\citeyear{androutsopoulos_potentials_2008}) later work examining German hip-hop websites.
-        A case of spelling variation on these sites was the use of \orth{z} where \orth{s} is expected.
-        \textcite{androutsopoulos_potentials_2008} quoted one of his informants as explicitly claiming that such spelling signaled an extreme dedication to hip-hop (pp.~12-13), which shows just how salient orthographic variation can be.
+        Hinrichs and White-Sustaíta's example from Jamaican Creole is somewhat similar to \citeauthor{tatman_im_2016}'s (\citeyear{tatman_im_2016}) report of variation between \orth{work} and \orth{werk} among drag queens online.
+        She compared collocations for the two and found that \orth{werk} was typically used to express approval and \orth{work} to express the more typical notion of doing work, leading her to conclude that these are in fact different lexical items \parencite[pp.~163-164]{tatman_im_2016}.
+        Determing whether this involved two lexical items versus one polysemous lexical item is well beyond the scope of the present study, and it would be admittedly a weak argument to claim that this variation is purely constrained by syntax, but there is enough in this example to make the more grammatical interpretation possible, wherein \orth{werk} is limited to particular syntactic positions.
 
-        % Pragmatics
-        As \textcite{androutsopoulos_non-standard_2000} argued, orthographic variants ``signal certain attitudes or evoke certain frame of interpretation by establishing a contrast to the text's spelling regularities or to the default spelling of a linguistic item'' (p.~517).
+        Clearer examples of grammatically constrained orthographic variation come from \citeauthor{eisenstein_systematic_2015}'s (\citeyear{eisenstein_systematic_2015}) work on Twitter.
+        He examined two orthographic variables that, on the surface, would appear to have a spoken phonological connection: (ing) as \orth{ing} or \orth{in}\footnote{
+          This presumably would include \orth{in'}, though \textcite{eisenstein_systematic_2015} does not explicitly give that variant.
+        } and (th) fortition, which he refers to as \lexi{th}-stopping.
+        In both cases, grammatical constraints were found.
+        The variable (ing) was more likely to be realized as \orth{in} for verbs (p.~176), and the variable (th) was more likely to be realized as a glyph \orth{d} when the spoken form would typically be voiced as opposed to having it realized as \orth{t} when the spoken form would be voiceless \parencite[pp.~170-171]{eisenstein_systematic_2015}.
+        There were other social factors found to be constraining these variables, but there is a strong argument here that linguistics factors were important for both.
+
+      \subsubsection{Connection to audience}
+        \label{subsubsec:connect_audience}
+        Another constraining factor that \textcite{eisenstein_systematic_2015} found for the realization of (ing) was the audience.
+        As was already discussed in section \ref{subsec:cmc}, the intended or expected audience for a message seems to have an impact or the character of language used on CMC just as it does in spoken language, but the examples from \textcite{pavalanathan_audience-modulated_2015} and \textcite{auer_style_2008} were related to lexical variation instead of orthographic variation.
+        \textcite{eisenstein_systematic_2015}, on the other hand, found this some relationship for orthographic variation where \orth{in} was the more frequent variant for @-messages on Twitter, meaning messages that were directed at a particular user instead of posted as general public statements (p.~176).
+
+        Additionally, \textcite{auer_style_2008} did generally look for respellings in his data, as well, also finding evidence of the importance of audience.
+        On the German hip-hop website webbeatz.de, for example, he noted more colloquial spellings (i.e., those non-standard spellings that are related to colloquial speech) than in other areas of the same site (p.~297).
+        The implication is that discussion forums are expected to be read by the more engaged members of the community whereas general web pages are more likely to be viewed by broader passers by, so to speak.
+
+      \subsubsection{Connection to community membership}
+        \label{subsubsec:connect_community}
+        Perhaps the most common associations examined for linguistic variables in variationist studies are associations between variants and particular communities or particular segments of communities, and indeed, these associations exist for orthographic variation.
+        For instance, Sebba (1998) examined spelling in British Creole and suggested that non-standard spellings are used both because they distance the language from its English superstrate and because there is no orthographic norm for British Creole.
+        The very idea of non-standard in this case, then, is \gloss{not as would be done for English}.
+        Sebba (1998) provided examples such as \orth{Jameka} and \orth{kool} where standard English orthography would have \orth{Jamaica} and \orth{cool} \parencite[as cited in][p.~515]{androutsopoulos_non-standard_2000}.
+        The idea is not simply to buck the superstrate but to make a statement against speakers of the superstrate,\footnote{
+          Of course, it is possible that many British Creole speakers are also English speakers, but the presumption is that speakers identities are bound up in their language preferences.
+        } to assert an independent identity from those speakers.
+
+        \textcite{androutsopoulos_potentials_2008} also presented an example of using a particular orthographic variant on German hip-hop websites to signal membership in the particular community.
+        In this case, \orth{z} would be written where \orth{s} was expected.
+        What makes this example's importance particularly clear is that \textcite{androutsopoulos_potentials_2008} quoted one of his informants as explicitly claiming that such \orth{z} signaled an extreme dedication to hip-hop (pp.~12-13).
+        It appears, then, that orthographic variation can be quite salient.
+
+        \citeauthor{eisenstein_systematic_2015}'s (\citeyear{eisenstein_systematic_2015}) once again proves useful in also showing community membership can be a determining factor in orthographic variation.
+        When examining (ing), he found that tweets emanating from US counties with high population density and/or high Black populations were more likely to have tokens of \orth{in} than those emanating from other counties \parencite[p.~176]{eisenstein_systematic_2015}.
+        It is important to note that he did not know the claimed racial identities of these Twitter users, but the presumption is that they are likely to identify as Black or to at least be highly exposed to those who identify as Black in their daily lives.
+
+        \citeauthor{eisenstein_systematic_2015}'s (\citeyear{eisenstein_systematic_2015}) finding also begins to highlight the important of geographic location.
+        Indeed, one should not confound virtual communities, those formed through consistent interaction online around shared interests \parencite[Castells 2000, as cited in][p.~283]{auer_style_2008}, and physically centered communities, but this does not mean that a connection between the two is impossible.
+        As \textcite{mcneill_lol_2018} showed for virtual communities and geographically defined communities in the Maritime Provinces of Canada, those who live near each other tend to converge online, as well (pp.~88-91).
+
+        As such, \textcite{jones_toward_2015} found that the choice of non-standard spelling between \orth{nuttin} and \orth{nun} on Twitter, both attempts to represent \lexi{nothing} spoken with an intervocalic glottal stop, was constrained by geographic.
+        Those tweeting from the north in the US preferred \orth{nuttin}, and those tweeting from the south in the US preferred \orth{nun} (p.~424).
+        It might thus be expected that northerners and southerners form separate virtual communities, as well, where different norms are established, as the spoken pronunciations in both areas would be the same.
+
+        There are also cases, though, where one might say that a virtual location is the constraining factor. Cherny (1995) offered somewhat anecdotal evidence of this in the early days of the internet.
+        She analyzed the use of \orth{u} and \orth{r} for \orth{you} and \orth{are}, respectively, finding that while these non-standard spellings did appear in MUDs, players of MUDs considered them to be forms that originated in IRC chatrooms \parencite[as cited in][p.~2]{paolillo_virtual_1999}.
+        If MUDs and IRC chatrooms are conceptualized as separate locations, then a important determinant here was likely virtual location.
+
+        Age also appears to be a determinant for the realization of orthographic linguistic variables.
+        \textcite{schnoebelen_you_2012} analyzed the use of different emoticons, faces essentially drawn using alphanumeric characters.
+        He looked particularly closely at those that included noses, such as \orth{:-)}, versus those that did not, such as \orth{:)}.
+        He found that noseless emoticons were preferred more by older users of Twitter more so than younger users, though noseless emoticons were also associated with users who disregarded various orthographic standards by doing things such as repeating letters or leaving out apostophes (pp.~122-124).
+
+        \textcite{baron_see_2004} also analyzed emoticons in instant messaging with the addition of analyzing abbreviations and acronyms that she considered unique to CMC.
+        She found that emoticons were almost exclusively limited to female participants in her data (pp.~415-416).
+        This result was reproduced in \citeauthor{varnhagen_lol_2010}'s (\citeyear{varnhagen_lol_2010}) work on instant messaging, though the results were not as quite as lopsided as in the earlier study (pp.~728-729).
+
+      \subsubsection{Connection to pragmatics}
+        \label{subsubsec:connect_pragmatics}
+        \textcite{androutsopoulos_non-standard_2000} long ago acknowledged that orthographic variants can perform pragmatic work.
+        He argued that they ``signal certain attitudes or evoke certain frame of interpretation by establishing a contrast to the text's spelling regularities or to the default spelling of a linguistic item'' \parencite[p.~517]{androutsopoulos_non-standard_2000}.
         An example of such a contrast can be found in his study of German punk fanzines, essentially low budget magazines made by enthusiasts.
         \textcite{androutsopoulos_non-standard_2000} noted that the typical spelling of the term \lexi{fanzine} was \orth{fanzine}, which in fact bucks against standard German spelling in which all nouns are capitalized.
         Nevertheless, this was the established norm within fanzines themselves.
         As a result, those familiar with the medium would sometimes produce hypothetical quotations from Germans who were not familiar that included the spelling \orth{Fähnziehn}, much more in line with standard German orthography, with the result being mockery of the latter's ignorance \parencite[p.~526]{androutsopoulos_non-standard_2000}.
 
+        The example of a pragmatic factor in the realization of orthographic variables given in this section as well as the examples of other factors from the preceding sections provide some insight into what the possible determinants variables are.
+        Unsurprisingly, the range is as broad as that which can be found for linguistic variables in spoken language.
+        While it will not be possible to look at each and every factor in analyzing (lol) due to the limitations of what we know about Twitter users without directly interacting with them, we will endeavor to include as many factors as possible in line with the exploratory nature of this study.
+
     \subsection{Previous work on (lol)}
       \label{subsec:previous_lol}
+      The orthographic variable being analyzed in the present study is (lol), which at least originally was an acronym that stood for \gloss{laugh out loud}.
+      This acronym is thought to have originated in English language chatrooms in the 1980s \parencite[McCulloch 2019, as cited in][p.~4]{schneier_digital_2021}.
+      However, it has found its way into other languages, as well.
+      \textcite{lienard_les_2014} documented (lol) being used by early adopters of the internet in Mayotte, an island nation near Reunion in Africa.
+      What is notable about this case is that the internet had only effectively been accessible started in 2012 (p.~154), and English was not a local language nor an official language in Mayotte, those being Shimaroe and Kibushi for the local languages and French for the official language (p.~158).
+      Likewise, \textcite{mcneill_lol_2018} documented significant use of \lexi{lol} in what would otherwise be viewed as French-language tweets on Twitter.
+      It appears possible then that (lol) has become something of an internet-language acronym rather than an English-language acronym, though almost all the work done on it has been focused on English.
+
+      Despite its penetration even into other languages, \lexi{lol} is not overall a frequent lexical item when compared to other lexical items.
+      In \citeauthor{baron_see_2004}'s (\citeyear{baron_see_2004}) IM data, \lexi{lol} made up only 0.6\% of the total words.
+      Similarly, in \citeauthor{tagliamonte_linguistic_2008}'s (\citeyear{tagliamonte_linguistic_2008}) IM data, it made up 0.41\% of the words, and 0.35\% in \citeauthor{schneier_digital_2021}'s (\citeyear{schneier_digital_2021}) cell phone data.
+      \textcite{schneier_digital_2021} also found \lexi{lol} to be most frequent turn-initially and turn-finally (p.~14).
+      This low overall frequency might be damning for quantitative analyses, but it is perfectly in line with Zipf's law, which claims that the most frequent lexical items in any corpus will be exponentially more frequent than those ranked even only slightly lower in frequency, and indeed \lexi{lol} is highly frequent when compared to other CMC-specific items.
+
+
 
   \section{Methods}
     \label{sec:methods}
