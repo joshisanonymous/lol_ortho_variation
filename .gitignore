@@ -277,7 +277,7 @@ TSWLatexianTemp*
 .Rproj.user
 
 # R files
-.Rhistory
+.R*
 *.Rproj
 
 # Protect non-anonymized data
