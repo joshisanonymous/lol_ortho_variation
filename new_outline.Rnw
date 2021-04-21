@@ -30,7 +30,7 @@
           % As late as 2008, researchers such as Androutsopoulos (2008 "Style":287) and Tagliamonte & Denis (2008) were still trying to situate CMC
             % N. Baron (2004) herself had previously suggested that studies of social determinants in speech, in her case gender, can inform and be informed by results from CMC because of this sort of hybrid nature (401).
 
-  % Orthographic variation
+  %! Orthographic variation
     % [probably leave out] It's important to identify a typology of orthographic variation, something Androutsopoulos (2000) has done.
       % Androutsopoulos (2000) defined non-standard spellings as diverging from standard, codified norms, having their origin in speech or not (514).
       % Ultimately, Androutsopoulos (2000) proposed a typology with five phonologically related non-standard spellings (i.e., phonetic, colloquial, regiolectal, prosodic, and interlingual) and one non-phonologically related (i.e., homophone) (521).
@@ -48,27 +48,32 @@
     %! There's good reason to believe that orthographic variation is not a case of poor spelling.
       %! Varnhagen et al. (2010) found no consistency between scores on spelling tests and usage of non-standard spellings in instant messaging.
       %! What Varnhagen et al. (2010) did find, though, was that non-standard spellings were acquired as norms where examples like <shulda> never occurred due to <shoulda> being the norm (731).
-    % Functions
-      % Grammatically constrained or indicative of grammatical function
+    %! Functions/associations
+      %! Grammatically constrained or indicative of grammatical function
         %! Likewise, Hinrichs & White-Sustaíta (2011) found Jamaican Creole speakers living abroad used forms like <mi> where the item would specifically signal a distinction between Creole and English (i.e., as a subject pronoun) but <me> otherwise (as cited in Eisenstein 2015:165).
-          % Tatman (2016) additionally presents the example of <work> vs <werk> as appearing to be phonologically related respelling but actually being two different lexical items (163-164).
-        % Eisenstein (2015) found four factors, one linguistic and three social, that favored the absence of <g> in (ing) on Twitter: being a verb, being an @-message, sent from a county with high Black population, sent from a county with high population density (176). [being a verb is for grammar]
-        % Eisenstein (2015) found that only voiced variants of "th-stopping" were used on Twitter (170-171).
-      % Audience
-        % Eisenstein (2015) found four factors, one linguistic and three social, that favored the absence of <g> in (ing) on Twitter: being a verb, being an @-message, sent from a county with high Black population, sent from a county with high population density (176). [@-message results is for audience]
-        % Androutsopoulos (2008 "Style") found forums on the German hip-hop website webbeatz.de to contain more colloquial spellings (i.e., linked to colloquial speech) than other areas of the site (297).
+          %! Tatman (2016) additionally presents the example of <work> vs <werk> as appearing to be phonologically related respelling but actually being two different lexical items (163-164).
+        %! Eisenstein (2015) found four factors, one linguistic and three social, that favored the absence of <g> in (ing) on Twitter: being a verb, being an @-message, sent from a county with high Black population, sent from a county with high population density (176). [being a verb is for grammar]
+        %! Eisenstein (2015) found that only voiced variants of "th-stopping" were used on Twitter (170-171).
+      %! Audience
+        %! Eisenstein (2015) found four factors, one linguistic and three social, that favored the absence of <g> in (ing) on Twitter: being a verb, being an @-message, sent from a county with high Black population, sent from a county with high population density (176). [@-message results is for audience]
+        %! Androutsopoulos (2008 "Style") found forums on the German hip-hop website webbeatz.de to contain more colloquial spellings (i.e., linked to colloquial speech) than other areas of the site (297).
       % Community
-        % Eisenstein (2015) found four factors, one linguistic and three social, that favored the absence of <g> in (ing) on Twitter: being a verb, being an @-message, sent from a county with high Black population, sent from a county with high population density (176). [county characteristics are for community]
-        % One example Jones (2015) finds, which also implicates a geographic difference in norms, is nothing being represented as <nuttin> in the north and <nun> in the south (424).
-        % Sebba (1998) suggested that non-standard spellings are used in British Creole both because it distances the language from its superstrate and because there's no orthographic norm, providing examples such as <Jameka> and <kool> (as cited in Androutsopoulos 2000:515).
-        % Schnoebelen (2012) also found a social connection with younger users preferring noseless emoticons and older users noseful (123-124).
-          % What Schnoebelen (2012) did find to be associated with noseful emoticons was more standard orthographic practices, like a lack of repeating letters to show prosody and a ubiquity of apostrophes in contractions (122-123), suggesting that the nose expresses a sort of stance.
-        % N. Baron (2004) also looked at emoticons in her study of gender in instant messaging, with the addition of abbreviations and acronyms that she considered to be limited to CMC (411).
-          % N. Baron (2004) found that emoticons were almost exclusively limited to females in her data (415-416).
-          % This result was found again in Varnhagen et al.'s (2010) examination of instant messaging, though not quite to the degree of exclusivity (728-729).
-        % <u> and <r> were also recognized early as Cherny (1995) reported these being considered by MUD players as spellings that originated on IRC (as cited in Paolillo 1999:2).
-        %! In fact, Androutsopoulos (2008 "Potentials") provides a discussion with one of his informants from his work on German hip-hop websites, Alex, as explicitly speaking of some orthographic variations, like medial <z> for <s>, as signaling an extreme dedication to hip-hop (12-13).
-      % Pragmatic
+        %! Race, ethnicity, or general identity
+          %! Sebba (1998) suggested that non-standard spellings are used in British Creole both because it distances the language from its superstrate and because there's no orthographic norm, providing examples such as <Jameka> and <kool> (as cited in Androutsopoulos 2000:515).
+          %! In fact, Androutsopoulos (2008 "Potentials") provides a discussion with one of his informants from his work on German hip-hop websites, Alex, as explicitly speaking of some orthographic variations, like medial <z> for <s>, as signaling an extreme dedication to hip-hop (12-13).
+          %! Eisenstein (2015) found four factors, one linguistic and three social, that favored the absence of <g> in (ing) on Twitter: being a verb, being an @-message, sent from a county with high Black population, sent from a county with high population density (176). [county characteristics are for community]
+        %! Location
+          %! One example Jones (2015) finds, which also implicates a geographic difference in norms, is nothing being represented as <nuttin> in the north and <nun> in the south (424).
+          %! Virtual location
+            %! <u> and <r> were also recognized early as Cherny (1995) reported these being considered by MUD players as spellings that originated on IRC (as cited in Paolillo 1999:2).
+        %! Age
+          %! Schnoebelen (2012) also found a social connection with younger users preferring noseless emoticons and older users noseful (123-124).
+            %! What Schnoebelen (2012) did find to be associated with noseful emoticons was more standard orthographic practices, like a lack of repeating letters to show prosody and a ubiquity of apostrophes in contractions (122-123), suggesting that the nose expresses a sort of stance.
+        %! Gender
+          %! N. Baron (2004) also looked at emoticons in her study of gender in instant messaging, with the addition of abbreviations and acronyms that she considered to be limited to CMC (411).
+            %! N. Baron (2004) found that emoticons were almost exclusively limited to females in her data (415-416).
+            %! This result was found again in Varnhagen et al.'s (2010) examination of instant messaging, though not quite to the degree of exclusivity (728-729).
+      %! Pragmatic
         %! Androutsopoulos (2000) argued that "spelling choices which signal certain attitudes or evoke certain frames of interpretation by establishing a contrast to the text's spelling regularities or to the default spelling of a linguistic item," though the exact function is not always the same (517).
           %! Androutsopoulos (2000) provides an example in which <Fähnziehn> is used in a German punk fanzine where <fanzine> is expected so as to mock German natives who are ignorant of the fanzine scene (526).
 
@@ -100,16 +105,16 @@
         % Androutsopoulos (2008 "Style") also noted a lack of capitalization where standard German orthography involves capitalizing every noun (301-304).
 
   % lol
-    % Originated in English language chat rooms in the 1980s according to McCulloch 2019, as cited in Schneier 2021:4).
-      % It is no longer limited to English, though.
-        % Liénard (2014) documented lol being used by early adopters of the internet (which was only effectively available starting in 2012 (154)) in Mayotte where Shimaore and Kibushi are the local languages and French the official language (158)
-    % Not hugely frequent as compared to all other items, but highly frequent as compared to other CMC-specific items.
+    %! Originated in English language chat rooms in the 1980s according to McCulloch 2019, as cited in Schneier 2021:4).
+      %! It is no longer limited to English, though.
+        %! Liénard (2014) documented lol being used by early adopters of the internet (which was only effectively available starting in 2012 (154)) in Mayotte where Shimaore and Kibushi are the local languages and French the official language (158)
+    %! Not hugely frequent as compared to all other items, but highly frequent as compared to other CMC-specific items.
       % This follows Zipf's law, and indeed, Schneier (2021) found that 18% of his recorded keybursts were unique, which included items like <lolol> (13).
+        %! Schneier (2021) found lol to be most frequent at turn initially and finally but rarely medially (14).
         % Likewise, Eisenstein (2015) found that the frequency of particularly respellings dropped dramatically when ordered from the most frequent to least (172).
-      % 0.6% of words in IMs in N. Baron's (2004) data (as cited in Schneier 2021:4).
-        % Similarly, 0.41% in Tagliamonte & Denis' (2008) IM data (as cited in Schneier 2021:4).
-        % Also similarly, 0.35% in Schneier's (2021) phone data (13).
-    % Schneier (2021) found lol to be most frequent at turn initially and finally but rarely medially (14).
+      %! 0.6% of words in IMs in N. Baron's (2004) data (as cited in Schneier 2021:4).
+        %! Similarly, 0.41% in Tagliamonte & Denis' (2008) IM data (as cited in Schneier 2021:4).
+        %! Also similarly, 0.35% in Schneier's (2021) phone data (13).
     % Lexical variation
       % lol has been examined before, but principally as a lexical variable.
       % N. Baron (2004) looked at lol as a lexical variable in her study of gender in instant messaging as this was the most frequent CMC specific acronym in her data (412).
@@ -131,7 +136,7 @@
       % Specific evidence for lol
         % Schneier (2021) argued that lol in his data was used like laughter to mitigate face threatening acts but also to coordinate turn taking, unlike laughter (5).
           % Specifically, Schneier (2021) found keybursts to be short in intiial position, arguing that this quickness is a response to a need to save face for one's interlocutor, whereas the slower turn final keybursts may represent more deliberation on the impact of one's own message (17-18).
-              % It's important to note that keybursts followed this same pattern of quick initial and slower final for all lexical items in Schneier's (2021) data.
+            % It's important to note that keybursts followed this same pattern of quick initial and slower final for all lexical items in Schneier's (2021) data.
     % Orthographic variation of lol
       % Hasn't really been examined.
   % Research question: What social and pragmatic functions does the orthographic variation of (lol) have?
