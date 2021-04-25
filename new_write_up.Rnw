@@ -209,7 +209,7 @@
       This acronym is thought to have originated in English language chatrooms in the 1980s \parencite[McCulloch 2019, as cited in][p.~4]{schneier_digital_2021}.
       However, it has found its way into other languages, as well.
       \textcite{lienard_les_2014} documented (lol) being used by early adopters of the internet in Mayotte, an island nation near Reunion in Africa.
-      What is notable about this case is that the internet had only effectively been accessible started in 2012 (p.~154), and English was not a local language nor an official language in Mayotte, those being Shimaroe and Kibushi for the local languages and French for the official language (p.~158).
+      What is notable about this case is that the internet had only effectively been accessible starting in 2012 (p.~154), and English was not a local language nor an official language in Mayotte, those being Shimaroe and Kibushi for the local languages and French for the official language (p.~158).
       Likewise, \textcite{mcneill_lol_2018} documented significant use of \lexi{lol} in what would otherwise be viewed as French-language tweets on Twitter.
       It appears possible then that (lol) has become something of an internet-language acronym rather than an English-language acronym, though almost all the work done on it has been focused on English.
 
@@ -217,9 +217,11 @@
       In \citeauthor{baron_see_2004}'s (\citeyear{baron_see_2004}) IM data, \lexi{lol} made up only 0.6\% of the total words.
       Similarly, in \citeauthor{tagliamonte_linguistic_2008}'s (\citeyear{tagliamonte_linguistic_2008}) IM data, it made up 0.41\% of the words, and 0.35\% in \citeauthor{schneier_digital_2021}'s (\citeyear{schneier_digital_2021}) cell phone data.
       \textcite{schneier_digital_2021} also found \lexi{lol} to be most frequent turn-initially and turn-finally (p.~14).
-      This low overall frequency might be damning for quantitative analyses, but it is perfectly in line with Zipf's law, which claims that the most frequent lexical items in any corpus will be exponentially more frequent than those ranked even only slightly lower in frequency, and indeed \lexi{lol} is highly frequent when compared to other CMC-specific items.
+      This low overall frequency might be damning for quantitative analyses, but it is perfectly in line with Zipf's law, which claims that the most frequent lexical items in any corpus will be exponentially more frequent than those ranked even only slightly lower in frequency, and indeed \lexi{lol} is highly frequent when compared to other as far as content words go, as \textcite{mcneill_lol_2018} found (p.~60).
 
-
+      \subsubsection{As a lexical variable}
+        \label{subsubsec:lexical}
+        
 
   \section{Methods}
     \label{sec:methods}
