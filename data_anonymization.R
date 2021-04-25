@@ -18,31 +18,31 @@ usersAll <- read.csv("data/usersAll.csv")
 ## Functions
 # Take a data frame and an anonymization key data frame and attempt to pseudonymize
 pseudonymize <- function(df, key) {
+  matrix <- as.matrix(df)
+  iteration <- 1 # For progress indicator
   for(name in key$realNames) {
     # Show progress
-    if (exists("iteration")) {
-      iteration <- iteration + 1
-    } else {
-      iteration <- 1 
-    }
-    print(paste("Current iteration:", iteration))
+    print(paste(iteration, "people renamed | renaming", name))
+    iteration <- iteration + 1
     # Perform task
-    if(is.element(key[key$realNames == name, 2], key$realNames)) {
+    if(is.element(key[key$realNames == name, "fakeNames"], matrix)) {
       if(exists("makeNewPseudo")) {
         makeNewPseudo <- c(makeNewPseudo, name)
       } else {
         makeNewPseudo <- name
       }
     } else {
-      df <- as.data.frame(apply(df, 2, function(column) gsub(name, key[key$realNames == name, 2], column)))
+      # df <- gsub(name, key[key$realNames == name, 2], df, fixed = TRUE)
+      matrix <- gsub(name, key[key$realNames == name, "fakeNames"], matrix, fixed = TRUE)
     }
   }
+  dfProcessed <- as.data.frame(matrix)
   if(exists("makeNewPseudo")) {
     print("Your check $makeNewPseudo for people to rename.")
-    return(list("newDf" = df, "makeNewPseudo" = makeNewPseudo))
+    return(list("newDf" = dfProcessed, "makeNewPseudo" = makeNewPseudo))
   } else {
     print("All names successfully anonymized.")
-    return(df)
+    return(dfProcessed)
   }
 }
 
@@ -54,9 +54,8 @@ tweets <- tweets[, 2:ncol(tweets)]
 usersAll <- usersAll[, c(1, 3:ncol(usersAll))]
 
 # Create key
-# fakeNames <- sample(unique(babynames$name), length(unique(tweets$utilisateur)))
-fakeNames <- randomNames(length(unique(usersAll$Id)), name.order = "first.last", name.sep = "_")
-userKey <- data.frame("realNames" = unique(usersAll$Id),
+fakeNames <- randomNames(length(unique(tweets$utilisateur)), name.order = "first.last", name.sep = "_")
+userKey <- data.frame("realNames" = unique(tweets$utilisateur),
                       "fakeNames" = fakeNames)
 
 # Apply pseudonym function
