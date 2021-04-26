@@ -20,20 +20,19 @@ usersAll <- read.csv("data/usersAll.csv")
 pseudonymize <- function(df, key) {
   matrix <- as.matrix(df)
   iteration <- 1 # For progress indicator
-  for(name in key$realNames) {
+  for(name in key[,1]) {
     # Show progress
     print(paste(iteration, "people renamed | renaming", name))
     iteration <- iteration + 1
     # Perform task
-    if(is.element(key[key$realNames == name, "fakeNames"], matrix)) {
+    if(is.element(key[key[, 1] == name, 2], matrix)) {
       if(exists("makeNewPseudo")) {
         makeNewPseudo <- c(makeNewPseudo, name)
       } else {
         makeNewPseudo <- name
       }
     } else {
-      # df <- gsub(name, key[key$realNames == name, 2], df, fixed = TRUE)
-      matrix <- gsub(name, key[key$realNames == name, "fakeNames"], matrix, fixed = TRUE)
+      matrix <- gsub(name, key[key[, 1] == name, 2], matrix, fixed = TRUE)
     }
   }
   dfProcessed <- as.data.frame(matrix)
@@ -54,8 +53,8 @@ tweets <- tweets[, 2:ncol(tweets)]
 usersAll <- usersAll[, c(1, 3:ncol(usersAll))]
 
 # Create key
-fakeNames <- randomNames(length(unique(tweets$utilisateur)), name.order = "first.last", name.sep = "_")
-userKey <- data.frame("realNames" = unique(tweets$utilisateur),
+fakeNames <- randomNames(length(unique(usersAll$Id)), name.order = "first.last", name.sep = "_")
+userKey <- data.frame("realNames" = unique(usersAll$Id),
                       "fakeNames" = fakeNames)
 
 # Apply pseudonym function
