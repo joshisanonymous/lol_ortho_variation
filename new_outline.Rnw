@@ -115,30 +115,28 @@
       %! 0.6% of words in IMs in N. Baron's (2004) data (as cited in Schneier 2021:4).
         %! Similarly, 0.41% in Tagliamonte & Denis' (2008) IM data (as cited in Schneier 2021:4).
         %! Also similarly, 0.35% in Schneier's (2021) phone data (13).
-    % Lexical variation
-      % lol has been examined before, but principally as a lexical variable.
-      % N. Baron (2004) looked at lol as a lexical variable in her study of gender in instant messaging as this was the most frequent CMC specific acronym in her data (412).
+    !% Lexical variation: typically pragmatic
+      !% lol has been examined before, but principally as a lexical variable.
+      !% N. Baron (2004) looked at lol as a lexical variable in her study of gender in instant messaging as this was the most frequent CMC specific acronym in her data (412).
         % N. Baron (2004) also noted, anecdotally, that lol was used in speech at that time (411), though the implication is that it originated in CMC.
-        % N. Baron (2004) argued that lol often functioned as a "phatic filler", similar to responding with "OK, cool, or yeah" to show engagement (412).
+        !% N. Baron (2004) argued that lol often functioned as a "phatic filler", similar to responding with "OK, cool, or yeah" to show engagement (412).
       % Tagliamonte & Denis (2008) collapsed spelling variants of lol, treating it as a lexical variable.
-        % They interpreted it in their data not as an expression of laughter but "as a signal of interlocutor involvement," whereas haha and hehe indicate forms of laughter (11).
-        % Tagliamonte & Denis (2008) found age to be significant in that lol and hehe were more frequent in younger users and haha more frequent among older users (13).
+        !% They interpreted it in their data not as an expression of laughter but "as a signal of interlocutor involvement," whereas haha and hehe indicate forms of laughter (11).
+        !% Tagliamonte & Denis (2008) found age to be significant in that lol and hehe were more frequent in younger users and haha more frequent among older users (13).
       % Schneier (2021) looked at both Haha and Lol as lexical variants in his keystroke analysis.
         % The keystroke logging allowed him to establish some spelling equivalents though as he could see when someone repaired something like <Hwhw> with <haha> (11), which presumably happened for Lol also.
         % Additionally, Schneier (2021) examined these as separate variables (14), implicitly arguing that these aren't purely representing laughter.
-    % Pragmatic functions of lol
+      !% Schneier (2021) argued that lol in his data was used like laughter to mitigate face threatening acts but also to coordinate turn taking, unlike laughter (5).
+        !% Specifically, Schneier (2021) found keybursts to be short in initial position, arguing that this quickness is a response to a need to save face for one's interlocutor, whereas the slower turn final keybursts may represent more deliberation on the impact of one's own message (17-18).
+          % It's important to note that keybursts followed this same pattern of quick initial and slower final for all lexical items in Schneier's (2021) data.
+    % Orthographic variation of lol
+      % Hasn't really been examined, but there are some hints at what its purpose is
       % Capitalization or reduplication could reasonably be used to represent different degrees of laughter
         % In fact, this could be quantified in terms of Levenshtein distance as was done by I. Stewart et al. (2017) for other orthographic variables (4).
           % They found this to be meaningful in terms of language change as newcomers to the Instagram community they examined generally prefered variants with greater distances from the original (5-6).
           % Likewise, greater distance correlated with more likes (I. Stewart et al. 2017:6-7).
         % Schnoebelen (2012) acknowledged this possibility when formulating his idea of affective lengthening (117-118).
         % Thurlow & A. Brown (2003) also talk more generally about what he calls paralinguistic restitution wherein users of CMC exploit features that are particular to the medium to represent paralinguistic information that might otherwise be communicated through things like gestures and facial expressions (as cited in Schneier 2021:3)
-      % Specific evidence for lol
-        % Schneier (2021) argued that lol in his data was used like laughter to mitigate face threatening acts but also to coordinate turn taking, unlike laughter (5).
-          % Specifically, Schneier (2021) found keybursts to be short in intiial position, arguing that this quickness is a response to a need to save face for one's interlocutor, whereas the slower turn final keybursts may represent more deliberation on the impact of one's own message (17-18).
-            % It's important to note that keybursts followed this same pattern of quick initial and slower final for all lexical items in Schneier's (2021) data.
-    % Orthographic variation of lol
-      % Hasn't really been examined.
   % Research question: What social and pragmatic functions does the orthographic variation of (lol) have?
 
 % Methods

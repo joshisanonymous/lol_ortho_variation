@@ -217,10 +217,26 @@
       In \citeauthor{baron_see_2004}'s (\citeyear{baron_see_2004}) IM data, \lexi{lol} made up only 0.6\% of the total words.
       Similarly, in \citeauthor{tagliamonte_linguistic_2008}'s (\citeyear{tagliamonte_linguistic_2008}) IM data, it made up 0.41\% of the words, and 0.35\% in \citeauthor{schneier_digital_2021}'s (\citeyear{schneier_digital_2021}) cell phone data.
       \textcite{schneier_digital_2021} also found \lexi{lol} to be most frequent turn-initially and turn-finally (p.~14).
-      This low overall frequency might be damning for quantitative analyses, but it is perfectly in line with Zipf's law, which claims that the most frequent lexical items in any corpus will be exponentially more frequent than those ranked even only slightly lower in frequency, and indeed \lexi{lol} is highly frequent when compared to other as far as content words go, as \textcite{mcneill_lol_2018} found (p.~60).
+      This low overall frequency might be damning for quantitative analyses, but it is perfectly in line with Zipf's law, which claims that the most frequent lexical items in any corpus will be exponentially more frequent than those ranked even only slightly lower in frequency, and indeed \lexi{lol} is highly frequent when compared to other as far as content words go (\citeauthor{baron_see_2004}, \citeyear[p.~412]{baron_see_2004}; \citeauthor{mcneill_lol_2018}, \citeyear[p.~60]{mcneill_lol_2018}), rendering it analyzable in a quantitative fashion.
 
       \subsubsection{As a lexical variable}
-        \label{subsubsec:lexical}
+        \label{subsubsec:lexical_lol}
+        Previous analyses of \lexi{lol} have by and large treated it as a lexical variable as opposed to an orthographic variable.
+        While the current study aims to present an orthographic analysis, the results from lexical analyses provide some context for better understanding variant spellings.
+        What those results repeatedly suggested was that \lexi{lol} is employed primarily for pragmatic purposes.
+
+        \textcite{baron_see_2004} included \lexi{lol} in her study of gender in instant messaging, though she did not draw any conclusions about it being constrained by gender.
+        Instead, she aruged that it functioned as a ``phatic filler'' used to show engagement in the same way as lexical items such as ``\lexi{OK}, \lexi{cool}, or \lexi{yeah}'' \parencite[p.~412]{baron_see_2004}.
+        Likewise, \textcite{tagliamonte_linguistic_2008} described \lexi{lol} ``as a signal of interlocutor involvement,'' specifically contrasting this interpretation with items such as \lexi{haha} and \lexi{hehe}, which they described as simply forms of laughter (p.~11).
+        A non-pragmatic constraint was also found, however, in that \lexi{lol} was more common among young user of instant messaging than older users \parencite[p.~13]{tagliamonte_linguistic_2008}.
+
+        \textcite{schneier_digital_2021} also gave a lexical treatment of \lexi{lol}, though he did not wash \lexi{lol} of its connection to laughter as others had done.
+        He argued instead that laughter in spoken conversation has pragmatic functions itself, specifically that it helps mitigate face threatening acts\parencite[p.~5]{schneier_digital_2021}.
+        Shorter keybursts for \lexi{lol} at the beginning of turns led him to this conclusion as one would want to very quickly respond when attempting to help one's interlocutor save face \parencite[pp.~17-18]{schneier_digital_2021}.
+        It was also argued that \lexi{lol} goes beyond the functions of laughter in spoken language in that it also helps to coordinate turn taking \parencite[p.~5]{schneier_digital_2021}.
+
+      \subsubsection{As an orthographic variable}
+        \label{subsubsec:orthographic_lol}
         
 
   \section{Methods}
