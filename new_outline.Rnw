@@ -130,14 +130,14 @@
         !% Specifically, Schneier (2021) found keybursts to be short in initial position, arguing that this quickness is a response to a need to save face for one's interlocutor, whereas the slower turn final keybursts may represent more deliberation on the impact of one's own message (17-18).
           % It's important to note that keybursts followed this same pattern of quick initial and slower final for all lexical items in Schneier's (2021) data.
     % Orthographic variation of lol
-      % Hasn't really been examined, but there are some hints at what its purpose is
+      !% Hasn't really been examined, but there are some hints at what its purpose is
       % Capitalization or reduplication could reasonably be used to represent different degrees of laughter
-        % In fact, this could be quantified in terms of Levenshtein distance as was done by I. Stewart et al. (2017) for other orthographic variables (4).
-          % They found this to be meaningful in terms of language change as newcomers to the Instagram community they examined generally prefered variants with greater distances from the original (5-6).
-          % Likewise, greater distance correlated with more likes (I. Stewart et al. 2017:6-7).
-        % Schnoebelen (2012) acknowledged this possibility when formulating his idea of affective lengthening (117-118).
-        % Thurlow & A. Brown (2003) also talk more generally about what he calls paralinguistic restitution wherein users of CMC exploit features that are particular to the medium to represent paralinguistic information that might otherwise be communicated through things like gestures and facial expressions (as cited in Schneier 2021:3)
-  % Research question: What social and pragmatic functions does the orthographic variation of (lol) have?
+        !% In fact, this could be quantified in terms of Levenshtein distance as was done by I. Stewart et al. (2017) for other orthographic variables (4).
+          % They found this to be meaningful in terms of language change as newcomers to the Instagram community they examined generally preferred variants with greater distances from the original (5-6).
+          !% Likewise, greater distance correlated with more likes (I. Stewart et al. 2017:6-7).
+        !% Schnoebelen (2012) acknowledged this possibility when formulating his idea of affective lengthening (117-118).
+        !% Thurlow & A. Brown (2003) also talk more generally about what he calls paralinguistic restitution wherein users of CMC exploit features that are particular to the medium to represent paralinguistic information that might otherwise be communicated through things like gestures and facial expressions (as cited in Schneier 2021:3)
+  !% Research question: What social and pragmatic functions does the orthographic variation of (lol) have?
 
 % Methods
   % Data collection

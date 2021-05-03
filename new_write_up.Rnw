@@ -237,10 +237,32 @@
 
       \subsubsection{As an orthographic variable}
         \label{subsubsec:orthographic_lol}
-        
+        While (lol) shows up in analyses as a lexical variable, to date, no research has analyzed what the constraints on and functions of orthographic variants of it are.
+        That said, some work on orthographic variation in CMC has been done for other variables the results of which can be suggestive for how (lol) works.
+
+        A rather obvious difference between the written language mode and spoken language mode is that the latter has a clear prosodic dimension nor a gestural dimension in the former that can be used for pragmatic purposes such as turning an utterance into a question or expressing disbelief.
+        However, there are arguably orthographic tools available to cover these functions such as capitalization and reduplication.
+        This phenomenon of using the unique tools that a medium offers to cover the functions of the tools that it lacks can be referred to as paralinguistic restitution \parencite[Thurlow and Brown 2003, as cited in][p.~3]{schneier_digital_2021}.
+
+        Along the same lines, the idea of affective lengthening has also been proposed, which is essentially the reduplication of individual typed characters for pragmatic effect \parencite[pp.~117-118]{schnoebelen_you_2012}.
+        Indeed, just such lengthening is readily apparent in the tweets collected for the present study, though an argument for what exact function this has or whether it even represents a pragmatic function has yet to be made.
+        [Insert example of lol lengthening]
+
+        Not all studies of orthographic variation in CMC propose that variants are linked to pragmatics.
+        \textcite{stewart_anorexia_2017}, for example, analyzed variation in the spelling of a banned hashtag on Instagram that was used for posts that treated anorexia as a positive condition.
+        Instagram users developed variants to get around the ban, and these variants became more and more disconnected from the original as measured using Levenshtein distance \parencite[p.~4]{stewart_anorexia_2017}.
+        It was found that newcomers to this Instagram community preferred the variants with the greatest distance from the original \parencite[pp.~5-6]{stewart_anorexia_2017}, suggesting perhaps that the community was stratified by something akin to age and that these variants were not in contrast serving any pragmatic functions.
+
+        There is thus reason to suspect that spelling variation in (lol) may be either socially constrained or serving pragmatic functions.
+        As a result, the primary research question of the present study is the following:
+        \begin{itemize}
+          \item[RQ] What are the social constraints and/or pragmatic function of the orthographic variable (lol)?
+        \end{itemize}
+        This is naturally a rather open-ended exploratory question given the lack of research on this particular variable, meaning results will have as much precision as possible, but more research will likely be needed.
 
   \section{Methods}
     \label{sec:methods}
+    
 
   \section{Results}
     \label{sec:results}
