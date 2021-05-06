@@ -66,7 +66,8 @@ getMode <- function(vector) {
 }
 
 ## Data
-tweets <- read.csv("data/tweetsAnon.csv")
+tweets <- read.csv("data/tweetsAnon.csv", encoding = "UTF-8")
+usersAll <- read.csv("data/usersAllAnon.csv", encoding = "UTF-8")
 # Subset by orthographic variants of <lol> only
 lol <- subset(tweets, grepl("l+(o+|u+|e+|a+w+)l+",
                             lol, perl = TRUE, ignore.case = TRUE))
@@ -81,10 +82,10 @@ lolActive <- lol[is.element(lol$utilisateur, usersActive),]
 # Create a data frame summarizing each community
 communitiesModes <- aggregate(lol$lol, list(lol$communaute), getMode)
 communitiesDivs <- aggregate(lol$lol, list(lol$communaute), getDiversity)
-communitiesSize <- aggregate(lol$utilisateur, list(lol$communaute), unique)
+communitiesSize <- aggregate(usersAll$Id, list(usersAll$modularity_class), unique)
 communitiesSize[,3] <- sapply(communitiesSize$x, length)
 communitiesModesDivs <- merge(communitiesModes, communitiesDivs, by = 1)
-communitiesSummary <- merge(communitiesModesDivs, communitiesSize, by = 1)
+communitiesSummary <- merge(communitiesModesDivs, communitiesSize, by = 1, all.y = FALSE)
 rm(list = c("communitiesModes", "communitiesDivs", "communitiesSize", "communitiesModesDivs"))
 colnames(communitiesSummary) <- c("Community", "Mode", "Diversity", "Users", "Size")
 
@@ -99,6 +100,23 @@ rm(list = c("usersCommunities", "usersModes", "usersDivByCent", "usersCommsModes
 colnames(usersSummary) <- c("User", "Community", "Mode", "PageRank", "Diversity", "Tokens")
 usersSummary <- merge(usersSummary, communitiesSummary[, c("Community", "Diversity")], by = "Community")
 colnames(usersSummary) <- c("Community", "User", "Mode", "PageRank", "Diversity", "Tokens", "Diversity_Comm")
+# Add the PageRank percentile for each user
+for (community in unique(usersSummary$Community)) {
+  sub <- subset(usersSummary, usersSummary$Community == community)
+  for (user in unique(sub$User)) {
+    if (!exists("usersPRPercentile")) {
+      usersPRPercentile <- data.frame(User = user,
+                                      PR_Percentile = ecdf(sub$PageRank)(sub[sub$User == user,]$PageRank))
+    } else {
+      usersPRPercentile <- rbind(usersPRPercentile,
+                                 data.frame(User = user,
+                                            PR_Percentile = ecdf(sub$PageRank)(sub[sub$User == user,]$PageRank)))
+    }
+  }
+}
+rm(list = c("community", "sub", "user"))
+usersSummary <- merge(usersSummary, usersPRPercentile, by = "User")
+rm(usersPRPercentile)
 
 # Create a data frame summarizing community 2265
 usersSummary2265 <- usersSummary[usersSummary$Community == 2265,]
