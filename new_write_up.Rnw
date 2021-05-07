@@ -11,6 +11,7 @@
   \usepackage{hyperref}
     \hypersetup{colorlinks=true, allcolors=blue}
   \usepackage[group-minimum-digits=4, group-separator={,}]{siunitx}
+  \usepackage{enumitem}
 
   % Document information
   \title{Orthographic variation of (lol)}
@@ -23,6 +24,17 @@
   \newcommand{\gloss}[1]{`#1'}
 
 \begin{document}
+  <<settings_load_scripts, echo = FALSE>>=
+  read_chunk("analysis.R")
+  opts_chunk$set(echo = FALSE,
+                 warning = FALSE,
+                 message = FALSE,
+                 results = "asis",
+                 fig.height = 3,
+                 fig.width = 5)
+  @
+  <<load_packages_functions_data>>=
+  @
   \maketitle
   \begin{abstract}
     [TBD]
@@ -35,10 +47,21 @@
     However, CMC studies and studies of orthographic variation in general have been focused mostly, though not always, either on situating CMC along a continuum between spoken language and older forms of written language or on the connection between phonology and spelling.
 
     With some notable exceptions, an area of orthographic variation that has not been explored as much is how it functions on its own terms, independent of phonology.
-    As such, the aim of the present study is to give an in depth examination of the potential social and pragmatic associations of variants of an orthographic variable that cannot reasonably be linked to either spoken language or educational and literary writing: (lol).
-    Specifically, we will look at (lol) as used on the social media platform Twitter, whether certain spelling variants are associated with certain Twitter communities or certain positions within communities and whether certain spelling variants are associated with particular sentiments.
+    As such, the aim of the present study is to give an in depth examination of the potential social and pragmatic associations of variants of an orthographic variable that cannot reasonably be linked to either spoken language or educational and literary writing: (lol) \gloss{laugh out loud}.
 
-    [Insert examples from data with explanation of the variable]
+    \begin{enumerate}
+      \item \Sexpr{lol[lol$id.occurrence == 840, "utilisateur"]}\footnote{
+        Users whose tweets appear in the corpus used here have all been anonymized without concern for gender nor social identity.
+      }: \Sexpr{lol[lol$id.occurrence == 840, "texte"]} \label{sent:lol}
+      \item \Sexpr{lol[lol$id.occurrence == 3071, "utilisateur"]}: \Sexpr{lol[lol$id.occurrence == 3071, "texte"]} \label{sent:LOL}
+      \item \Sexpr{lol[lol$id.occurrence == 2959, "utilisateur"]}: \Sexpr{lol[lol$id.occurrence == 2959, "texte"]} \label{sent:lololol}
+    \end{enumerate}
+
+    As tweets \ref{sent:lol}, \ref{sent:LOL}, and \ref{sent:lololol} show, there are various ways that (lol) can be spelled, ranging from all lowercase \orth{lol} to all uppercase \orth{LOL} to repeated characters that defy this item's origin as an acronym, as in \orth{lololol}.
+    These three tweets alone also display numerous non-standard orthographic practices such as repeated punctuation, abbreviations, acronyms, and characters meant to be understood as some homophonous word or portion of a word, such as \orth{2} for \lexi{to}.
+    Moreover, these tokens of (lol) also coincide with other non-standard features of English such as the negative concord in tweet \ref{sent:lol}.
+    While any of these linguistic features could prove interesting to analyze, only (lol) is examined here.
+    Specifically, we will look at (lol) as used on the social media platform Twitter, whether certain spelling variants are associated with certain Twitter communities or certain positions within communities and whether certain spelling variants are associated with particular sentiments.
 
     The rest of this introduction will be structured as follows.
     Section \ref{subsec:cmc} will cover the general nature of CMC and any special considerations that are applicable to the present study.
@@ -245,8 +268,11 @@
         This phenomenon of using the unique tools that a medium offers to cover the functions of the tools that it lacks can be referred to as paralinguistic restitution \parencite[Thurlow and Brown 2003, as cited in][p.~3]{schneier_digital_2021}.
 
         Along the same lines, the idea of affective lengthening has also been proposed, which is essentially the reduplication of individual typed characters for pragmatic effect \parencite[pp.~117-118]{schnoebelen_you_2012}.
-        Indeed, just such lengthening is readily apparent in the tweets collected for the present study, though an argument for what exact function this has or whether it even represents a pragmatic function has yet to be made.
-        [Insert example of lol lengthening]
+        Indeed, just such lengthening is readily apparent in the tweets collected for the present study as can be seen in tweet \ref{sent:looool}, though an argument for what exact function this has or whether it even represents a pragmatic function has yet to be made.
+
+        \begin{enumerate}[resume]
+          \item \Sexpr{lol[lol$id.occurrence == 4289, "utilisateur"]}: \Sexpr{lol[lol$id.occurrence == 4289, "texte"]} \label{sent:looool}
+        \end{enumerate}
 
         Not all studies of orthographic variation in CMC propose that variants are linked to pragmatics.
         \textcite{stewart_anorexia_2017}, for example, analyzed variation in the spelling of a banned hashtag on Instagram that was used for posts that treated anorexia as a positive condition.
@@ -262,7 +288,20 @@
 
   \section{Methods}
     \label{sec:methods}
-    
+    The corpus used for this study is a collection of tweets from Twitter.
+    As such, this section will briefly discuss some characteristics of Twitter along with how the tweets were scraped in section \ref{subsec:data_collect}.
+    This will be followed by discussion of the information information that was coded for each token in section \ref{subsec:coding}.
+    As some of the social network analysis techniques involved in the coding are fairly novel in sociolinguistics, a greater amount of detail will be provided in the coding section.
+    Finally, the statistics to be used to analyze the detail will be discussed in section \ref{subsec:statistics}.
+
+    \subsection{Data collection}
+      \label{subsec:data_collect}
+
+    \subsection{Coding}
+      \label{subsec:coding}
+
+    \subsection{Statistics}
+      \label{subsec:statistics}
 
   \section{Results}
     \label{sec:results}
