@@ -72,6 +72,8 @@ usersAll <- read.csv("data/usersAllAnon.csv", encoding = "UTF-8")
 lol <- subset(tweets, grepl("l+(o+|u+|e+|a+w+)l+",
                             lol, perl = TRUE, ignore.case = TRUE))
 colnames(lol) <- c("id.occurrence", colnames(lol[2:ncol(lol)]))
+# Reformat usernames to get rid of underscores
+lol$utilisateur <- gsub("_", " ", lol$utilisateur, fixed = TRUE)
 
 # Identify active users, producing at least 10 tokens
 Active <- data.frame(table(lol$utilisateur) >= 10)
