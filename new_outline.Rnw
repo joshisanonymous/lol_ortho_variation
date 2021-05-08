@@ -142,17 +142,17 @@
 % Methods
   % Data collection
     % Characteristics of Twitter
-      % Types of tweets
-        % Similar to face-to-face conversation in some ways, but as Danescu-Niculescu-Mizil et al. (2011) note, it isn't always synchronous and there's a limit to how much can be said in one turn (1).
-          % At the time of collection, tweets were limited to 140 characters (280 today)
-        % Yates (1996) focused on "open" discussions (i.e., not private) in his early study of a computer conferencing system in CMC for ethical concerns (31), and as Twitter is also primarily public discourse, it has the same advantage.
-        % Java et al. (2007) found that only a quarter of Twitter users hold conversations (as cited in Danescu-Niculescu-Mizil et al. 2011:1).
-          % There is, however, also evidence that this varies from language to language (see Hong et al. 2011).
+      !% Types of tweets
+        !% Similar to face-to-face conversation in some ways, but as Danescu-Niculescu-Mizil et al. (2011) note, it isn't always synchronous and there's a limit to how much can be said in one turn (1).
+          !% At the time of collection, tweets were limited to 140 characters (280 today)
+        !% Yates (1996) focused on "open" discussions (i.e., not private) in his early study of a computer conferencing system in CMC for ethical concerns (31), and as Twitter is also primarily public discourse, it has the same advantage.
+        !% Java et al. (2007) found that only a quarter of Twitter users hold conversations (as cited in Danescu-Niculescu-Mizil et al. 2011:1).
+          !% There is, however, also evidence that this varies from language to language (see Hong et al. 2011).
     % Process
-      % Original purpose of corpus
-      % Date and duration
+      !% Original purpose of corpus
+      !% Date and duration
       % Search string
-        % A common practice, as seen in Pavalanathan & Eisenstein (2015), is to filter out retweets and tweets with URLs in them to reduce the presence of commercial account tweets in the data and limit it to real conversation (199).
+        !% A common practice, as seen in Pavalanathan & Eisenstein (2015), is to filter out retweets and tweets with URLs in them to reduce the presence of commercial account tweets in the data and limit it to real conversation (199).
         % Likewise, only directed tweets are kept to limit audience effects, ensuring each tweet is meant for the community that the user belongs to
           % Ilbury (2020) found that @-messages directed at other gay men were more likely to include AAVE features (256), echoing Bell's (1984) audience design framework for style.
           % Indeed, @-messages seem to be important in a very general sense as Eisenstein (2015) also founds an effect for the absence of <g> in (ing) (176).

@@ -14,7 +14,9 @@
   \usepackage{enumitem}
 
   % Document information
-  \title{Orthographic variation of (lol)}
+  \title{Orthographic variation of (lol)\footnote{
+    Data and code available at \url{https://osf.io/mgdpu/}.
+  }}
   \author{Joshua McNeill}
   \date{\today}
 
@@ -296,6 +298,37 @@
 
     \subsection{Data collection}
       \label{subsec:data_collect}
+      The social media platform Twitter offers great opportunities for the study of language but also presents its own special challenges for research.
+      In \citeauthor{herring_oral_1996}'s (\citeyear{herring_oral_1996}) early work on CMC, he decided to collect data from a computer conferencing system as these systems involved ``open'' discussions that carried fewer ethical concerns than CMC mediums that users expect to be private (p.~31).
+      This is also true of Twitter, which allows users to make their accounts private but is by and large used as a form of open public discourse.
+      Messages, referred to as tweets, are posted to users' timelines to be read by other users who explicitly follow the posters.
+      At the time of the data collection for this study, tweets were limited to 140 charaters, though that number has since been increased to 280.
+
+      Tweets can also be directed at specific users, in which case this form of CMC begins to resemble face-to-face conversation in some ways, as has been noted \parencite[e.g.,][p.~31]{danescu-niculescu-mizil_mark_2011}.
+      There are some key differences, however.
+      First, only a quarter of Twitter users have been found to hold conversations \parencite[Java et al. 2007, as cited in][p.~1]{danescu-niculescu-mizil_mark_2011}, defined as sending directed tweets back and forth, though this proportion varies depending on the language being used \parencite{hong_language_2011}.
+      Second, and relatedly, conversations may or may not be synchronous, particularly in today's world where Twitter is commonly accessed via smartphones that can provide instant notifications of incoming messages wherever a user may be.
+      Lastly, and most obviously, Twitter involves only written communication, which both removes access to some methods of expression such as gestures and prosody but also introduces new methods such as punctuation, spelling, and images.
+
+      The particular Twitter corpus used for this study was originally collected for a study looking at (lol) as a lexical variable as used in French tweets originating in the Maritime Provinces of Canada \parencite{mcneill_lol_2018}.
+      Tweets were collected continuously between January 8th, 2017 and February 8th, 2017 using what was at the time referred to as the spritzer level of access to Twitter's API, which allows samples to be taken from 1\% of all public tweets (as opposed to gardenhose access at 10\% and firehose at 100\%).
+      Collecting samples of tweets is essentially identical to using Twitter's search bar, which allows users to specify geographic regions, languages, dates, and so on.
+      The following search string was used for the \textcite{mcneill_lol_2018} corpus:
+      \begin{itemize}
+        \item[] geocode:46.0878,-64.7782,200mi exclude:retweets exclude:links
+      \end{itemize}
+
+      The first parameter of the search string uses latitude and longitude to target the Maritime Provinces.
+      The second parameter excludes retweets, which involve one user repeating another users tweet in the former's own timeline and so does not count as language use by the former.
+      The last parameter excludes tweets that contain links as these are more likely to be posts from commercial accounts as opposed to language use from regular users.
+      Both of these exclusions are common practice when working with Twitter data \parencite[e.g.,][p.~199]{pavalanathan_audience-modulated_2015}.
+
+      This method of scraping Twitter for data resulted in a corpus made up of 1,274,233 tweets, by and large in English, though not all of these were used in the original study nor will they all be used in the present study.
+      In order to limit the effects of variable audiences for tweets, this initial set of tweets was filtered so as to include only directed tweets.
+      This increases the likelihood of the message being part of a conversational interaction and ensures that it was intended for the community to which the poster belonged.
+
+      Indeed, audience is a constraining factor in language variation on Twitter, so including tweets with different types of audiences (i.e., individuals versus the public in general) is an important step.
+
 
     \subsection{Coding}
       \label{subsec:coding}
