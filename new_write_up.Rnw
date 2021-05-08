@@ -328,7 +328,15 @@
       This increases the likelihood of the message being part of a conversational interaction and ensures that it was intended for the community to which the poster belonged.
 
       Indeed, audience is a constraining factor in language variation on Twitter, so including tweets with different types of audiences (i.e., individuals versus the public in general) is an important step.
+      African-American English features used by gay White men from England on Twitter were more likely to occur in tweets directed at other such users rather than in broadcast tweets \parencite[p.~256]{ilbury_sassy_2020}.
+      The fact of being directed or not has also been found to constrain the presence of \orth{g} in the (ing) orthographic variable \parencite[p.~176]{eisenstein_systematic_2015} as well as lexical choices \parencite{pavalanathan_audience-modulated_2015}.
 
+      Filtering the data down to only directed tweets resulted in a corpus of 307,878 tweets, but as the focus was only on French language tweets in the original study, this number was further filtered down to include only those Twitter communities that contained French tweets, resulting in \Sexpr{length(levels(factor(tweets$communaute)))} communities, each with a three- or four-digit ID, and each still containing far more English tweets than French.
+
+      Community detection will be discussed in greater detail below, though what is important for the moment is that these communities contained \num{\Sexpr{nrow(tweets)}} tokens of (lol).
+      In this case, these were tokens of (lol) as a lexical variable and so included variants such as \lexi{rofl} \gloss{roll on the floor laughing} and even \lexi{mdr} from French \lexi{mort de rire}, the rough equivalent of \lexi{lol}.
+      In other words, lexical items that are not of interest in the current study were included and spelling variants of \orth{lol} such as \orth{LOL} or \orth{lolol} were collapsed into tokens of one lexical item: \lexi{lol}.
+      Fortunately, the original spellings were stored in the corpus, and by far the most common lexical item was \lexi{lol}, so filtering out unwanted lexical items resulted in a final corpus with \Sexpr{length(levels(factor(lol$communaute)))} communities, \num{\Sexpr{nrow(lol)}} tokens of the orthographic variable (lol), and \Sexpr{length(levels(factor(lol$lol)))} spelling variants for (lol).
 
     \subsection{Coding}
       \label{subsec:coding}

@@ -151,12 +151,12 @@
     % Process
       !% Original purpose of corpus
       !% Date and duration
-      % Search string
+      !% Search string
         !% A common practice, as seen in Pavalanathan & Eisenstein (2015), is to filter out retweets and tweets with URLs in them to reduce the presence of commercial account tweets in the data and limit it to real conversation (199).
-        % Likewise, only directed tweets are kept to limit audience effects, ensuring each tweet is meant for the community that the user belongs to
-          % Ilbury (2020) found that @-messages directed at other gay men were more likely to include AAVE features (256), echoing Bell's (1984) audience design framework for style.
-          % Indeed, @-messages seem to be important in a very general sense as Eisenstein (2015) also founds an effect for the absence of <g> in (ing) (176).
-          % Pavalanathan & Eisenstein (2015) took this a step farther to show that lexical choices varied on Twitter as a function of the intended audience between @-messages and broadcasts.
+        !% Likewise, only directed tweets are kept to limit audience effects, ensuring each tweet is meant for the community that the user belongs to
+          !% Ilbury (2020) found that @-messages directed at other gay men were more likely to include AAVE features (256), echoing Bell's (1984) audience design framework for style.
+          !% Indeed, @-messages seem to be important in a very general sense as Eisenstein (2015) also founds an effect for the absence of <g> in (ing) (176).
+          !% Pavalanathan & Eisenstein (2015) took this a step farther to show that lexical choices varied on Twitter as a function of the intended audience between @-messages and broadcasts.
   % Data coding
     % Social variables
       % Social variables are indeed at work on social media
