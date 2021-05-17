@@ -158,30 +158,38 @@
           !% Indeed, @-messages seem to be important in a very general sense as Eisenstein (2015) also founds an effect for the absence of <g> in (ing) (176).
           !% Pavalanathan & Eisenstein (2015) took this a step farther to show that lexical choices varied on Twitter as a function of the intended audience between @-messages and broadcasts.
   % Data coding
+    !% Linguistic variables
+      !% Spelling variants
+        !% While others such as <Lol> or <lolol> exist, <lol> and <LOL> are by far the most frequent
+        !% <Lol> is particularly notable as auto-correct and spell correct systems can capitalize it
+          !% Schneier (2021) was able to identify when his participants used autocomplete on their phones with his KeyLog software (9), but this isn't possible here.
+          % Check if it's particularly common at the beginning of sentences [leave out for now]
+          !% Contextualize its impact by giving its low frequency
+      % Turn initial, medial, or final [leave out for now]
     % Social variables
       % Social variables are indeed at work on social media
-        % Danescu-Niculescu-Mizil et al. (2011) found that users will accommodate their style to their interlocutors on Twitter, either symmetrically or asymmetrically (6-8).
-          % As the literature on accommodation theory suggests that accommodation is triggered not just by a need for "communicational efficiency", but also to gain social approval and maintain one's identity (Danescu-Niculescu-Mizil et al. 2011:3), this suggests that social factors are unsurprisingly at work on social media.
+        !% Danescu-Niculescu-Mizil et al. (2011) found that users will accommodate their style to their interlocutors on Twitter, either symmetrically or asymmetrically (6-8).
+          !% As the literature on accommodation theory suggests that accommodation is triggered not just by a need for "communicational efficiency", but also to gain social approval and maintain one's identity (Danescu-Niculescu-Mizil et al. 2011:3), this suggests that social factors are unsurprisingly at work on social media.
       % However, it can be difficult to confirm social variables for users of CMC in large scale studies like this.
-        % Jones (2015) faced this challenge when trying to determine if the users of Twitter he examined were indeed native speakers of AAVE or simply performing, a challenge he dealt with through ethnographic work (412).
-        % Ilbury's (2020) work on gay men from the south of English on Twitter involved involved an ethnography of a small subset of users (N = 10) to identify them as openly gay young White men from the south of England (249)
+        !% Ilbury's (2020) work on gay men from the south of English on Twitter involved involved an ethnography of a small subset of users (N = 10) to identify them as openly gay young White men from the south of England (249)
           % Ilbury (2020) showed both that AAVE features could be reappropriated to present a "Sassy Queen" persona and showed how much can be gained from a qualitative analysis of Twitter data in general.
-      % Where posisble, though, an advantage of Twitter is that there is a broad range of demographics.
+        !% Jones (2015) faced this challenge when trying to determine if the users of Twitter he examined were indeed native speakers of AAVE or simply performing, a challenge he dealt with through ethnographic work (412).
+        !% Gender has also been incorporated into Twitter variationist studies
+          % Bamman et al. (2014) clustered Twitter users through having similar vocabularies (145-146) and found that males and females had different vocabulary preferences, sometimes completely opposite, between clusters (147).
+          !% This factors such as this or race/ethnicity involve either some creative deduction or broad assumptions, so I stick to communities and geographic location here, which are more reliable
+      % Where possible, though, an advantage of Twitter is that there is a broad range of demographics.
         % The Pew Internet Research Center found, for race, that its users were 29% Black, 16% White and Hispanic (Duggan & Smith 2013, as cited in Eisenstein 2015:169).
       % Some demographics are more restricted
         % Although many languages are used on Twitter, Hong et al. (2011) found that 51% was in English (519), and there is little reason to believe that has changed.
         % And language is meaningful
           % Very broadly, Hong et al. (2011) provided evidence that variation in how speakers of different languages use Twitter exists, in this case in terms of Twitter conventions that were employed such as retweets and hashtags (519-520).
         % Non-English tweets included here, but they make up a very small percentage of tweets and so this is not taken as a factor
-      % Gender has also been incorporated into Twitter variationist studies
-        % Bamman et al. (2014) clustered Twitter users through having similar vocabularies (145-146) and found that males and females had different vocabulary preferences, sometimes completely opposite, between clusters (147).
-        % This factors such as this or race/ethnicity involve either some creative deduction or broad assumptions, so I stick to communities and geographic location here, which are more reliable
       % Communities in CMC
-        % Talk about conceptualizations of communities in general: speech communities, communities of practice
+        !% Talk about conceptualizations of communities in general: speech communities, communities of practice
         % Mendoza-Denton (2001) defines social identity as "the active negotiation of an individual's relationship with larger social constructs" that is "signaled through language and other semiotic means" (as cited in Androutsopoulos 2008 "Style":282).
           % This means that communities must have norms for a linguistic feature that differ from each other otherwise nothing will be signaled by using the shared feature.
-        % Castells (2000) defined these similar to communities of practice where they are "organized around a shared interest or purpose," but he didn't think these were the same as face-to-face communities because of the differences in how interaction occurs (as cited in Androutsopoulos 2008 "Style":283).
-          % Androutsopoulos (2008 "Style") recognized that the internet allows virtual communities to be connected in a quite literal way through hyperlinks, calling such conglomerates computer-mediated discourse fields (283-284).
+        !% Castells (2000) defined these similar to communities of practice where they are "organized around a shared interest or purpose," but he didn't think these were the same as face-to-face communities because of the differences in how interaction occurs (as cited in Androutsopoulos 2008 "Style":283).
+          !% Androutsopoulos (2008 "Style") recognized that the internet allows virtual communities to be connected in a quite literal way through hyperlinks, calling such conglomerates computer-mediated discourse fields (283-284).
             % This is perhaps more relevant when working with web sites and forums as CMC as Androutsopoulos (2008 "Style") did, though even in places like Twitter, users can link to each other's posts.
         % Androutsopoulos (2008 "Style") describes participants in the German hip-hop sites as partaking in a "liminal" virtual community where they could experiment with different identities linguistically from their day-to-day (290).
           % Indeed, Androutsopoulos's (2008 "Potentials") described one informant, Wolfgang, as indicating that he would never speak in person the way people write on German hip-hop websites, nor has he heard anyone else do so (15).
@@ -209,14 +217,6 @@
         % Danescu-Niculescu-Mizil et al. (2011) got around this by identifying pairs that were likely to converse a lot and mining their entire Twitter histories to reconstruct many conversations between those pairs (3), which I do not do here.
       % Sentiment of turn can, however, be done, and will perhaps shed some light on pragmatics
         % Code using the sentiment classifier package sentimentr in R
-    % Linguistic variables
-      % Spelling variants
-        % While others such as <Lol> or <lolol> exist, <lol> and <LOL> are by far the most frequent
-        % <Lol> is particularly notable as auto-correct and spell correct systems can capitalize it
-          % Schneier (2021) was able to identify when his participants used autocomplete on their phones with his KeyLog software (9), but this isn't possible here.
-          % Check if it's particularly common at the beginning of sentences
-          % Contextualize its impact by giving its low frequency
-      % Turn initial, medial, or final
 
   % Statistics
     % Modes by geographic location and community
