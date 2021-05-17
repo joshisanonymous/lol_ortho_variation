@@ -11,8 +11,9 @@
 ## ---- load_packages_functions_data ----
 library(knitr)
 library(tools)
-library(vegan)
 library(ggplot2)
+library(igraph)
+library(vegan)
 
 # Remove scientific notation
 options(scipen = 999)
@@ -161,12 +162,20 @@ lolDistUsersLow <- lolDistUsersLow[lolDistUsersLow$lol == "lol" |
                                    lolDistUsersLow$lol == "LOL",]
 
 ## Analysis
+## ---- example_community ----
+par(mar = c(4, 4, 3, 2))
+plot.igraph(
+  graph(edges = c("Ted", "Bob", "Bob", "Joe", "Joe", "Kelly", "Kelly", "Bob"), directed = FALSE),
+  layout = layout_with_kk,
+  vertex.color = "yellow",
+  vertex.label.dist = 4
+)
+
 ## ---- divByPR_graph ----
 graphDivByCent("lol", "PageRank")
 
 ## ---- divByPR_graph_active ----
 graphDivByCent("lolActive", "PageRank")
-
 
 ## ---- lol_dist_comms ----
 lolDistComms$communaute_ordered <- factor(lolDistComms$communaute, levels = c("1291", "2265", "1032"))
