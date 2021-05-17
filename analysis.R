@@ -163,7 +163,7 @@ lolDistUsersLow <- lolDistUsersLow[lolDistUsersLow$lol == "lol" |
 
 ## Analysis
 ## ---- example_community ----
-par(mar = c(4, 4, 3, 2))
+par(mar = c(2, 4, 3, 2))
 plot.igraph(
   graph(edges = c("Ted", "Bob", "Bob", "Joe", "Joe", "Kelly", "Kelly", "Bob"), directed = FALSE),
   layout = layout_with_kk,
