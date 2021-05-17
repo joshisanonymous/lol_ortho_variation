@@ -198,25 +198,25 @@
           % Such factors must always be approached carefully, though, as N. Baron (2004) herself notes, CMC offers a level of anonymity where speakers can portray themselves as different ages and genders, among other social characteristics (406).
       % Community detection
       % Centrality measures
-        % Has been used in CMC, e.g. Paollilo's (1999) study of IRC
+        !% Has been used in CMC, e.g. Paollilo's (1999) study of IRC
           % Paolillo (1999) started from previous findings that central members of a community would use more non-standard variants (2-3), but his own results showed the opposite pattern (8).
-          % Androutsopoulos (2008 "Style") did the same for German hip-hop web sites using page views and general awareness of the scene (288-289).
-          % Danescu-Niculescu-Mizil et al. (2011) used follower count, but did not find social status to be meaningful (8)
+          !% Androutsopoulos (2008 "Style") did the same for German hip-hop web sites using page views and general awareness of the scene (288-289).
+          !% Danescu-Niculescu-Mizil et al. (2011) used follower count, but did not find social status to be meaningful (8)
             % Their treatment of "style" was unusual, as things like the presence vs absence of features such as articles or second person pronouns were considered markers of style.
-          % The point is just that centrality can be is measurable and sometimes meaningful even in CMC.
+          !% The point is just that centrality can be is measurable and sometimes meaningful even in CMC.
       % Geographic location
-        % Geographic variation does in fact appear on Twitter as Jones (2015) showed for AAVE features and Huang et al. (2016) showed for lexical variables.
+        !% Geographic variation does in fact appear on Twitter as Jones (2015) showed for AAVE features and Huang et al. (2016) showed for lexical variables.
         % Geotags are possible but not used here because of their rarety.
           % Eisenstein (2013) was able to look at demographics using geotagged tweets, but these represented the environments of users, not the demographics of the users themselves (15)
-            % Eisenstein's (2013) results suggested that those from high density, African-American areas represented t/d deletion more in their writing (15-17)
+            !% Eisenstein's (2013) results suggested that those from high density, African-American areas represented t/d deletion more in their writing (15-17)
             % Eisenstein (2015) extended this research to include (ing), as well (163).
-          % For example, Jones (2015) found only 150 to 800 geotagged tweets per lexical item, representing between 2.5% and 7% of the tweets with those items, respectively (407).
-          % Using geotags really requires very large corpora, such as Huang et al.'s (2016) corpus of 924 million geotagged tweets that represented a year of data mining to accumulate (244).
+          !% For example, Jones (2015) found only 150 to 800 geotagged tweets per lexical item, representing between 2.5% and 7% of the tweets with those items, respectively (407).
+          !% Using geotags really requires very large corpora, such as Huang et al.'s (2016) corpus of 924 million geotagged tweets that represented a year of data mining to accumulate (244).
     % Pragmatic variables
-      % It can be difficult to find long or repeated conversation between pairs of individuals for the sake of doing discourse analysis.
-        % Danescu-Niculescu-Mizil et al. (2011) got around this by identifying pairs that were likely to converse a lot and mining their entire Twitter histories to reconstruct many conversations between those pairs (3), which I do not do here.
-      % Sentiment of turn can, however, be done, and will perhaps shed some light on pragmatics
-        % Code using the sentiment classifier package sentimentr in R
+      !% It can be difficult to find long or repeated conversation between pairs of individuals for the sake of doing discourse analysis.
+        !% Danescu-Niculescu-Mizil et al. (2011) got around this by identifying pairs that were likely to converse a lot and mining their entire Twitter histories to reconstruct many conversations between those pairs (3), which I do not do here.
+      !% Sentiment of turn can, however, be done, and will perhaps shed some light on pragmatics
+        !% Code using the sentiment classifier package sentimentr in R
 
   % Statistics
     % Modes by geographic location and community

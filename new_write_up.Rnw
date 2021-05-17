@@ -399,11 +399,11 @@
           One important area of development in modern social network analysis techniques that has been generally missing from sociolinguistics is community detection.
           Community detection is the process of using algorithms to delineate communities within a social network.
           In this case, a community is conceptualized as a cluster of individuals who interact with each other more than they do with others.
-          For instance, Figure \ref{fig:example} is a very simply hypothetical network consisting of Joe, Kelly, Bob, and Ted.
-          In the network, and Joe, Kelly, and Bob all know each other, but the only person who knows Ted is Bob.
+          For instance, Figure \ref{fig:example} shows a very simple hypothetical network consisting of Joe, Kelly, Bob, and Ted.
+          In the network, Joe, Kelly, and Bob all know each other, but the only person who knows Ted is Bob.
           As a result, Joe, Kelly, and Bob likely form community of which Bob is not a part.
           Each of these connections is called a tie, but what may constitute a tie or how to quantify the strength of a tie is decided by the researcher.
-          In the case of the present study, I define a tie as a directed tweet and the strength of a tie as the number of directed tweets between two users.
+          In the case of the present study, I define a tie existing betweeen two users if there is any directed tweet sent between them and the strength of that tie as the number of directed tweets between them.
 
           \begin{figure}[tbhp]
             \caption{Simple example network}
@@ -412,17 +412,97 @@
 @
           \end{figure}
 
-          At the core of any tie, though, is the idea that two people who are tied together interact with each other on some level so that ultimately any community in a social network is based on mutual interactions.
+          At the core of any tie is the idea that two people who are tied together interact with each other on some level so that ultimately any community in a social network is based on mutual interactions.
           This conceptualization of what a community is, a group of people who interact with each other, accords with conceptions of communities such as communities of practice.
           To share an activity together is inextricably about interacting with one another.
           For this reason, \textcite{schenkel_theorizing_2002} argued that social network analysis can be used to quantify the characteristics of communities of practice as the latter are more often identified through qualitative means.
+          I take no stance on what draws people into their communities here, though, as is at least implicitly done with communities of practice as they suggest that the activity is what binds the community together.
 
-          % Blondel et al. 2008: It essentially starts with all the nodes and then, one by one, moves them and calculates if there was a gain or loss in modularity (Q). If there was a gain, the move is kept. This continues until a maximum Q is achieved. (There's a second phase before repeating this, as well, but I don't understand it well enough.)
+          There are a number of algorithms for community detection, but the one used for this study comes from \textcite{blondel_fast_2008} and is commonly referred to as the Louvain method.
+          The general mechanics of the Louvain method involve trying out different possible community divisions and calculating the modularity $Q$ for each pass in order to find the division that yields the highest $Q$.
+          $Q$ itself is ``a measure of the quality of a particular division of a network'' \parencite{newman_finding_2004}.
+
+          A standard test for the reliability of community detection algorithms is to apply them to \citeauthor{zachary_information_1977}'s (\citeyear{zachary_information_1977}) karate club data.
+          This data includes a karate club that dissolved into two separate clubs, thus two explicitly different communities.
+          An algorithm which takes the same network and divides it into the same two communities is thought to be valid and reliable.
+          \textcite{newman_finding_2004} evaluated $Q$ itself for this using several $Q$ maximization algorithms and obtained good results, suggesting that this is indeed a useful measure.
+          For the Louvain method specifically, \textcite{waltman_smart_2013} tested it on the karate club data and found it to be almost perfect at finding the maximum $Q$ possible (p.~471), suggesting that it is a reliable modularity optimization algorithm.
+
+          As for the application of the Louvain method for community detection to sociolinguistic data, this has only been done once, to my knowledge.
+          In \textcite{mcneill_lol_2018}, which used the same corpus as the present study, the lexical variable (lol) was found to be significantly constrained by the community to which one belonged.
+          The variants in that study were English-origin and French-origin equivalents of \lexi{lol} as used within what could generally be considered French-language tweets.
+          While there have not been other applications of community detection in sociolinguistic research, this result combined with its history of evaluation in sociology and computer science point to its validity.
+
+          The implementation of the Louvain method used here comes from the social network analysis software Gephi \parencite{bastian_gephi:_2009}.
+          Gephi uses a slightly modified version of the algorithm made to handle directed networks as opposed to the original version, which handled only undirected networks.
+          This was more appropriate for the Twitter corpus used here as users do not always respond to directed tweets, making some ties asymmetric.
+          The resolution option for the algorithm was kept at the default of 1.
+
+          Initially, 8,945 communities were detected in the data, but as the goal at the time of the original study involved looking at those who might be considered French speakers specifically, only communities which contained tweets with French in them were analyzed, resulting in \Sexpr{length(levels(factor(tweets$communaute)))} communities, each with a three- or four-digit ID.
+
+          These \Sexpr{length(levels(factor(tweets$communaute)))} communities contained \num{\Sexpr{nrow(tweets)}} tokens of (lol).
+          In this case, these were tokens of (lol) as a lexical variable and so included variants such as \lexi{rofl} \gloss{roll on the floor laughing} and even \lexi{mdr} from French \lexi{mort de rire}, the rough equivalent of \lexi{lol}.
+          In other words, lexical items that are not of interest in the current study were included and spelling variants of \orth{lol} such as \orth{LOL} or \orth{lolol} were collapsed into tokens of one lexical item: \lexi{lol}.
+          Fortunately, the original spellings were stored in the corpus, and by far the most common lexical item was \lexi{lol}, so filtering out unwanted lexical items resulting in a corpus with \Sexpr{length(levels(factor(lol$communaute)))} communities, \num{\Sexpr{nrow(lol)}} tokens of the orthographic variable (lol), and \Sexpr{length(levels(factor(lol$lol)))} spelling variants for (lol).
+
+        \paragraph{Centrality measures}
+          \label{para:centralirty_measures}
+          In social network analysis, a centrality measure is a measure of a person's position within a given community.
+          In the perhaps more familiar terms of communities of practice, this is somewhat similar to deciding which members are core members and which are peripheral members.
+          However, centrality measures are always quantitative, as the name implies.
+
+          CMC research has included centrality measures at least as far back as \textcite{paolillo_virtual_1999} in his study of an IRC community.
+          They have also been used in analyzing language on German hip-hop web sites \parencite{auer_style_2008} and on Twitter using follower count \parencite{danescu-niculescu-mizil_mark_2011}.
+          Centrality has often, though not always, been found to be significant in these studies.
+
+          Likewise, centrality measures have been used in language variation studies since \textcite{milroy_language_1987}.
+          Just as \textcite{milroy_language_1987} did, the implementation in sociolinguistics tends to involve the use of an index with a relatively small scale of possible values, such as 5.
+          Part of the reason for this approach is that it can be exceedingly difficult to track face-to-face interactions, which is conversely not a problem at all with Twitter data as directed tweets are explicit.
+
+          There are many other centrality measures, as well, though the one used in this study is PageRank \parencite{brin_anatomy_1998}, which was calculated for each user in the data relative to the community of which they were a member.
+          PageRank was originally developed for ordering search engine results and ultimately led to the creation of Google.
+          Equation \ref{eq:pagerank} shows how page $A$'s PageRank $PR$, or in this case person $A$'s $PR$, is calculated.
+          \begin{equation}
+            \label{eq:pagerank}
+            PR \left( A \right) = \left( 1 - d \right) + d \left( \frac{PR \left( T1 \right)}{C \left( T1 \right)} + ... + \frac{PR \left( Tn \right)}{C \left( Tn \right)} \right)
+          \end{equation}
+          Here, $d$ is a damping factor between zero and one, $Tn$ is a page that links to page $A$, and $C(Tn)$ is the total pages linked to by page $Tn$.
+          This effectively makes PageRank a function of the number of pages that link to the page of interest as well as the PageRanks of those pages.
+          As a result, a user who directs many tweets to other members of their community but who receives very few tweets from other members will not have a particularly high PageRank.
+          The intuition is that it is not difficult to talk a lot, but it is difficult to get people to care enough about what a person thinks to bother talking to that person.
+
+        \paragraph{Geographic location}
+          \label{para:geographic_location}
+          Geographic location has also proved to be a meaningful social variable for language variation on Twitter, despite Twitter not be regionally segregated.
+          It is possible to for users to search for tweets that are emanating from a particular physical area, but this is not the default setting nor do a user's followed accounts necessarily come from their own region.
+          However, geographic variation has been found at least for AAVE features \parencite{eisenstein_phonological_2013, jones_toward_2015} and lexical variables \parencite{huang_understanding_2016}.
+          Part of this importance may be due to a propensity for Twitter users to form virtual communities with those from the same regions despite this not being necessary, as there as at least some evidence that this sort of agglomeration happens \parencite[pp.~88-91]{mcneill_lol_2018}.
+
+          Geographic location is also a social variable that is fairly easy to obtain for users of Twitter, though there are some caveats.
+          The simplest way to get this information, and what is was done for the present study, is to use the location that each user entered manually in their profile.
+          This is often available and also returned by the Twitter API when tweets are collected.
+          The downside to this is naturally that users can enter any location that they want regardless of accuracy, thus an assumption that only a small number of users enter inaccurate locations is required.
+
+          An alternative approach to finding the geographic locations of users is to use geotags.
+          Twitter users can turn on this feature so that, when they send a tweet, the exact location they sent it from will be stored as metadata with said tweet.
+          However, this feature is rarely used.
+          \textcite{jones_toward_2015} found only 150 to 800 geotagged tweets per lexical item in his study, which accounted for between 2.5\% and 7.0\% of the tweets containing those lexical items (p.~407).
+          Using this method calls for an API access level that makes amassing extremely large corpora possible, which was out of reach for the current study.
+          For example, \textcite{huang_understanding_2016} used geotagging but were also able to collect 924 million such tweets over the course of a year with the access level that they had (p.~244).
+          As a result, manually entered geographic locations are used for the present study.
 
       \subsubsection{Pragmatic variables}
         \label{subsubsec:pragmatic_vars}
+        As was discussed in section \ref{subsec:previous_lol}, a repeated argument for (lol) as a lexical variable and orthographic variables in general is that they are used for pragmatic effects.
+        One of the difficulties for performing the sort of discourse analyses that could uncover such effects is that long and/or repeated conversations between pairs of individuals on Twitter are not easily obtained.
+        \textcite{danescu-niculescu-mizil_mark_2011} solved this problem by identifying pairs of users who were likely to converse often and mining each of their entire Twitter histories.
+        With both histories at hand, it was possible to reconstruct repeated, long conversations between the pairs \parencite[p.~3]{danescu-niculescu-mizil_mark_2011}.
+        Such a solution was not achievable given the resources of the current study, so I chose not to perform an exhaustive discourse analysis for pragmatic factors.
 
-      \subsubsection{Linguistic variables}
+        What can be analyzed in a quantitative fashion that could also shed light on some pragmatic factors that are linked to the orthographic variation of (lol) is the sentiment of each turn.
+        In this case, a turn is conceived of as a single tweet, which may or may not be multiple sentences but is always limited to 140 characters.
+        The sentiment classifier R package sentimentr \parencite{rinker_sentimentr_2019} was used to calculate the polarity sentiment of each turn.
+        No preprosessing of the corpus was done before sending it to this classifier other than removing \lexi{lol} from the dictionary that the classifier uses.
 
     \subsection{Statistics}
       \label{subsec:statistics}
