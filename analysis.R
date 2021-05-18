@@ -39,14 +39,14 @@ getDivByCent <- function(df, speaker, variable, centrality){
 }
 
 # Draw a scatter plot comparing Simpon's index of diversity and a centrality measure
-graphDivByCent <- function(df, centrality) {
+graphDivByCent <- function(df, centrality, xlab) {
   divByCent <- getDivByCent(df, "utilisateur", "lol", centrality)
   colnames(divByCent) <- c("User", colnames(divByCent)[2:3])
   ggplot(divByCent,
-         aes(x = log(eval(parse(text = toTitleCase(centrality)))),
+         aes(x = eval(parse(text = toTitleCase(centrality))),
              y = Diversity)) +
     theme_bw() +
-    labs(x = paste(toTitleCase(centrality), "(log)")) +
+    labs(x = xlab) +
     geom_point()
 }
 
@@ -93,6 +93,26 @@ communitiesSummary <- merge(communitiesModesDivs, communitiesSize, by = 1, all.y
 rm(list = c("communitiesModes", "communitiesDivs", "communitiesSize", "communitiesModesDivs"))
 colnames(communitiesSummary) <- c("Community", "Mode", "Diversity", "Users", "Size")
 
+# Create a data frame summarizing each province
+provincesModes <- aggregate(lol$lol, list(lol$province), getMode)
+provincesDivs <- aggregate(lol$lol, list(lol$province), getDiversity)
+provincesSize <- aggregate(lol$utilisateur, list(lol$province), unique)
+provincesSize[,3] <- sapply(provincesSize$x, length)
+provincesModesDivs <- merge(provincesModes, provincesDivs, by = 1)
+provincesSummary <- merge(provincesModesDivs, provincesSize, by = 1, all.y = FALSE)
+rm(list = c("provincesModes", "provincesDivs", "provincesSize", "provincesModesDivs"))
+colnames(provincesSummary) <- c("Province", "Mode", "Diversity", "Users", "Size")
+provincesSummary <- provincesSummary[provincesSummary$Province != "indefini",]
+# Translate provinces to English
+provincesSummary$Province <- sub("Angleterre", "England", provincesSummary$Province)
+provincesSummary$Province <- sub("Brabant-Septentrional", "North Brabant", provincesSummary$Province)
+provincesSummary$Province <- sub("Californie", "California", provincesSummary$Province)
+provincesSummary$Province <- sub("Ile-du-Prince-Edouard", "Prince Edward Island", provincesSummary$Province)
+provincesSummary$Province <- sub("Iles Vierges des Etats-Unis", "US Virgin Islands", provincesSummary$Province)
+provincesSummary$Province <- sub("Nouveau-Brunswick", "New Brunswick", provincesSummary$Province)
+provincesSummary$Province <- sub("Nouvelle-Ecosse", "Nova Scotia", provincesSummary$Province)
+provincesSummary$Province <- sub("Provence-Alpes-Cote d'Azur", "Provence-Alps-French Riviera", provincesSummary$Province)
+
 # Create a data frame summarizing each user
 usersCommunities <- aggregate(lol$communaute, list(lol$utilisateur), function(x) head(x, n = 1))
 usersModes <- aggregate(lol$lol, list(lol$utilisateur), getMode)
@@ -120,6 +140,10 @@ for (community in unique(usersSummary$Community)) {
 }
 rm(list = c("community", "sub", "user"))
 usersSummary <- merge(usersSummary, usersPRPercentile, by = "User")
+
+# Add the PageRank Percentiles to the (lol) observations
+lol <- merge(lol, usersPRPercentile, by.x = "utilisateur", by.y = "User")
+lolActive <- merge(lolActive, usersPRPercentile, by.x = "utilisateur", by.y = "User")
 rm(usersPRPercentile)
 
 # Create a data frame summarizing community 2265
@@ -142,21 +166,21 @@ lolDistComms <- lolDistComms[lolDistComms$lol == "lol" |
                              lolDistComms$lol == "LOL",]
 
 # Subset data frame including only users with the 5 highest PageRanks
-lolDistUsersHigh <- lol[lol$utilisateur == "Rithanya" |
-                        lol$utilisateur == "Amair" |
-                        lol$utilisateur == "Rheya" |
-                        lol$utilisateur == "Saadiya" |
-                        lol$utilisateur == "Seprina",]
+lolDistUsersHigh <- lol[lol$utilisateur == usersSummaryActive[order(usersSummaryActive$PageRank, decreasing = TRUE),][1, "User"] |
+                        lol$utilisateur == usersSummaryActive[order(usersSummaryActive$PageRank, decreasing = TRUE),][2, "User"] |
+                        lol$utilisateur == usersSummaryActive[order(usersSummaryActive$PageRank, decreasing = TRUE),][3, "User"] |
+                        lol$utilisateur == usersSummaryActive[order(usersSummaryActive$PageRank, decreasing = TRUE),][4, "User"] |
+                        lol$utilisateur == usersSummaryActive[order(usersSummaryActive$PageRank, decreasing = TRUE),][5, "User"],]
 lolDistUsersHigh <- lolDistUsersHigh[lolDistUsersHigh$lol == "lol" |
                                      lolDistUsersHigh$lol == "Lol" |
                                      lolDistUsersHigh$lol == "LOL",]
 
 # Subset data frame including only users with the 5 lowest PageRanks
-lolDistUsersLow <- lol[lol$utilisateur == "Leyann" |
-                       lol$utilisateur == "Dellanira" |
-                       lol$utilisateur == "Jocques" |
-                       lol$utilisateur == "Kentoria" |
-                       lol$utilisateur == "Yogi",]
+lolDistUsersLow <- lol[lol$utilisateur == usersSummaryActive[order(usersSummaryActive$PageRank),][5, "User"] |
+                       lol$utilisateur == usersSummaryActive[order(usersSummaryActive$PageRank),][4, "User"] |
+                       lol$utilisateur == usersSummaryActive[order(usersSummaryActive$PageRank),][3, "User"] |
+                       lol$utilisateur == usersSummaryActive[order(usersSummaryActive$PageRank),][2, "User"] |
+                       lol$utilisateur == usersSummaryActive[order(usersSummaryActive$PageRank),][1, "User"],]
 lolDistUsersLow <- lolDistUsersLow[lolDistUsersLow$lol == "lol" |
                                    lolDistUsersLow$lol == "Lol" |
                                    lolDistUsersLow$lol == "LOL",]
@@ -171,11 +195,12 @@ plot.igraph(
   vertex.label.dist = 4
 )
 
-## ---- divByPR_graph ----
-graphDivByCent("lol", "PageRank")
-
 ## ---- divByPR_graph_active ----
-graphDivByCent("lolActive", "PageRank")
+lolActive$PageRankLog <- log(lolActive$PageRank)
+graphDivByCent("lolActive", "PageRankLog", "PageRank (log)")
+
+## ---- divByPRPerc_graph_active ----
+graphDivByCent("lolActive", "PR_Percentile", "PageRank Percentile")
 
 ## ---- lol_dist_comms ----
 lolDistComms$communaute_ordered <- factor(lolDistComms$communaute, levels = c("1291", "2265", "1032"))
