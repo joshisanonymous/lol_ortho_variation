@@ -506,6 +506,20 @@
 
     \subsection{Statistics}
       \label{subsec:statistics}
+      The data analyzed in this study is all categorical, and the typical descriptive statistics for categorical data are used.
+      One such statistic that is worth discussing as it does not appear in sociolinguistic research a great deal is the measure of dispersion for variants of (lol) for either an individual or a community.
+      The Simpson diversity index $D$ \parencite{simpson_measurement_1949}, as described in equation \ref{eq:simpson}, is used as a measure of stability in the sense that a small dispersion can be interpreted as a consistent preference for a particular variant whereas a large dispersion can be interpreted as a lack of clear preference for any particular variant.
+      This ia rather novel use for $D$ in variationist studies where it otherwise shows up as a measure of language ecology \parencite[e.g.,][]{greenberg_measurement_1956} or as a measure of the diversity of interactions one has \parencite[e.g.,][]{sharma_style_2011}.
+      \begin{equation}
+        \label{eq:simpson}
+        D = 1 - \sum_{i=1}^R{p_{i}^2}
+      \end{equation}
+
+      In equation \ref{eq:simpson}, $p$ is the relative frequency of a variant $i$ of the variable in question.
+      Essentially, the few variants included and the greater the frequency of the mode relative to the other variants, the lower $D$ will be.
+      One can imagine a uniform distribution as having a very high $D$ and a strongly unimodal distribution having a very low $D$.
+
+      
 
   \section{Results}
     \label{sec:results}
