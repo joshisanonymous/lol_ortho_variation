@@ -219,13 +219,18 @@
         !% Code using the sentiment classifier package sentimentr in R
 
   % Statistics
-    % Modes by geographic location and community
+    % Summary stats for community and geographic location
+      % Mode, diversity, size
       % Geographic communities range from city to province to country
-      % Province and country yield more robust Ns where cities sometimes have very few members in data
-      % Province is used over country for the sake of higher precision
-    % Spreads by geographic location and community using D
-    % Fisher's exact test for significance
-      % Null: There is no difference from location to location or community to community in the distribution of spelling variants
+        % Province and country yield more robust Ns where cities sometimes have very few members in data
+        % Province is used over country for the sake of higher precision
+      % Significance test between communities' Ds
+    % Description user Ds relative to PRs and PR %s
+    % Mixed model with <lol> as response
+      % Factors: community, geographic location, PR, PR %
+      % Random: user
+    % Description mean sentiment by variant
+      % Significance test between mean sentiments
 
 % Results
   % Demographics of each geographic location and community, include mode, spread, and N
