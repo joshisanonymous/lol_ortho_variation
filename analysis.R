@@ -15,6 +15,9 @@ library(ggplot2)
 library(igraph)
 library(vegan)
 
+# Data
+source("data_cleaning.R")
+
 # Remove scientific notation
 options(scipen = 999)
 
@@ -40,8 +43,7 @@ getDivByCent <- function(df, speaker, variable, centrality){
 
 # Draw a scatter plot comparing Simpon's index of diversity and a centrality measure
 graphDivByCent <- function(df, centrality, xlab) {
-  divByCent <- getDivByCent(df, "utilisateur", "lol", centrality)
-  colnames(divByCent) <- c("User", colnames(divByCent)[2:3])
+  divByCent <- getDivByCent(df, "User", "lol", centrality)
   ggplot(divByCent,
          aes(x = eval(parse(text = toTitleCase(centrality))),
              y = Diversity)) +
@@ -57,7 +59,7 @@ graphlolDistUsers <- function(df) {
     facet_wrap(. ~ df$communaute + df$utilisateur, ncol = 5) +
     labs(x = "(lol)", y = "Relative Frequency") +
     theme_bw() +
-    geom_bar(aes(y = ..count.. / sapply(PANEL, FUN=function(x) sum(count[PANEL == x]))))
+    geom_bar(aes(y = ..count.. / sapply(PANEL, FUN = function(x) sum(count[PANEL == x]))))
 }
 
 # Get the mode of a vector
@@ -66,27 +68,17 @@ getMode <- function(vector) {
   types[which.max(tabulate(match(vector, types)))]
 }
 
-## Data
-tweets <- read.csv("data/tweetsAnon.csv", encoding = "UTF-8")
-usersAll <- read.csv("data/usersAllAnon.csv", encoding = "UTF-8")
-# Subset by orthographic variants of <lol> only
-lol <- subset(tweets, grepl("l+(o+|u+|e+|a+w+)l+",
-                            lol, perl = TRUE, ignore.case = TRUE))
-colnames(lol) <- c("id.occurrence", colnames(lol[2:ncol(lol)]))
-# Reformat usernames to get rid of underscores
-lol$utilisateur <- gsub("_", " ", lol$utilisateur, fixed = TRUE)
-
 # Identify active users, producing at least 10 tokens
-Active <- data.frame(table(lol$utilisateur) >= 10)
+Active <- data.frame(table(lol$User) >= 10)
 Active$User <- row.names(Active)
-usersActive <- Active[Active$table.lol.utilisateur.....10 == TRUE, 2]
+usersActive <- Active[Active$table.lol.User.....10 == TRUE, 2]
 rm(Active)
-lolActive <- lol[is.element(lol$utilisateur, usersActive),]
+lolActive <- lol[is.element(lol$User, usersActive),]
 
 # Create a data frame summarizing each community
-communitiesModes <- aggregate(lol$lol, list(lol$communaute), getMode)
-communitiesDivs <- aggregate(lol$lol, list(lol$communaute), getDiversity)
-communitiesSize <- aggregate(usersAll$Id, list(usersAll$modularity_class), unique)
+communitiesModes <- aggregate(lol$lol, list(lol$Community), getMode)
+communitiesDivs <- aggregate(lol$lol, list(lol$Community), getDiversity)
+communitiesSize <- aggregate(usersAll$User, list(usersAll$Community), unique)
 communitiesSize[,3] <- sapply(communitiesSize$x, length)
 communitiesModesDivs <- merge(communitiesModes, communitiesDivs, by = 1)
 communitiesSummary <- merge(communitiesModesDivs, communitiesSize, by = 1, all.y = FALSE)
@@ -94,32 +86,23 @@ rm(list = c("communitiesModes", "communitiesDivs", "communitiesSize", "communiti
 colnames(communitiesSummary) <- c("Community", "Mode", "Diversity", "Users", "Size")
 
 # Create a data frame summarizing each province
-provincesModes <- aggregate(lol$lol, list(lol$province), getMode)
-provincesDivs <- aggregate(lol$lol, list(lol$province), getDiversity)
-provincesSize <- aggregate(lol$utilisateur, list(lol$province), unique)
+provincesModes <- aggregate(lol$lol, list(lol$Province), getMode)
+provincesDivs <- aggregate(lol$lol, list(lol$Province), getDiversity)
+provincesSize <- aggregate(lol$User, list(lol$Province), unique)
 provincesSize[,3] <- sapply(provincesSize$x, length)
 provincesModesDivs <- merge(provincesModes, provincesDivs, by = 1)
 provincesSummary <- merge(provincesModesDivs, provincesSize, by = 1, all.y = FALSE)
 rm(list = c("provincesModes", "provincesDivs", "provincesSize", "provincesModesDivs"))
 colnames(provincesSummary) <- c("Province", "Mode", "Diversity", "Users", "Size")
-provincesSummary <- provincesSummary[provincesSummary$Province != "indefini",]
-# Translate provinces to English
-provincesSummary$Province <- sub("Angleterre", "England", provincesSummary$Province)
-provincesSummary$Province <- sub("Brabant-Septentrional", "North Brabant", provincesSummary$Province)
-provincesSummary$Province <- sub("Californie", "California", provincesSummary$Province)
-provincesSummary$Province <- sub("Ile-du-Prince-Edouard", "Prince Edward Island", provincesSummary$Province)
-provincesSummary$Province <- sub("Iles Vierges des Etats-Unis", "US Virgin Islands", provincesSummary$Province)
-provincesSummary$Province <- sub("Nouveau-Brunswick", "New Brunswick", provincesSummary$Province)
-provincesSummary$Province <- sub("Nouvelle-Ecosse", "Nova Scotia", provincesSummary$Province)
-provincesSummary$Province <- sub("Provence-Alpes-Cote d'Azur", "Provence-Alps-French Riviera", provincesSummary$Province)
+provincesSummary <- provincesSummary[provincesSummary$Province != "Undefined",]
 
 # Create a data frame summarizing each user
-usersCommunities <- aggregate(lol$communaute, list(lol$utilisateur), function(x) head(x, n = 1))
-usersModes <- aggregate(lol$lol, list(lol$utilisateur), getMode)
-usersDivByCent <- getDivByCent("lol", "utilisateur", "lol", "PageRank")
+usersCommunities <- aggregate(lol$Community, list(lol$User), function(x) head(x, n = 1))
+usersModes <- aggregate(lol$lol, list(lol$User), getMode)
+usersDivByCent <- getDivByCent("lol", "User", "lol", "PageRank")
 usersCommsModes <- merge(usersCommunities, usersModes, by = 1)
 usersSummary <- merge(usersCommsModes, usersDivByCent, by = 1)
-usersSummary$Tokens <- table(lol$utilisateur)
+usersSummary$Tokens <- table(lol$User)
 rm(list = c("usersCommunities", "usersModes", "usersDivByCent", "usersCommsModes"))
 colnames(usersSummary) <- c("User", "Community", "Mode", "PageRank", "Diversity", "Tokens")
 usersSummary <- merge(usersSummary, communitiesSummary[, c("Community", "Diversity")], by = "Community")
@@ -142,8 +125,8 @@ rm(list = c("community", "sub", "user"))
 usersSummary <- merge(usersSummary, usersPRPercentile, by = "User")
 
 # Add the PageRank Percentiles to the (lol) observations
-lol <- merge(lol, usersPRPercentile, by.x = "utilisateur", by.y = "User")
-lolActive <- merge(lolActive, usersPRPercentile, by.x = "utilisateur", by.y = "User")
+lol <- merge(lol, usersPRPercentile, by = "User")
+lolActive <- merge(lolActive, usersPRPercentile, by = "User")
 rm(usersPRPercentile)
 
 # Create a data frame summarizing community 2265
@@ -166,21 +149,21 @@ lolDistComms <- lolDistComms[lolDistComms$lol == "lol" |
                              lolDistComms$lol == "LOL",]
 
 # Subset data frame including only users with the 5 highest PageRanks
-lolDistUsersHigh <- lol[lol$utilisateur == usersSummaryActive[order(usersSummaryActive$PageRank, decreasing = TRUE),][1, "User"] |
-                        lol$utilisateur == usersSummaryActive[order(usersSummaryActive$PageRank, decreasing = TRUE),][2, "User"] |
-                        lol$utilisateur == usersSummaryActive[order(usersSummaryActive$PageRank, decreasing = TRUE),][3, "User"] |
-                        lol$utilisateur == usersSummaryActive[order(usersSummaryActive$PageRank, decreasing = TRUE),][4, "User"] |
-                        lol$utilisateur == usersSummaryActive[order(usersSummaryActive$PageRank, decreasing = TRUE),][5, "User"],]
+lolDistUsersHigh <- lol[lol$User == usersSummaryActive[order(usersSummaryActive$PageRank, decreasing = TRUE),][1, "User"] |
+                        lol$User == usersSummaryActive[order(usersSummaryActive$PageRank, decreasing = TRUE),][2, "User"] |
+                        lol$User == usersSummaryActive[order(usersSummaryActive$PageRank, decreasing = TRUE),][3, "User"] |
+                        lol$User == usersSummaryActive[order(usersSummaryActive$PageRank, decreasing = TRUE),][4, "User"] |
+                        lol$User == usersSummaryActive[order(usersSummaryActive$PageRank, decreasing = TRUE),][5, "User"],]
 lolDistUsersHigh <- lolDistUsersHigh[lolDistUsersHigh$lol == "lol" |
                                      lolDistUsersHigh$lol == "Lol" |
                                      lolDistUsersHigh$lol == "LOL",]
 
 # Subset data frame including only users with the 5 lowest PageRanks
-lolDistUsersLow <- lol[lol$utilisateur == usersSummaryActive[order(usersSummaryActive$PageRank),][5, "User"] |
-                       lol$utilisateur == usersSummaryActive[order(usersSummaryActive$PageRank),][4, "User"] |
-                       lol$utilisateur == usersSummaryActive[order(usersSummaryActive$PageRank),][3, "User"] |
-                       lol$utilisateur == usersSummaryActive[order(usersSummaryActive$PageRank),][2, "User"] |
-                       lol$utilisateur == usersSummaryActive[order(usersSummaryActive$PageRank),][1, "User"],]
+lolDistUsersLow <- lol[lol$User == usersSummaryActive[order(usersSummaryActive$PageRank),][5, "User"] |
+                       lol$User == usersSummaryActive[order(usersSummaryActive$PageRank),][4, "User"] |
+                       lol$User == usersSummaryActive[order(usersSummaryActive$PageRank),][3, "User"] |
+                       lol$User == usersSummaryActive[order(usersSummaryActive$PageRank),][2, "User"] |
+                       lol$User == usersSummaryActive[order(usersSummaryActive$PageRank),][1, "User"],]
 lolDistUsersLow <- lolDistUsersLow[lolDistUsersLow$lol == "lol" |
                                    lolDistUsersLow$lol == "Lol" |
                                    lolDistUsersLow$lol == "LOL",]
@@ -203,13 +186,13 @@ graphDivByCent("lolActive", "PageRankLog", "PageRank (log)")
 graphDivByCent("lolActive", "PR_Percentile", "PageRank Percentile")
 
 ## ---- lol_dist_comms ----
-lolDistComms$communaute_ordered <- factor(lolDistComms$communaute, levels = c("1291", "2265", "1032"))
+lolDistComms$community_ordered <- factor(lolDistComms$Community, levels = c("1291", "2265", "1032"))
 ggplot(lolDistComms,
        aes(x = lol)) +
-  facet_wrap(.~lolDistComms$communaute_ordered, ncol = 3) +
+  facet_wrap(.~lolDistComms$community_ordered, ncol = 3) +
   labs(x = "(lol)", y = "Relative Frequency") +
   theme_bw() +
-  geom_bar(aes(y = ..count.. / sapply(PANEL, FUN=function(x) sum(count[PANEL == x]))))
+  geom_bar(aes(y = ..count.. / sapply(PANEL, FUN = function(x) sum(count[PANEL == x]))))
 
 ## ---- lol_dist_users_high ----
 graphlolDistUsers(lolDistUsersHigh)
