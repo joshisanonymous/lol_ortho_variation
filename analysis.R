@@ -56,7 +56,7 @@ graphDivByCent <- function(df, centrality, xlab) {
 graphlolDistUsers <- function(df) {
   ggplot(df,
          aes(x = lol)) +
-    facet_wrap(. ~ df$communaute + df$utilisateur, ncol = 5) +
+    facet_wrap(. ~ df$Community + df$User, ncol = 5) +
     labs(x = "(lol)", y = "Relative Frequency") +
     theme_bw() +
     geom_bar(aes(y = ..count.. / sapply(PANEL, FUN = function(x) sum(count[PANEL == x]))))
@@ -137,9 +137,9 @@ usersSummaryActive <- usersSummary[usersSummary$Tokens >= 10,]
 
 # Subset data frame including only communities that users with the 5 highest and
 # 5 lowest PageRanks belong to
-lolDistComms <- lol[lol$communaute == 2265 |
-                    lol$communaute == 1291 |
-                    lol$communaute == 1032,]
+lolDistComms <- lol[lol$Community == 2265 |
+                    lol$Community == 1291 |
+                    lol$Community == 1032,]
 # Grab only variants of (lol) over 1
 variants <- table(lolDistComms$lol)
 variantsGT <- names(variants[variants > 5])
