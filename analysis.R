@@ -14,6 +14,7 @@ library(tools)
 library(ggplot2)
 library(igraph)
 library(vegan)
+library(sentimentr)
 
 # Data
 source("data_cleaning.R")
@@ -67,6 +68,15 @@ getMode <- function(vector) {
   types <- unique(vector)
   types[which.max(tabulate(match(vector, types)))]
 }
+
+## Summary data frames and subsets
+# Get sentiments for tweets with (lol) using default polarity dictionary (doesn't include <lol>)
+lol$Sentiment <- sentiment_by(lol$Text)$ave_sentiment
+# Data frame for only non-zero sentiments for the three main (lol) variants
+lolSentMajorVars <- lol[lol$lol == "lol" | lol$lol == "LOL" | lol$lol == "Lol",]
+lolSentMajorVars <- lolSentMajorVars[lolSentMajorVars$Sentiment != 0,]
+# Get the means for each variant
+lolSentMeans <- tapply(lolSentMajorVars$Sentiment, lolSentMajorVars$lol, mean)
 
 # Identify active users, producing at least 10 tokens
 Active <- data.frame(table(lol$User) >= 10)
@@ -210,3 +220,11 @@ ggplot(usersSummaryActive,
   theme_bw() +
   geom_point() +
   geom_abline(slope = 1, intercept = 0)
+
+## ---- sentiment_lol_hist ----
+ggplot(lolSentMajorVars,
+       aes(x = Sentiment, y = stat(density * width))) +
+  facet_grid(lol ~ .) +
+  labs(y = "Density") +
+  theme_bw() +
+  geom_histogram()
