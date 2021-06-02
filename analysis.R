@@ -15,6 +15,8 @@ library(ggplot2)
 library(igraph)
 library(vegan)
 library(sentimentr)
+library(plyr)
+library(lsr)
 
 # Data
 source("data_cleaning.R")
@@ -179,6 +181,20 @@ lolDistUsersLow <- lolDistUsersLow[lolDistUsersLow$lol == "lol" |
                                    lolDistUsersLow$lol == "LOL",]
 
 ## Analysis
+# Perform significance tests for each factor other than sentiment
+lolSigTests <- lapply(list(lol$Community, lol$Province), function(column)
+  list(
+    fisher.test(lol$lol, column, simulate.p.value = TRUE),
+    cramersV(lol$lol, column))
+  )
+names(lolSigTests) <- c("Community", "Province")
+names(lolSigTests$Community) <- c("Test", "Effect")
+names(lolSigTests$Province) <- c("Test", "Effect")
+
+# Perform a one-way ANOVA for the means of sentiments
+lolSentSigTest <- aov(Sentiment ~ lol, data = lolSentMajorVars)
+lolSentSigTestSummary <- summary(lolSentSigTest)
+
 ## ---- example_community ----
 par(mar = c(2, 4, 3, 2))
 plot.igraph(
