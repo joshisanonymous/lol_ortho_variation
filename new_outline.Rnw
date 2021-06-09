@@ -243,7 +243,16 @@
     % Linguistic variables
 
 % Discussion
-  % Did this work like a phonological variable?
   % Is there evidence that orthographic (lol) serves a social function in terms of group identity?
+    % Not being used to signal group affiliation since there is little difference between aggregate group behavior
+    % Some users do, though, have different norms than their communities
+    % Discourse analysis might shed some light on why these users don't follow community norms
+      % Go through some examples that might show the stances these users take
   % Is there evidence that orthographic (lol) serves a pragmatic function?
-  % Is there evidence that the position of (lol) in a turn impacts its spelling?
+    % It is associated with positive sentiment tweets, but not highly positive
+    % Discourse analysis of both the major variants and rarer variants might be meaningful
+      % Go through some of the major variants
+      % Go through some of the rare variants
+  % Orthographic variation may not always show anything meaningful in aggregate data
+    % This is true for (lol) even though its related lexical version did show aggregate variation in this same data
+    % It may be more fruitful to approach orthographic variation from discourse analysis first before searching for aggregate patterning

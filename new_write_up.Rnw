@@ -623,7 +623,7 @@
       While communities may have clear norms that differ little from each other, this does not mean that all speakers follow these norms.
       Indeed, out of the \Sexpr{nrow(usersSummaryActive)} active producers of (lol) in the data, defined as those producing at least 10 tokens, \Sexpr{nrow(usersSummaryActive[usersSummaryActive$Mode != "lol" & usersSummaryActive$Community != "2265",])} who belong to \orth{lol} dominant communities use another variant most frequently, namely \orth{LOL} or \orth{Lol}.
       Additionally, all but one of these users other than Ambria Howard are above the 64th percentile for PageRanks in their communities, meaning they are fairly central members of their communities.
-      Ambria is an outlier with a PageRank percentile of \Sexpr{round(usersSummaryActive[usersSummaryActive$User == "Ambria Howard", usersSummaryActive$PR_Percentile], 2)}, making this user rather peripheral to their community.
+      Ambria is an outlier with a PageRank percentile of \Sexpr{round(usersSummaryActive[usersSummaryActive$User == "Ambria Howard", "PR_Percentile"], 2)}, making this user rather peripheral to their community.
       This suggests that individuals do in fact go against the norms of their community and that those individuals who do so are generally those who have a central position in their community.
       In this sense, (lol) is indeed socially variable, though it is clearly not indexing any particular community.
       The motivation for why these central community members buck the norms of their communities would likely require a discourse analysis that is beyond the scope of the present study but would perhaps be an interesting avenue for future research.
@@ -655,10 +655,13 @@
       Indeed, a one-way ANOVA for the difference in means shows this difference to be statistically significant ($P < \Sexpr{round_any(lolSentSigTestSummary[[1]][["Pr(>F)"]][[1]], 0.05, f = ceiling)}$).
       While this does suggest that some amount of pragmatic work is being done by the different variants of (lol) in relation to sentiment, the amount is seemingly very small.
       If (lol) is in fact pragmatically conditioned to a great extent, it is unlikely that this will be found by looking at sentiment.
+      Indeed, one of the sentiment dictionaries available in the sentimentr classifier package includes \lexi{lol} with a corresponding sentiment of \Sexpr{lexicon::hash_sentiment_senticnet[x == "lol", "y"]} \parencite{cambria_senticnet_2016}.
+      Out of the \num{\Sexpr{nrow(lexicon::hash_sentiment_senticnet)}} lexical items in this dictionary, \num{\Sexpr{nrow(lexicon::hash_sentiment_senticnet[y > 0.111])}} have higher sentiments, most of which are at least twice as high as \lexi{lol}, meaning that a large proportion of lexical items are assumed to have a much larger impact on sentiment than \lexi{lol}.
       As others have claimed, a more fruitful direction may be to look into its behavior as a ``phatic filler'' (see section \ref{subsubsec:lexical_lol}).
 
   \section{Discussion}
     \label{sec:discussion}
+    
 
   \printbibliography
 \end{document}
