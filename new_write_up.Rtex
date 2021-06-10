@@ -661,7 +661,12 @@
 
   \section{Discussion}
     \label{sec:discussion}
-
+    The goal of this study has been to search for possible social and/or pragmatic constraints on the realization of the orthographic variable (lol).
+    The methods used have been quantitative and so work well for uncovering aggregate group patterns.
+    However, while there is some evidence for such patterns, they are undoubtedly small.
+    The distributions of realizations of (lol) do differ from community to community and province to province, yet the norm of lowercase \orth{lol} is shared by all groups.
+    Variants of (lol) are also associated with positive sentiment tweets, but the sentiment polarities of said tweets are by and large only slightly above neutral.
+    In both cases, however, there is evidence that a more qualitative discourse analysis would uncover both social and pragmatic functions for (lol).
 
   \printbibliography
 \end{document}
