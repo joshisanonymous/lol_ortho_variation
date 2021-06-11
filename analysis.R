@@ -267,4 +267,4 @@ View(lol[lol$User == del[1] |
          lol$User == del[17] |
          lol$User == del[18] |
          lol$User == del[19],
-         c("User", "Text")])
+         c("Token ID", "User", "Text")])

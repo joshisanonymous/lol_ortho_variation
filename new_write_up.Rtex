@@ -671,9 +671,70 @@
     Variants of (lol) are also associated with positive sentiment tweets, but the sentiment polarities of said tweets are by and large only slightly above neutral.
     In both cases, however, there is evidence that a more qualitative discourse analysis would uncover both social and pragmatic functions for (lol).
 
+    \subsection{Individual identities}
+      \label{subsec:discuss_social}
+      As discussed in section \ref{subsec:social_constraints}, some Twitter users show personal norms for (lol) that do not adhere to the norms of their communities.
+      Those personal norms do not match the any outgroup norms captured in the data, so it cannot be said that they were indexing other analyzed communities through their spelling of (lol).
+      There is however still the possibility that they were indexing general qualitites such as properness, broader outgroup membership such as political affiliation, or simply outgroups that were not analyzed here.
+
+      It is possible that standard orthographic practices influence the way users spell (lol) on Twitter, despite this not being a particularly formal domain.
+      If (lol) is viewed as an acronym following its origin, then standard orthography would require it to be fully capitalized as \orth{LOL}.
+      \orth{LOL} can thus be uncontroversially considered a variant with overt prestige.
+      Additionally, the combination of this overt prestige and the rather informal domain may lead to \orth{LOL} having a strong air of being overly proper.
+
+      The tweets below provide some anecdotal evidence that this properness is part of the identities that some individuals have tried to foster.
+      In tweet \ref{sent:proper1}, Jack Encina uses \lexi{BTW} \gloss{by the way} with the fully capitalized spelling \orth{BTW}, just as they do with (lol) in the same tweet as well as all others.
+      The same user also uses overtly formal terms such as \lexi{sir} and \lexi{madam} in conjunction with \orth{LOL}, as in tweet \ref{sent:proper2}, further suggesting a desire to appear proper.
+      Additionally, unlike many Twitter users, Jasmine Boller consistently uses standard capitalization practices along with the (lol) variant \orth{LOL}, as in tweet \ref{sent:proper3}.
+      This example also contains the non-standard \orth{Presidents} in place of \orth{presidents'}, which is perhaps a case of hypercorrection.
+      If so, this hypercorrection itself would be evidence that Jasmine wishes to present a very proper persona as they are going out of their way to attempt to follow standard spellings.
+      \begin{enumerate}[resume]
+        \item \Sexpr{lol[lol$'Token ID' == 3007, "User"]}: \Sexpr{lol[lol$'Token ID' == 3007, "Text"]} \label{sent:proper1}
+        \item \Sexpr{lol[lol$'Token ID' == 3012, "User"]}: \Sexpr{lol[lol$'Token ID' == 3012, "Text"]} \label{sent:proper2}
+        \item \Sexpr{lol[lol$'Token ID' == 4117, "User"]}: \Sexpr{lol[lol$'Token ID' == 4117, "Text"]} \label{sent:proper3}
+      \end{enumerate}
+
+      Also present in tweet \ref{sent:proper3} is mockery of then United States president Donald Trump.
+      As these tweets were collected during the time when the highly controversial Trump was entering office, he was naturally the focal point of many online discussions where people would take strong stances for or against him.
+      In this case, Jasmine is referencing a widely reported case of potential plagiarism from a speech that Trump's wife, Melania Trump, had given in which she seemed to copy a speech from her predecessor from an opposing party.
+      The implication is that Ivanka Trump, Trump's daughter, would do the same.
+      Jasmine appears to be positioning herself as being better than Trump and better than supporters of Trump with whom she argues by presenting a proper, educated persona.
+
+      Tawfeeq al-Khalifa takes similar stances against Trump in many of their tweets as is evident in tweet \ref{sent:proper4} below.
+      Against, Tawfeeq is employing standard capitalization practices that co-occur with the variant \orth{LOL}.
+      \begin{enumerate}[resume]
+        \item \Sexpr{lol[lol$'Token ID' == 4042, "User"]}: \Sexpr{lol[lol$'Token ID' == 4042, "Text"]} \label{sent:proper4}
+      \end{enumerate}
+
+      The tweets below are also examples of political allegiances being expressed, though
+      % Political leanings
+        % Users argue one way or another, often about Trump
+        % Jasmine Boller still, Josiah Eguino Silvas, Tawfeeq al-Khalifa
+
+      % Unanalyzed outgroups
+        % Remember that many more communities were detected than those that were analyzed
+
+      % These personal social identities would require studies focused both on discourse analysis and ethnography to understand
+
     % Alexis Moore <Lol> because always sentence-initial except one token of <lol>
     % Aliyya el-Mowad <LOL> with a good amount of <lol>, always sentence-final, usually no final punctuation, seems to be indicating good humor
     % Ambria Howard <LOL> plenty <lol> and 2 <Lol> sentence-initially. Final punctuation variable. Seems to be indicating good humor
+    % Briana Gray Uses <LOL> and <lolol> with with exclamation marks. Uses caps elsewhere to indicate stress or for whole sentences combined with many exclamation and question marks. <Lol> only shows up sentence-initially. Seems to be mostly used to indicate mockery, often sarcastic.
+    % Carrie Ahn Mostly <LOL> with some <LOLOL> and <lol>. Uses <LOL> when used as a the verb <LOLd>. <LOLOL> may be intenser as it shows up with <OMG IT IS>. Seems to represent laughter.
+    % Cherokee Martin Prefers <Lol> but it always comes sentence-initially (usually at end of turn), though does not capitalize sentences normally. Uses <BECAUSE> for stress followed by one of the few <LOL>s. Used often in arguments but also for self-deprecation.
+    % Erin Robinson <LOL> preference. Sometimes just seems to signal agreement. Topics are often about animation and games.
+    % Gabriella Garcia <Lol> but usually sentence-initial. Includes <Lolol> sentence-initially. Topics usually hockey.
+    % Jack Encina Always <LOL> and always with exclamation marks, sometimes many <LOL!!!!!!!>. Only other acronym was <BTW>, also all caps. Uses <sir> and <Madam> each once, but otherwise doesn't seem particularly proper. Hard to tell if it's used for conviviality or mockery or both.
+    % Jasmine Boller <LOL> with a couple <lol>s. Also uses <LOLLOL> or <LOLLOLLOL>, so full reduplication instead of partial. Uses exclamations regularly but not always with <LOL> and not clear why the reduplications are used. Standard capitalization typically used. Topics are very often critiques of Trump.
+    % Jesus Ibarra <LOL> but one <lul> and another <LUL>. Not enough context to conclude anything. No periods used at all, but most tokens are just tweets made up of (lol)
+    % Jose Nevarez Almost always <LOL>. Seems to be showing agreement with another user about things they find funny seemingly because they're pathetic. Topic always boxing.
+    % Josiah Eguino Silvas <LOL>. Doesn't often use standard capitalization practices but does capitalize some other non-standard spellings like <GR8> yet not others like <u> and even a token of <Gr8>. Includes some odd Trump-esque capitalization, like capitalizing <Death Penalty> and <Dickheads> and <Vacation> for no apparent reason. Topic seems to be voicing support for Trump and criticism of people/orgs that seem anti-Trump with some music and sports talk mixed in.
+    % Katilyn Ortiz Always <LOL>. No clear topic or reason but seems generally about humor. Makes heavy use of <...> as well.
+    % Mackenzie Bowen <LOL> sometimes co-occurs with <!> but so does <lol>. <LOLOLOL> used when it's an adjective.
+    % Nassaar el-Ghattas Always <Lol> and always sentence-initial. One token of <lol> where a space was not present between it and the preceding period. User claims to be 61 and seems generally to be trying to be positive.
+    % Tawfeeq al-Abdo Always <LOL>. No consistent topic but seems to be indicating making fun of recipients in a playful way.
+    % Tawfeeq al-Khalifa Always <LOL>. Topic is typically politics, critical of Trump and general critiques of NZ politics. Capitalization is pretty standard but some other non-standard spellings co-occur like <2> and <&>.
+    % Tony Nauth Mostlly <LOL> but also some heavy reduplication (still caps) and even a <TROLOLOLOLOL> responding to someone in a pro wrestling thread and a <lolno>. Often about wrestling and illicit activities like smoking pot and pirating TV/movies.
 
   \printbibliography
 \end{document}
