@@ -36,6 +36,18 @@ tweets$Province <- gsub("indefini", "Undefined", tweets$Province)
 # Reformat usernames to get rid of underscores
 tweets$User <- gsub("_", " ", tweets$User, fixed = TRUE)
 
+# Make tweets safe for knitting into LaTeX
+tweets$Text <- gsub("\\", "\\textbackslash", tweets$Text, fixed = TRUE)
+tweets$Text <- gsub("#", "\\#", tweets$Text, fixed = TRUE)
+tweets$Text <- gsub("$", "\\$", tweets$Text, fixed = TRUE)
+tweets$Text <- gsub("%", "\\%", tweets$Text, fixed = TRUE)
+tweets$Text <- gsub("^", "\\^", tweets$Text, fixed = TRUE)
+tweets$Text <- gsub("&", "\\&", tweets$Text, fixed = TRUE)
+tweets$Text <- gsub("_", "\\_", tweets$Text, fixed = TRUE)
+tweets$Text <- gsub("{", "\\{", tweets$Text, fixed = TRUE)
+tweets$Text <- gsub("}", "\\}", tweets$Text, fixed = TRUE)
+tweets$Text <- gsub("~", "\\~", tweets$Text, fixed = TRUE)
+
 # Subset by orthographic variants of <lol> only
 lol <- subset(tweets, grepl("l+(o+|u+|e+|a+w+)l+", lol,
                             perl = TRUE, ignore.case = TRUE))
