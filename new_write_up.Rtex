@@ -660,7 +660,7 @@
       If (lol) is in fact pragmatically conditioned to a great extent, it is unlikely that this will be found by looking at sentiment.
       Indeed, one of the sentiment dictionaries available in the sentimentr classifier package includes \lexi{lol} with a corresponding sentiment of \Sexpr{lexicon::hash_sentiment_senticnet[x == "lol", "y"]} \parencite{cambria_senticnet_2016}.
       Out of the \num{\Sexpr{nrow(lexicon::hash_sentiment_senticnet)}} lexical items in this dictionary, \num{\Sexpr{nrow(lexicon::hash_sentiment_senticnet[y > 0.111])}} have higher sentiments, most of which are at least twice as high as \lexi{lol}, meaning that a large proportion of lexical items are assumed to have a much larger impact on sentiment than \lexi{lol}.
-      As others have claimed, a more fruitful direction may be to look into its behavior as a ``phatic filler'' (see section \ref{subsubsec:lexical_lol}).
+      A more fruitful direction may thus be to look into other pragmatic functions, perhaps using discourse analysis instead of a quantitative analysis.
 
   \section{Discussion}
     \label{sec:discussion}
@@ -714,36 +714,65 @@
       Also unlike Jasmine and Tawfeeqa, their capitalization practices are fairly non-standard.
       Although this is not always the case, both tweets \ref{sent:politics2} and \ref{sent:politics3} lack sentence-initial capitalization as in standard orthography.
       The latter additionally does not include standard capitalization for \lexi{I} nor the proper name \lexi{Trump}, spelling them as \orth{i} and \orth{trump}, respectively.
-      On the other hand, \lexi{global warming} is unexpectedly capitalized as \orth{Global Warming}, a characteristic that matches Trump's own spelling practices in his own tweets \parencite{clarke_}.
+      On the other hand, \lexi{global warming} is unexpectedly capitalized as \orth{Global Warming}, a characteristic that matches Trump's own spelling practices in his own tweets.
       This unexpected capitalization was not the only such case despite the relatively small number of tweets from Josiah that were analyzed.
       They also produced forms such as \orth{Death Penalty} and \orth{Dickheads}.
       It is possible that Josiah's spelling patterns were meant to align them with Trump as Trump himself has been known to shown a disdain for those he fashions as ``elites'' who oppress his supporters \parencite{kelly_donald_2020}.
+      Eskewing the standard might be viewed by Josiah as an act of rebellion against elites who would presumably set that standard.
       The variant \orth{LOL} does not appear to fit into this pattern except for being contrary to the norms of those Josiah argues with who are more likely to use \orth{lol} as that is the mode for every community analyzed here.
 
-      % Unanalyzed outgroups
-        % Remember that many more communities were detected than those that were analyzed
+      While some users who do not follow the norms of their communities for (lol) may be indexing characteristics like properness or broad social categories like political affiliation, it is also possible that they are indexing other communities that were not analyzed here.
+      Indeed, only \Sexpr{nrow(communitiesSummary)} communities were analyzed in this study out of the 8,945 initially detected.
+      However, it is not clear that any one of those 8,945 communities is salient to users in any other community.
+      One limitation of community detection is that defining communities by interactions alone does not necessarily mean those communities are salient in the minds of other nor even in the minds of members of those communities.
+      Combining community detection with ethnography would be helpful for uncovering such saliencies.
 
-      % These personal social identities would require studies focused both on discourse analysis and ethnography to understand
+    \subsection{Discourse analysis for orthographic variation}
+      \label{subsec:discuss_pragmatics}
+      Regardless of whether the spelling of (lol) is socially meaningful either on an group level or an individual level, the fact remains that it does indeed vary.
+      Out of the \Sexpr{nrow(usersSummaryActive)} active users of (lol) in the data analyzed here, only \Sexpr{nrow(usersSummaryActive[usersSummaryActive$Diversity == 0,])} had diversities of zero, meaning over 75\% of these users employed at least two variants.
+      The other possible explanation for this behavior is that different spellings have different pragmatic functions.
+      As was shown in section \ref{subsec:pragmatic_constraints}, there is not much quantitative evidence for variants of (lol) having a large impact on sentiment, though there are many other pragmatic functions that may be uncoverable through a discourse analysis that the data used in this study is not well suited for as the data was not collected with an aim at following prolonged discussions.
 
-    % Alexis Moore <Lol> because always sentence-initial except one token of <lol>
-    % Aliyya el-Mowad <LOL> with a good amount of <lol>, always sentence-final, usually no final punctuation, seems to be indicating good humor
-    % Ambria Howard <LOL> plenty <lol> and 2 <Lol> sentence-initially. Final punctuation variable. Seems to be indicating good humor
-    % Briana Gray Uses <LOL> and <lolol> with with exclamation marks. Uses caps elsewhere to indicate stress or for whole sentences combined with many exclamation and question marks. <Lol> only shows up sentence-initially. Seems to be mostly used to indicate mockery, often sarcastic.
-    % Carrie Ahn Mostly <LOL> with some <LOLOL> and <lol>. Uses <LOL> when used as a the verb <LOLd>. <LOLOL> may be intenser as it shows up with <OMG IT IS>. Seems to represent laughter.
-    % Cherokee Martin Prefers <Lol> but it always comes sentence-initially (usually at end of turn), though does not capitalize sentences normally. Uses <BECAUSE> for stress followed by one of the few <LOL>s. Used often in arguments but also for self-deprecation.
-    % Erin Robinson <LOL> preference. Sometimes just seems to signal agreement. Topics are often about animation and games.
-    % Gabriella Garcia <Lol> but usually sentence-initial. Includes <Lolol> sentence-initially. Topics usually hockey.
-    % Jack Encina Always <LOL> and always with exclamation marks, sometimes many <LOL!!!!!!!>. Only other acronym was <BTW>, also all caps. Uses <sir> and <Madam> each once, but otherwise doesn't seem particularly proper. Hard to tell if it's used for conviviality or mockery or both.
-    % Jasmine Boller <LOL> with a couple <lol>s. Also uses <LOLLOL> or <LOLLOLLOL>, so full reduplication instead of partial. Uses exclamations regularly but not always with <LOL> and not clear why the reduplications are used. Standard capitalization typically used. Topics are very often critiques of Trump.
-    % Jesus Ibarra <LOL> but one <lul> and another <LUL>. Not enough context to conclude anything. No periods used at all, but most tokens are just tweets made up of (lol)
-    % Jose Nevarez Almost always <LOL>. Seems to be showing agreement with another user about things they find funny seemingly because they're pathetic. Topic always boxing.
-    % Josiah Eguino Silvas <LOL>. Doesn't often use standard capitalization practices but does capitalize some other non-standard spellings like <GR8> yet not others like <u> and even a token of <Gr8>. Includes some odd Trump-esque capitalization, like capitalizing <Death Penalty> and <Dickheads> and <Vacation> for no apparent reason. Topic seems to be voicing support for Trump and criticism of people/orgs that seem anti-Trump with some music and sports talk mixed in.
-    % Katilyn Ortiz Always <LOL>. No clear topic or reason but seems generally about humor. Makes heavy use of <...> as well.
-    % Mackenzie Bowen <LOL> sometimes co-occurs with <!> but so does <lol>. <LOLOLOL> used when it's an adjective.
-    % Nassaar el-Ghattas Always <Lol> and always sentence-initial. One token of <lol> where a space was not present between it and the preceding period. User claims to be 61 and seems generally to be trying to be positive.
-    % Tawfeeq al-Abdo Always <LOL>. No consistent topic but seems to be indicating making fun of recipients in a playful way.
-    % Tawfeeq al-Khalifa Always <LOL>. Topic is typically politics, critical of Trump and general critiques of NZ politics. Capitalization is pretty standard but some other non-standard spellings co-occur like <2> and <&>.
-    % Tony Nauth Mostlly <LOL> but also some heavy reduplication (still caps) and even a <TROLOLOLOLOL> responding to someone in a pro wrestling thread and a <lolno>. Often about wrestling and illicit activities like smoking pot and pirating TV/movies.
+      Following the concepts of paralinguistic restitution \parencite[Thurlow and Brown 2003, as cited in][p.~3]{schneier_digital_2021} and affective lengthening \parencite[pp.~117-118]{schnoebelen_you_2012}, as discussed in section \ref{subsubsec:orthographic_lol}, a natural function to consider is emphasis.
+      Specifically, capitalized or reduplicated variants of (lol) may be encoding a more emphatic reaction than the typical \orth{lol} variant to make up for lack of prosody in text.
+      If this is indeed the case, one might expect to find capitalized and reduplicated variants co-occurring with exclamation marks or perhaps other capitalization/reduplication that is more clearly meant to show stress.
+      Importantly, this co-occurrence would be found for users whose mode for (lol) is not a capitalized or reduplicated variant to begin with.
+      Tweets \ref{sent:emphasis1} to \ref{sent:emphasis6} below are examples in the data that fit this criteria.
+
+      \begin{enumerate}[resume]
+        \item \Sexpr{lol[lol$'Token ID' == 562, "User"]}: \Sexpr{lol[lol$'Token ID' == 562, "Text"]} \label{sent:emphasis1}
+        \item \Sexpr{lol[lol$'Token ID' == 578, "User"]}: \Sexpr{lol[lol$'Token ID' == 578, "Text"]} \label{sent:emphasis2}
+        \item \Sexpr{lol[lol$'Token ID' == 2517, "User"]}: \Sexpr{lol[lol$'Token ID' == 2517, "Text"]} \label{sent:emphasis3}
+        \item \Sexpr{lol[lol$'Token ID' == 2605, "User"]}: \Sexpr{lol[lol$'Token ID' == 2605, "Text"]} \label{sent:emphasis4}
+        \item \Sexpr{lol[lol$'Token ID' == 4217, "User"]}: \Sexpr{lol[lol$'Token ID' == 4217, "Text"]} \label{sent:emphasis5}
+        \item \Sexpr{lol[lol$'Token ID' == 2753, "User"]}: \Sexpr{lol[lol$'Token ID' == 2753, "Text"]} \label{sent:emphasis6}
+      \end{enumerate}
+
+      In tweets \ref{sent:emphasis1} and \ref{sent:emphasis2}, Carlton Brink's use of \orth{lololol} co-occurs with three exclamation marks and their use of \orth{lolol} with two exclamation marks, matching the number of reduplications.
+      Admittedly, there may not be a connection for this user between the number of exclamations and the level of exclaiming, but these examples at least show reduplicated (lol) going along with what are overtly symbols meant to represent emphasis.
+      Similary, Ryan Johnson in tweet \ref{sent:emphasis3} used the reduplicated variant \orth{lolol} with sentences that ended in exclamation marks.
+
+      Exclamation marks also co-occur with the tokens of \orth{LOL} in tweets \ref{sent:emphasis4}, \ref{sent:emphasis5}, and \ref{sent:emphasis6}, though in these cases, the exclamation marks are directly adjacent to the tokens of (lol), which are treated as independent sentences.
+      This suggests that what is being exclaimed is the laughter itself.
+      Additionally, \orth{LOL} in tweets \ref{sent:emphasis4} and \ref{sent:emphasis6} also co-occur with other fully capitalized words, \orth{OH} and \orth{LOUD}, respectively.
+      The latter is particularly noteworthy as \orth{LOUD} is found within a sentence featuring otherwise standard capitalization patterns, making it more contrastive, and it also overtly describes the volume of the user's speech.
+      It would be difficult to argue that Fat'hi el-Abdalla is not using capitalization in both \orth{LOUD} and \orth{LOL} to emphasize these words.
+
+      Some variants of (lol) might be used to indicate that a tweet is meant to be understood as cynicism, though the available data for the most likely candidates in the corpus used here is far too sparse to even provide good examples.
+      For instance, \orth{yololololo} and \orth{TROLOLOLOLOL} are each used once, but in both cases, they make up the entirety of the content of those tweets.
+      However, the former seems to be a blend with \lexi{YOLO} \gloss{you only live once} and the latter a blend with \lexi{troll}, understood as a internet user who purposely attempts to get a rise out of their interlocutors purely for their own entertainment.
+      This playfulness with the structure of the words suggests a lack of seriousness or serious consideration on the parts of these users.
+      To uncover the intent of such variants necessarily requires a more focused discourse analysis than what the current study can present.
+
+  \section{Conclusion}
+    \label{sec:conclusion}
+    The aim of this study was to search for possible social and pragmatic conditioning for the realization of the orthographic linguistic variable (lol) on Twitter.
+    The methods used were squarely quantitative, employing the modern social network analysis technique of community detection in particular.
+    The results suggested that communities do differ slightly in their distributions for the variants of (lol), but all communities had the same norm of \orth{lol}.
+    It was also found that both \orth{lol} and capitalized variants \orth{Lol} and \orth{LOL} were associated with positive sentiments, the latter two being associated with slightly more positive sentiments, but that the effect size was not great.
+    A more qualitative look at the data revealed that approaching (lol), and perhaps orthographic variation in general, from either a more individualized angle or a discourse analysis angle before looking for aggregate patterns may be more fruitful.
+    Some individuals do pattern contrary to their communities, and it does appear that capitalization and reduplication have associations with stress or emphasis, but these possibilities are not easily explored through quantatitive analyses.
 
   \printbibliography
 \end{document}
