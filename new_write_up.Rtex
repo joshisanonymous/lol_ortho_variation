@@ -700,16 +700,25 @@
       The implication is that Ivanka Trump, Trump's daughter, would do the same.
       Jasmine appears to be positioning herself as being better than Trump and better than supporters of Trump with whom she argues by presenting a proper, educated persona.
 
-      Tawfeeq al-Khalifa takes similar stances against Trump in many of their tweets as is evident in tweet \ref{sent:proper4} below.
-      Against, Tawfeeq is employing standard capitalization practices that co-occur with the variant \orth{LOL}.
+      Tawfeeqa al-Khalifa takes similar stances against Trump in many of their tweets as is evident in tweet \ref{sent:politics1} below.
+      Like Jasmine, Tawfeeqa is employing standard capitalization practices that co-occur with the variant \orth{LOL}.
+      Also like Jasmine, Tawfeeqa capitalizes \orth{President} in what may be a case of hypercorrection in an effort to appear highly educated and proper in contrast to how they view the Trump supporters with whom they argue.
       \begin{enumerate}[resume]
-        \item \Sexpr{lol[lol$'Token ID' == 4042, "User"]}: \Sexpr{lol[lol$'Token ID' == 4042, "Text"]} \label{sent:proper4}
+        \item \Sexpr{lol[lol$'Token ID' == 4042, "User"]}: \Sexpr{lol[lol$'Token ID' == 4042, "Text"]} \label{sent:politics1}
+        \item \Sexpr{lol[lol$'Token ID' == 3025, "User"]}: \Sexpr{lol[lol$'Token ID' == 3025, "Text"]} \label{sent:politics2}
+        \item \Sexpr{lol[lol$'Token ID' == 3043, "User"]}: \Sexpr{lol[lol$'Token ID' == 3043, "Text"]} \label{sent:politics3}
       \end{enumerate}
 
-      The tweets below are also examples of political allegiances being expressed, though
-      % Political leanings
-        % Users argue one way or another, often about Trump
-        % Jasmine Boller still, Josiah Eguino Silvas, Tawfeeq al-Khalifa
+      Another user who often tweets about politics and has \orth{LOL} as a mode is Josiah Eguino Silvas.
+      However, unlike Jasmine and Tawfeeqa, Josiah appears to argue supportively for Trump.
+      Also unlike Jasmine and Tawfeeqa, their capitalization practices are fairly non-standard.
+      Although this is not always the case, both tweets \ref{sent:politics2} and \ref{sent:politics3} lack sentence-initial capitalization as in standard orthography.
+      The latter additionally does not include standard capitalization for \lexi{I} nor the proper name \lexi{Trump}, spelling them as \orth{i} and \orth{trump}, respectively.
+      On the other hand, \lexi{global warming} is unexpectedly capitalized as \orth{Global Warming}, a characteristic that matches Trump's own spelling practices in his own tweets \parencite{clarke_}.
+      This unexpected capitalization was not the only such case despite the relatively small number of tweets from Josiah that were analyzed.
+      They also produced forms such as \orth{Death Penalty} and \orth{Dickheads}.
+      It is possible that Josiah's spelling patterns were meant to align them with Trump as Trump himself has been known to shown a disdain for those he fashions as ``elites'' who oppress his supporters \parencite{kelly_donald_2020}.
+      The variant \orth{LOL} does not appear to fit into this pattern except for being contrary to the norms of those Josiah argues with who are more likely to use \orth{lol} as that is the mode for every community analyzed here.
 
       % Unanalyzed outgroups
         % Remember that many more communities were detected than those that were analyzed
