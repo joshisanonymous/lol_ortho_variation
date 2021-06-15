@@ -122,6 +122,12 @@
       One could instead argue from the audience design framework that the audience for a homepage or magazine is far broader than for a discussion forum, leading to more standard language.
       What is to be taken away from this is that audience appears to impact the character of the language produced on Twitter, which can inform how we interpret results in the present study.
 
+      % Crystal (2001) defined CMC varieties by medium of communication (e.g., email language or forum language) under the view that the constraints each medium place on speakers are the most important (as cited in Androutsopoulos 2008 "Style":280).
+      % Yates (1996) used what might be better described as linguistic statistics than linguistic variables, such as type/token ratio and lexical density (33-37), although he also looked at the frequency of different personal pronouns (40-41).
+      % Relationship to speech and writing
+        % As late as 2008, researchers such as Androutsopoulos (2008 "Style":287) and Tagliamonte & Denis (2008) were still trying to situate CMC
+        % N. Baron (2004) herself had previously suggested that studies of social determinants in speech, in her case gender, can inform and be informed by results from CMC because of this sort of hybrid nature (401).
+
     \subsection{Orthographic variation}
       \label{subsec:orthographic_variation}
       From early on in CMC research, it has been acknowledged that CMC is not only different from face-to-face language, as \textcite{paolillo_virtual_1999} recognized, but that it is also different from older forms of writing.
@@ -137,6 +143,19 @@
       In fact, they found that non-standard spelling norms were acquired quite readily.
       For example, \orth{shoulda} \gloss{should have} was found but never forms like \orth{shulda} \parencite[p.~731]{varnhagen_lol_2010}.
       The implication is that non-standard spellers may actually be very good spellers if the qualification of ``good'' in this case is defined as \gloss{accurately follows norms}.
+
+      % [probably leave out] It's important to identify a typology of orthographic variation, something Androutsopoulos (2000) has done.
+        % Androutsopoulos (2000) defined non-standard spellings as diverging from standard, codified norms, having their origin in speech or not (514).
+        % Ultimately, Androutsopoulos (2000) proposed a typology with five phonologically related non-standard spellings (i.e., phonetic, colloquial, regiolectal, prosodic, and interlingual) and one non-phonologically related (i.e., homophone) (521).
+          % Androutsopoulos (2000) divided homophone spellings into two subtypes: lexical substitutions and grapheme substitutions (521-522).
+        % Likewise, Liénard (2014) proposed his own typology, though more general as it aimed to include all forms particular to CMC (147-149).
+          % Includes the broad categories of simplification, specialization, and expressivity
+          % Simplification includes such things as truncations and acronyms.
+          % Specialization includes such things as borrowings and "semi-phonological" notation, equivalent to Androutsopoulos's lexical substitutions
+          % Expressivity includes such things as emoticons.
+        % Finally, Varnhagen et al. (2010) split up their typology broadly into shortcuts (much like simplifications) and pragmatic devices (723).
+        % Important here is that lol would fall under simplification as an acronym in Liénard's system, lexical substitution in Androutsopoulos's, and emotion acronym in Varnhagen et al.'s.
+          % In any case, what's shared is that it would be difficult to place lol in any phonologically motivated in any of these systems.
 
       \subsubsection{Connection to grammar}
         \label{subsubsec:connect_grammar}
@@ -228,6 +247,33 @@
         Unsurprisingly, the range is as broad as that which can be found for linguistic variables in spoken language.
         While it will not be possible to look at each and every factor in analyzing (lol) due to the limitations of what we know about Twitter users without directly interacting with them, we will endeavor to include as many factors as possible in line with the exploratory nature of this study.
 
+        %[leave out] Phonological connection
+          % Eisenstein (2013) noted that both Whiteman (1982) and Thompson et al. (2004) found no phonology-orthography connection, but both were before there were models of non-standard orthography, like those found on social media, to follow (17).
+            % In fact, Androutsopoulos (2000) found colloquial spellings to be the most frequent non-standard phonologically related spellings in German punk fanzines (523).
+              % This means that previous research did not fully agree and that non-standard forms could be found even outside of CMC.
+              % This involved forms like elisions in articles and verbs as well as contractions of clitic pronouns (Androutsopoulos 2000:523-524).
+          % It's also important to be careful about what to consider phonologically related.
+            % Androutsopoulos (2008 "Potentials") points out a discussion with a regular visitor to German hip-hop websites, Anita, who used <a> for word final <er> as doing so to imitate liner notes for Wu Tang albums, seemingly unaware that there's a phonological relationship there (12-13).
+            % Tatman (2016) argues that two criteria must be met to even have the possibility for phonetically motived orthographic variation: the feature be salient and there's concerted purpose behind the respelling in light of pressures from standardized spellings (161).
+          % Where there is a phonological connection, Schneier (2021) argues that this is the "residue" of spoken language more so than a complete transfer, in argreement with Eisenstein (4).
+            % Perhaps along the same lines, Eisenstein (2015) points out that phonologically related respellings can't just take any form because they're constrained not only by the spoken modality but also the written modality (162).
+              % In this case, Eisenstein (2015) is arguing that (ing) can only be respelled in so many ways (162).
+            % Tatman's (2016) comparison of a fan's performance of a radio announcer's voice in recordings vs tweets shows that these two contexts may be similar but are not always identical (165-167).
+          % Representations of phonologically related orthographic variation can be difficult to identify and interpret, as Jones (2015) notes (410).
+            % Jones (2015) notes a case where an apostrophe might be used to represent a glottal stop, but instead either voiceless stops or simply nothing are used to represent it (416).
+        %[leave out] Strictly non-phonological orthographic variation
+          % Emoticons, invented by Scott Fahlman in 1982, can't possibly be phonological.
+            % Schnoebelen (2012) looked at these in American English, finding that 9.7% of the tweets in his corpus contained them (117).
+              % Schnoebelen (2012) focused primairly on the most frequent noseless smiley :) compared to the far less frequent noseful version :-) (117).
+                % Schnoebelen (2012) previously found that emoticons can express positive or negative feelings, flirting, or teasing, but that the presence of a nose made no difference for these uses (122).
+          % Other strictly non-phonological variations have been long recognized
+            % Paolillo (1999) examined <you> as <u>, <are> as <r>, and final <s> as <z> on IRC (2).
+          % Tagliamonte & Denis (2008) also looked at <u> but added to this <I> as <i>, finding a preference for <you> and <i>, respectively, in their IM study (14).
+          % Tagliamonte & Denis (2008) looked at the five most frequent "IM forms" (i.e., those that they considered unique to CMC): haha, lol, hehe, omg, and hmm (12).
+            % While it is, however, arguable if haha, hehe, and hmm are truly unique to CMC, there is far less question for lol and omg.
+          % This phenomenon is not limited to English, of course, as members of German hip-hop web sites and forums were found to use <z> for plural, <ph> for <f>, and <k> for <c> (Androutsopoulos 2008 "Style":291).
+            % Androutsopoulos (2008 "Style") also noted a lack of capitalization where standard German orthography involves capitalizing every noun (301-304).
+
     \subsection{Previous work on (lol)}
       \label{subsec:previous_lol}
       The orthographic variable being analyzed in the present study is (lol), which at least originally was an acronym that stood for \gloss{laugh out loud}.
@@ -255,10 +301,17 @@
         Likewise, \textcite{tagliamonte_linguistic_2008} described \lexi{lol} ``as a signal of interlocutor involvement,'' specifically contrasting this interpretation with items such as \lexi{haha} and \lexi{hehe}, which they described as simply forms of laughter (p.~11).
         A non-pragmatic constraint was also found, however, in that \lexi{lol} was more common among young user of instant messaging than older users \parencite[p.~13]{tagliamonte_linguistic_2008}.
 
+        % N. Baron (2004) also noted, anecdotally, that lol was used in speech at that time (411), though the implication is that it originated in CMC.
+
         \textcite{schneier_digital_2021} also gave a lexical treatment of \lexi{lol}, though he did not wash \lexi{lol} of its connection to laughter as others had done.
         He argued instead that laughter in spoken conversation has pragmatic functions itself, specifically that it helps mitigate face threatening acts\parencite[p.~5]{schneier_digital_2021}.
         Shorter keybursts for \lexi{lol} at the beginning of turns led him to this conclusion as one would want to very quickly respond when attempting to help one's interlocutor save face \parencite[pp.~17-18]{schneier_digital_2021}.
         It was also argued that \lexi{lol} goes beyond the functions of laughter in spoken language in that it also helps to coordinate turn taking \parencite[p.~5]{schneier_digital_2021}.
+
+        % Schneier (2021) looked at both Haha and Lol as lexical variants in his keystroke analysis.
+          % The keystroke logging allowed him to establish some spelling equivalents though as he could see when someone repaired something like <Hwhw> with <haha> (11), which presumably happened for Lol also.
+          % Additionally, Schneier (2021) examined these as separate variables (14), implicitly arguing that these aren't purely representing laughter.
+        % It's important to note that keybursts followed this same pattern of quick initial and slower final for all lexical items in Schneier's (2021) data.
 
       \subsubsection{As an orthographic variable}
         \label{subsubsec:orthographic_lol}
@@ -280,6 +333,8 @@
         \textcite{stewart_anorexia_2017}, for example, analyzed variation in the spelling of a banned hashtag on Instagram that was used for posts that treated anorexia as a positive condition.
         Instagram users developed variants to get around the ban, and these variants became more and more disconnected from the original as measured using Levenshtein distance \parencite[p.~4]{stewart_anorexia_2017}.
         It was found that newcomers to this Instagram community preferred the variants with the greatest distance from the original \parencite[pp.~5-6]{stewart_anorexia_2017}, suggesting perhaps that the community was stratified by something akin to age and that these variants were not in contrast serving any pragmatic functions.
+
+        % They found this to be meaningful in terms of language change as newcomers to the Instagram community they examined generally preferred variants with greater distances from the original (5-6).
 
         There is thus reason to suspect that spelling variation in (lol) may be either socially constrained or serving pragmatic functions.
         As a result, the primary research question of the present study is the following:
@@ -367,6 +422,8 @@
         For instance, \textcite{ilbury_sassy_2020} targeted openly gay men from the south of England in his study of Twitter, but he analyzed a only ten users as opposed to the \Sexpr{length(unique(lol$User))} users in my corpous.
         This small number of users allowed Ilbury to conduct a sort of virtual ethnography to establish the identities of those he analyzed even though he never interacted with them directly.
 
+        % Ilbury (2020) showed both that AAVE features could be reappropriated to present a "Sassy Queen" persona and showed how much can be gained from a qualitative analysis of Twitter data in general.
+
         Similarly, \textcite{jones_toward_2015} also faced the challenge of determining if the users of Twitter that he examined were indeed native speakers of African-American Vernacular English (AAVE) or if they were simply performing an identity.
         He dealt with this problem much like Ilbury did: through ethnography \parencite[p.~412]{jones_toward_2015}.
         However, and perhaps because his data was much more large scale than Ilbury's, Jones's ethnography included experience with African-Americans in person, and his goal was not to identify African-Americans on Twitter but to identify native speakers of AAVE who may not necessarily be African-American.
@@ -375,6 +432,16 @@
         \textcite{bamman_gender_2014} deduced users' genders by establishing gender associations for given names using US census data in which the majority gender for a name in the census data would be taken as the typical gender for people with that name (p.~140).
         While most names had a clear association using this method, and while most people did not have names that were highly ambiguous, there is still a level of uncertainty with classifying users this way, just as there is for race, ethnicity, and sexual orientation.
         For this reason, I focus on social variables that are more directly observable on Twitter, namely community membership and centrality in a community as calculated using well established social network analysis techniques as well as geographic location as given by the user.
+
+        % Bamman et al. (2014) clustered Twitter users through having similar vocabularies (145-146) and found that males and females had different vocabulary preferences, sometimes completely opposite, between clusters (147).
+
+        % Where possible, though, an advantage of Twitter is that there is a broad range of demographics.
+          % The Pew Internet Research Center found, for race, that its users were 29% Black, 16% White and Hispanic (Duggan & Smith 2013, as cited in Eisenstein 2015:169).
+        % Some demographics are more restricted
+          % Although many languages are used on Twitter, Hong et al. (2011) found that 51% was in English (519), and there is little reason to believe that has changed.
+          % And language is meaningful
+            % Very broadly, Hong et al. (2011) provided evidence that variation in how speakers of different languages use Twitter exists, in this case in terms of Twitter conventions that were employed such as retweets and hashtags (519-520).
+          % Non-English tweets included here, but they make up a very small percentage of tweets and so this is not taken as a factor
 
         \paragraph{Concepts of community}
           \label{para:concepts_of_community}
@@ -385,10 +452,19 @@
           With communities of practice, smaller scale communities are typically identified and so the importance of geography is not necessarily as present as it typically is for speech communities.
           The key is simply that there is a shared activity, which implies sharing physical space, as well, but that is no longer required as people can partake in shared activities virtually with the advent of the internet.
 
+          % Mendoza-Denton (2001) defines social identity as "the active negotiation of an individual's relationship with larger social constructs" that is "signaled through language and other semiotic means" (as cited in Androutsopoulos 2008 "Style":282).
+            % This means that communities must have norms for a linguistic feature that differ from each other otherwise nothing will be signaled by using the shared feature.
+
           Various concepts of community have thus been used in CMC research.
           Castells (2000) defined communities along similar lines as communities of practice where they are ``organized around a shared interest or purpose,'' but he did not think these were the same as face-to-face communities because of the differences in how interaction occurs.
           Castells (2000) referred to these communities as virtual communities \parencite[as cited in][p.~283]{auer_style_2008}.
           \textcite{auer_style_2008}, for his part, recognized that the connections between members of these communities could be quite literal through the user of hyperlinks (pp.~283-284), which is indeed a feature that is not possible in face-to-face communities.
+
+          % Androutsopoulos (2008 "Style") describes participants in the German hip-hop sites as partaking in a "liminal" virtual community where they could experiment with different identities linguistically from their day-to-day (290).
+            % Indeed, Androutsopoulos's (2008 "Potentials") described one informant, Wolfgang, as indicating that he would never speak in person the way people write on German hip-hop websites, nor has he heard anyone else do so (15).
+          % Androutsopoulos (2008 "Style") found two dichotomies from work on speech reproduced in German hip-hop music critics on websites: standard vs non-standard language and overt vs covert prestige (309).
+          % Social factors also find import in CMC, as N. Baron (2004) found gender differences between such things as turn lengths and use of contractions in instant messaging.
+            % Such factors must always be approached carefully, though, as N. Baron (2004) herself notes, CMC offers a level of anonymity where speakers can portray themselves as different ages and genders, among other social characteristics (406).
 
           What is at least implicit in all these concepts is the idea of interaction, which is how I define communities for the present study.
           Those who interact with each other more than with others may be considered as members of the same community.
@@ -455,6 +531,9 @@
           They have also been used in analyzing language on German hip-hop web sites \parencite{auer_style_2008} and on Twitter using follower count \parencite{danescu-niculescu-mizil_mark_2011}.
           Centrality has often, though not always, been found to be significant in these studies.
 
+          % Paolillo (1999) started from previous findings that central members of a community would use more non-standard variants (2-3), but his own results showed the opposite pattern (8).
+          % Danescu-Niculescu-Mizil et al.'s (2011) treatment of "style" was unusual, as things like the presence vs absence of features such as articles or second person pronouns were considered markers of style.
+
           Likewise, centrality measures have been used in language variation studies since \textcite{milroy_language_1987}.
           Just as \textcite{milroy_language_1987} did, the implementation in sociolinguistics tends to involve the use of an index with a relatively small scale of possible values, such as 5.
           Part of the reason for this approach is that it can be exceedingly difficult to track face-to-face interactions, which is conversely not a problem at all with Twitter data as directed tweets are explicit.
@@ -490,6 +569,10 @@
           Using this method calls for an API access level that makes amassing extremely large corpora possible, which was out of reach for the current study.
           For example, \textcite{huang_understanding_2016} used geotagging but were also able to collect 924 million such tweets over the course of a year with the access level that they had (p.~244).
           As a result, manually entered geographic locations are used for the present study.
+
+          % Geotags are possible but not used here because of their rarety.
+            % Eisenstein (2013) was able to look at demographics using geotagged tweets, but these represented the environments of users, not the demographics of the users themselves (15)
+              % Eisenstein (2015) extended this research to include (ing), as well (163).
 
       \subsubsection{Pragmatic variables}
         \label{subsubsec:pragmatic_vars}
