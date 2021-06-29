@@ -322,6 +322,8 @@
         However, there are arguably orthographic tools available to cover these functions such as capitalization and reduplication.
         This phenomenon of using the unique tools that a medium offers to cover the functions of the tools that it lacks can be referred to as paralinguistic restitution \parencite[Thurlow and Brown 2003, as cited in][p.~3]{schneier_digital_2021}.
 
+        % Milroy & Milroy (1985/2012) talked about different tools for disambiguiting available to written and oral channels (53-54).
+
         Along the same lines, the idea of affective lengthening has also been proposed, which is essentially the reduplication of individual typed characters for pragmatic effect \parencite[pp.~117-118]{schnoebelen_you_2012}.
         Indeed, just such lengthening is readily apparent in the tweets collected for the present study as can be seen in tweet \ref{sent:looool}, though an argument for what exact function this has or whether it even represents a pragmatic function has yet to be made.
 
@@ -469,6 +471,8 @@
           What is at least implicit in all these concepts is the idea of interaction, which is how I define communities for the present study.
           Those who interact with each other more than with others may be considered as members of the same community.
           Formally, this can be quantified using community detection methods from social network analysis, one of which I will now describe.
+
+          % Gumperz had interactions at the heart of his definition of community (1962, as cited in Hymes 1972) and speech community (1968, as cited in G. Sankoff 2015:24)
 
         \paragraph{Community detection}
           \label{para:community_detection}
