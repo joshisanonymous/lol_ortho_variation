@@ -38,14 +38,13 @@
   <<load_packages_functions_data>>=
   @
   \maketitle
-  \begin{abstract}
-    [TBD]
-  \end{abstract}
+  % \begin{abstract}
+  %   [TBD]
+  % \end{abstract}
 
   \section{Introduction}
     \label{sec:introduction}
-    Studies of orthographic variation are not unheard of in sociolinguistics.
-    This has been especially true since the widespread adoption of the internet as computer-mediated communication (CMC) presents both a wealth of relatively easily accessible data and social contexts that are less subject to overt social controls than what would have historically been the case for written forms as they had previously been largely relegated to educational and literary contexts.
+    Studies of orthographic variation in sociolinguistics have been more widespread since the adoption of the internet as computer-mediated communication (CMC) presents both a wealth of relatively easily accessible data and social contexts that are less subject to overt social controls than what would have historically been the case for written forms as they had previously been largely relegated to educational and literary contexts.
     However, CMC studies and studies of orthographic variation in general have been focused mostly, though not always, either on situating CMC along a continuum between spoken language and older forms of written language or on the connection between phonology and spelling.
 
     With some notable exceptions, an area of orthographic variation that has not been explored as much is how it functions on its own terms, independent of phonology.
@@ -756,76 +755,59 @@
     However, while there is some evidence for such patterns, they are undoubtedly small.
     The distributions of realizations of (lol) do differ from community to community and province to province, yet the norm of lowercase \orth{lol} is shared by all groups.
     Variants of (lol) are also associated with positive sentiment tweets, but the sentiment polarities of said tweets are by and large only slightly above neutral.
-    In both cases, however, there is evidence that a more qualitative discourse analysis would uncover both social and pragmatic functions for (lol).
+    In both cases, however, there are clues that a more qualitative analysis of individual behavior would uncover both social and discursive functions for (lol).
 
-    \subsection{Individual identities}
-      \label{subsec:discuss_social}
+    \subsection{Outlier individuals}
+      \label{subsec:discuss_outliers}
       As discussed in section \ref{subsec:social_constraints}, some Twitter users show personal norms for (lol) that do not adhere to the norms of their communities.
-      Those personal norms do not match the any outgroup norms captured in the data, so it cannot be said that they were indexing other analyzed communities through their spelling of (lol).
-      There is however still the possibility that they were indexing general qualitites such as properness, broader outgroup membership such as political affiliation, or simply outgroups that were not analyzed here.
+      Those personal norms do not match any outgroup norms captured in the data, so it cannot be said that they were indexing other analyzed communities through their spelling of (lol).
+      Other possibilities remain to be analyzed, such as whether these users were indexing general personal qualitites, broad outgroup membership in the vein of imagined communities \parencite{anderson_imagined_1991}, or simply outgroup communities that were not captured here.
+      In any case, while it is worthwhile to discuss the behavior of these outlier individuals, a proper interpretation is beyond the scope of the present study.
 
-      It is possible that standard orthographic practices influence the way users spell (lol) on Twitter, despite this not being a particularly formal domain.
-      If (lol) is viewed as an acronym following its origin, then standard orthography would require it to be fully capitalized as \orth{LOL}.
-      \orth{LOL} can thus be uncontroversially considered a variant with overt prestige.
-      Additionally, the combination of this overt prestige and the rather informal domain may lead to \orth{LOL} having a strong air of being overly proper.
-
-      The tweets below provide some anecdotal evidence that this properness is part of the identities that some individuals have tried to foster.
+      The tweets below provide form a small sample of those produced by users whose mode for (lol) was all uppercase \orth{LOL}, and in each case, there are some capitalization practices in their writing styles that are worth noting.
       In tweet \ref{sent:proper1}, Jack Encina uses \lexi{BTW} \gloss{by the way} with the fully capitalized spelling \orth{BTW}, just as they do with (lol) in the same tweet as well as all others.
-      The same user also uses overtly formal terms such as \lexi{sir} and \lexi{madam} in conjunction with \orth{LOL}, as in tweet \ref{sent:proper2}, further suggesting a desire to appear proper.
-      Additionally, unlike many Twitter users, Jasmine Boller consistently uses standard capitalization practices along with the (lol) variant \orth{LOL}, as in tweet \ref{sent:proper3}.
-      This example also contains the non-standard \orth{Presidents} in place of \orth{presidents'}, which is perhaps a case of hypercorrection.
-      If so, this hypercorrection itself would be evidence that Jasmine wishes to present a very proper persona as they are going out of their way to attempt to follow standard spellings.
+      The same user also capitalizes \orth{Madam} in tweet \ref{sent:proper2} as one might do for kinship terms when used as names in formal writing styles.
+      In the first case, using all uppercase for acronyms matches prescriptive writing norms for English, but the second case does not unless it is an instance of hypercorrection, which cannot be determined from the analysis in this study.
+      Jasmine Boller also uses a mix of standard capitalization practices along with non-standard practices, as in tweet \ref{sent:proper3}.
+      This example contains the acronym \orth{USA} in all uppercase but also the non-standard \orth{Presidents} in place of \orth{presidents'}.
+      Again, the latter may be a case of hypercorrection, but there are many other possibilities, as well, and sorting these possibilities out is beyond the scope of the present study.
       \begin{enumerate}[resume]
         \item \Sexpr{lol[lol$'Token ID' == 3007, "User"]}: \Sexpr{lol[lol$'Token ID' == 3007, "Text"]} \label{sent:proper1}
         \item \Sexpr{lol[lol$'Token ID' == 3012, "User"]}: \Sexpr{lol[lol$'Token ID' == 3012, "Text"]} \label{sent:proper2}
         \item \Sexpr{lol[lol$'Token ID' == 4117, "User"]}: \Sexpr{lol[lol$'Token ID' == 4117, "Text"]} \label{sent:proper3}
       \end{enumerate}
 
-      Also present in tweet \ref{sent:proper3} is mockery of then United States president Donald Trump.
-      As these tweets were collected during the time when the highly controversial Trump was entering office, he was naturally the focal point of many online discussions where people would take strong stances for or against him.
-      In this case, Jasmine is referencing a widely reported case of potential plagiarism from a speech that Trump's wife, Melania Trump, had given in which she seemed to copy a speech from her predecessor from an opposing party.
-      The implication is that Ivanka Trump, Trump's daughter, would do the same.
-      Jasmine appears to be positioning herself as being better than Trump and better than supporters of Trump with whom she argues by presenting a proper, educated persona.
-
-      Tawfeeqa al-Khalifa takes similar stances against Trump in many of their tweets as is evident in tweet \ref{sent:politics1} below.
-      Like Jasmine, Tawfeeqa is employing standard capitalization practices that co-occur with the variant \orth{LOL}.
-      Also like Jasmine, Tawfeeqa capitalizes \orth{President} in what may be a case of hypercorrection in an effort to appear highly educated and proper in contrast to how they view the Trump supporters with whom they argue.
+      Also present in tweet \ref{sent:proper3} was discussion of then United States president Donald Trump.
+      As these tweets were collected during the time when the highly controversial Trump was entering office, he was naturally the focal point of many online discussions.
+      Likewise, the tweets below all touched on Trump or politics in general.
+      Tawfeeqa al-Khalifa in tweet \ref{sent:politics1} capitalizes \orth{President} counter to formal writing styles, but also capitalizes other words that are not always capitalized in CMC, such as \orth{I'm} and the sentence-initial \orth{You're}.
+      This is in contrast to Josiah Eguino Silvas in tweets \ref{sent:politics2} and \ref{sent:politics3} who does not capitalize the first words in sentences nor the pronoun \lexi{I} nor the proper name \lexi{Trump}.
+      What Josiah does capitalize, however, is \orth{Global Warming}.
+      The reason for this token of capitalization is not clear, though it is also not unusual for Josiah.
+      They also capitalize words like \orth{Death Penalty} and \orth{Dickheads}, for example.
       \begin{enumerate}[resume]
         \item \Sexpr{lol[lol$'Token ID' == 4042, "User"]}: \Sexpr{lol[lol$'Token ID' == 4042, "Text"]} \label{sent:politics1}
         \item \Sexpr{lol[lol$'Token ID' == 3025, "User"]}: \Sexpr{lol[lol$'Token ID' == 3025, "Text"]} \label{sent:politics2}
         \item \Sexpr{lol[lol$'Token ID' == 3043, "User"]}: \Sexpr{lol[lol$'Token ID' == 3043, "Text"]} \label{sent:politics3}
       \end{enumerate}
 
-      Another user who often tweets about politics and has \orth{LOL} as a mode is Josiah Eguino Silvas.
-      However, unlike Jasmine and Tawfeeqa, Josiah appears to argue supportively for Trump.
-      Also unlike Jasmine and Tawfeeqa, their capitalization practices are fairly non-standard.
-      Although this is not always the case, both tweets \ref{sent:politics2} and \ref{sent:politics3} lack sentence-initial capitalization as in standard orthography.
-      The latter additionally does not include standard capitalization for \lexi{I} nor the proper name \lexi{Trump}, spelling them as \orth{i} and \orth{trump}, respectively.
-      On the other hand, \lexi{global warming} is unexpectedly capitalized as \orth{Global Warming}, a characteristic that matches Trump's own spelling practices in his own tweets.
-      This unexpected capitalization was not the only such case despite the relatively small number of tweets from Josiah that were analyzed.
-      They also produced forms such as \orth{Death Penalty} and \orth{Dickheads}.
-      It is possible that Josiah's spelling patterns were meant to align them with Trump as Trump himself has been known to shown a disdain for those he fashions as ``elites'' who oppress his supporters \parencite{kelly_donald_2020}.
-      Eskewing the standard might be viewed by Josiah as an act of rebellion against elites who would presumably set that standard.
-      The variant \orth{LOL} does not appear to fit into this pattern except for being contrary to the norms of those Josiah argues with who are more likely to use \orth{lol} as that is the mode for every community analyzed here.
-
-      While some users who do not follow the norms of their communities for (lol) may be indexing characteristics like properness or broad social categories like political affiliation, it is also possible that they are indexing other communities that were not analyzed here.
+      These outlier users who do not follow the norms of their communities for (lol) may be indexing personal qualities or perhaps imagined communities, but it is also possible that they are indexing other communities that were not analyzed here.
       Indeed, only \Sexpr{nrow(communitiesSummary)} communities were analyzed in this study out of the 8,945 initially detected.
       However, it is not clear that any one of those 8,945 communities is salient to users in any other community.
       One limitation of community detection is that defining communities by interactions alone does not necessarily mean those communities are salient in the minds of other nor even in the minds of members of those communities.
-      Combining community detection with ethnography would be helpful for uncovering such saliencies.
+      Combining community detection with ethnography would be helpful for uncovering such saliencies as well as what is behind the behavior of individuals who buck community norms.
 
-    \subsection{Discourse analysis for orthographic variation}
-      \label{subsec:discuss_pragmatics}
-      Regardless of whether the spelling of (lol) is socially meaningful either on an group level or an individual level, the fact remains that it does indeed vary.
+    \subsection{Individual variation}
+      \label{subsec:discuss_individuals}
       Out of the \Sexpr{nrow(usersSummaryActive)} active users of (lol) in the data analyzed here, only \Sexpr{nrow(usersSummaryActive[usersSummaryActive$Diversity == 0,])} had diversities of zero, meaning over 75\% of these users employed at least two variants.
-      The other possible explanation for this behavior is that different spellings have different pragmatic functions.
-      As was shown in section \ref{subsec:pragmatic_constraints}, there is not much quantitative evidence for variants of (lol) having a large impact on sentiment, though there are many other pragmatic functions that may be uncoverable through a discourse analysis that the data used in this study is not well suited for as the data was not collected with an aim at following prolonged discussions.
+      The majority of these users were naturally not outliers and instead conformed to the norms of their communities.
+      Their use of spellings of (lol) other than \orth{lol} could of course have the same motivation as for outlier users who do not fit their communities' norms.
+      Unlike outliers, however, a norm-adhering user is not habitually producing forms such as \orth{LOL}, and so whereas outliers may arguably be doing so in order to establish some sort of identity, non-outliers may be more likely doing so to create some discursive effect via unexpected contrasts to their norms, just as \textcite{androutsopoulos_non-standard_2000} argued that non-standard spellings can signal attitudes or frames of interpretation.
 
       Following the concepts of paralinguistic restitution \parencite[Thurlow and Brown 2003, as cited in][p.~3]{schneier_digital_2021} and affective lengthening \parencite[pp.~117-118]{schnoebelen_you_2012}, as discussed in section \ref{subsubsec:orthographic_lol}, a natural function to consider is emphasis.
       Specifically, capitalized or reduplicated variants of (lol) may be encoding a more emphatic reaction than the typical \orth{lol} variant to make up for lack of prosody in text.
       If this is indeed the case, one might expect to find capitalized and reduplicated variants co-occurring with exclamation marks or perhaps other capitalization/reduplication that is more clearly meant to show stress.
-      Importantly, this co-occurrence would be found for users whose mode for (lol) is not a capitalized or reduplicated variant to begin with.
-      Tweets \ref{sent:emphasis1} to \ref{sent:emphasis6} below are examples in the data that fit this criteria.
+      Tweets \ref{sent:emphasis1} to \ref{sent:emphasis6} below are examples from normative users in the data that fit this criteria.
 
       \begin{enumerate}[resume]
         \item \Sexpr{lol[lol$'Token ID' == 562, "User"]}: \Sexpr{lol[lol$'Token ID' == 562, "Text"]} \label{sent:emphasis1}
@@ -837,20 +819,18 @@
       \end{enumerate}
 
       In tweets \ref{sent:emphasis1} and \ref{sent:emphasis2}, Carlton Brink's use of \orth{lololol} co-occurs with three exclamation marks and their use of \orth{lolol} with two exclamation marks, matching the number of reduplications.
-      Admittedly, there may not be a connection for this user between the number of exclamations and the level of exclaiming, but these examples at least show reduplicated (lol) going along with what are overtly symbols meant to represent emphasis.
+      Admittedly, there may not be a connection for this user between the number of exclamations and the level of exclaiming, but these examples at least show reduplicated (lol) going along with what are overt symbols meant to represent emphasis.
       Similary, Ryan Johnson in tweet \ref{sent:emphasis3} used the reduplicated variant \orth{lolol} with sentences that ended in exclamation marks.
-
       Exclamation marks also co-occur with the tokens of \orth{LOL} in tweets \ref{sent:emphasis4}, \ref{sent:emphasis5}, and \ref{sent:emphasis6}, though in these cases, the exclamation marks are directly adjacent to the tokens of (lol), which are treated as independent sentences.
       This suggests that what is being exclaimed is the laughter itself.
       Additionally, \orth{LOL} in tweets \ref{sent:emphasis4} and \ref{sent:emphasis6} also co-occur with other fully capitalized words, \orth{OH} and \orth{LOUD}, respectively.
       The latter is particularly noteworthy as \orth{LOUD} is found within a sentence featuring otherwise standard capitalization patterns, making it more contrastive, and it also overtly describes the volume of the user's speech.
-      It would be difficult to argue that Fat'hi el-Abdalla is not using capitalization in both \orth{LOUD} and \orth{LOL} to emphasize these words.
+      It would be difficult to argue that Fat'hi el-Abdalla is not using capitalization in both \orth{LOUD} and \orth{LOL} to emphasize these words, though this cannot be established concretely just from this anecdotal evidence.
 
-      Some variants of (lol) might be used to indicate that a tweet is meant to be understood as cynicism, though the available data for the most likely candidates in the corpus used here is far too sparse to even provide good examples.
-      For instance, \orth{yololololo} and \orth{TROLOLOLOLOL} are each used once, but in both cases, they make up the entirety of the content of those tweets.
-      However, the former seems to be a blend with \lexi{YOLO} \gloss{you only live once} and the latter a blend with \lexi{troll}, understood as a internet user who purposely attempts to get a rise out of their interlocutors purely for their own entertainment.
-      This playfulness with the structure of the words suggests a lack of seriousness or serious consideration on the parts of these users.
-      To uncover the intent of such variants necessarily requires a more focused discourse analysis than what the current study can present.
+      Some variants of (lol) seem as though they may have very specific meanings, as well, though the available data for the most likely candidates in the corpus used here is far too sparse to even provide good examples.
+      For instance, \orth{yololololo} and \orth{TROLOLOLOLOL} are each used once, but in both cases, they make up the entirety of the content of those tweets, and so no hints for future research on these are available.
+      The former seems to be a blend with \lexi{YOLO} \gloss{you only live once} and the latter a blend with \lexi{troll}, understood as an internet user who purposely attempts to get a rise out of their interlocutors purely for their own entertainment.
+      To get beyond this very basic understanding of such variants necessarily requires a more focused discourse analysis than what the current study can include.
 
   \section{Conclusion}
     \label{sec:conclusion}
@@ -858,8 +838,8 @@
     The methods used were squarely quantitative, employing the modern social network analysis technique of community detection in particular.
     The results suggested that communities do differ slightly in their distributions for the variants of (lol), but all communities had the same norm of \orth{lol}.
     It was also found that both \orth{lol} and capitalized variants \orth{Lol} and \orth{LOL} were associated with positive sentiments, the latter two being associated with slightly more positive sentiments, but that the effect size was not great.
-    A more qualitative look at the data revealed that approaching (lol), and perhaps orthographic variation in general, from either a more individualized angle or a discourse analysis angle before looking for aggregate patterns may be more fruitful.
-    Some individuals do pattern contrary to their communities, and it does appear that capitalization and reduplication have associations with stress or emphasis, but these possibilities are not easily explored through quantatitive analyses.
+    A more qualitative look at the data revealed that approaching (lol), and perhaps orthographic variation in general, from a more individualized angle before looking for aggregate patterns may be more fruitful.
+    Some individuals do pattern contrary to their communities, and those that pattern with their communities are still motivated to occasionally use non-normative spellings, but possible explanations are not easily explored through quantatitive analyses.
 
   \printbibliography
 \end{document}
