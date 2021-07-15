@@ -53,6 +53,7 @@
     \begin{enumerate}
       \item \Sexpr{lol[lol$'Token ID' == 840, "User"]}\footnote{
         Users whose tweets appear in the corpus used here have all been anonymized without concern for gender nor social identity.
+        The pronouns \lexi{they/them/their} are used in references in light of the indeterminacy of users' genders.
       }: \Sexpr{lol[lol$'Token ID' == 840, "Text"]} \label{sent:lol}
       \item \Sexpr{lol[lol$'Token ID' == 3071, "User"]}: \Sexpr{lol[lol$'Token ID' == 3071, "Text"]} \label{sent:LOL}
       \item \Sexpr{lol[lol$'Token ID' == 2959, "User"]}: \Sexpr{lol[lol$'Token ID' == 2959, "Text"]} \label{sent:lololol}
@@ -63,61 +64,57 @@
     Moreover, these tokens of (lol) also coincide with other non-standard features of English such as the negative concord in tweet \ref{sent:lol}.
     While any of these linguistic features could prove interesting to analyze, only (lol) is examined here.
     Specifically, we will look at (lol) as used on the social media platform Twitter, whether certain spelling variants are associated with certain Twitter communities or certain positions within communities and whether certain spelling variants are associated with particular sentiments.
+    In part, the focus on (lol) stems from its appearance in the literature, where it is commonly argued to be a ``phatic filler'' \parencite[p.~412]{baron_see_2004} or as ``a signal of interlocutor involvement'' \parencite[p.~11]{tagliamonte_linguistic_2008}.
+    While such interpretations are quite likely on the surface, other possibilities have not been systematically ruled out yet.
 
     The rest of this introduction will be structured as follows.
     Section \ref{subsec:cmc} will cover the general nature of CMC and any special considerations that are applicable to the present study.
     Section \ref{subsec:orthographic_variation} will review work that has been done on orthographic variation.
-    Finally, a thorough review of work that has been done on (lol), whether as a lexical or orthographic variable, will be presented in section \ref{subsec:previous_lol}.
+    Finally, a thorough review of work that has been done on (lol) specifically, whether as a lexical or orthographic variable, will be presented in section \ref{subsec:previous_lol}.
 
     \subsection{Computer-mediated communication}
       \label{subsec:cmc}
       With the advent of the internet, many new mediums of communication have entered daily life, collectively referred to as CMC.
-      Likewise, by the end of the 1990s, research focused on these new mediums began in ernest.
-      For instance, \textcite{cherny_mud_1996} examined multi-user dungeons (MUDS), which are online, text-based, multiplayer games, whereas \textcite{herring_oral_1996} analyzed language in computer conferencing systems, which are perhaps best thought of as progenitors of discussion forums, and \textcite{paolillo_virtual_1999} looked at chatrooms on internet relay chat (IRC).
+      Likewise, by the end of the 1990s, research focused on these new mediums began in ernest, such as with studies of multi-user dungeons (MUDS) \parencite{cherny_mud_1996}, which are online, text-based, multiplayer games, were examined, language in computer conferencing systems \parencite{herring_oral_1996}, which are perhaps best thought of as progenitors of discussion forums, and chatrooms on internet relay chat (IRC) \parencite{paolillo_virtual_1999}.
       These were all early mediums, and so studies have progressed to other mediums as they have been developed, which include instant messaging (IM) \parencite[e.g.,][]{baron_see_2004, tagliamonte_linguistic_2008}, the social media photo-sharing platform Instagram \parencite[e.g.,][]{stewart_anorexia_2017}, and both commonly and importantly for the present study, the social media micro-blogging platform Twitter \parencite[e.g.,][]{bamman_gender_2014, eisenstein_phonological_2013, hong_language_2011, ilbury_sassy_2020, jones_toward_2015, kim_sociolinguistic_2014}.
-      \textcite{schneier_digital_2021} also looked at text messaging on cell phones, though his data included use of any communication application on a cell phone.
+      Text messaging on cell phones as well as language used on any communication application on a cell phone has also been examined \parencite{schneier_digital_2021}.
 
-      \textcite{androutsopoulos_potentials_2008} described the goals of these researchers of CMC as fitting into two separate ``waves'',\footnote{
-        This is not to be confused with \citeauthor{eckert_three_2012}'s (\citeyear{eckert_three_2012}) description of three ``waves'' of sociolinguistics, though there comparison is apt.
-      } the first focused on the impact of the constraints placed on users of different CMC mediums on the language they produce, and the second focused more on analyses of what happens in CMC pragmaticly and sociolinguisticly (pp.~1-2), though one might also add that there has been a consistent interest in characterizing the relationship between CMC and both speech and older written mediums throughout both of these waves.
-      A particularly useful tool for the present study -- and indeed any CMC study -- that was developed during the first wave is a typology for CMC mediums.
+      The goals of these researchers of CMC have been described as fitting into two separate ``waves'' \parencite{androutsopoulos_potentials_2008},\footnote{
+        This is not to be confused with the three ``waves'' of sociolinguistics \parencite{eckert_three_2012}, though there comparison is apt.
+      }. The first wave focused on the impact of the constraints placed on users of different CMC mediums on the language they produce, and the second wave focused more on analyses of what happens in CMC pragmaticly and sociolinguisticly \parencite[pp.~1-2]{androutsopoulos_potentials_2008}, though one might also add that there has been a consistent interest in characterizing the relationship between CMC and both speech and older written mediums throughout both of these waves.
 
-      In order to compare results from a study centered on Twitter, as we are doing here, with results from previous work, it is important to have a framework for classifying different mediums.
-      As \textcite{paolillo_virtual_1999} recognized early on CMC is not identical to face-to-face conversation (p.~1).
-      \textcite{herring_oral_1996} had previously gone even further, suggesting that CMC occurred in the absence of any field à la Halliday other than the text itself (pp.~45-46).
+      A particularly useful tool for understanding how results from different CMC studies relate was a CMC medium typology developed during the first wave.
+      In order to compare results from a study centered on Twitter, as we are doing here, with results from previous work, it is important to have a framework for classifying different mediums, as CMC is not identical to face-to-face conversation \textcite[p.~1]{paolillo_virtual_1999}.
+      It has also been suggested that CMC occurs in the absence of any field à la Halliday other than the text itself \textcite[pp.~45-46]{herring_oral_1996}.
       \textcite{baron_see_2004} echoed these general sentiments, adding to them that the medium may change ``the character of language produced in that medium,'' leading her to formulate perhaps the most prevalent typological framework in CMC for mediums, which includes two dichotomous parameters: synchronicity versus asynchronicity, and one-to-one versus one-to-many interactions (p.~398).
       The first parameter, synchronicity versus asynchronicity, refers to whether there is a reasonable expectation between the interlocutors that messages will be received and responses made immediately, as if in a face-to-face conversation.
       The second parameter, one-to-one versus one-to-many interactions, refers to whether locutors are sending messages that are meant to be received either by one person or by many people.
 
-      \citeauthor{baron_see_2004}'s (\citeyear{baron_see_2004}) typological framework for CMC is useful for understanding how comparable data produced through different mediums is as there may be different limitations placed on the forms of messages.
-      For instance, \textcite{baron_see_2004} suggested that chatrooms, MUDs, and IM are all synchronous CMC mediums, whereas text messaging is asynchronous as one may not expect immediate replies to text messages (p.~398).
-      The implication is that data collected from chatrooms and IM are more comparable than data collected from chatrooms and text messages.
-
-      Indeed, there are clear examples of the synchonocity or asynchronicity of a medium having an effect on how conversations progress.
-      \textcite{baron_see_2004} herself noted a phenomenon in instant messaging in which multiple topics overlap as a result of both interlocutors being able to construct messages simultaneously without interrupting each other (p.~400), which would not happen in a less synchronous medium such as e-mail.
-      Somewhat relatedly, she observed a prevalence of multiturn sequences, where each sent message is considered a turn.
-      \textcite{baron_see_2004} argued that interlocutors face pressure to break up their messages into multiple shorter turns in order to hold the floor (p.~417), the idea being that, since messages are not seen until sent, longer single turn messages provide more time for the other party to chime in before the whole statement is ready to be sent.
-      These sorts of phenomena suggest that one must be cautious when comparing the language used in one CMC medium versus another.
+      % Clear examples of the synchonocity or asynchronicity of a medium having an effect on how conversations progress are not difficult to find in the literature.
+      % In instant messaging, there is a phenomenon in which multiple topics overlap as a result of both interlocutors being able to construct messages simultaneously without interrupting each other \parencite[p.~400]{baron_see_2004}, which would not happen in a less synchronous medium such as e-mail.
+      % Somewhat relatedly, a prevalence of multiturn sequences has been observed, where each sent message is considered a turn.
+      % It has been argued that interlocutors face pressure to break up their messages into multiple shorter turns in order to hold the floor \parencite[p.~417]{baron_see_2004}, the idea being that, since messages are not seen until sent, longer single turn messages provide more time for the other party to chime in before the whole statement is ready to be sent.
+      % These sorts of phenomena suggest that one must be cautious when comparing the language used in one CMC medium versus another.
 
       However, the boundaries between what should be considered synchronous and asynchronous are somewhat fuzzy.
       While chatrooms would presumably yield situations where interlocutors immediately reply to each other, this is not necessarily the case.
       IRC still exists today, though the way it is used may have changed over the last 20 years.
       For instance, at the time of this writing, the chatroom \#nlp on the freenode network, which offers discussion and help with natural language processing, has a topic that states that it may take two to three hours to get a response to a question.
       The reason is that it is typical to be connected to an IRC chatroom without monitoring it closely, making it less synchronous than might be expected.
-      Indeed, \textcite{baron_see_2004} herself acknowledged that IM users in her data were sometimes multitasking while connected and so did not always respond immediately (p.~419).
+      Likewise, IM users in have been found to multitask while connected and so did not always respond immediately \parencite[p.~419]{baron_see_2004}.
       Even in clearer cases of asynchronicity, such e-mail, there is still some imperfection in the classification as many people now own cell phones that receive e-mail notifications instantly wherever they are, allowing for relatively quick responses, though quick responses are not necessarily expected.
       This parameter is still useful, of course, since a medium can be thought of as more or less synchronous in terms of expectations -- in our case, Twitter is relatively asynchronous but can be used from a cell phone that provides immediate notifications still -- but there are caveats to keep in mind.
 
       It is also important to consider the audience for messages.
       \citeauthor{baron_see_2004}'s (\citeyear{baron_see_2004}) framework accounts for this with the one-to-one versus one-to-many parameter.
       Protypical examples of each might be e-mail for the former and blogs for the latter, although here again one finds some fuzziness in the categorization.
-      While e-mail might typically be a one-to-one medium, one-to-many messages are not unknown.
-
+      While e-mail might typically be a one-to-one medium, one-to-many messages are also quite normal.
       This same difficulty in categorization is present on Twitter, as well, where the most common sort of messages may be one-to-many, but there exist public directed messages and private directed messages.
-      Again, the parameter here is still useful, but in this case, there is also an alternative: \citeauthor{bell_language_1984}'s (\citeyear{bell_language_1984}) audience design framework.
-      Indeed, \textcite{pavalanathan_audience-modulated_2015} employed this framework on Twitter, which yielded interesting results, as will be discussed further in the \nameref{sec:methods} section.
-      Likewise, the audience design framework would have been useful when \textcite{auer_style_2008} had found ``hip-hop slang'' to be used more on German hip-hop discussion forums than on German hip-hop homepages and online magazines (p.~293).
-      Both of these venues are indeed one-to-many when approached from \citeauthor{baron_see_2004}'s (\citeyear{baron_see_2004}) typology, but the results are not the same.
+
+      Again, the parameter here is still useful, but in this case, there is also an alternative: the audience design framework \parencite{bell_language_1984}.
+      Indeed, the audience design framework has already been employed to analyze Twitter \textcite{pavalanathan_audience-modulated_2015}, yielding interesting results, as will be discussed further in the \nameref{sec:methods} section.
+      Likewise, the audience design framework may explain why more ``hip-hop slang'' had been observed on German hip-hop discussion forums than on German hip-hop homepages and online magazines \parencite[p.~293]{auer_style_2008}.
+      Both of these venues are indeed one-to-many when approached from the traditional CMC typology, but the results are not the same.
       One could instead argue from the audience design framework that the audience for a homepage or magazine is far broader than for a discussion forum, leading to more standard language.
       What is to be taken away from this is that audience appears to impact the character of the language produced on Twitter, which can inform how we interpret results in the present study.
 
@@ -129,17 +126,19 @@
 
     \subsection{Orthographic variation}
       \label{subsec:orthographic_variation}
-      From early on in CMC research, it has been acknowledged that CMC is not only different from face-to-face language, as \textcite{paolillo_virtual_1999} recognized, but that it is also different from older forms of writing.
-      Indeed, \textcite{tagliamonte_linguistic_2008}, speaking of instant messaging, described it as a ``hybrid register'', somewhere between speech and older forms of writing (p.~5).
-      Part of this hybridity perhaps stems from CMC taking place outside of the auspices of social institutions, such as schools and book publishers, that extert overt social control on what is acceptable.
+      From early on in CMC research, it has been acknowledged that CMC is not only different from face-to-face language \parencite{paolillo_virtual_1999}, but that it is also different from older forms of writing.
+      For example, instant messaging has been described as a ``hybrid register'', somewhere between speech and older forms of writing \parencite[p.~5]{tagliamonte_linguistic_2008}.
+      Part of this hybridity perhaps stems from CMC taking place outside of the auspices of social institutions, such as schools and book publishers.
+      CMC may still be subject to certain types of overt social control on what is acceptable, such as being banned from a social media platform, but the ramifications for an individual are not as high as when schools or publishers exert overt social control.
       This makes CMC a fruitful area for locutors to creatively manipulate linguistic features to various ends, one of those features being the focus of the present study: orthography.
-      It is thus useful to review the literature on orthographic variation to better understand what functions and associations it has, as that is what we would like to analyze for (lol).
-      We group these under four broad categories: those related to 1) grammar, 2) audience, 3) community or subsets of a community, and 4) pragmatics.
+      It is thus useful to review the literature on orthographic variation to better understand what functions and associations it has, as that is what is being analyzed here for (lol).
+      There are three broad categories of functions to consider: those related to 1) audience, 2) community or subsets of a community, and 3) pragmatics.
+
+      % If you decide to re-insert the grammatical constraints section, add in a 4th broad category.
 
       Before moving on to the possible functions and associations of orthographic variation, it should first be noted that orthographic variation is unlikely to simply be the result of poor spelling capability.
-      \textcite{varnhagen_lol_2010}, in their examination of instant messaging, compared participants scores on spelling tests to their use of non-standard spellings in IM.
-      They found no relationship between the two, suggesting that non-standard spelling is not the result of a poor grasp of standard spelling.
-      In fact, they found that non-standard spelling norms were acquired quite readily.
+      Scores on spelling tests have been compared to participants' use of non-standard spellings in IM where no relationship could be found between the two, suggesting that non-standard spelling is not the result of a poor grasp of standard spelling \parencite{varnhagen_lol_2010}.
+      In fact, it was found that non-standard spelling norms were acquired quite readily.
       For example, \orth{shoulda} \gloss{should have} was found but never forms like \orth{shulda} \parencite[p.~731]{varnhagen_lol_2010}.
       The implication is that non-standard spellers may actually be very good spellers if the qualification of ``good'' in this case is defined as \gloss{accurately follows norms}.
 
@@ -156,49 +155,47 @@
         % Important here is that lol would fall under simplification as an acronym in Liénard's system, lexical substitution in Androutsopoulos's, and emotion acronym in Varnhagen et al.'s.
           % In any case, what's shared is that it would be difficult to place lol in any phonologically motivated in any of these systems.
 
-      \subsubsection{Connection to grammar}
-        \label{subsubsec:connect_grammar}
-        It is not unusual for variant spellings to be constrained by grammar.
-        A very standard and overt example of this comes from French verbs.
-        For most verbs, the singular first, second, and third person present forms of verbs are phonetically identical, yet the written forms vary anyway to agree with the subject.
-        \lexi{Parler} \gloss{to speak} is pronounced [paʀl] for all three singular subjects in perhaps most varieties of Hexagonal French,\footnote{
-          French spoken in France.
-        } but is written \orth{parle} for first and third person and \orth{parles} for second person.
-        It is thus useful to consider other potential grammatical constraints on orthographic variation.
-
-        One such case can be found in Hinrichs and White-Sustaíta's (2011) work on Jamaican Creole, which has English as its superstrate.
-        They found that speakers of the language living outside of Jamaica would vary between spellings such as \orth{mi} and \orth{me}, both pronounced [mi], based on the syntactic function within the sentence, using the former as the subject pronun and the latter in all other cases.
-        Hinrichs and White-Sustaíta (2011) argued that \orth{mi} was limited to the subject pronoun function because this was a stereotypical feature of Jamaican Creole as English would have \lexi{I} in these cases.
-        However, they note that it could also be said that this variation indicates a complex relationship to English and perhaps non-Creole-speakers \parencite[Hinrichs and White-Sustaíta 2011, as cited in][p.~165]{eisenstein_systematic_2015}, making it not only grammatical constrained but possibly socially motivated.
-
-        Hinrichs and White-Sustaíta's example from Jamaican Creole is somewhat similar to \citeauthor{tatman_im_2016}'s (\citeyear{tatman_im_2016}) report of variation between \orth{work} and \orth{werk} among drag queens online.
-        She compared collocations for the two and found that \orth{werk} was typically used to express approval and \orth{work} to express the more typical notion of doing work, leading her to conclude that these are in fact different lexical items \parencite[pp.~163-164]{tatman_im_2016}.
-        Determing whether this involved two lexical items versus one polysemous lexical item is well beyond the scope of the present study, and it would be admittedly a weak argument to claim that this variation is purely constrained by syntax, but there is enough in this example to make the more grammatical interpretation possible, wherein \orth{werk} is limited to particular syntactic positions.
-
-        Clearer examples of grammatically constrained orthographic variation come from \citeauthor{eisenstein_systematic_2015}'s (\citeyear{eisenstein_systematic_2015}) work on Twitter.
-        He examined two orthographic variables that, on the surface, would appear to have a spoken phonological connection: (ing) as \orth{ing} or \orth{in}\footnote{
-          This presumably would include \orth{in'}, though \textcite{eisenstein_systematic_2015} does not explicitly give that variant.
-        } and (th) fortition, which he refers to as \lexi{th}-stopping.
-        In both cases, grammatical constraints were found.
-        The variable (ing) was more likely to be realized as \orth{in} for verbs (p.~176), and the variable (th) was more likely to be realized as a glyph \orth{d} when the spoken form would typically be voiced as opposed to having it realized as \orth{t} when the spoken form would be voiceless \parencite[pp.~170-171]{eisenstein_systematic_2015}.
-        There were other social factors found to be constraining these variables, but there is a strong argument here that linguistics factors were important for both.
+      % \subsubsection{Connection to grammar}
+      %   \label{subsubsec:connect_grammar}
+      %   It is not unusual for variant spellings to be constrained by grammar.
+      %   A very standard and overt example of this comes from French verbs.
+      %   For most verbs, the singular first, second, and third person present forms of verbs are phonetically identical, yet the written forms vary in order to agree with the subject.
+      %   \lexi{Parler} \gloss{to speak} is pronounced [paʀl] for all three singular subjects in perhaps most varieties of Hexagonal French,\footnote{
+      %     French spoken in France.
+      %   } but is written \orth{parle} for first and third person and \orth{parles} for second person.
+      %   It is thus useful to consider other potential grammatical constraints on orthographic variation.
+      %
+      %   One such case can be found in work on Jamaican Creole, which has English as its superstrate.
+      %   It has been found that speakers of the language living outside of Jamaica varied between spellings such as \orth{mi} and \orth{me}, both pronounced [mi], based on the syntactic function within the sentence, using the former as the subject pronun and the latter in all other cases, the arguement being that \orth{mi} was limited to the subject pronoun function because this was a stereotypical feature of Jamaican Creole as English would have \lexi{I} in these cases.
+      %   However, it was noted that it could also be said that this variation indicates a complex relationship between English and non-Creole-speakers \parencite[Hinrichs and White-Sustaíta 2011, as cited in][p.~165]{eisenstein_systematic_2015}, making it not only grammatical constrained but possibly socially motivated.
+      %
+      %   This example from Jamaican Creole is somewhat similar to a report of variation between \orth{work} and \orth{werk} among drag queens online.
+      %   Collocations for the two were compared and it was found that \orth{werk} was typically used to express approval and \orth{work} to express the notion of doing work, leading to the conclusion that these are in fact different lexical items \parencite[pp.~163-164]{tatman_im_2016}.
+      %   Determing whether this involved two lexical items versus one polysemous lexical item is well beyond the scope of the present study, and it would be admittedly a weak argument to claim that this variation is purely constrained by syntax, but there is enough in this example to make the more grammatical interpretation possible, wherein \orth{werk} is limited to particular syntactic positions.
+      %
+      %   Clearer examples of grammatically constrained orthographic variation come from work on Twitter.
+      %   Two orthographic variables were examined that, on the surface, would appear to have a spoken phonological connection: (ing) as \orth{ing} or \orth{in}\footnote{
+      %     This presumably would include \orth{in'} despite not explicitly being given as a variant.
+      %   } and (th) fortition, which is referred to as \lexi{th}-stopping.
+      %   In both cases, grammatical constraints were found.
+      %   The variable (ing) was more likely to be realized as \orth{in} for verbs (p.~176), and the variable (th) was more likely to be realized as a glyph \orth{d} when the spoken form would typically be voiced as opposed to having it realized as \orth{t} when the spoken form would be voiceless \parencite[pp.~170-171]{eisenstein_systematic_2015}.
+      %   There were other social factors found to be constraining these variables, but there is a strong argument here that linguistics factors were important for both.
+      %   As this and all of the preceding examples show, any case of orthographic variation may have a grammatical explanation.
 
       \subsubsection{Connection to audience}
         \label{subsubsec:connect_audience}
-        Another constraining factor that \textcite{eisenstein_systematic_2015} found for the realization of (ing) was the audience.
+        One constraining factor for orthographic variation that has been found for the realization of (ing) as \orth{ing} or \orth{in} is the audience \parencite{eisenstein_systematic_2015}.
         As was already discussed in section \ref{subsec:cmc}, the intended or expected audience for a message seems to have an impact or the character of language used on CMC just as it does in spoken language, but the examples from \textcite{pavalanathan_audience-modulated_2015} and \textcite{auer_style_2008} were related to lexical variation instead of orthographic variation.
-        \textcite{eisenstein_systematic_2015}, on the other hand, found this some relationship for orthographic variation where \orth{in} was the more frequent variant for @-messages on Twitter, meaning messages that were directed at a particular user instead of posted as general public statements (p.~176).
-
-        Additionally, \textcite{auer_style_2008} did generally look for respellings in his data, as well, also finding evidence of the importance of audience.
-        On the German hip-hop website webbeatz.de, for example, he noted more colloquial spellings (i.e., those non-standard spellings that are related to colloquial speech) than in other areas of the same site (p.~297).
+        \textcite{eisenstein_systematic_2015}, on the other hand, found this relationship for orthographic variation where \orth{in} was the more frequent variant for @-messages on Twitter, meaning messages that were directed at a particular user instead of posted as general public statements (p.~176).
+        Additionally, in an examination of respellings, evidence of the importance of audience was found.
+        On the German hip-hop website webbeatz.de, for example, more colloquial spellings (i.e., those non-standard spellings that are related to colloquial speech) were noted than in other areas of the same site \parencite[p.~297]{auer_style_2008}.
         The implication is that discussion forums are expected to be read by the more engaged members of the community whereas general web pages are more likely to be viewed by broader passers by, so to speak.
 
       \subsubsection{Connection to community membership}
         \label{subsubsec:connect_community}
-        Perhaps the most common associations examined for linguistic variables in variationist studies are associations between variants and particular communities or particular segments of communities, and indeed, these associations exist for orthographic variation.
-        For instance, Sebba (1998) examined spelling in British Creole and suggested that non-standard spellings are used both because they distance the language from its English superstrate and because there is no orthographic norm for British Creole.
-        The very idea of non-standard in this case, then, is \gloss{not as would be done for English}.
-        Sebba (1998) provided examples such as \orth{Jameka} and \orth{kool} where standard English orthography would have \orth{Jamaica} and \orth{cool} \parencite[as cited in][p.~515]{androutsopoulos_non-standard_2000}.
+        While research on the effects of audience on variation is relatively infrequent, a perhaps more common association examined for linguistic variables in variationist studies is between variants and particular communities or particular segments of communities, and indeed, such associations exist for orthographic variation.
+        For instance, spelling in British Creole suggests that non-standard spellings are used both because they distance the language from its English superstrate and because there is no orthographic norm for British Creole.
+        The very idea of non-standard in this case, then, is \gloss{not as would be done for English}, with examples provided such as \orth{Jameka} and \orth{kool} where standard English orthography would have \orth{Jamaica} and \orth{cool} \parencite[Sebba 1998, as cited in][p.~515]{androutsopoulos_non-standard_2000}.
         The idea is not simply to buck the superstrate but to make a statement against speakers of the superstrate,\footnote{
           Of course, it is possible that many British Creole speakers are also English speakers, but the presumption is that speakers identities are bound up in their language preferences.
         } to assert an independent identity from those speakers.
@@ -235,16 +232,16 @@
 
       \subsubsection{Connection to pragmatics}
         \label{subsubsec:connect_pragmatics}
-        \textcite{androutsopoulos_non-standard_2000} long ago acknowledged that orthographic variants can perform pragmatic work.
-        He argued that they ``signal certain attitudes or evoke certain frame of interpretation by establishing a contrast to the text's spelling regularities or to the default spelling of a linguistic item'' \parencite[p.~517]{androutsopoulos_non-standard_2000}.
+        It has long been acknowledged that orthographic variants can perform pragmatic work.
+        For instance, \textcite{androutsopoulos_non-standard_2000} argued that they ``signal certain attitudes or evoke certain frame of interpretation by establishing a contrast to the text's spelling regularities or to the default spelling of a linguistic item'' (p.~517).
         An example of such a contrast can be found in his study of German punk fanzines, essentially low budget magazines made by enthusiasts.
-        \textcite{androutsopoulos_non-standard_2000} noted that the typical spelling of the term \lexi{fanzine} was \orth{fanzine}, which in fact bucks against standard German spelling in which all nouns are capitalized.
+        One case involved the typical spelling of the term \lexi{fanzine} as \orth{fanzine}, which in fact bucks against standard German spelling in which all nouns are capitalized.
         Nevertheless, this was the established norm within fanzines themselves.
         As a result, those familiar with the medium would sometimes produce hypothetical quotations from Germans who were not familiar that included the spelling \orth{Fähnziehn}, much more in line with standard German orthography, with the result being mockery of the latter's ignorance \parencite[p.~526]{androutsopoulos_non-standard_2000}.
 
-        The example of a pragmatic factor in the realization of orthographic variables given in this section as well as the examples of other factors from the preceding sections provide some insight into what the possible determinants variables are.
+        The example of a pragmatic factor in the realization of orthographic variables given in this section as well as the examples of other factors from the preceding sections provide some insight into what the possible determinants for variables are.
         Unsurprisingly, the range is as broad as that which can be found for linguistic variables in spoken language.
-        While it will not be possible to look at each and every factor in analyzing (lol) due to the limitations of what we know about Twitter users without directly interacting with them, we will endeavor to include as many factors as possible in line with the exploratory nature of this study.
+        While it will not be possible to look at each and every factor in analyzing (lol) due to the limitations of what can be known about Twitter users without directly interacting with them, I will endeavor to include as many factors as possible in line with the exploratory nature of this study.
 
         %[leave out] Phonological connection
           % Eisenstein (2013) noted that both Whiteman (1982) and Thompson et al. (2004) found no phonology-orthography connection, but both were before there were models of non-standard orthography, like those found on social media, to follow (17).
