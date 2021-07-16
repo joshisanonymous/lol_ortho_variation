@@ -147,6 +147,9 @@ usersSummary2265 <- usersSummary[usersSummary$Community == 2265,]
 # Create a data frame summarizing active users, producing at least 10 tokens
 usersSummaryActive <- usersSummary[usersSummary$Tokens >= 10,]
 
+# Create a data frame summarizing active users that don't have <lol> as their mode
+usersSummaryActiveOut <- usersSummaryActive[usersSummaryActive$Mode != "lol" & usersSummaryActive$Tokens >= 20,]
+
 # Subset data frame including only communities that users with the 5 highest and
 # 5 lowest PageRanks belong to
 lolDistComms <- lol[lol$Community == 2265 |
@@ -244,27 +247,3 @@ ggplot(lolSentMajorVars,
   labs(y = "Density") +
   theme_bw() +
   geom_histogram()
-
-
-# Temp, delete this stuff
-del <- usersSummaryActive[usersSummaryActive$Mode != "lol", "User"]
-View(lol[lol$User == del[1] |
-         lol$User == del[2] |
-         lol$User == del[3] |
-         lol$User == del[4] |
-         lol$User == del[5] |
-         lol$User == del[6] |
-         lol$User == del[7] |
-         lol$User == del[8] |
-         lol$User == del[9] |
-         lol$User == del[10] |
-         lol$User == del[11] |
-         lol$User == del[12] |
-         lol$User == del[13] |
-         lol$User == del[14] |
-         lol$User == del[15] |
-         lol$User == del[16] |
-         lol$User == del[17] |
-         lol$User == del[18] |
-         lol$User == del[19],
-         c("Token ID", "User", "Text")])

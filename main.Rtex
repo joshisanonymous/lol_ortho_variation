@@ -608,8 +608,8 @@
       \label{subsec:social_constraints}
       The summary of the characteristics for each community, shown in Table \ref{tab:summary_communities} reveal a general lack of variation in the mode of each community but internal variation in the variants used.
       The mode for every community is \orth{lol} except community \Sexpr{communitiesSummary[12, "Community"]} with all uppercase \orth{\Sexpr{communitiesSummary[12, "Mode"]}} as the mode.
-      The diversity measures, however, suggest that \orth{lol} is far from being the exclusive variants used, with a median of diversity of \Sexpr{round(median(communitiesSummary$Diversity), 2)} among the communities.
-      The only communities to be highly consistent in which using a single variant are communities \Sexpr{communitiesSummary[5, "Community"]} and \Sexpr{communitiesSummary[11, "Community"]} which each use the \orth{lol} spelling at all times.
+      The diversity measures, however, suggest that \orth{lol} is far from being the exclusive variants used, with a median diversity of \Sexpr{round(median(communitiesSummary$Diversity), 2)} among the communities.
+      The only communities to be highly consistent in using a single variant are communities \Sexpr{communitiesSummary[5, "Community"]} and \Sexpr{communitiesSummary[11, "Community"]} which each use the \orth{lol} spelling at all times.
       However, (lol) was rarely used in these two communities to begin with as only \Sexpr{length(unique(lol[lol$Community == "799",]$User))} and \Sexpr{length(unique(lol[lol$Community == "2067",]$User))} members produced (lol) at all in each, respectively.
       Communities \Sexpr{communitiesSummary[5, "Community"]} and \Sexpr{communitiesSummary[11, "Community"]} can therefore not be taken as evidence that (lol) would be invariant even within said communities save for the unlikely scenario where a larger sample would not uncover more tokens.
       \begin{table}[tbhp]
@@ -667,11 +667,13 @@
       Thus, while the dominance of the \orth{lol} variant in almost every community does vary, and while the distributions for (lol) are not identical, the differences are not great.
       It would be difficult to argue that the spelling of (lol) varies enough from community to community to make it maleable as a marker of one's social identity.
 
-      Similarly, Table \ref{tab:summary_provinces} presents a summary of (lol) usage relative to the province of the Twitter user.
+      Similarly, Table \ref{tab:summary_provinces} presents a summary of (lol) usage relative to the province\footnote{
+        In some cases, these are actually states as parts of the US and of New Zealand were captured during the data mining process, presumably because these tweets were still processed through servers in the Maritime Provinces.
+      } of the Twitter user.
       While modes other than \orth{lol} appear, this happens only where the number of residents using (lol) is limited to one to three people and so hardly represents what would be produced if a larger sample were taken.
       In all other provinces, \orth{lol} was always the most frequent variant.
       Also, as with community, the null hypothesis that the distribution of (lol) for each province was the same was rejected ($P < \Sexpr{round_any(lolSigTests$Province$Test$p.value, 0.05, f = ceiling)}$), though in this case the effect size was even smaller than for community ($V \approx \Sexpr{round(lolSigTests$Province$Effect, 2)}$).
-      In this case, even less evidence can be found that (lol) is an socially meaningful.
+      Examining provinces thus returns results that are even less promising for the idea that (lol) is socially meaningful.
       There are indeed some differences between the provinces, but nothing great enough to indicate that Twitter users express their provincial identities through the spelling of (lol).
 
       \begin{table}[tbhp]
@@ -701,11 +703,27 @@
       Another way to approach the question of whether (lol) is socially conditioned is to look at individuals relative to their communities.
       While communities may have clear norms that differ little from each other, this does not mean that all speakers follow these norms.
       Indeed, out of the \Sexpr{nrow(usersSummaryActive)} active producers of (lol) in the data, defined as those producing at least 10 tokens, \Sexpr{nrow(usersSummaryActive[usersSummaryActive$Mode != "lol" & usersSummaryActive$Community != "2265",])} who belong to \orth{lol} dominant communities use another variant most frequently, namely \orth{LOL} or \orth{Lol}.
-      Additionally, all of these users other than Ambria Howard are above the 64th percentile for PageRanks in their communities, meaning they are fairly central members of their communities.
+      A sample of those included in this group who produced at least 20 tokens of (lol) are summarized in Table \ref{tab:summary_outliers}.
+      All of these users other than Ambria Howard are above the 64th percentile for PageRanks in their communities, meaning they are fairly central members of their communities.
       Ambria is an outlier with a PageRank percentile of \Sexpr{round(usersSummaryActive[usersSummaryActive$User == "Ambria Howard", "PR_Percentile"], 2)}, making this user rather peripheral to their community.
       This suggests that individuals do in fact go against the norms of their community and that those individuals who do so are generally those who have a central position in their community.
 
-      % Table with a few exempliar individuals
+      \begin{table}[tbhp]
+        \centering
+        \caption{Summary statistics for a sample of outlier individuals}
+        \label{tab:summary_outliers}
+        \begin{tabular}{l l r r r}
+          User                                     & Mode                                     & Diversity                                               & $PR$ Percentile & Community \rule{0pt}{14pt} \\
+          \hline
+          \Sexpr{usersSummaryActiveOut[2, "User"]} & \Sexpr{usersSummaryActiveOut[2, "Mode"]} & \Sexpr{round(usersSummaryActiveOut[2, "Diversity"], 2)} & \Sexpr{round(usersSummaryActiveOut[2, "PR_Percentile"], 2)} & \Sexpr{usersSummaryActiveOut[2, "Community"]} \\
+          \Sexpr{usersSummaryActiveOut[3, "User"]} & \Sexpr{usersSummaryActiveOut[3, "Mode"]} & \Sexpr{round(usersSummaryActiveOut[3, "Diversity"], 2)} & \Sexpr{round(usersSummaryActiveOut[3, "PR_Percentile"], 2)} & \Sexpr{usersSummaryActiveOut[3, "Community"]} \\
+          \Sexpr{usersSummaryActiveOut[1, "User"]} & \Sexpr{usersSummaryActiveOut[1, "Mode"]} & \Sexpr{round(usersSummaryActiveOut[1, "Diversity"], 2)} & \Sexpr{round(usersSummaryActiveOut[1, "PR_Percentile"], 2)} & \Sexpr{usersSummaryActiveOut[1, "Community"]} \\
+          \Sexpr{usersSummaryActiveOut[4, "User"]} & \Sexpr{usersSummaryActiveOut[4, "Mode"]} & \Sexpr{round(usersSummaryActiveOut[4, "Diversity"], 2)} & \Sexpr{round(usersSummaryActiveOut[4, "PR_Percentile"], 2)} & \Sexpr{usersSummaryActiveOut[4, "Community"]} \\
+          \Sexpr{usersSummaryActiveOut[5, "User"]} & \Sexpr{usersSummaryActiveOut[5, "Mode"]} & \Sexpr{round(usersSummaryActiveOut[5, "Diversity"], 2)} & \Sexpr{round(usersSummaryActiveOut[5, "PR_Percentile"], 2)} & \Sexpr{usersSummaryActiveOut[5, "Community"]} \\
+          \Sexpr{usersSummaryActiveOut[6, "User"]} & \Sexpr{usersSummaryActiveOut[6, "Mode"]} & \Sexpr{round(usersSummaryActiveOut[6, "Diversity"], 2)} & \Sexpr{round(usersSummaryActiveOut[6, "PR_Percentile"], 2)} & \Sexpr{usersSummaryActiveOut[6, "Community"]} \\
+          \Sexpr{usersSummaryActiveOut[7, "User"]} & \Sexpr{usersSummaryActiveOut[7, "Mode"]} & \Sexpr{round(usersSummaryActiveOut[7, "Diversity"], 2)} & \Sexpr{round(usersSummaryActiveOut[7, "PR_Percentile"], 2)} & \Sexpr{usersSummaryActiveOut[7, "Community"]} \\
+        \end{tabular}
+      \end{table}
 
       In this sense, (lol) is indeed socially variable, though it is clearly not indexing any particular community.
       The motivation for why these central community members buck the norms of their communities would likely require a discourse analysis that is beyond the scope of the present study but would perhaps be an interesting avenue for future research.
@@ -714,7 +732,7 @@
       \label{subsec:pragmatic_constraints}
       While some small amount of the variation in (lol) may be explained by a handful of users going against the norms of their communities, it would be difficult to argue that (lol) is primarily conditioned by how users express their social identities.
       Another possibility is that variations in the spelling of (lol) are used for pragmatic effect.
-      One such possibility explored here was the relationship between the variant of (lol) used and the sentiment of the tweet.
+      One such possibility explored here is the relationship between the variant of (lol) used and the sentiment of the tweet.
       The assumption is that, if different spellings are associated with different sentiments, there is some sort of pragmatic work being done by those particular spellings.
       This work could be boosting the sentiment in the same positive or negative direction that the rest of the tweet suggested.
       Alternatively, the spelling may be doing the opposite, softening a negative tweet or adding mockery to a positive tweet.
