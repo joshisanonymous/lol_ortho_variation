@@ -10,7 +10,10 @@
     \addbibresource{References.bib}
   \usepackage{hyperref}
     \hypersetup{colorlinks=true, allcolors=blue}
-  \usepackage[group-minimum-digits=4, group-separator={,}]{siunitx}
+  \usepackage{siunitx}
+    \sisetup{group-minimum-digits=4,
+             group-separator={,},
+             detect-all}
   \usepackage{enumitem}
 
   % Document information
@@ -340,9 +343,9 @@
     \label{sec:methods}
     The corpus used for this study is a collection of tweets from Twitter.
     As such, this section will briefly discuss some characteristics of Twitter along with how the tweets were scraped in section \ref{subsec:data_collect}.
-    This will be followed by discussion of the information information that was coded for each token in section \ref{subsec:coding}.
+    This will be followed by discussion of the information that was coded for each token in section \ref{subsec:coding}.
     As some of the social network analysis techniques involved in the coding are fairly novel in sociolinguistics, a greater amount of detail will be provided in the coding section.
-    Finally, the statistics to be used to analyze the detail will be discussed in section \ref{subsec:statistics}.
+    Finally, some statistics used will be discussed in section \ref{subsec:statistics}.
 
     \subsection{Data collection}
       \label{subsec:data_collect}
@@ -350,9 +353,9 @@
       In \citeauthor{herring_oral_1996}'s (\citeyear{herring_oral_1996}) early work on CMC, he decided to collect data from a computer conferencing system as these systems involved ``open'' discussions that carried fewer ethical concerns than CMC mediums that users expect to be private (p.~31).
       This is also true of Twitter, which allows users to make their accounts private but is by and large used as a form of open public discourse.
       Messages, referred to as tweets, are posted to users' timelines to be read by other users who explicitly follow the posters.
-      At the time of the data collection for this study, tweets were limited to 140 charaters, though that number has since been increased to 280.
+      At the time of the data collection for this study, tweets were limited to 140 charaters, though that number has since been increased to 280 \parencite{rosen_tweeting_2017}.
 
-      Tweets can also be directed at specific users, in which case this form of CMC begins to resemble face-to-face conversation in some ways, as has been noted \parencite[e.g.,][p.~31]{danescu-niculescu-mizil_mark_2011}.
+      Tweets can also be directed at specific users, in which case this form of CMC begins to resemble face-to-face conversation in some ways, as has been noted \parencite[p.~31]{danescu-niculescu-mizil_mark_2011}.
       There are some key differences, however.
       First, only a quarter of Twitter users have been found to hold conversations \parencite[Java et al. 2007, as cited in][p.~1]{danescu-niculescu-mizil_mark_2011}, defined as sending directed tweets back and forth, though this proportion varies depending on the language being used \parencite{hong_language_2011}.
       Second, and relatedly, conversations may or may not be synchronous, particularly in today's world where Twitter is commonly accessed via smartphones that can provide instant notifications of incoming messages wherever a user may be.
@@ -361,30 +364,27 @@
       The particular Twitter corpus used for this study was originally collected for a study looking at (lol) as a lexical variable as used in French tweets originating in the Maritime Provinces of Canada \parencite{mcneill_lol_2018}.
       Tweets were collected continuously between January 8th, 2017 and February 8th, 2017 using what was at the time referred to as the spritzer level of access to Twitter's API, which allows samples to be taken from 1\% of all public tweets (as opposed to gardenhose access at 10\% and firehose at 100\%).
       Collecting samples of tweets is essentially identical to using Twitter's search bar, which allows users to specify geographic regions, languages, dates, and so on.
-      The following search string was used for the \textcite{mcneill_lol_2018} corpus:
+      The following search string was used to obtain tweets:
       \begin{itemize}
         \item[] geocode:46.0878,-64.7782,200mi exclude:retweets exclude:links
       \end{itemize}
 
-      The first parameter of the search string uses latitude and longitude to target the Maritime Provinces.
+      The first parameter of the search string uses latitude, longitude, and radius to target the Maritime Provinces.
       The second parameter excludes retweets, which involve one user repeating another users tweet in the former's own timeline and so does not count as language use by the former.
       The last parameter excludes tweets that contain links as these are more likely to be posts from commercial accounts as opposed to language use from regular users.
-      Both of these exclusions are common practice when working with Twitter data \parencite[e.g.,][p.~199]{pavalanathan_audience-modulated_2015}.
+      Both of these exclusions are common practice when working with Twitter data \parencite[p.~199]{pavalanathan_audience-modulated_2015}.
 
       This method of scraping Twitter for data resulted in a corpus made up of 1,274,233 tweets, by and large in English, though not all of these were used in the original study nor will they all be used in the present study.
       In order to limit the effects of variable audiences for tweets, this initial set of tweets was filtered so as to include only directed tweets.
       This increases the likelihood of the message being part of a conversational interaction and ensures that it was intended for the community to which the poster belonged.
-
-      Indeed, audience is a constraining factor in language variation on Twitter, so including tweets with different types of audiences (i.e., individuals versus the public in general) is an important step.
-      African-American English features used by gay White men from England on Twitter were more likely to occur in tweets directed at other such users rather than in broadcast tweets \parencite[p.~256]{ilbury_sassy_2020}.
-      The fact of being directed or not has also been found to constrain the presence of \orth{g} in the (ing) orthographic variable \parencite[p.~176]{eisenstein_systematic_2015} as well as lexical choices \parencite{pavalanathan_audience-modulated_2015}.
+      Indeed, audience is a constraining factor in language variation on Twitter as has been found in the language use of gay White men from England \parencite{ilbury_sassy_2020}, the presence of \orth{g} in the (ing) orthographic variable \parencite{eisenstein_systematic_2015}, and in lexical choices generally \parencite{pavalanathan_audience-modulated_2015}, making this an important factor to control.
 
       Filtering the data down to only directed tweets resulted in a corpus of 307,878 tweets, but as the focus was only on French language tweets in the original study, this number was further filtered down to include only those Twitter communities that contained French tweets, resulting in \Sexpr{length(levels(factor(tweets$Community)))} communities, each with a three- or four-digit ID, and each still containing far more English tweets than French.
 
       Community detection will be discussed in greater detail below, though what is important for the moment is that these communities contained \num{\Sexpr{nrow(tweets)}} tokens of (lol).
-      In this case, these were tokens of (lol) as a lexical variable and so included variants such as \lexi{rofl} \gloss{roll on the floor laughing} and even \lexi{mdr} from French \lexi{mort de rire}, the rough equivalent of \lexi{lol}.
-      In other words, lexical items that are not of interest in the current study were included and spelling variants of \orth{lol} such as \orth{LOL} or \orth{lolol} were collapsed into tokens of one lexical item: \lexi{lol}.
-      Fortunately, the original spellings were stored in the corpus, and by far the most common lexical item was \lexi{lol}, so filtering out unwanted lexical items resulted in a final corpus with \Sexpr{length(levels(factor(lol$Community)))} communities, \num{\Sexpr{nrow(lol)}} tokens of the orthographic variable (lol), and \Sexpr{length(levels(factor(lol$lol)))} spelling variants for (lol).
+      In this case, these were tokens of (lol) as a lexical variable and so included alternate lexical variants such as \lexi{rofl} \gloss{roll on the floor laughing} and even \lexi{mdr} from French \lexi{mort de rire}, the rough equivalent of \lexi{lol}.
+      In other words, lexical items that are not of interest in the current study were originally included.
+      Filtering out these unwanted lexical items resulted in a final corpus with \Sexpr{length(levels(factor(lol$Community)))} communities, \num{\Sexpr{nrow(lol)}} tokens of the orthographic variable (lol), and \Sexpr{length(levels(factor(lol$lol)))} spelling variants for (lol).
 
     \subsection{Coding}
       \label{subsec:coding}
@@ -393,10 +393,10 @@
       Despite there being \Sexpr{length(variants)} variants in the data, only \Sexpr{length(variantsGT)} occurred more than 5 times, namely \orth{\Sexpr{variantsGT[1]}}, \orth{\Sexpr{variantsGT[2]}}, and \orth{\Sexpr{variantsGT[3]}}.
       Of special note when interpreting why particular orthographic variants appear is the presence of auto-complete and auto-correct systems on both smartphones and computers.
       For instance, the initial capital in \orth{Lol} could sometimes be forced by the typing device when at the beginning of a sentence as opposed to being something the user purposely did.
-      The use of keylogging software that tracks key presses can identify whether auto-complete was used \parencite[e.g.,][p.~9]{schneier_digital_2021}, though this was not done for the present study.
+      The use of keylogging software that tracks key presses can identify whether auto-complete was used \parencite[p.~9]{schneier_digital_2021}, though this was not done for the present study.
 
-      While this lack is distinction between what is auto-completed/auto-corrected and what is not could introduce a potentially significant methodological issue, there are two important reasons to believe that the issue is not a large one.
-      First, auto-complete/auto-correct systems are sometimes generated by the typing habits of the user.
+      While this lack of distinction between what is auto-completed or -corrected and what is not could introduce a potentially significant methodological issue, there are two important reasons to believe that the issue is not a large one.
+      First, auto-complete and -correct systems are sometimes generated by the typing habits of the user.
       If a user always manually types \orth{LOL}, their auto-correcting system may very well start correcting any spelling of (lol) to the fully capitalized variant.
       While this means the user's likelihood of varying their spelling is somewhat diminished, the spelling that is ultimately produced is at least representative of their own personal norm.
       Second, the most likely candidate for auto-correction is \orth{Lol} at the beginning of a sentence as this would be in adhering to the capitalization rules of standard English orthography, but this variant is easily the least frequent of the three top variants, as will be evident in the \nameref{sec:results} section below.
@@ -407,24 +407,26 @@
       \subsubsection{Social variables}
         \label{subsubsec:social_vars}
         It has been well established that social variables are meaningful for language variation in CMC.
-        For instance, \textcite{danescu-niculescu-mizil_mark_2011} found that Twitter users accommodate their language styles relative to their interlocutors, both symmetrically and asymmetrically (pp.~6-8).
+        For instance, it has been found that Twitter users accommodate their language styles relative to their interlocutors, both symmetrically and asymmetrically \parencite[pp.~6-8]{danescu-niculescu-mizil_mark_2011}.
         As the literature on accommodation theory suggests that accommodation is triggered not just by a need for ``communicational efficiency'', but also to gain social approval and maintain one's identity \parencite[p.~3]{danescu-niculescu-mizil_mark_2011}, this suggests that social factors are unsurprisingly at work on social media.
 
         CMC presents challenges for obtaining social descriptors for locutors in a corpus that are not present in data that was obtained through traditional sociolinguistic interviews as researchers do not always interact directly with those producing data in CMC studies, as is the case in the current study.
         This is particularly true when large corpora are collected, which is often the case in CMC research.
-        For instance, \textcite{ilbury_sassy_2020} targeted openly gay men from the south of England in his study of Twitter, but he analyzed a only ten users as opposed to the \Sexpr{length(unique(lol$User))} users in my corpous.
+        For instance, \textcite{ilbury_sassy_2020} targeted openly gay men from the south of England in his study of Twitter, but he analyzed only ten users as opposed to the \num{\Sexpr{length(unique(lol$User))}} users in the corpus used here.
         This small number of users allowed Ilbury to conduct a sort of virtual ethnography to establish the identities of those he analyzed even though he never interacted with them directly.
+
+        Similarly, \textcite{jones_toward_2015} faced the challenge of determining if the users of Twitter that he examined were indeed native speakers of African-American Language (AAL)\footnote{
+          Ilbury uses the term African-American Vernacular English (AAVE), but I use AAL to match current practices.
+        } or if they were simply performing an identity.
+        He dealt with this problem much like Ilbury did: through ethnography \parencite[p.~412]{jones_toward_2015}.
+        However, and perhaps because his data was much more large scale than Ilbury's, Jones's ethnography included experience with African-Americans in person, and his goal was not to identify African-Americans on Twitter but to identify native speakers of AAL even if not African-American.
 
         % Ilbury (2020) showed both that AAVE features could be reappropriated to present a "Sassy Queen" persona and showed how much can be gained from a qualitative analysis of Twitter data in general.
 
-        Similarly, \textcite{jones_toward_2015} also faced the challenge of determining if the users of Twitter that he examined were indeed native speakers of African-American Vernacular English (AAVE) or if they were simply performing an identity.
-        He dealt with this problem much like Ilbury did: through ethnography \parencite[p.~412]{jones_toward_2015}.
-        However, and perhaps because his data was much more large scale than Ilbury's, Jones's ethnography included experience with African-Americans in person, and his goal was not to identify African-Americans on Twitter but to identify native speakers of AAVE who may not necessarily be African-American.
-
-        Gender has also found its way into CMC research on Twitter.
+        Another creative technique for gathering social details of users on Twitter came from a study of gender.
         \textcite{bamman_gender_2014} deduced users' genders by establishing gender associations for given names using US census data in which the majority gender for a name in the census data would be taken as the typical gender for people with that name (p.~140).
         While most names had a clear association using this method, and while most people did not have names that were highly ambiguous, there is still a level of uncertainty with classifying users this way, just as there is for race, ethnicity, and sexual orientation.
-        For this reason, I focus on social variables that are more directly observable on Twitter, namely community membership and centrality in a community as calculated using well established social network analysis techniques as well as geographic location as given by the user.
+        For this reason, I focus on social variables that are more directly observable on Twitter, namely community membership and centrality in a community as calculated using well established social network analysis techniques, as well as geographic location as given by the user.
 
         % Bamman et al. (2014) clustered Twitter users through having similar vocabularies (145-146) and found that males and females had different vocabulary preferences, sometimes completely opposite, between clusters (147).
 
@@ -440,7 +442,7 @@
           \label{para:concepts_of_community}
           Perhaps the two most common ways to conceptualize communities in variationist research is through the concepts of speech communities and communities of practice.
           The former are defined primarily according to shared linguistic norms and linguistic evaluations among people in a relatively clearly delineated geographic area.
-          This concept of community has been employed since \textcite{labov_social_2006} proposed it in his foundational work in sociolinguistics
+          This concept of community has been employed since \textcite{labov_social_2006} proposed it in his foundational work in sociolinguistics.
           The latter came to prominence in the work of Eckert and gives precedence to what draws people together, that being a shared activity.
           With communities of practice, smaller scale communities are typically identified and so the importance of geography is not necessarily as present as it typically is for speech communities.
           The key is simply that there is a shared activity, which implies sharing physical space, as well, but that is no longer required as people can partake in shared activities virtually with the advent of the internet.
@@ -472,7 +474,7 @@
           In this case, a community is conceptualized as a cluster of individuals who interact with each other more than they do with others.
           For instance, Figure \ref{fig:example} shows a very simple hypothetical network consisting of Joe, Kelly, Bob, and Ted.
           In the network, Joe, Kelly, and Bob all know each other, but the only person who knows Ted is Bob.
-          As a result, Joe, Kelly, and Bob likely form community of which Bob is not a part.
+          As a result, Joe, Kelly, and Bob likely form a community of which Bob is not a part.
           Each of these connections is called a tie, but what may constitute a tie or how to quantify the strength of a tie is decided by the researcher.
           In the case of the present study, I define a tie existing betweeen two users if there is any directed tweet sent between them and the strength of that tie as the number of directed tweets between them.
 
@@ -499,7 +501,7 @@
           \textcite{newman_finding_2004} evaluated $Q$ itself for this using several $Q$ maximization algorithms and obtained good results, suggesting that this is indeed a useful measure.
           For the Louvain method specifically, \textcite{waltman_smart_2013} tested it on the karate club data and found it to be almost perfect at finding the maximum $Q$ possible (p.~471), suggesting that it is a reliable modularity optimization algorithm.
 
-          As for the application of the Louvain method for community detection to sociolinguistic data, this has only been done once, to my knowledge.
+          As for the application of the Louvain method for community detection to sociolinguistic data, this has only been done once to my knowledge.
           In \textcite{mcneill_lol_2018}, which used the same corpus as the present study, the lexical variable (lol) was found to be significantly constrained by the community to which one belonged.
           The variants in that study were English-origin and French-origin equivalents of \lexi{lol} as used within what could generally be considered French-language tweets.
           While there have not been other applications of community detection in sociolinguistic research, this result combined with its history of evaluation in sociology and computer science point to its validity.
@@ -510,11 +512,10 @@
           The resolution option for the algorithm was kept at the default of 1.
 
           Initially, 8,945 communities were detected in the data, but as the goal at the time of the original study involved looking at those who might be considered French speakers specifically, only communities which contained tweets with French in them were analyzed, resulting in \Sexpr{length(levels(factor(tweets$Community)))} communities, each with a three- or four-digit ID.
-
           These \Sexpr{length(levels(factor(tweets$Community)))} communities contained \num{\Sexpr{nrow(tweets)}} tokens of (lol).
           In this case, these were tokens of (lol) as a lexical variable and so included variants such as \lexi{rofl} \gloss{roll on the floor laughing} and even \lexi{mdr} from French \lexi{mort de rire}, the rough equivalent of \lexi{lol}.
-          In other words, lexical items that are not of interest in the current study were included and spelling variants of \orth{lol} such as \orth{LOL} or \orth{lolol} were collapsed into tokens of one lexical item: \lexi{lol}.
-          Fortunately, the original spellings were stored in the corpus, and by far the most common lexical item was \lexi{lol}, so filtering out unwanted lexical items resulting in a corpus with \Sexpr{length(levels(factor(lol$Community)))} communities, \num{\Sexpr{nrow(lol)}} tokens of the orthographic variable (lol), and \Sexpr{length(levels(factor(lol$lol)))} spelling variants for (lol).
+          In other words, lexical items that are not of interest in the current study were originally included.
+          These unwanted lexical items were filtered out of the corpus for the present analysis, resulting in a corpus with \Sexpr{length(levels(factor(lol$Community)))} communities, \num{\Sexpr{nrow(lol)}} tokens of the orthographic variable (lol), and \Sexpr{length(levels(factor(lol$lol)))} spelling variants for (lol).
 
         \paragraph{Centrality measures}
           \label{para:centralirty_measures}
@@ -543,17 +544,17 @@
           Here, $d$ is a damping factor between zero and one, $Tn$ is a page that links to page $A$, and $C(Tn)$ is the total pages linked to by page $Tn$.
           This effectively makes PageRank a function of the number of pages that link to the page of interest as well as the PageRanks of those pages.
           As a result, a user who directs many tweets to other members of their community but who receives very few tweets from other members will not have a particularly high PageRank.
-          The intuition is that it is not difficult to talk a lot, but it is difficult to get people to care enough about what a person thinks to bother talking to that person.
+          The intuition is that it is not difficult to talk a lot, but it is difficult to get people to care enough to respond.
 
         \paragraph{Geographic location}
           \label{para:geographic_location}
           Geographic location has also proved to be a meaningful social variable for language variation on Twitter, despite Twitter not be regionally segregated.
-          It is possible to for users to search for tweets that are emanating from a particular physical area, but this is not the default setting nor do a user's followed accounts necessarily come from their own region.
-          However, geographic variation has been found at least for AAVE features \parencite{eisenstein_phonological_2013, jones_toward_2015} and lexical variables \parencite{huang_understanding_2016}.
-          Part of this importance may be due to a propensity for Twitter users to form virtual communities with those from the same regions despite this not being necessary, as there as at least some evidence that this sort of agglomeration happens \parencite[pp.~88-91]{mcneill_lol_2018}.
+          It is possible for users to search for tweets that are emanating from a particular physical area, but this is not the default setting nor do a user's followed accounts necessarily come from their own region.
+          However, geographic variation has been found at least for AAL features \parencite{eisenstein_phonological_2013, jones_toward_2015} and lexical variables \parencite{huang_understanding_2016}.
+          Part of this importance may be due to a propensity for Twitter users to form virtual communities with those from the same regions despite this not being necessary, as there is at least some evidence that this sort of agglomeration happens \parencite[pp.~88-91]{mcneill_lol_2018}.
 
           Geographic location is also a social variable that is fairly easy to obtain for users of Twitter, though there are some caveats.
-          The simplest way to get this information, and what is was done for the present study, is to use the location that each user entered manually in their profile.
+          The simplest way to get this information, and what was done for the present study, is to use the location that each user entered manually in their profile.
           This is often available and also returned by the Twitter API when tweets are collected.
           The downside to this is naturally that users can enter any location that they want regardless of accuracy, thus an assumption that only a small number of users enter inaccurate locations is required.
 
@@ -571,7 +572,7 @@
 
       \subsubsection{Pragmatic variables}
         \label{subsubsec:pragmatic_vars}
-        As was discussed in section \ref{subsec:previous_lol}, a repeated argument for (lol) as a lexical variable and orthographic variables in general is that they are used for pragmatic effects.
+        As was discussed in section \ref{subsec:previous_lol}, a repeated argument for \lexi{lol} in general is that it is used for pragmatic effects.
         One of the difficulties for performing the sort of discourse analyses that could uncover such effects is that long and/or repeated conversations between pairs of individuals on Twitter are not easily obtained.
         \textcite{danescu-niculescu-mizil_mark_2011} solved this problem by identifying pairs of users who were likely to converse often and mining each of their entire Twitter histories.
         With both histories at hand, it was possible to reconstruct repeated, long conversations between the pairs \parencite[p.~3]{danescu-niculescu-mizil_mark_2011}.
@@ -584,18 +585,18 @@
 
     \subsection{Statistics}
       \label{subsec:statistics}
-      The data analyzed in this study is all categorical, and the typical descriptive statistics for categorical data are used.
+      The data analyzed in this study is all categorical, and the typical descriptive statistics for categorical data were used.
       One such statistic that is worth discussing as it does not appear in sociolinguistic research a great deal is the measure of dispersion for variants of (lol) for either an individual or a community.
       The Simpson diversity index $D$ \parencite{simpson_measurement_1949}, as described in equation \ref{eq:simpson}, is used as a measure of stability in the sense that a small dispersion can be interpreted as a consistent preference for a particular variant whereas a large dispersion can be interpreted as a lack of clear preference for any particular variant.
-      This ia rather novel use for $D$ in variationist studies where it otherwise shows up as a measure of language ecology \parencite[e.g.,][]{greenberg_measurement_1956} or as a measure of the diversity of interactions one has \parencite[e.g.,][]{sharma_style_2011}.
+      This is a rather novel use for $D$ in variationist studies where it otherwise shows up as a measure of language ecology \parencite{greenberg_measurement_1956} or as a measure of the diversity of interactions one has \parencite{sharma_style_2011}.
       \begin{equation}
         \label{eq:simpson}
         D = 1 - \sum_{i=1}^R{p_{i}^2}
       \end{equation}
 
       In equation \ref{eq:simpson}, $p$ is the relative frequency of a variant $i$ of the variable in question.
-      Essentially, the few variants included and the greater the frequency of the mode relative to the other variants, the lower $D$ will be.
-      One can imagine a uniform distribution as having a very high $D$ and a strongly unimodal distribution having a very low $D$.
+      Essentially, the fewer variants included and the greater the frequency of the mode relative to the other variants, the lower $D$ will be.
+      One can imagine a uniform distribution as having a very high $D$ and a strongly unimodal distribution as having a very low $D$.
 
   \section{Results}
     \label{sec:results}
