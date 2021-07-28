@@ -15,6 +15,7 @@ library(ggplot2)
 library(igraph)
 library(vegan)
 library(sentimentr)
+library(dplyr)
 library(plyr)
 library(lsr)
 
@@ -194,6 +195,18 @@ names(lolSigTests) <- c("Community", "Province")
 names(lolSigTests$Community) <- c("Test", "Effect")
 names(lolSigTests$Province) <- c("Test", "Effect")
 
+# Get sentiment of an example sentence to demonstrate the process
+sentence <- lst(
+  words = c("great", "sentences", "can", "be", "ugly"),
+  sentiment = sentiment(paste(words, collapse = " ")),
+  word_sentiments = sapply(words, function (word) if (!any(lexicon::hash_sentiment_jockers_rinker == word)) {
+    0
+  } else {
+    lexicon::hash_sentiment_jockers_rinker[x == word, "y"]
+  }
+  )
+)
+
 # Perform a one-way ANOVA for the means of sentiments
 lolSentSigTest <- aov(Sentiment ~ lol, data = lolSentMajorVars)
 lolSentSigTestSummary <- summary(lolSentSigTest)
@@ -246,4 +259,7 @@ ggplot(lolSentMajorVars,
   facet_grid(lol ~ .) +
   labs(y = "Density") +
   theme_bw() +
-  geom_histogram()
+  geom_histogram() +
+  geom_vline(data = filter(lolSentMajorVars, lol == "lol"), aes(xintercept = mean(Sentiment)), color = "red", lwd = 1) +
+  geom_vline(data = filter(lolSentMajorVars, lol == "Lol"), aes(xintercept = mean(Sentiment)), color = "red", lwd = 1) +
+  geom_vline(data = filter(lolSentMajorVars, lol == "LOL"), aes(xintercept = mean(Sentiment)), color = "red", lwd = 1)

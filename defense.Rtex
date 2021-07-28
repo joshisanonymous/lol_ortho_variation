@@ -25,12 +25,14 @@
     \sisetup{group-minimum-digits=4,
              group-separator={,},
              detect-all}
+  \usepackage{graphicx}
+    \graphicspath{{./figure/}}
 
   % Document information
   \title{Orthographic variation of (lol)}
   \author{Joshua McNeill}
   \institute{University of Georgia}
-  \date{\today}
+  \date{29 July 2021}
 
   % New commands
   \newcommand{\orth}[1]{$\langle$#1$\rangle$}
@@ -43,9 +45,7 @@
   opts_chunk$set(echo = FALSE,
                  warning = FALSE,
                  message = FALSE,
-                 results = "asis",
-                 fig.height = 3,
-                 fig.width = 5)
+                 results = "asis")
   @
   <<load_packages_functions_data>>=
   @
@@ -68,6 +68,7 @@
   }
 
   \section{Introduction}
+
     \begin{frame}{Phenomenon}
       \begin{enumerate}
         \item \Sexpr{lol[lol$'Token ID' == 840, "User"]}: \Sexpr{lol[lol$'Token ID' == 840, "Text"]}
@@ -119,512 +120,207 @@
       \begin{itemize}
         \item Has not been studied as an orthographic variable
         \item Orthographic variation has been studied in general
+        \item Significant factors:
         \begin{itemize}
-          \item Audience: \orth{in} for (ing) is more frequent in @-messages on Twitter \parencite{eisenstein_systematic_2015}
-          \item Community membership: Found to be significant in German hip-hop community membership \parencite{androutsopoulos_potentials_2008}, for race \parencite{eisenstein_systematic_2015}, for geographic location \parencite{jones_toward_2015}, virtual community membership \parencite[Cherny 1995, as cited in][]{paolillo_virtual_1999}, age group membership \parencite{schnoebelen_you_2012}, and gender \parencite{baron_see_2004, varnhagen_lol_2010}
-          \item Pragmatics: Lengthening and capitalization have been argued to represent prosody (\citeauthor{schnoebelen_you_2012}, \citeyear{schnoebelen_you_2012}; \citeauthor[Thurlow and Brown 2003, as cited in][]{schneier_digital_2021}, \citeyear{schneier_digital_2021})
+          \item \alert{Audience} \parencite{eisenstein_systematic_2015}
+          \item \alert{German hip-hop community membership} \parencite{androutsopoulos_potentials_2008}
+          \item \alert{Virtual community membership} \parencite[Cherny 1995, as cited in][]{paolillo_virtual_1999}
+          \item \alert{Geographic location} \parencite{jones_toward_2015}
+          \item \alert{Race} \parencite{eisenstein_systematic_2015}
+          \item \alert{Age} \parencite{schnoebelen_you_2012}
+          \item \alert{Gender} \parencite{baron_see_2004, varnhagen_lol_2010}
         \end{itemize}
+        \item Lengthening and capitalization have been argued to represent prosody (\citeauthor{schnoebelen_you_2012}, \citeyear{schnoebelen_you_2012}; \citeauthor[Thurlow and Brown 2003, as cited in][]{schneier_digital_2021}, \citeyear{schneier_digital_2021})
       \end{itemize}
     \end{frame}
 
     \begin{frame}{Research question}
+      What are the social constraints and/or pragmatic functions of the orthographic variable (lol), if any?
+    \end{frame}
+
+  \section{Methods}
+
+    \begin{frame}{Data}
       \begin{itemize}
-        \item With these possibilities in mind:
+        \item Collected from Twitter between January and February 2017
+        \item Focused on directed tweets from the Maritime Provinces of Canada
+        \item Final corpus has \num{\Sexpr{nrow(lol)}} tweets containing one of the \Sexpr{length(levels(factor(lol$lol)))} variants of (lol)
+        \item \emph{Original purpose}, an analysis of \alert{lexical} (lol) in French tweets \parencite{mcneill_lol_2018}
         \begin{itemize}
-          \item What if any are the social constraints and/or pragmatic functions of the orthographic variable (lol)?
+          \item Still a valid corpus to the extent that \lexi{lol} is a broad internet-language lexical item
         \end{itemize}
       \end{itemize}
     \end{frame}
 
-  \section{Methods}
-    % The corpus used for this study is a collection of tweets from Twitter.
-    % As such, this section will briefly discuss some characteristics of Twitter along with how the tweets were scraped in section \ref{subsec:data_collect}.
-    % This will be followed by discussion of the information that was coded for each token in section \ref{subsec:coding}.
-    % As some of the social network analysis techniques involved in the coding are fairly novel in sociolinguistics, a greater amount of detail will be provided in the coding section.
-    % Finally, some statistics used will be discussed in section \ref{subsec:statistics}.
-
-    \begin{frame}
-      \frametitle{Data collection}
-
+    \begin{frame}{Social variables}
+      \begin{itemize}
+        \item Traditional social variables are not easily accessible through Twitter
+        \item Social network analysis (SNA) is \emph{more} practical with Twitter data
+        \begin{itemize}
+          \item Community detection
+          \item Centrality
+        \end{itemize}
+      \end{itemize}
     \end{frame}
-      % The social media platform Twitter offers great opportunities for the study of language but also presents its own special challenges for research.
-      % In \citeauthor{herring_oral_1996}'s (\citeyear{herring_oral_1996}) early work on CMC, he decided to collect data from a computer conferencing system as these systems involved ``open'' discussions that carried fewer ethical concerns than CMC mediums that users expect to be private (p.~31).
-      % This is also true of Twitter, which allows users to make their accounts private but is by and large used as a form of open public discourse.
-      % Messages, referred to as tweets, are posted to users' timelines to be read by other users who explicitly follow the posters.
-      % At the time of the data collection for this study, tweets were limited to 140 charaters, though that number has since been increased to 280 \parencite{rosen_tweeting_2017}.
-      %
-      % Tweets can also be directed at specific users, in which case this form of CMC begins to resemble face-to-face conversation in some ways, as has been noted \parencite[p.~31]{danescu-niculescu-mizil_mark_2011}.
-      % There are some key differences, however.
-      % First, only a quarter of Twitter users have been found to hold conversations \parencite[Java et al. 2007, as cited in][p.~1]{danescu-niculescu-mizil_mark_2011}, defined as sending directed tweets back and forth, though this proportion varies depending on the language being used \parencite{hong_language_2011}.
-      % Second, and relatedly, conversations may or may not be synchronous, particularly in today's world where Twitter is commonly accessed via smartphones that can provide instant notifications of incoming messages wherever a user may be.
-      % Lastly, and most obviously, Twitter involves only written communication, which both removes access to some methods of expression such as gestures and prosody but also introduces new methods such as punctuation, spelling, and images.
-      %
-      % The particular Twitter corpus used for this study was originally collected for a study looking at (lol) as a lexical variable as used in French tweets originating in the Maritime Provinces of Canada \parencite{mcneill_lol_2018}.
-      % Tweets were collected continuously between January 8th, 2017 and February 8th, 2017 using what was at the time referred to as the spritzer level of access to Twitter's API, which allows samples to be taken from 1\% of all public tweets (as opposed to gardenhose access at 10\% and firehose at 100\%).
-      % Collecting samples of tweets is essentially identical to using Twitter's search bar, which allows users to specify geographic regions, languages, dates, and so on.
-      % The following search string was used to obtain tweets:
-      % \begin{itemize}
-      %   \item[] geocode:46.0878,-64.7782,200mi exclude:retweets exclude:links
-      % \end{itemize}
-      %
-      % The first parameter of the search string uses latitude, longitude, and radius to target the Maritime Provinces.
-      % The second parameter excludes retweets, which involve one user repeating another users tweet in the former's own timeline and so does not count as language use by the former.
-      % The last parameter excludes tweets that contain links as these are more likely to be posts from commercial accounts as opposed to language use from regular users.
-      % Both of these exclusions are common practice when working with Twitter data \parencite[p.~199]{pavalanathan_audience-modulated_2015}.
-      %
-      % This method of scraping Twitter for data resulted in a corpus made up of 1,274,233 tweets, by and large in English, though not all of these were used in the original study nor will they all be used in the present study.
-      % In order to limit the effects of variable audiences for tweets, this initial set of tweets was filtered so as to include only directed tweets.
-      % This increases the likelihood of the message being part of a conversational interaction and ensures that it was intended for the community to which the poster belonged.
-      % Indeed, audience is a constraining factor in language variation on Twitter as has been found in the language use of gay White men from England \parencite{ilbury_sassy_2020}, the presence of \orth{g} in the (ing) orthographic variable \parencite{eisenstein_systematic_2015}, and in lexical choices generally \parencite{pavalanathan_audience-modulated_2015}, making this an important factor to control.
-      %
-      % Filtering the data down to only directed tweets resulted in a corpus of 307,878 tweets, but as the focus was only on French language tweets in the original study, this number was further filtered down to include only those Twitter communities that contained French tweets, resulting in \Sexpr{length(levels(factor(tweets$Community)))} communities, each with a three- or four-digit ID, and each still containing far more English tweets than French.
-      %
-      % Community detection will be discussed in greater detail below, though what is important for the moment is that these communities contained \num{\Sexpr{nrow(tweets)}} tokens of (lol).
-      % In this case, these were tokens of (lol) as a lexical variable and so included alternate lexical variants such as \lexi{rofl} \gloss{roll on the floor laughing} and even \lexi{mdr} from French \lexi{mort de rire}, the rough equivalent of \lexi{lol}.
-      % In other words, lexical items that are not of interest in the current study were originally included.
-      % Filtering out these unwanted lexical items resulted in a final corpus with \Sexpr{length(levels(factor(lol$Community)))} communities, \num{\Sexpr{nrow(lol)}} tokens of the orthographic variable (lol), and \Sexpr{length(levels(factor(lol$lol)))} spelling variants for (lol).
 
-    \begin{frame}
-      \frametitle{Coding}
-
+    \begin{frame}{Community detection}
+      \begin{columns}
+        \column{0.5\textwidth}
+          \begin{itemize}
+            \item Those who all mutually interact are considered a community
+            \item Interactions based on directed tweets
+            \item Louvain algorithm \parencite{blondel_fast_2008} for finding the maximum modularity $Q$ \parencite{newman_finding_2004}
+            \begin{itemize}
+              \item \Sexpr{length(levels(factor(lol$Community)))} detected communities analyzed
+            \end{itemize}
+          \end{itemize}
+        \column{0.5\textwidth}
+          <<example_community>>=
+          @
+      \end{columns}
     \end{frame}
-      % In order to perform a quantitative analysis on the use of (lol) in the present Twitter corpus, each token was coded for several different variables.
-      % The linguistic variable in this case, (lol), is made up of orthographic variants of what was originally an acronym standing for \gloss{laugh out loud}.
-      % Despite there being \Sexpr{length(variants)} variants in the data, only \Sexpr{length(variantsGT)} occurred more than 5 times, namely \orth{\Sexpr{variantsGT[1]}}, \orth{\Sexpr{variantsGT[2]}}, and \orth{\Sexpr{variantsGT[3]}}.
-      % Of special note when interpreting why particular orthographic variants appear is the presence of auto-complete and auto-correct systems on both smartphones and computers.
-      % For instance, the initial capital in \orth{Lol} could sometimes be forced by the typing device when at the beginning of a sentence as opposed to being something the user purposely did.
-      % The use of keylogging software that tracks key presses can identify whether auto-complete was used \parencite[p.~9]{schneier_digital_2021}, though this was not done for the present study.
-      %
-      % While this lack of distinction between what is auto-completed or -corrected and what is not could introduce a potentially significant methodological issue, there are two important reasons to believe that the issue is not a large one.
-      % First, auto-complete and -correct systems are sometimes generated by the typing habits of the user.
-      % If a user always manually types \orth{LOL}, their auto-correcting system may very well start correcting any spelling of (lol) to the fully capitalized variant.
-      % While this means the user's likelihood of varying their spelling is somewhat diminished, the spelling that is ultimately produced is at least representative of their own personal norm.
-      % Second, the most likely candidate for auto-correction is \orth{Lol} at the beginning of a sentence as this would be in adhering to the capitalization rules of standard English orthography, but this variant is easily the least frequent of the three top variants, as will be evident in the \nameref{sec:results} section below.
-      %
-      % Beyond the linguistic variable, there are both social and pragmatic variables for which each token of (lol) was coded.
-      % The former will be covered in section \ref{subsubsec:social_vars} and the latter in section \ref{subsubsec:pragmatic_vars}.
 
-      \begin{frame}
-        \frametitle{Social variables}
+    \begin{frame}{Centrality}
+      PageRank $PR$ is a function of the number of people tweeting at a user combined with the value of their own $PR$s
+      \begin{equation}
+        PR \left( A \right) = \left( 1 - d \right) + d \left( \frac{PR \left( T1 \right)}{C \left( T1 \right)} + ... + \frac{PR \left( Tn \right)}{C \left( Tn \right)} \right)
+      \end{equation}
+    \end{frame}
 
-      \end{frame}
-        % It has been well established that social variables are meaningful for language variation in CMC.
-        % For instance, it has been found that Twitter users accommodate their language styles relative to their interlocutors, both symmetrically and asymmetrically \parencite[pp.~6-8]{danescu-niculescu-mizil_mark_2011}.
-        % As the literature on accommodation theory suggests that accommodation is triggered not just by a need for ``communicational efficiency'', but also to gain social approval and maintain one's identity \parencite[p.~3]{danescu-niculescu-mizil_mark_2011}, this suggests that social factors are unsurprisingly at work on social media.
-        %
-        % CMC presents challenges for obtaining social descriptors for locutors in a corpus that are not present in data that was obtained through traditional sociolinguistic interviews as researchers do not always interact directly with those producing data in CMC studies, as is the case in the current study.
-        % This is particularly true when large corpora are collected, which is often the case in CMC research.
-        % For instance, \textcite{ilbury_sassy_2020} targeted openly gay men from the south of England in his study of Twitter, but he analyzed only ten users as opposed to the \num{\Sexpr{length(unique(lol$User))}} users in the corpus used here.
-        % This small number of users allowed Ilbury to conduct a sort of virtual ethnography to establish the identities of those he analyzed even though he never interacted with them directly.
-        %
-        % Similarly, \textcite{jones_toward_2015} faced the challenge of determining if the users of Twitter that he examined were indeed native speakers of African-American Language (AAL)\footnote{
-        %   Ilbury uses the term African-American Vernacular English (AAVE), but I use AAL to match current practices.
-        % } or if they were simply performing an identity.
-        % He dealt with this problem much like Ilbury did: through ethnography \parencite[p.~412]{jones_toward_2015}.
-        % However, and perhaps because his data was much more large scale than Ilbury's, Jones's ethnography included experience with African-Americans in person, and his goal was not to identify African-Americans on Twitter but to identify native speakers of AAL even if not African-American.
+    \begin{frame}{Geographic location}
+      The Twitter API returns both geotags and \emph{manually entered locations} on users' profiles
+      \begin{columns}
+        \column{0.4\textwidth}
+          \begin{itemize}
+            \item There is evidence of covariation between detected communities and geographic locations \parencite{mcneill_lol_2018}
+          \end{itemize}
+        \column{0.6\textwidth}
+          \includegraphics[scale=0.45]{example_twit_prof.png}
+      \end{columns}
+    \end{frame}
 
-        % Another creative technique for gathering social details of users on Twitter came from a study of gender.
-        % \textcite{bamman_gender_2014} deduced users' genders by establishing gender associations for given names using US census data in which the majority gender for a name in the census data would be taken as the typical gender for people with that name (p.~140).
-        % While most names had a clear association using this method, and while most people did not have names that were highly ambiguous, there is still a level of uncertainty with classifying users this way, just as there is for race, ethnicity, and sexual orientation.
-        % For this reason, I focus on social variables that are more directly observable on Twitter, namely community membership and centrality in a community as calculated using well established social network analysis techniques, as well as geographic location as given by the user.
+    \begin{frame}{Pragmatic variables}
+      A sentiment classifier based on sentiment polarity \parencite{rinker_sentimentr_2019} was used to calculate the sentiment of each tweet
+      \begin{center}
+        \begin{tabular}{l | r r r r r r}
+          Sentence  & \Sexpr{sentence$words[1]}               & \Sexpr{sentence$words[2]}                     & \Sexpr{sentence$words[3]}              & \Sexpr{sentence$words[4]}             & \Sexpr{sentence$words[5]}               & \\
+          Sentiment &\Sexpr{sentence$word_sentiments$great.y} & \Sexpr{sentence$word_sentiments$sentences}    & \Sexpr{sentence$word_sentiments$can}   & \Sexpr{sentence$word_sentiments$be}   & \Sexpr{sentence$word_sentiments$ugly.y} & = \Sexpr{round(sentence$sentiment$sentiment, 2)}\\
+        \end{tabular}
+      \end{center}
+    \end{frame}
 
-        % \paragraph{Concepts of community}
-        %   \label{para:concepts_of_community}
-        %   Perhaps the two most common ways to conceptualize communities in variationist research is through the concepts of speech communities \parencite{labov_social_2006} and communities of practice \parencite{lave_situated_1991}.
-        %   The former are defined primarily according to shared linguistic norms and linguistic evaluations among people in a relatively clearly delineated geographic area.
-        %   This concept of community has been employed since \textcite{labov_social_2006} proposed it in his foundational work in sociolinguistics.
-        %   The latter came to prominence in the work of Eckert and gives precedence to what draws people together, that being a shared activity.
-        %   With communities of practice, smaller scale communities are typically identified and so the importance of geography is not necessarily as present as it typically is for speech communities.
-        %   The key is simply that there is a shared activity, which implies sharing physical space, as well, but that is no longer required as people can partake in shared activities virtually with the advent of the internet.
-        %
-        %   Various concepts of community have thus been used in CMC research.
-        %   Ca\-stells (2000) defined communities along similar lines as communities of practice where they are ``organized around a shared interest or purpose,'' but he did not think these were the same as face-to-face communities because of the differences in how interaction occurs.
-        %   Castells (2000) referred to these communities as virtual communities \parencite[as cited in][p.~283]{auer_style_2008}.
-        %   \textcite{auer_style_2008}, for his part, recognized that the connections between members of these communities could be quite literal through the user of hyperlinks (pp.~283-284), which is indeed a feature that is not possible in face-to-face communities.
-        %
-        %   What is at least implicit in all these concepts is the idea of interaction, which is how I define communities for the present study.
-        %   Those who interact with each other more than with others may be considered as members of the same community.
-        %   Formally, this can be quantified using community detection methods from social network analysis, one of which I will now describe.
-        %
-        % \paragraph{Community detection}
-        %   \label{para:community_detection}
-        %   One important area of development in modern social network analysis techniques that has been generally missing from sociolinguistics is community detection.
-        %   Community detection is the process of using algorithms to delineate communities within a social network.
-        %   In this case, a community is conceptualized as a cluster of individuals who interact with each other more than they do with others.
-        %   For instance, Figure \ref{fig:example} shows a very simple hypothetical network consisting of Joe, Kelly, Bob, and Ted.
-        %   In the network, Joe, Kelly, and Bob all know each other, but the only person who knows Ted is Bob.
-        %   As a result, Joe, Kelly, and Bob likely form a community of which Bob is not a part.
-        %   Each of these connections is called a tie, but what may constitute a tie or how to quantify the strength of a tie is decided by the researcher.
-        %   In the case of the present study, I define a tie existing betweeen two users if there is any directed tweet sent between them and the strength of that tie as the number of directed tweets between them.
-        %
-        %   \begin{figure}[tbhp]
-        %     \caption{Simple example network}
-        %     \label{fig:example}
-        %     <<example_community>>=
-        %     @
-        %   \end{figure}
-        %
-        %   At the core of any tie is the idea that two people who are tied together interact with each other on some level so that ultimately any community in a social network is based on mutual interactions.
-        %   This conceptualization of what a community is, a group of people who interact with each other, accords with conceptions of communities such as communities of practice.
-        %   To share an activity together is inextricably about interacting with one another.
-        %   For this reason, \textcite{schenkel_theorizing_2002} argued that social network analysis can be used to quantify the characteristics of communities of practice as the latter are more often identified through qualitative means.
-        %   I take no stance on what draws people into their communities here, though, as is at least implicitly done with communities of practice as they suggest that the activity is what binds the community together.
-        %
-        %   There are a number of algorithms for community detection, but the one used for this study comes from \textcite{blondel_fast_2008} and is commonly referred to as the Louvain method.
-        %   The general mechanics of the Louvain method involve trying out different possible community divisions and calculating the modularity $Q$ for each pass in order to find the division that yields the highest $Q$.
-        %   $Q$ itself is ``a measure of the quality of a particular division of a network'' \parencite{newman_finding_2004}.
-        %
-        %   A standard test for the reliability of community detection algorithms is to apply them to \citeauthor{zachary_information_1977}'s (\citeyear{zachary_information_1977}) karate club data.
-        %   This data includes a karate club that dissolved into two separate clubs, thus two explicitly different communities.
-        %   An algorithm which takes the same network and divides it into the same two communities is thought to be valid and reliable.
-        %   \textcite{newman_finding_2004} evaluated $Q$ itself for this using several $Q$ maximization algorithms and obtained good results, suggesting that this is indeed a useful measure.
-        %   For the Louvain method specifically, \textcite{waltman_smart_2013} tested it on the karate club data and found it to be almost perfect at finding the maximum $Q$ possible (p.~471), suggesting that it is a reliable modularity optimization algorithm.
-        %
-        %   As for the application of the Louvain method for community detection to sociolinguistic data, this has only been done once to my knowledge.
-        %   In \textcite{mcneill_lol_2018}, which used the same corpus as the present study, the lexical variable (lol) was found to be significantly constrained by the community to which one belonged.
-        %   The variants in that study were English-origin and French-origin equivalents of \lexi{lol} as used within what could generally be considered French-language tweets.
-        %   While there have not been other applications of community detection in sociolinguistic research, this result combined with its history of evaluation in sociology and computer science point to its validity.
-        %
-        %   The implementation of the Louvain method used here comes from the social network analysis software Gephi \parencite{bastian_gephi:_2009}.
-        %   Gephi uses a slightly modified version of the algorithm made to handle directed networks as opposed to the original version, which handled only undirected networks.
-        %   This was more appropriate for the Twitter corpus used here as users do not always respond to directed tweets, making some ties asymmetric.
-        %   The resolution option for the algorithm was kept at the default of 1.
-        %
-        %   Initially, 8,945 communities were detected in the data, but as the goal at the time of the original study involved looking at those who might be considered French speakers specifically, only communities which contained tweets with French in them were analyzed, resulting in \Sexpr{length(levels(factor(tweets$Community)))} communities, each with a three- or four-digit ID.
-        %   These \Sexpr{length(levels(factor(tweets$Community)))} communities contained \num{\Sexpr{nrow(tweets)}} tokens of (lol).
-        %   In this case, these were tokens of (lol) as a lexical variable and so included variants such as \lexi{rofl} \gloss{roll on the floor laughing} and even \lexi{mdr} from French \lexi{mort de rire}, the rough equivalent of \lexi{lol}.
-        %   In other words, lexical items that are not of interest in the current study were originally included.
-        %   These unwanted lexical items were filtered out of the corpus for the present analysis, resulting in a corpus with \Sexpr{length(levels(factor(lol$Community)))} communities, \num{\Sexpr{nrow(lol)}} tokens of the orthographic variable (lol), and \Sexpr{length(levels(factor(lol$lol)))} spelling variants for (lol).
+  \section{Results}
 
-        % \paragraph{Centrality measures}
-        %   \label{para:centralirty_measures}
-        %   In social network analysis, a centrality measure is a measure of a person's position within a given community.
-        %   In the perhaps more familiar terms of communities of practice, this is somewhat similar to deciding which members are core members and which are peripheral members.
-        %   However, centrality measures are always quantitative, as the name implies.
-        %
-        %   CMC research has included centrality measures at least as far back as \textcite{paolillo_virtual_1999} in his study of an IRC community.
-        %   They have also been used in analyzing language on German hip-hop web sites \parencite{auer_style_2008} and on Twitter using follower count \parencite{danescu-niculescu-mizil_mark_2011}.
-        %   Centrality has often, though not always, been found to be significant in these studies.
-        %
-        %   Likewise, centrality measures have been used in language variation studies since \textcite{milroy_language_1987}.
-        %   Just as \textcite{milroy_language_1987} did, the implementation in sociolinguistics tends to involve the use of an index with a relatively small scale of possible values, such as 5.
-        %   Part of the reason for this approach is that it can be exceedingly difficult to track face-to-face interactions, which is conversely not a problem at all with Twitter data as directed tweets are explicit.
-        %
-        %   There are many other centrality measures, as well, though the one used in this study is PageRank \parencite{brin_anatomy_1998}, which was calculated for each user in the data relative to the community of which they were a member.
-        %   PageRank was originally developed for ordering search engine results and ultimately led to the creation of Google.
-        %   Equation \ref{eq:pagerank} shows how page $A$'s PageRank $PR$, or in this case person $A$'s $PR$, is calculated.
-        %   \begin{equation}
-        %     \label{eq:pagerank}
-        %     PR \left( A \right) = \left( 1 - d \right) + d \left( \frac{PR \left( T1 \right)}{C \left( T1 \right)} + ... + \frac{PR \left( Tn \right)}{C \left( Tn \right)} \right)
-        %   \end{equation}
-        %   Here, $d$ is a damping factor between zero and one, $Tn$ is a page that links to page $A$, and $C(Tn)$ is the total pages linked to by page $Tn$.
-        %   This effectively makes PageRank a function of the number of pages that link to the page of interest as well as the PageRanks of those pages.
-        %   As a result, a user who directs many tweets to other members of their community but who receives very few tweets from other members will not have a particularly high PageRank.
-        %   The intuition is that it is not difficult to talk a lot, but it is difficult to get people to care enough to respond.
-        %
-        % \paragraph{Geographic location}
-        %   \label{para:geographic_location}
-        %   Geographic location has also proved to be a meaningful social variable for language variation on Twitter, despite Twitter not be regionally segregated.
-        %   It is possible for users to search for tweets that are emanating from a particular physical area, but this is not the default setting nor do a user's followed accounts necessarily come from their own region.
-        %   However, geographic variation has been found at least for AAL features \parencite{eisenstein_phonological_2013, jones_toward_2015} and lexical variables \parencite{huang_understanding_2016}.
-        %   Part of this importance may be due to a propensity for Twitter users to form virtual communities with those from the same regions despite this not being necessary, as there is at least some evidence that this sort of agglomeration happens \parencite[pp.~88-91]{mcneill_lol_2018}.
-        %
-        %   Geographic location is also a social variable that is fairly easy to obtain for users of Twitter, though there are some caveats.
-        %   The simplest way to get this information, and what was done for the present study, is to use the location that each user entered manually in their profile.
-        %   This is often available and also returned by the Twitter API when tweets are collected.
-        %   The downside to this is naturally that users can enter any location that they want regardless of accuracy, thus an assumption that only a small number of users enter inaccurate locations is required.
-        %
-        %   An alternative approach to finding the geographic locations of users is to use geotags.
-        %   Twitter users can turn on this feature so that, when they send a tweet, the exact location they sent it from will be stored as metadata with said tweet.
-        %   However, this feature is rarely used.
-        %   \textcite{jones_toward_2015} found only 150 to 800 geotagged tweets per lexical item in his study, which accounted for between 2.5\% and 7.0\% of the tweets containing those lexical items (p.~407).
-        %   Using this method calls for an API access level that makes amassing extremely large corpora possible, which was out of reach for the current study.
-        %   For example, \textcite{huang_understanding_2016} used geotagging but were also able to collect 924 million such tweets over the course of a year with the access level that they had (p.~244).
-        %   As a result, manually entered geographic locations are used for the present study.
+    \begin{frame}{Summary of communities}
+      \begin{center}
+        \begin{tabular}{l l r r l}
+          Community                                  & Mode                                  & Diversity                                            & Members                               & \\
+          \cline{1-4}
+          \Sexpr{communitiesSummary[1, "Community"]} & \Sexpr{communitiesSummary[1, "Mode"]} & \Sexpr{round(communitiesSummary[1, "Diversity"], 2)} & \Sexpr{communitiesSummary[1, "Size"]} & \\
+          \Sexpr{communitiesSummary[2, "Community"]} & \Sexpr{communitiesSummary[2, "Mode"]} & \Sexpr{round(communitiesSummary[2, "Diversity"], 2)} & \Sexpr{communitiesSummary[2, "Size"]} & \\
+          \Sexpr{communitiesSummary[3, "Community"]} & \Sexpr{communitiesSummary[3, "Mode"]} & \Sexpr{round(communitiesSummary[3, "Diversity"], 2)} & \Sexpr{communitiesSummary[3, "Size"]} & \\
+          \Sexpr{communitiesSummary[4, "Community"]} & \Sexpr{communitiesSummary[4, "Mode"]} & \Sexpr{round(communitiesSummary[4, "Diversity"], 2)} & \Sexpr{communitiesSummary[4, "Size"]} & \\
+          \Sexpr{communitiesSummary[5, "Community"]} & \Sexpr{communitiesSummary[5, "Mode"]} & \Sexpr{round(communitiesSummary[5, "Diversity"], 2)} & \Sexpr{communitiesSummary[5, "Size"]} & 1 (lol) user \\
+          \Sexpr{communitiesSummary[6, "Community"]} & \Sexpr{communitiesSummary[6, "Mode"]} & \Sexpr{round(communitiesSummary[6, "Diversity"], 2)} & \Sexpr{communitiesSummary[6, "Size"]} & \\
+          \Sexpr{communitiesSummary[7, "Community"]} & \Sexpr{communitiesSummary[7, "Mode"]} & \Sexpr{round(communitiesSummary[7, "Diversity"], 2)} & \Sexpr{communitiesSummary[7, "Size"]} & \\
+          \Sexpr{communitiesSummary[8, "Community"]} & \Sexpr{communitiesSummary[8, "Mode"]} & \Sexpr{round(communitiesSummary[8, "Diversity"], 2)} & \Sexpr{communitiesSummary[8, "Size"]} & \\
+          \Sexpr{communitiesSummary[9, "Community"]} & \Sexpr{communitiesSummary[9, "Mode"]} & \Sexpr{round(communitiesSummary[9, "Diversity"], 2)} & \Sexpr{communitiesSummary[9, "Size"]} & \\
+          \Sexpr{communitiesSummary[10, "Community"]} & \Sexpr{communitiesSummary[10, "Mode"]} & \Sexpr{round(communitiesSummary[10, "Diversity"], 2)} & \Sexpr{communitiesSummary[10, "Size"]} & \\
+          \Sexpr{communitiesSummary[11, "Community"]} & \Sexpr{communitiesSummary[11, "Mode"]} & \Sexpr{round(communitiesSummary[11, "Diversity"], 2)} & \Sexpr{communitiesSummary[11, "Size"]} & 2 (lol) users \\
+          \Sexpr{communitiesSummary[12, "Community"]} & \Sexpr{communitiesSummary[12, "Mode"]} & \Sexpr{round(communitiesSummary[12, "Diversity"], 2)} & \Sexpr{communitiesSummary[12, "Size"]} & 1 user dominant \\
+          \Sexpr{communitiesSummary[13, "Community"]} & \Sexpr{communitiesSummary[13, "Mode"]} & \Sexpr{round(communitiesSummary[13, "Diversity"], 2)} & \Sexpr{communitiesSummary[13, "Size"]} & \\
+        \end{tabular}
+      \end{center}
+    \end{frame}
 
-      \begin{frame}
-        \frametitle{Pragmatic variables}
+    \begin{frame}{Summary of provinces}
+      \begin{center}
+        {\small\color{black}
+        \begin{tabular}{l l r r}
+          Province                                   & Mode                                  & Diversity                                            & Residents using (lol) \\
+          \hline
+          \Sexpr{provincesSummary[1, "Province"]} & \Sexpr{provincesSummary[1, "Mode"]} & \Sexpr{round(provincesSummary[1, "Diversity"], 2)} & \Sexpr{provincesSummary[1, "Size"]} \\
+          \Sexpr{provincesSummary[2, "Province"]} & \Sexpr{provincesSummary[2, "Mode"]} & \Sexpr{round(provincesSummary[2, "Diversity"], 2)} & \Sexpr{provincesSummary[2, "Size"]} \\
+          \Sexpr{provincesSummary[3, "Province"]} & \Sexpr{provincesSummary[3, "Mode"]} & \Sexpr{round(provincesSummary[3, "Diversity"], 2)} & \Sexpr{provincesSummary[3, "Size"]} \\
+          \Sexpr{provincesSummary[4, "Province"]} & \Sexpr{provincesSummary[4, "Mode"]} & \Sexpr{round(provincesSummary[4, "Diversity"], 2)} & \Sexpr{provincesSummary[4, "Size"]} \\
+          \Sexpr{provincesSummary[5, "Province"]} & \Sexpr{provincesSummary[5, "Mode"]} & \Sexpr{round(provincesSummary[5, "Diversity"], 2)} & \Sexpr{provincesSummary[5, "Size"]} \\
+          \Sexpr{provincesSummary[6, "Province"]} & \Sexpr{provincesSummary[6, "Mode"]} & \Sexpr{round(provincesSummary[6, "Diversity"], 2)} & \Sexpr{provincesSummary[6, "Size"]} \\
+          \Sexpr{provincesSummary[7, "Province"]} & \Sexpr{provincesSummary[7, "Mode"]} & \Sexpr{round(provincesSummary[7, "Diversity"], 2)} & \Sexpr{provincesSummary[7, "Size"]} \\
+          \Sexpr{provincesSummary[8, "Province"]} & \Sexpr{provincesSummary[8, "Mode"]} & \Sexpr{round(provincesSummary[8, "Diversity"], 2)} & \Sexpr{provincesSummary[8, "Size"]} \\
+          \Sexpr{provincesSummary[9, "Province"]} & \Sexpr{provincesSummary[9, "Mode"]} & \Sexpr{round(provincesSummary[9, "Diversity"], 2)} & \Sexpr{provincesSummary[9, "Size"]} \\
+          \Sexpr{provincesSummary[10, "Province"]} & \Sexpr{provincesSummary[10, "Mode"]} & \Sexpr{round(provincesSummary[10, "Diversity"], 2)} & \Sexpr{provincesSummary[10, "Size"]} \\
+          \Sexpr{provincesSummary[11, "Province"]} & \Sexpr{provincesSummary[11, "Mode"]} & \Sexpr{round(provincesSummary[11, "Diversity"], 2)} & \Sexpr{provincesSummary[11, "Size"]} \\
+          \Sexpr{provincesSummary[12, "Province"]} & \Sexpr{provincesSummary[12, "Mode"]} & \Sexpr{round(provincesSummary[12, "Diversity"], 2)} & \Sexpr{provincesSummary[12, "Size"]} \\
+          \Sexpr{provincesSummary[13, "Province"]} & \Sexpr{provincesSummary[13, "Mode"]} & \Sexpr{round(provincesSummary[13, "Diversity"], 2)} & \Sexpr{provincesSummary[13, "Size"]} \\
+          \Sexpr{provincesSummary[14, "Province"]} & \Sexpr{provincesSummary[14, "Mode"]} & \Sexpr{round(provincesSummary[14, "Diversity"], 2)} & \Sexpr{provincesSummary[14, "Size"]} \\
+        \end{tabular}
+        }
+      \end{center}
+    \end{frame}
 
-      \end{frame}
-  %       As was discussed in section \ref{subsec:previous_lol}, a repeated argument for \lexi{lol} in general is that it is used for pragmatic effects.
-  %       One of the difficulties for performing the sort of discourse analyses that could uncover such effects is that long and/or repeated conversations between pairs of individuals on Twitter are not easily obtained.
-  %       \textcite{danescu-niculescu-mizil_mark_2011} solved this problem by identifying pairs of users who were likely to converse often and mining each of their entire Twitter histories.
-  %       With both histories at hand, it was possible to reconstruct repeated, long conversations between the pairs \parencite[p.~3]{danescu-niculescu-mizil_mark_2011}.
-  %       Such a solution was not achievable given the resources of the current study, so I chose not to perform an exhaustive discourse analysis for pragmatic factors.
-  %
-  %       What can be analyzed in a quantitative fashion that could also shed light on some pragmatic factors that are linked to the orthographic variation of (lol) is the sentiment of each turn.
-  %       In this case, a turn is conceived of as a single tweet, which may or may not be multiple sentences but is always limited to 140 characters.
-  %       The sentiment classifier R package sentimentr \parencite{rinker_sentimentr_2019} was used to calculate the polarity sentiment of each turn.
-  %       No preprosessing of the corpus was done before sending it to this classifier, though the dictionary used by the classifier was checked to ensure that it did not contain \lexi{lol} itself as a lexical item.
-  %
-  %   \subsection{Statistics}
-  %     \label{subsec:statistics}
-  %     The data analyzed in this study is all categorical, and the typical descriptive statistics for categorical data were used.
-  %     One such statistic that is worth discussing as it does not appear in sociolinguistic research a great deal is the measure of dispersion for variants of (lol) for either an individual or a community.
-  %     The Simpson diversity index $D$ \parencite{simpson_measurement_1949}, as described in equation \ref{eq:simpson}, is used as a measure of stability in the sense that a small dispersion can be interpreted as a consistent preference for a particular variant whereas a large dispersion can be interpreted as a lack of clear preference for any particular variant.
-  %     This is a rather novel use for $D$ in variationist studies where it otherwise shows up as a measure of language ecology \parencite{greenberg_measurement_1956} or as a measure of the diversity of interactions one has \parencite{sharma_style_2011}.
-  %     \begin{equation}
-  %       \label{eq:simpson}
-  %       D = 1 - \sum_{i=1}^R{p_{i}^2}
-  %     \end{equation}
-  %
-  %     In equation \ref{eq:simpson}, $p$ is the relative frequency of a variant $i$ of the variable in question.
-  %     Essentially, the fewer variants included and the greater the frequency of the mode relative to the other variants, the lower $D$ will be.
-  %     One can imagine a uniform distribution as having a very high $D$ and a strongly unimodal distribution as having a very low $D$.
-  %
-  % \section{Results}
-  %   \label{sec:results}
-  %   The research question for this study asked what the social and/or pragmatic constraints are for the realization of the orthographic variable (lol).
-  %   In terms of social constraints, section \ref{subsec:social_constraints} specifically looks at how detected communities differ, how provinces differ, and how a Twitter user's centrality within their detected community impacts their realizations of (lol).
-  %   For pragmatic constraints, section \ref{subsec:pragmatic_constraints} looks into possible relationships between (lol) and the sentiment of a tweet.
-  %
-  %   \subsection{Social constraints}
-  %     \label{subsec:social_constraints}
-  %     The summary of the characteristics for each community, shown in Table \ref{tab:summary_communities} reveal a general lack of variation in the mode of each community but internal variation in the variants used.
-  %     The mode for every community is \orth{lol} except community \Sexpr{communitiesSummary[12, "Community"]} with all uppercase \orth{\Sexpr{communitiesSummary[12, "Mode"]}} as the mode.
-  %     The diversity measures, however, suggest that \orth{lol} is far from being the exclusive variants used, with a median diversity of \Sexpr{round(median(communitiesSummary$Diversity), 2)} among the communities.
-  %     The only communities to be highly consistent in using a single variant are communities \Sexpr{communitiesSummary[5, "Community"]} and \Sexpr{communitiesSummary[11, "Community"]} which each use the \orth{lol} spelling at all times.
-  %     However, (lol) was rarely used in these two communities to begin with as only \Sexpr{length(unique(lol[lol$Community == "799",]$User))} and \Sexpr{length(unique(lol[lol$Community == "2067",]$User))} members produced (lol) at all in each, respectively.
-  %     Communities \Sexpr{communitiesSummary[5, "Community"]} and \Sexpr{communitiesSummary[11, "Community"]} can therefore not be taken as evidence that (lol) would be invariant even within said communities save for the unlikely scenario where a larger sample would not uncover more tokens.
-  %     \begin{table}[tbhp]
-  %       \centering
-  %       \caption{Summary statistics for each community}
-  %       \label{tab:summary_communities}
-  %       \begin{tabular}{l l r r}
-  %         Community                                  & Mode                                  & Diversity                                            & Members \rule{0pt}{14pt} \\
-  %         \hline
-  %         \Sexpr{communitiesSummary[1, "Community"]} & \Sexpr{communitiesSummary[1, "Mode"]} & \Sexpr{round(communitiesSummary[1, "Diversity"], 2)} & \Sexpr{communitiesSummary[1, "Size"]} \\
-  %         \Sexpr{communitiesSummary[2, "Community"]} & \Sexpr{communitiesSummary[2, "Mode"]} & \Sexpr{round(communitiesSummary[2, "Diversity"], 2)} & \Sexpr{communitiesSummary[2, "Size"]} \\
-  %         \Sexpr{communitiesSummary[3, "Community"]} & \Sexpr{communitiesSummary[3, "Mode"]} & \Sexpr{round(communitiesSummary[3, "Diversity"], 2)} & \Sexpr{communitiesSummary[3, "Size"]} \\
-  %         \Sexpr{communitiesSummary[4, "Community"]} & \Sexpr{communitiesSummary[4, "Mode"]} & \Sexpr{round(communitiesSummary[4, "Diversity"], 2)} & \Sexpr{communitiesSummary[4, "Size"]} \\
-  %         \Sexpr{communitiesSummary[5, "Community"]} & \Sexpr{communitiesSummary[5, "Mode"]} & \Sexpr{round(communitiesSummary[5, "Diversity"], 2)} & \Sexpr{communitiesSummary[5, "Size"]} \\
-  %         \Sexpr{communitiesSummary[6, "Community"]} & \Sexpr{communitiesSummary[6, "Mode"]} & \Sexpr{round(communitiesSummary[6, "Diversity"], 2)} & \Sexpr{communitiesSummary[6, "Size"]} \\
-  %         \Sexpr{communitiesSummary[7, "Community"]} & \Sexpr{communitiesSummary[7, "Mode"]} & \Sexpr{round(communitiesSummary[7, "Diversity"], 2)} & \Sexpr{communitiesSummary[7, "Size"]} \\
-  %         \Sexpr{communitiesSummary[8, "Community"]} & \Sexpr{communitiesSummary[8, "Mode"]} & \Sexpr{round(communitiesSummary[8, "Diversity"], 2)} & \Sexpr{communitiesSummary[8, "Size"]} \\
-  %         \Sexpr{communitiesSummary[9, "Community"]} & \Sexpr{communitiesSummary[9, "Mode"]} & \Sexpr{round(communitiesSummary[9, "Diversity"], 2)} & \Sexpr{communitiesSummary[9, "Size"]} \\
-  %         \Sexpr{communitiesSummary[10, "Community"]} & \Sexpr{communitiesSummary[10, "Mode"]} & \Sexpr{round(communitiesSummary[10, "Diversity"], 2)} & \Sexpr{communitiesSummary[10, "Size"]} \\
-  %         \Sexpr{communitiesSummary[11, "Community"]} & \Sexpr{communitiesSummary[11, "Mode"]} & \Sexpr{round(communitiesSummary[11, "Diversity"], 2)} & \Sexpr{communitiesSummary[11, "Size"]} \\
-  %         \Sexpr{communitiesSummary[12, "Community"]} & \Sexpr{communitiesSummary[12, "Mode"]} & \Sexpr{round(communitiesSummary[12, "Diversity"], 2)} & \Sexpr{communitiesSummary[12, "Size"]} \\
-  %         \Sexpr{communitiesSummary[13, "Community"]} & \Sexpr{communitiesSummary[13, "Mode"]} & \Sexpr{round(communitiesSummary[13, "Diversity"], 2)} & \Sexpr{communitiesSummary[13, "Size"]} \\
-  %       \end{tabular}
-  %     \end{table}
-  %
-  %     The only community to not have \orth{lol} as its mode was community 2265, which had \orth{LOL} as its mode instead.
-  %     Table \ref{tab:summary_2265} provides summary statistics for each user in this community.
-  %     What is immediately apparent is that the mode for this community stems mostly from Jesus Ibarra's linguistic behavior in that they produced far more tokens of (lol) than anyone else and were also quite consistent in their spelling with a diversity of \Sexpr{round(usersSummary2265[2, "Diversity"], 2)}.
-  %     It is not clear what this community's linguistic behavior relative to (lol) would look like given a larger sample size.
-  %     As it stands, it is difficult to take results for community 2265 as evidence for or against a difference in norms for (lol) between communities.
-  %     \begin{table}[tbhp]
-  %       \centering
-  %       \caption{Summary statistics for community 2265}
-  %       \label{tab:summary_2265}
-  %       \begin{tabular}{l r l r r}
-  %         User                                & PageRank                                          & Mode                                & Diversity                                          & Tokens \rule{0pt}{14pt} \\
-  %         \hline
-  %         \Sexpr{usersSummary2265[1, "User"]} & \Sexpr{round(usersSummary2265[1, "PageRank"], 4)} & \Sexpr{usersSummary2265[1, "Mode"]} & \Sexpr{round(usersSummary2265[1, "Diversity"], 2)} & \Sexpr{usersSummary2265[1, "Tokens"]} \\
-  %         \Sexpr{usersSummary2265[2, "User"]} & \Sexpr{round(usersSummary2265[2, "PageRank"], 4)} & \Sexpr{usersSummary2265[2, "Mode"]} & \Sexpr{round(usersSummary2265[2, "Diversity"], 2)} & \Sexpr{usersSummary2265[2, "Tokens"]} \\
-  %         \Sexpr{usersSummary2265[3, "User"]} & \Sexpr{round(usersSummary2265[3, "PageRank"], 4)} & \Sexpr{usersSummary2265[3, "Mode"]} & \Sexpr{round(usersSummary2265[3, "Diversity"], 2)} & \Sexpr{usersSummary2265[3, "Tokens"]} \\
-  %         \Sexpr{usersSummary2265[4, "User"]} & \Sexpr{round(usersSummary2265[4, "PageRank"], 4)} & \Sexpr{usersSummary2265[4, "Mode"]} & \Sexpr{round(usersSummary2265[4, "Diversity"], 2)} & \Sexpr{usersSummary2265[4, "Tokens"]} \\
-  %         \Sexpr{usersSummary2265[5, "User"]} & \Sexpr{round(usersSummary2265[5, "PageRank"], 4)} & \Sexpr{usersSummary2265[5, "Mode"]} & \Sexpr{round(usersSummary2265[5, "Diversity"], 2)} & \Sexpr{usersSummary2265[5, "Tokens"]} \\
-  %         \Sexpr{usersSummary2265[6, "User"]} & \Sexpr{round(usersSummary2265[6, "PageRank"], 4)} & \Sexpr{usersSummary2265[6, "Mode"]} & \Sexpr{round(usersSummary2265[6, "Diversity"], 2)} & \Sexpr{usersSummary2265[6, "Tokens"]} \\
-  %         \Sexpr{usersSummary2265[7, "User"]} & \Sexpr{round(usersSummary2265[7, "PageRank"], 4)} & \Sexpr{usersSummary2265[7, "Mode"]} & \Sexpr{round(usersSummary2265[7, "Diversity"], 2)} & \Sexpr{usersSummary2265[7, "Tokens"]} \\
-  %         \Sexpr{usersSummary2265[8, "User"]} & \Sexpr{round(usersSummary2265[8, "PageRank"], 4)} & \Sexpr{usersSummary2265[8, "Mode"]} & \Sexpr{round(usersSummary2265[8, "Diversity"], 2)} & \Sexpr{usersSummary2265[8, "Tokens"]} \\
-  %       \end{tabular}
-  %     \end{table}
-  %
-  %     It is quite possible that the distributions for (lol) in each community are not significantly different.
-  %     To test this null hypothesis, Fisher's exact test was used.
-  %     A $\chi^2$-test was not appropriate given the low expected counts for some cells in the relevant contingency table.
-  %     The null hypothesis that the distribution of (lol) for each community was the same was rejected ($P < \Sexpr{round_any(lolSigTests$Community$Test$p.value, 0.05, f = ceiling)}$).
-  %     Using Cramér's $V$ to measure the effect size returned a value of \Sexpr{round(lolSigTests$Community$Effect, 2)}, a generally small effect size suggesting that the differences were not great.
-  %     The large number of variants and communities makes displaying a contingency table of the results here both difficult and uninformative, but the proportions for the \orth{lol} variant range from 75.8\% in community 756 to 52.5\% in community 1032, though most were had proportions near 70.0\%. % Manually checked prop.table
-  %     Thus, while the dominance of the \orth{lol} variant in almost every community does vary, and while the distributions for (lol) are not identical, the differences are not great.
-  %     It would be difficult to argue that the spelling of (lol) varies enough from community to community to make it maleable as a marker of one's social identity.
-  %
-  %     Similarly, Table \ref{tab:summary_provinces} presents a summary of (lol) usage relative to the province\footnote{
-  %       In some cases, these are actually states as parts of the US and of New Zealand were captured during the data mining process, presumably because these tweets were still processed through servers in the Maritime Provinces.
-  %     } of the Twitter user.
-  %     While modes other than \orth{lol} appear, this happens only where the number of residents using (lol) is limited to one to three people and so hardly represents what would be produced if a larger sample were taken.
-  %     In all other provinces, \orth{lol} was always the most frequent variant.
-  %     Also, as with community, the null hypothesis that the distribution of (lol) for each province was the same was rejected ($P < \Sexpr{round_any(lolSigTests$Province$Test$p.value, 0.05, f = ceiling)}$), though in this case the effect size was even smaller than for community ($V \approx \Sexpr{round(lolSigTests$Province$Effect, 2)}$).
-  %     Examining provinces thus returns results that are even less promising for the idea that (lol) is socially meaningful.
-  %     There are indeed some differences between the provinces, but nothing great enough to indicate that Twitter users express their provincial identities through the spelling of (lol).
-  %
-  %     \begin{table}[tbhp]
-  %       \centering
-  %       \caption{Summary statistics for each province}
-  %       \label{tab:summary_provinces}
-  %       \begin{tabular}{l l r r}
-  %         Province                                   & Mode                                  & Diversity                                            & Residents using (lol) \rule{0pt}{14pt} \\
-  %         \hline
-  %         \Sexpr{provincesSummary[1, "Province"]} & \Sexpr{provincesSummary[1, "Mode"]} & \Sexpr{round(provincesSummary[1, "Diversity"], 2)} & \Sexpr{provincesSummary[1, "Size"]} \\
-  %         \Sexpr{provincesSummary[2, "Province"]} & \Sexpr{provincesSummary[2, "Mode"]} & \Sexpr{round(provincesSummary[2, "Diversity"], 2)} & \Sexpr{provincesSummary[2, "Size"]} \\
-  %         \Sexpr{provincesSummary[3, "Province"]} & \Sexpr{provincesSummary[3, "Mode"]} & \Sexpr{round(provincesSummary[3, "Diversity"], 2)} & \Sexpr{provincesSummary[3, "Size"]} \\
-  %         \Sexpr{provincesSummary[4, "Province"]} & \Sexpr{provincesSummary[4, "Mode"]} & \Sexpr{round(provincesSummary[4, "Diversity"], 2)} & \Sexpr{provincesSummary[4, "Size"]} \\
-  %         \Sexpr{provincesSummary[5, "Province"]} & \Sexpr{provincesSummary[5, "Mode"]} & \Sexpr{round(provincesSummary[5, "Diversity"], 2)} & \Sexpr{provincesSummary[5, "Size"]} \\
-  %         \Sexpr{provincesSummary[6, "Province"]} & \Sexpr{provincesSummary[6, "Mode"]} & \Sexpr{round(provincesSummary[6, "Diversity"], 2)} & \Sexpr{provincesSummary[6, "Size"]} \\
-  %         \Sexpr{provincesSummary[7, "Province"]} & \Sexpr{provincesSummary[7, "Mode"]} & \Sexpr{round(provincesSummary[7, "Diversity"], 2)} & \Sexpr{provincesSummary[7, "Size"]} \\
-  %         \Sexpr{provincesSummary[8, "Province"]} & \Sexpr{provincesSummary[8, "Mode"]} & \Sexpr{round(provincesSummary[8, "Diversity"], 2)} & \Sexpr{provincesSummary[8, "Size"]} \\
-  %         \Sexpr{provincesSummary[9, "Province"]} & \Sexpr{provincesSummary[9, "Mode"]} & \Sexpr{round(provincesSummary[9, "Diversity"], 2)} & \Sexpr{provincesSummary[9, "Size"]} \\
-  %         \Sexpr{provincesSummary[10, "Province"]} & \Sexpr{provincesSummary[10, "Mode"]} & \Sexpr{round(provincesSummary[10, "Diversity"], 2)} & \Sexpr{provincesSummary[10, "Size"]} \\
-  %         \Sexpr{provincesSummary[11, "Province"]} & \Sexpr{provincesSummary[11, "Mode"]} & \Sexpr{round(provincesSummary[11, "Diversity"], 2)} & \Sexpr{provincesSummary[11, "Size"]} \\
-  %         \Sexpr{provincesSummary[12, "Province"]} & \Sexpr{provincesSummary[12, "Mode"]} & \Sexpr{round(provincesSummary[12, "Diversity"], 2)} & \Sexpr{provincesSummary[12, "Size"]} \\
-  %         \Sexpr{provincesSummary[13, "Province"]} & \Sexpr{provincesSummary[13, "Mode"]} & \Sexpr{round(provincesSummary[13, "Diversity"], 2)} & \Sexpr{provincesSummary[13, "Size"]} \\
-  %         \Sexpr{provincesSummary[14, "Province"]} & \Sexpr{provincesSummary[14, "Mode"]} & \Sexpr{round(provincesSummary[14, "Diversity"], 2)} & \Sexpr{provincesSummary[14, "Size"]} \\
-  %       \end{tabular}
-  %     \end{table}
-  %
-  %     Another way to approach the question of whether (lol) is socially conditioned is to look at individuals relative to their communities.
-  %     While communities may have clear norms that differ little from each other, this does not mean that all speakers follow these norms.
-  %     Indeed, out of the \Sexpr{nrow(usersSummaryActive)} active producers of (lol) in the data, defined as those producing at least 10 tokens, \Sexpr{nrow(usersSummaryActive[usersSummaryActive$Mode != "lol" & usersSummaryActive$Community != "2265",])} who belong to \orth{lol} dominant communities use another variant most frequently, namely \orth{LOL} or \orth{Lol}.
-  %     A sample of those included in this group who produced at least 20 tokens of (lol) are summarized in Table \ref{tab:summary_outliers}.
-  %     All of these users other than Ambria Howard are above the 64th percentile for PageRanks in their communities, meaning they are fairly central members of their communities.
-  %     Ambria is an outlier with a PageRank percentile of \Sexpr{round(usersSummaryActive[usersSummaryActive$User == "Ambria Howard", "PR_Percentile"], 2)}, making this user rather peripheral to their community.
-  %     This suggests that individuals do in fact go against the norms of their community and that those individuals who do so are generally those who have a central position in their community.
-  %
-  %     \begin{table}[tbhp]
-  %       \centering
-  %       \caption{Summary statistics for a sample of outlier individuals}
-  %       \label{tab:summary_outliers}
-  %       \begin{tabular}{l l r r r}
-  %         User                                     & Mode                                     & Diversity                                               & $PR$ Percentile & Community \rule{0pt}{14pt} \\
-  %         \hline
-  %         \Sexpr{usersSummaryActiveOut[2, "User"]} & \Sexpr{usersSummaryActiveOut[2, "Mode"]} & \Sexpr{round(usersSummaryActiveOut[2, "Diversity"], 2)} & \Sexpr{round(usersSummaryActiveOut[2, "PR_Percentile"], 2)} & \Sexpr{usersSummaryActiveOut[2, "Community"]} \\
-  %         \Sexpr{usersSummaryActiveOut[3, "User"]} & \Sexpr{usersSummaryActiveOut[3, "Mode"]} & \Sexpr{round(usersSummaryActiveOut[3, "Diversity"], 2)} & \Sexpr{round(usersSummaryActiveOut[3, "PR_Percentile"], 2)} & \Sexpr{usersSummaryActiveOut[3, "Community"]} \\
-  %         \Sexpr{usersSummaryActiveOut[1, "User"]} & \Sexpr{usersSummaryActiveOut[1, "Mode"]} & \Sexpr{round(usersSummaryActiveOut[1, "Diversity"], 2)} & \Sexpr{round(usersSummaryActiveOut[1, "PR_Percentile"], 2)} & \Sexpr{usersSummaryActiveOut[1, "Community"]} \\
-  %         \Sexpr{usersSummaryActiveOut[4, "User"]} & \Sexpr{usersSummaryActiveOut[4, "Mode"]} & \Sexpr{round(usersSummaryActiveOut[4, "Diversity"], 2)} & \Sexpr{round(usersSummaryActiveOut[4, "PR_Percentile"], 2)} & \Sexpr{usersSummaryActiveOut[4, "Community"]} \\
-  %         \Sexpr{usersSummaryActiveOut[5, "User"]} & \Sexpr{usersSummaryActiveOut[5, "Mode"]} & \Sexpr{round(usersSummaryActiveOut[5, "Diversity"], 2)} & \Sexpr{round(usersSummaryActiveOut[5, "PR_Percentile"], 2)} & \Sexpr{usersSummaryActiveOut[5, "Community"]} \\
-  %         \Sexpr{usersSummaryActiveOut[6, "User"]} & \Sexpr{usersSummaryActiveOut[6, "Mode"]} & \Sexpr{round(usersSummaryActiveOut[6, "Diversity"], 2)} & \Sexpr{round(usersSummaryActiveOut[6, "PR_Percentile"], 2)} & \Sexpr{usersSummaryActiveOut[6, "Community"]} \\
-  %         \Sexpr{usersSummaryActiveOut[7, "User"]} & \Sexpr{usersSummaryActiveOut[7, "Mode"]} & \Sexpr{round(usersSummaryActiveOut[7, "Diversity"], 2)} & \Sexpr{round(usersSummaryActiveOut[7, "PR_Percentile"], 2)} & \Sexpr{usersSummaryActiveOut[7, "Community"]} \\
-  %       \end{tabular}
-  %     \end{table}
-  %
-  %     In this sense, (lol) is indeed socially variable, though it is clearly not indexing any particular community.
-  %     The motivation for why these central community members buck the norms of their communities would likely require a discourse analysis that is beyond the scope of the present study but would perhaps be an interesting avenue for future research.
-  %
-  %   \subsection{Pragmatic constraints}
-  %     \label{subsec:pragmatic_constraints}
-  %     While some small amount of the variation in (lol) may be explained by a handful of users going against the norms of their communities, it would be difficult to argue that (lol) is primarily conditioned by how users express their social identities.
-  %     Another possibility is that variations in the spelling of (lol) are used for pragmatic effect.
-  %     One such possibility explored here is the relationship between the variant of (lol) used and the sentiment of the tweet.
-  %     The assumption is that, if different spellings are associated with different sentiments, there is some sort of pragmatic work being done by those particular spellings.
-  %     This work could be boosting the sentiment in the same positive or negative direction that the rest of the tweet suggested.
-  %     Alternatively, the spelling may be doing the opposite, softening a negative tweet or adding mockery to a positive tweet.
-  %     These nuances would be best explored through a thorough discourse analysis, which is beyond the scope of this study, but the quantitative results here are indicative of whether that is a worthwhile avenue for future research.
-  %
-  %     Among all the variants of (lol), three were exponentially more frequent: \orth{lol}, \orth{LOL}, and \orth{Lol}.
-  %     The sentiments for tweets containing only these three variants were thus analyzed.
-  %     Additionally, tweets that received sentiments of zero were excluded.
-  %     Figure \ref{fig:sentiment_lol_hist} shows the distribution of sentiments for each of the major variants of (lol) where \orth{lol} has a mean of \Sexpr{round(as.numeric(lolSentMeans["lol"]), 3)}, \orth{Lol} a mean of \Sexpr{round(as.numeric(lolSentMeans["Lol"]), 3)}, and \orth{LOL} a mean of \Sexpr{round(as.numeric(lolSentMeans["LOL"]), 3)}.
-  %     \begin{figure}[tbhp]
-  %       \centering
-  %       \caption{Density plots for the sentiments of tweets for each of the three major variants of (lol)}
-  %       \label{fig:sentiment_lol_hist}
-  %       <<sentiment_lol_hist>>=
-  %       @
-  %     \end{figure}
-  %
-  %     All three variants have positive sentiment means, though they are not much above the neutral sentiment of zero.
-  %     Relative to each other, the two version containing capitalization do appear to be different from \orth{lol} in that they are more positive.
-  %     Indeed, a one-way ANOVA for the difference in means shows this difference to be statistically significant ($P < \Sexpr{round_any(lolSentSigTestSummary[[1]][["Pr(>F)"]][[1]], 0.05, f = ceiling)}$).
-  %     While this does suggest that some amount of pragmatic work is being done by the different variants of (lol) in relation to sentiment, the amount is seemingly very small.
-  %     If (lol) is in fact pragmatically conditioned to a great extent, it is unlikely that this will be found by looking at sentiment.
-  %     Indeed, one of the sentiment dictionaries available in the sentimentr classifier package includes \lexi{lol} with a corresponding sentiment of \Sexpr{lexicon::hash_sentiment_senticnet[x == "lol", "y"]} \parencite{cambria_senticnet_2016}.
-  %     Out of the \num{\Sexpr{nrow(lexicon::hash_sentiment_senticnet)}} lexical items in this dictionary, \num{\Sexpr{nrow(lexicon::hash_sentiment_senticnet[y > 0.111])}} have higher sentiments, most of which are at least twice as high as \lexi{lol}, meaning that a large proportion of lexical items are assumed to have a much larger impact on sentiment than \lexi{lol}.
-  %     A more fruitful direction may thus be to look into other pragmatic functions, perhaps using discourse analysis instead of a quantitative analysis.
-  %
-  % \section{Discussion}
-  %   \label{sec:discussion}
-  %   The goal of this study has been to search for possible social and/or pragmatic constraints on the realization of the orthographic variable (lol).
-  %   The methods used have been quantitative and so work well for uncovering aggregate group patterns.
-  %   However, while there is some evidence for such patterns, they are undoubtedly small.
-  %   The distributions of realizations of (lol) do differ from community to community and province to province, yet the norm of lowercase \orth{lol} is shared by all groups.
-  %   Variants of (lol) are also associated with positive sentiment tweets, but the sentiment polarities of said tweets are by and large only slightly above neutral.
-  %   In both cases, however, there are clues that a more qualitative analysis of individual behavior would uncover both social and discursive functions for (lol).
-  %
-  %   \subsection{Outlier individuals}
-  %     \label{subsec:discuss_outliers}
-  %     As discussed in section \ref{subsec:social_constraints}, some Twitter users show personal norms for (lol) that do not adhere to the norms of their communities.
-  %     Those personal norms do not match any outgroup norms captured in the data, so it cannot be said that they were indexing other analyzed communities through their spelling of (lol).
-  %     Other possibilities remain to be analyzed, such as whether these users were indexing general personal qualitites, broad outgroup membership in the vein of imagined communities \parencite{anderson_imagined_1991}, or simply outgroup communities that were not captured here.
-  %     In any case, while it is worthwhile to discuss the behavior of these outlier individuals, a proper interpretation is beyond the scope of the present study.
-  %
-  %     The tweets below provide form a small sample of those produced by users whose mode for (lol) was all uppercase \orth{LOL}, and in each case, there are some capitalization practices in their writing styles that are worth noting.
-  %     In tweet \ref{sent:proper1}, Jack Encina uses \lexi{BTW} \gloss{by the way} with the fully capitalized spelling \orth{BTW}, just as they do with (lol) in the same tweet as well as all others.
-  %     The same user also capitalizes \orth{Madam} in tweet \ref{sent:proper2} as one might do for kinship terms when used as names in formal writing styles.
-  %     In the first case, using all uppercase for acronyms matches prescriptive writing norms for English, but the second case does not unless it is an instance of hypercorrection, which cannot be determined from the analysis in this study.
-  %     Jasmine Boller also uses a mix of standard capitalization practices along with non-standard practices, as in tweet \ref{sent:proper3}.
-  %     This example contains the acronym \orth{USA} in all uppercase but also the non-standard \orth{Presidents} in place of \orth{presidents'}.
-  %     Again, the latter may be a case of hypercorrection, but there are many other possibilities, as well, and sorting these possibilities out is beyond the scope of the present study.
-  %     \begin{enumerate}[resume]
-  %       \item \Sexpr{lol[lol$'Token ID' == 3007, "User"]}: \Sexpr{lol[lol$'Token ID' == 3007, "Text"]} \label{sent:proper1}
-  %       \item \Sexpr{lol[lol$'Token ID' == 3012, "User"]}: \Sexpr{lol[lol$'Token ID' == 3012, "Text"]} \label{sent:proper2}
-  %       \item \Sexpr{lol[lol$'Token ID' == 4117, "User"]}: \Sexpr{lol[lol$'Token ID' == 4117, "Text"]} \label{sent:proper3}
-  %     \end{enumerate}
-  %
-  %     Also present in tweet \ref{sent:proper3} was discussion of then United States president Donald Trump.
-  %     As these tweets were collected during the time when the highly controversial Trump was entering office, he was naturally the focal point of many online discussions.
-  %     Likewise, the tweets below all touched on Trump or politics in general.
-  %     Tawfeeqa al-Khalifa in tweet \ref{sent:politics1} capitalizes \orth{President} counter to formal writing styles, but also capitalizes other words that are not always capitalized in CMC, such as \orth{I'm} and the sentence-initial \orth{You're}.
-  %     This is in contrast to Josiah Eguino Silvas in tweets \ref{sent:politics2} and \ref{sent:politics3} who does not capitalize the first words in sentences nor the pronoun \lexi{I} nor the proper name \lexi{Trump}.
-  %     What Josiah does capitalize, however, is \orth{Global Warming}.
-  %     The reason for this token of capitalization is not clear, though it is also not unusual for Josiah.
-  %     They also capitalize words like \orth{Death Penalty} and \orth{Dickheads}, for example.
-  %     \begin{enumerate}[resume]
-  %       \item \Sexpr{lol[lol$'Token ID' == 4042, "User"]}: \Sexpr{lol[lol$'Token ID' == 4042, "Text"]} \label{sent:politics1}
-  %       \item \Sexpr{lol[lol$'Token ID' == 3025, "User"]}: \Sexpr{lol[lol$'Token ID' == 3025, "Text"]} \label{sent:politics2}
-  %       \item \Sexpr{lol[lol$'Token ID' == 3043, "User"]}: \Sexpr{lol[lol$'Token ID' == 3043, "Text"]} \label{sent:politics3}
-  %     \end{enumerate}
-  %
-  %     These outlier users who do not follow the norms of their communities for (lol) may be indexing personal qualities or perhaps imagined communities, but it is also possible that they are indexing other communities that were not analyzed here.
-  %     Indeed, only \Sexpr{nrow(communitiesSummary)} communities were analyzed in this study out of the 8,945 initially detected.
-  %     However, it is not clear that any one of those 8,945 communities is salient to users in any other community.
-  %     One limitation of community detection is that defining communities by interactions alone does not necessarily mean those communities are salient in the minds of other nor even in the minds of members of those communities.
-  %     Combining community detection with ethnography would be helpful for uncovering such saliencies as well as what is behind the behavior of individuals who buck community norms.
-  %
-  %   \subsection{Individual variation}
-  %     \label{subsec:discuss_individuals}
-  %     Out of the \Sexpr{nrow(usersSummaryActive)} active users of (lol) in the data analyzed here, only \Sexpr{nrow(usersSummaryActive[usersSummaryActive$Diversity == 0,])} had diversities of zero, meaning over 75\% of these users employed at least two variants.
-  %     The majority of these users were naturally not outliers and instead conformed to the norms of their communities.
-  %     Their use of spellings of (lol) other than \orth{lol} could of course have the same motivation as for outlier users who do not fit their communities' norms.
-  %     Unlike outliers, however, a norm-adhering user is not habitually producing forms such as \orth{LOL}, and so whereas outliers may arguably be doing so in order to establish some sort of identity, non-outliers may be more likely doing so to create some discursive effect via unexpected contrasts to their norms, just as \textcite{androutsopoulos_non-standard_2000} argued that non-standard spellings can signal attitudes or frames of interpretation.
-  %
-  %     Following the concepts of paralinguistic restitution \parencite[Thurlow and Brown 2003, as cited in][p.~3]{schneier_digital_2021} and affective lengthening \parencite[pp.~117-118]{schnoebelen_you_2012}, as discussed in section \ref{subsubsec:orthographic_lol}, a natural function to consider is emphasis.
-  %     Specifically, capitalized or reduplicated variants of (lol) may be encoding a more emphatic reaction than the typical \orth{lol} variant to make up for lack of prosody in text.
-  %     If this is indeed the case, one might expect to find capitalized and reduplicated variants co-occurring with exclamation marks or perhaps other capitalization/reduplication that is more clearly meant to show stress.
-  %     Tweets \ref{sent:emphasis1} to \ref{sent:emphasis6} below are examples from normative users in the data that fit this criteria.
-  %
-  %     \begin{enumerate}[resume]
-  %       \item \Sexpr{lol[lol$'Token ID' == 562, "User"]}: \Sexpr{lol[lol$'Token ID' == 562, "Text"]} \label{sent:emphasis1}
-  %       \item \Sexpr{lol[lol$'Token ID' == 578, "User"]}: \Sexpr{lol[lol$'Token ID' == 578, "Text"]} \label{sent:emphasis2}
-  %       \item \Sexpr{lol[lol$'Token ID' == 2517, "User"]}: \Sexpr{lol[lol$'Token ID' == 2517, "Text"]} \label{sent:emphasis3}
-  %       \item \Sexpr{lol[lol$'Token ID' == 2605, "User"]}: \Sexpr{lol[lol$'Token ID' == 2605, "Text"]} \label{sent:emphasis4}
-  %       \item \Sexpr{lol[lol$'Token ID' == 4217, "User"]}: \Sexpr{lol[lol$'Token ID' == 4217, "Text"]} \label{sent:emphasis5}
-  %       \item \Sexpr{lol[lol$'Token ID' == 2753, "User"]}: \Sexpr{lol[lol$'Token ID' == 2753, "Text"]} \label{sent:emphasis6}
-  %     \end{enumerate}
-  %
-  %     In tweets \ref{sent:emphasis1} and \ref{sent:emphasis2}, Carlton Brink's use of \orth{lololol} co-occurs with three exclamation marks and their use of \orth{lolol} with two exclamation marks, matching the number of reduplications.
-  %     Admittedly, there may not be a connection for this user between the number of exclamations and the level of exclaiming, but these examples at least show reduplicated (lol) going along with what are overt symbols meant to represent emphasis.
-  %     Similary, Ryan Johnson in tweet \ref{sent:emphasis3} used the reduplicated variant \orth{lolol} with sentences that ended in exclamation marks.
-  %     Exclamation marks also co-occur with the tokens of \orth{LOL} in tweets \ref{sent:emphasis4}, \ref{sent:emphasis5}, and \ref{sent:emphasis6}, though in these cases, the exclamation marks are directly adjacent to the tokens of (lol), which are treated as independent sentences.
-  %     This suggests that what is being exclaimed is the laughter itself.
-  %     Additionally, \orth{LOL} in tweets \ref{sent:emphasis4} and \ref{sent:emphasis6} also co-occur with other fully capitalized words, \orth{OH} and \orth{LOUD}, respectively.
-  %     The latter is particularly noteworthy as \orth{LOUD} is found within a sentence featuring otherwise standard capitalization patterns, making it more contrastive, and it also overtly describes the volume of the user's speech.
-  %     It would be difficult to argue that Fat'hi el-Abdalla is not using capitalization in both \orth{LOUD} and \orth{LOL} to emphasize these words, though this cannot be established concretely just from this anecdotal evidence.
-  %
-  %     Some variants of (lol) seem as though they may have very specific meanings, as well, though the available data for the most likely candidates in the corpus used here is far too sparse to even provide good examples.
-  %     For instance, \orth{yololololo} and \orth{TROLOLOLOLOL} are each used once, but in both cases, they make up the entirety of the content of those tweets, and so no hints for future research on these are available.
-  %     The former seems to be a blend with \lexi{YOLO} \gloss{you only live once} and the latter a blend with \lexi{troll}, understood as an internet user who purposely attempts to get a rise out of their interlocutors purely for their own entertainment.
-  %     To get beyond this very basic understanding of such variants necessarily requires a more focused discourse analysis than what the current study can include.
-  %
-  % \section{Conclusion}
-  %   \label{sec:conclusion}
-  %   The aim of this study was to search for possible social and pragmatic conditioning for the realization of the orthographic linguistic variable (lol) on Twitter.
-  %   The methods used were squarely quantitative, employing the modern social network analysis technique of community detection in particular.
-  %   The results suggested that communities do differ slightly in their distributions for the variants of (lol), but all communities had the same norm of \orth{lol}.
-  %   It was also found that both \orth{lol} and capitalized variants \orth{Lol} and \orth{LOL} were associated with positive sentiments, the latter two being associated with slightly more positive sentiments, but that the effect size was not great.
-  %   A more qualitative look at the data revealed that approaching (lol), and perhaps orthographic variation in general, from a more individualized angle before looking for aggregate patterns may be more fruitful.
-  %   Some individuals do pattern contrary to their communities, and those that pattern with their communities are still motivated to occasionally use non-normative spellings, but possible explanations are not easily explored through quantatitive analyses.
+    \begin{frame}{Difference in distributions of variants}
+      Fisher's exact test for significance ($\alpha < 0.5$) and Cramér's $V$ for effect size
+      \begin{center}
+        \begin{tabular}{l | r r}
+                      & $P <$                                                                     & $V \approx$ \\
+          \hline
+          Communities & \Sexpr{round_any(lolSigTests$Community$Test$p.value, 0.001, f = ceiling)} & \Sexpr{round(lolSigTests$Community$Effect, 3)} \\
+          Provinces   & \Sexpr{round_any(lolSigTests$Province$Test$p.value, 0.0015, f = ceiling)} & \Sexpr{round(lolSigTests$Province$Effect, 3)}
+        \end{tabular}
+      \end{center}
+    \end{frame}
+
+    \begin{frame}{Sample of outlier individuals ($N = \Sexpr{nrow(usersSummaryActive[usersSummaryActive$Mode != "lol" & usersSummaryActive$Community != "2265",])}$)}
+      \begin{center}
+        \begin{tabular}{l l r r r}
+          User                                     & Mode                                     & Diversity                                               & $PR$ Percentile & Community \\
+          \hline
+          \Sexpr{usersSummaryActiveOut[2, "User"]} & \Sexpr{usersSummaryActiveOut[2, "Mode"]} & \Sexpr{round(usersSummaryActiveOut[2, "Diversity"], 2)} & \Sexpr{round(usersSummaryActiveOut[2, "PR_Percentile"], 2)} & \Sexpr{usersSummaryActiveOut[2, "Community"]} \\
+          \Sexpr{usersSummaryActiveOut[3, "User"]} & \Sexpr{usersSummaryActiveOut[3, "Mode"]} & \Sexpr{round(usersSummaryActiveOut[3, "Diversity"], 2)} & \Sexpr{round(usersSummaryActiveOut[3, "PR_Percentile"], 2)} & \Sexpr{usersSummaryActiveOut[3, "Community"]} \\
+          \Sexpr{usersSummaryActiveOut[1, "User"]} & \Sexpr{usersSummaryActiveOut[1, "Mode"]} & \Sexpr{round(usersSummaryActiveOut[1, "Diversity"], 2)} & \Sexpr{round(usersSummaryActiveOut[1, "PR_Percentile"], 2)} & \Sexpr{usersSummaryActiveOut[1, "Community"]} \\
+          \Sexpr{usersSummaryActiveOut[4, "User"]} & \Sexpr{usersSummaryActiveOut[4, "Mode"]} & \Sexpr{round(usersSummaryActiveOut[4, "Diversity"], 2)} & \Sexpr{round(usersSummaryActiveOut[4, "PR_Percentile"], 2)} & \Sexpr{usersSummaryActiveOut[4, "Community"]} \\
+          \Sexpr{usersSummaryActiveOut[5, "User"]} & \Sexpr{usersSummaryActiveOut[5, "Mode"]} & \Sexpr{round(usersSummaryActiveOut[5, "Diversity"], 2)} & \Sexpr{round(usersSummaryActiveOut[5, "PR_Percentile"], 2)} & \Sexpr{usersSummaryActiveOut[5, "Community"]} \\
+          \Sexpr{usersSummaryActiveOut[6, "User"]} & \Sexpr{usersSummaryActiveOut[6, "Mode"]} & \Sexpr{round(usersSummaryActiveOut[6, "Diversity"], 2)} & \Sexpr{round(usersSummaryActiveOut[6, "PR_Percentile"], 2)} & \Sexpr{usersSummaryActiveOut[6, "Community"]} \\
+          \Sexpr{usersSummaryActiveOut[7, "User"]} & \Sexpr{usersSummaryActiveOut[7, "Mode"]} & \Sexpr{round(usersSummaryActiveOut[7, "Diversity"], 2)} & \Sexpr{round(usersSummaryActiveOut[7, "PR_Percentile"], 2)} & \Sexpr{usersSummaryActiveOut[7, "Community"]} \\
+        \end{tabular}
+      \end{center}
+    \end{frame}
+
+    \begin{frame}{Sentiments of tweets with major (lol) variants}
+      One-way ANOVA for the difference in means rejects the null ($P < \Sexpr{round_any(lolSentSigTestSummary[[1]][["Pr(>F)"]][[1]], 0.001, f = ceiling)}$)
+      \begin{center}
+        <<sentiment_lol_hist, fig.height = 2.5, fig.width = 4.5>>=
+        @
+      \end{center}
+    \end{frame}
+
+  \section{Discussion}
+
+    \begin{frame}{Outlier individuals}
+      \begin{enumerate}
+        \item \Sexpr{lol[lol$'Token ID' == 3007, "User"]}: \Sexpr{lol[lol$'Token ID' == 3007, "Text"]} \label{sent:proper1}
+        \item \Sexpr{lol[lol$'Token ID' == 4117, "User"]}: \Sexpr{lol[lol$'Token ID' == 4117, "Text"]} \label{sent:proper3}
+        \item \Sexpr{lol[lol$'Token ID' == 4042, "User"]}: \Sexpr{lol[lol$'Token ID' == 4042, "Text"]} \label{sent:politics1}
+        \item \Sexpr{lol[lol$'Token ID' == 3025, "User"]}: \Sexpr{lol[lol$'Token ID' == 3025, "Text"]} \label{sent:politics2}
+      \end{enumerate}
+    \end{frame}
+
+    \begin{frame}{Individual variation of non-outlier individuals}
+      \begin{enumerate}
+        \item \Sexpr{lol[lol$'Token ID' == 562, "User"]}: \Sexpr{lol[lol$'Token ID' == 562, "Text"]} \label{sent:emphasis1}
+        \item \Sexpr{lol[lol$'Token ID' == 2517, "User"]}: \Sexpr{lol[lol$'Token ID' == 2517, "Text"]} \label{sent:emphasis3}
+        \item \Sexpr{lol[lol$'Token ID' == 2605, "User"]}: \Sexpr{lol[lol$'Token ID' == 2605, "Text"]} \label{sent:emphasis4}
+        \item \Sexpr{lol[lol$'Token ID' == 4217, "User"]}: \Sexpr{lol[lol$'Token ID' == 4217, "Text"]} \label{sent:emphasis5}
+        \item \Sexpr{lol[lol$'Token ID' == 2753, "User"]}: \Sexpr{lol[lol$'Token ID' == 2753, "Text"]} \label{sent:emphasis6}
+      \end{enumerate}
+    \end{frame}
+
   \section{References}
     \printbibliography
+
+    \begin{frame}{}
+      \begin{center}
+        Questions or comments?
+      \end{center}
+    \end{frame}
 \end{document}
