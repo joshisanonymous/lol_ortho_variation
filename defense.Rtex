@@ -77,19 +77,10 @@
       \end{enumerate}
     \end{frame}
 
-    % \begin{frame}{Defining \lexi{lol}}
-    %   \begin{itemize}
-    %     \item Originated in English language chatrooms in the early 1980s \parencite[McCulloch 2019, as cited in][]{schneier_digital_2021}
-    %     \item Originally an acronym meaning \gloss{laugh out loud}
-    %     \begin{itemize}
-    %       \item In other languages \parencite[e.g., French][]{lienard_les_2014, mcneill_lol_2018}
-    %       \item[$\to$] Now a general internet-language maybe-acronym?
-    %     \end{itemize}
-    %   \end{itemize}
-    % \end{frame}
-
     \begin{frame}{Why (lol)}
       \begin{itemize}
+        \item It's a very frequent arguably non-function word \parencite{baron_see_2004, mcneill_lol_2018, tagliamonte_linguistic_2008}
+        \item It does carry social significance as a \alert{lexical} variable in French tweets \parencite{mcneill_lol_2018}
         \item Typical interpretation of \lexi{lol}
         \begin{itemize}
           \item ``Phatic filler'' \parencite{baron_see_2004} or ``a signal of interlocutor involvement'' \parencite{tagliamonte_linguistic_2008}
@@ -103,24 +94,14 @@
 
     \begin{frame}{(lol) as a lexical variable}
       \begin{itemize}
-        \item Mostly a small part of broader analyses
-        \begin{itemize}
-          \item Most frequent acronym in instant messaging (IM) \parencite{baron_see_2004, tagliamonte_linguistic_2008}
-          \item Less frequent with older IMers \parencite{tagliamonte_linguistic_2008}
-        \end{itemize}
-        \item But also sometimes the primary focus
-        \begin{itemize}
-          \item Almost always turn initial or final \parencite{schneier_digital_2021}
-          \item Also argued that \lexi{lol} coordinates turn taking and mitigates face threatening acts
-        \end{itemize}
+        \item Mostly a small part of broader analyses \parencite{baron_see_2004, lienard_les_2014, tagliamonte_linguistic_2008, varnhagen_lol_2010}
+        \item But also sometimes the primary focus \parencite{mcneill_lol_2018, schneier_digital_2021}
       \end{itemize}
     \end{frame}
 
     \begin{frame}{(lol) as an orthographic variable}
       \begin{itemize}
-        \item Has not been studied as an orthographic variable
-        \item Orthographic variation has been studied in general
-        \item Significant factors:
+        \item Has not been studied as an orthographic variable, but others have found significant factors for orthographic variation
         \begin{itemize}
           \item \alert{Audience} \parencite{eisenstein_systematic_2015}
           \item \alert{German hip-hop community membership} \parencite{androutsopoulos_potentials_2008}
@@ -145,16 +126,15 @@
         \item Collected from Twitter between January and February 2017
         \item Focused on directed tweets from the Maritime Provinces of Canada
         \item Final corpus has \num{\Sexpr{nrow(lol)}} tweets containing one of the \Sexpr{length(levels(factor(lol$lol)))} variants of (lol)
-        % \item \emph{Original purpose}, an analysis of \alert{lexical} (lol) in French tweets \parencite{mcneill_lol_2018}
-        % \begin{itemize}
-        %   \item Still a valid corpus to the extent that \lexi{lol} is a broad internet-language lexical item
-        % \end{itemize}
       \end{itemize}
     \end{frame}
 
     \begin{frame}{Social variables}
       \begin{itemize}
         \item Traditional social variables are not easily accessible through Twitter
+        \begin{itemize}
+          \item Except geographic location
+        \end{itemize}
         \item Social network analysis (SNA) is \emph{more} practical with Twitter data
         \begin{itemize}
           \item Community detection
@@ -191,9 +171,6 @@
       The Twitter API returns manually entered locations from users' profiles
       \begin{columns}
         \column{0.4\textwidth}
-          % \begin{itemize}
-          %   \item There is evidence of covariation between detected communities and geographic locations \parencite{mcneill_lol_2018}
-          % \end{itemize}
         \column{0.6\textwidth}
           \includegraphics[scale=0.45]{example_twit_prof.png}
       \end{columns}
