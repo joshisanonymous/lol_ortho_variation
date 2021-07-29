@@ -77,16 +77,16 @@
       \end{enumerate}
     \end{frame}
 
-    \begin{frame}{Defining \lexi{lol}}
-      \begin{itemize}
-        \item Originated in English language chatrooms in the early 1980s \parencite[McCulloch 2019, as cited in][]{schneier_digital_2021}
-        \item Originally an acronym meaning \gloss{laugh out loud}
-        \begin{itemize}
-          \item In other languages (e.g., French \parencite{lienard_les_2014, mcneill_lol_2018}
-          \item[$\to$] Now a general internet-language maybe-acronym?
-        \end{itemize}
-      \end{itemize}
-    \end{frame}
+    % \begin{frame}{Defining \lexi{lol}}
+    %   \begin{itemize}
+    %     \item Originated in English language chatrooms in the early 1980s \parencite[McCulloch 2019, as cited in][]{schneier_digital_2021}
+    %     \item Originally an acronym meaning \gloss{laugh out loud}
+    %     \begin{itemize}
+    %       \item In other languages \parencite[e.g., French][]{lienard_les_2014, mcneill_lol_2018}
+    %       \item[$\to$] Now a general internet-language maybe-acronym?
+    %     \end{itemize}
+    %   \end{itemize}
+    % \end{frame}
 
     \begin{frame}{Why (lol)}
       \begin{itemize}
@@ -145,10 +145,10 @@
         \item Collected from Twitter between January and February 2017
         \item Focused on directed tweets from the Maritime Provinces of Canada
         \item Final corpus has \num{\Sexpr{nrow(lol)}} tweets containing one of the \Sexpr{length(levels(factor(lol$lol)))} variants of (lol)
-        \item \emph{Original purpose}, an analysis of \alert{lexical} (lol) in French tweets \parencite{mcneill_lol_2018}
-        \begin{itemize}
-          \item Still a valid corpus to the extent that \lexi{lol} is a broad internet-language lexical item
-        \end{itemize}
+        % \item \emph{Original purpose}, an analysis of \alert{lexical} (lol) in French tweets \parencite{mcneill_lol_2018}
+        % \begin{itemize}
+        %   \item Still a valid corpus to the extent that \lexi{lol} is a broad internet-language lexical item
+        % \end{itemize}
       \end{itemize}
     \end{frame}
 
@@ -188,12 +188,12 @@
     \end{frame}
 
     \begin{frame}{Geographic location}
-      The Twitter API returns both geotags and \emph{manually entered locations} on users' profiles
+      The Twitter API returns manually entered locations from users' profiles
       \begin{columns}
         \column{0.4\textwidth}
-          \begin{itemize}
-            \item There is evidence of covariation between detected communities and geographic locations \parencite{mcneill_lol_2018}
-          \end{itemize}
+          % \begin{itemize}
+          %   \item There is evidence of covariation between detected communities and geographic locations \parencite{mcneill_lol_2018}
+          % \end{itemize}
         \column{0.6\textwidth}
           \includegraphics[scale=0.45]{example_twit_prof.png}
       \end{columns}
@@ -299,8 +299,6 @@
     \begin{frame}{Outlier individuals}
       \begin{enumerate}
         \item \Sexpr{lol[lol$'Token ID' == 3007, "User"]}: \Sexpr{lol[lol$'Token ID' == 3007, "Text"]} \label{sent:proper1}
-        \item \Sexpr{lol[lol$'Token ID' == 4117, "User"]}: \Sexpr{lol[lol$'Token ID' == 4117, "Text"]} \label{sent:proper3}
-        \item \Sexpr{lol[lol$'Token ID' == 4042, "User"]}: \Sexpr{lol[lol$'Token ID' == 4042, "Text"]} \label{sent:politics1}
         \item \Sexpr{lol[lol$'Token ID' == 3025, "User"]}: \Sexpr{lol[lol$'Token ID' == 3025, "Text"]} \label{sent:politics2}
       \end{enumerate}
     \end{frame}
@@ -308,9 +306,6 @@
     \begin{frame}{Individual variation of non-outlier individuals}
       \begin{enumerate}
         \item \Sexpr{lol[lol$'Token ID' == 562, "User"]}: \Sexpr{lol[lol$'Token ID' == 562, "Text"]} \label{sent:emphasis1}
-        \item \Sexpr{lol[lol$'Token ID' == 2517, "User"]}: \Sexpr{lol[lol$'Token ID' == 2517, "Text"]} \label{sent:emphasis3}
-        \item \Sexpr{lol[lol$'Token ID' == 2605, "User"]}: \Sexpr{lol[lol$'Token ID' == 2605, "Text"]} \label{sent:emphasis4}
-        \item \Sexpr{lol[lol$'Token ID' == 4217, "User"]}: \Sexpr{lol[lol$'Token ID' == 4217, "Text"]} \label{sent:emphasis5}
         \item \Sexpr{lol[lol$'Token ID' == 2753, "User"]}: \Sexpr{lol[lol$'Token ID' == 2753, "Text"]} \label{sent:emphasis6}
       \end{enumerate}
     \end{frame}
